@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8e6d6d22-6ac9-418d-abc9-d967e0bf6c68": {
+      "ProjectGuid": "8e6d6d22-6ac9-418d-abc9-d967e0bf6c68",
+      "DisplayName": "Navegador",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
