@@ -7,3 +7,12 @@ C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Se
 C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.csproj.CopyComplete
 C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.dll
 C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.pdb
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\CapaControladorSeguridadHSC.dll
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\CapaControladorSeguridadHSC.pdb
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\CapaModeloSeguridadHSC.dll
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\CapaModeloSeguridadHSC.pdb
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.csproj.AssemblyReference.cache
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.csproj.CoreCompileInputs.cache
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.csproj.CopyComplete
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.dll
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.pdb

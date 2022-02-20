@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Pa7uz62CR/pw3iRrms1ETtbczALl9MXDAemtVurT7hacinCpuejnPrLsQmPmeIn/4wW8Z7pnrVRwjMYduQ7aLA==",
+  "dgSpecHash": "CeaVso0IUn4KpDdOAK3Hxt4/M/HbXJa4srDxOmxurf09qGQlpY43ESobCd9mfE89V7yO10s1NsMxpp+1iEQzrQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ZUZU\\Desktop\\ProyectoHSC22021-main\\ProyectoHSC22021-main\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj",
+  "projectFilePath": "C:\\Users\\GiancarloS\\Desktop\\IS220221\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ZUZU\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
-    "C:\\Users\\ZUZU\\.nuget\\packages\\system.data.odbc\\5.0.0\\system.data.odbc.5.0.0.nupkg.sha512"
+    "C:\\Users\\GiancarloS\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
+    "C:\\Users\\GiancarloS\\.nuget\\packages\\system.data.odbc\\5.0.0\\system.data.odbc.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -4,3 +4,9 @@ C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Se
 C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.csproj.CoreCompileInputs.cache
 C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.dll
 C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.pdb
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\bin\Debug\CapaModeloSeguridadHSC.dll
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\bin\Debug\CapaModeloSeguridadHSC.pdb
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.csproj.AssemblyReference.cache
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.csproj.CoreCompileInputs.cache
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.dll
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.pdb
