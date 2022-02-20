@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaModelo;
+using CapaModeloNav;
 using System.Collections;
 namespace CapaControlador
 {
@@ -17,11 +18,12 @@ namespace CapaControlador
         Control control;
 
         ClaseModelo modelo = new ClaseModelo();
+        ClaseModelo2 modelo2 = new ClaseModelo2();
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
         public TextBox[] ordenandoTextos(Control parent)
         {
-            texts = modelo.funTexts(parent);
+            texts = modelo2.AsignaAlias(parent);
             control = parent;
             TextBox[] alias = new TextBox[texts.Length];
 
@@ -36,9 +38,9 @@ namespace CapaControlador
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void funAsignarAliasControl(TextBox[] alias, string tabla, string BD)
+        public void comparaTagscampoBD(TextBox[] alias, string tabla, string BD)
         {
-            errores = modelo.funAsignarAlias(alias, tabla, BD);
+            errores = modelo2.comparaTagscampoBD(alias, tabla, BD);
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
@@ -46,8 +48,8 @@ namespace CapaControlador
         {
             if (String.IsNullOrEmpty(errores))
             {
-                modelo.funSalida(menu);
-                modelo.funDeshabilitarTexts(control);
+                modelo.MetodoSalir(menu);
+                modelo.metodoDeshabilitarTexts(control);
             }
             else
             {
@@ -56,69 +58,69 @@ namespace CapaControlador
             }
         }
 
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public int funUltimoEnteroControl(string tabla)
+        /*2*/
+        public int idSiguienteDeNuevoIngreso(string tabla)
         {
             int longitud = texts.Length;
-            int entero = modelo.funUltimoEntero(tabla, texts[longitud - 1].Tag.ToString());
+            int entero = modelo2.idSiguienteDeNuevoIngreso(tabla, texts[longitud - 1].Tag.ToString());
 
             return entero;
         }
 
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
-        public void funLlenarComboControl(ComboBox cbx, string tabla, string value, string display, string estatus)
+        public void metodoLlenarCombo(ComboBox cbx, string tabla, string value, string display, string estatus)
         {
-            modelo.funLlenarCombo(cbx,tabla,value, display, estatus);
+            modelo.metodoLlenarCombo(cbx,tabla,value, display, estatus);
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void funSeleccionarDTControl(DataGridView data)
+        public void SeleccionDeFilaDGV(DataGridView data)
         {
-            modelo.funSeleccionarDT(data);
+            modelo2.SeleccionDeFilaDGV(data);
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void funSetearRBControl(RadioButton activo, RadioButton inactivo, TextBox estatus)
+        public void activaRadiobtn(RadioButton activo, RadioButton inactivo, TextBox estatus)
         {
-            modelo.funSetearRB(activo, inactivo, estatus);
+            modelo.activaRadiobtn(activo, inactivo, estatus);
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void funCambioEstatusRBControl(TextBox estado, RadioButton AI, string cadenaEstado)
+        public void CambioEstadoTextBox(TextBox estado, RadioButton AI, string cadenaEstado)
         {
-            modelo.funCambioEstatusRB(estado, AI, cadenaEstado);
+            modelo2.CambioEstadoTextBox(estado, AI, cadenaEstado);
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
-        public void funComboTextboxControl(ComboBox combo, TextBox combotexto)
+        public void enviarDatoCbxaTextbox(ComboBox combo, TextBox combotexto)
         {
-            modelo.funComboTextbox(combo, combotexto);
+            modelo.enviarDatoCbxaTextbox(combo, combotexto);
 
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
-        public void funTextboxComboControl(ComboBox combo, TextBox combotexto)
+        public void SeleccionarElementoEnComboBox(ComboBox combo, TextBox combotexto)
         {
-            modelo.funTextboxCombo(combo, combotexto);
+            modelo2.SeleccionarElementoEnComboBox(combo, combotexto);
         }
 
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
-        public void funDPTextBoxControl(DateTimePicker date, TextBox textoDate)
+        public void CambiarFormatoFecha(DateTimePicker date, TextBox textoDate)
         {
-            modelo.funDPTextBox(date,textoDate);
+            modelo.CambiarFormatoFecha(date,textoDate);
 
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void funTextBoxDPTControl(DateTimePicker date, TextBox textoDate)
+        public void SeleccionarFechaDTP(DateTimePicker date, TextBox textoDate)
         {
-            modelo.funTextBoxDPT(date, textoDate);
+            modelo2.SeleccionarFechaDTP(date, textoDate);
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
-        public string funReportesControl(string idAplicacion, string campoRuta, string campoB, string tablaR)
+        public string obtieneRutaReporte(string idAplicacion, string campoRuta, string campoB, string tablaR)
         {
-            string ruta = modelo.funReportes(idAplicacion, campoRuta, campoB, tablaR);
+            string ruta = modelo.obtieneRutaReporte(idAplicacion, campoRuta, campoB, tablaR);
             return ruta;
         }
 
@@ -130,33 +132,33 @@ namespace CapaControlador
         }
         
 
-        public DataTable llenarTbl(string tablaDB)//Jaime López 0901-18-735
+        public DataTable ActualizarDGV(string tablaDB)//Jaime López 0901-18-735
         {
             //cambiado 18/10/2021-01:30pm, todo el odbc se paso a realizar solo en la modelo
             //para aumentar la seguridad
-            return modelo.llenarTbl(tablaDB);
+            return modelo2.ActualizarDGV(tablaDB);
         }
         public bool modificar(TextBox[] campos, string tablas)//Modificar de Wilber Enrique Segura Ramirez 0901-18-13952
         {
           return modelo.modificar(campos, tablas); 
         }
 
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public bool insertar(TextBox[] campos, string tablas)
+        /*1*/
+        public bool insertarDatostabla(TextBox[] campos, string tablas)
         {
-            return modelo.insertar(campos, tablas);
+            return modelo.insertarDatostabla(campos, tablas);
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void funEliminarControl(TextBox[] arreglo, string tabla, string campoEstado)
+        public void InhabilitarRegistro(TextBox[] arreglo, string tabla, string campoEstado)
         {
-            modelo.eliminar(arreglo, tabla, campoEstado);
+            modelo.InhabilitarRegistro(arreglo, tabla, campoEstado);
         }
 
         /*Geovani Fernando Mendoza - 9959-18-15407*/
-        public void funAyudaControl(string idAplicacion, string nombreCampo, string tablaA)
+        public void LlamadaAyudas(string idAplicacion, string nombreCampo, string tablaA)
         {
-            modelo.funAyuda(idAplicacion, nombreCampo, tablaA, control);
+            modelo2.LlamadaAyudas(idAplicacion, nombreCampo, tablaA, control);
 
             //MessageBox.Show(tablaA);
 

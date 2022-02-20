@@ -21,9 +21,19 @@ namespace CapaVistaSeguridadHSC
         public frmMantenimientoPerfil()
         {
             InitializeComponent();
-            CenterToScreen();
-            actualizardatagriew();
-            permisos = bloqueo(usuario, idaplicacion);
+
+            TextBox[] alias = navegador1.funAsignandoTexts(this);
+            navegador1.funAsignarAliasVista(alias, "perfil", "hotelSanCarlos");
+            navegador1.funAsignarSalidadVista(this);
+
+            navegador1.pideGrid(this.perfilTabla);
+            navegador1.llenaTabla();
+            navegador1.pedirRef(this);
+            navegador1.usuario = "admin";
+            navegador1.aplicacion = "Mantenimiento Módulo";
+            navegador1.funActualizarPermisos();
+            navegador1.idmodulo = "1";
+            navegador1.pedirRef(this);
         }
 
         private string tabla = "perfil";
@@ -185,6 +195,36 @@ namespace CapaVistaSeguridadHSC
 
 
             return cadena;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void perfilTabla_SelectionChanged(object sender, EventArgs e)
+        {
+            navegador1.funSeleccionarDTVista(perfilTabla);
+        }
+
+        private void btnHabilitado_MouseClick(object sender, MouseEventArgs e)
+        {
+            navegador1.funCambioEstatusRBVista(textBox3, btnHabilitado, "A");
+        }
+
+        private void btnInhabilitado_MouseClick(object sender, MouseEventArgs e)
+        {
+            navegador1.funCambioEstatusRBVista(textBox3, btnInhabilitado, "I");
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            navegador1.funSetearRBVista(btnHabilitado, btnInhabilitado, textBox3);
+        }
+
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

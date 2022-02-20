@@ -4,3 +4,9 @@ C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Co
 C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
 C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaModelo\obj\Debug\CapaModelo.dll
 C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaModelo\obj\Debug\CapaModelo.pdb
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaModelo\bin\Debug\CapaModelo.dll
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaModelo\bin\Debug\CapaModelo.pdb
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaModelo\obj\Debug\CapaModelo.csproj.AssemblyReference.cache
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaModelo\obj\Debug\CapaModelo.dll
+C:\Users\GiancarloS\Desktop\IS220221\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaModelo\obj\Debug\CapaModelo.pdb
