@@ -1,1 +1,2 @@
-# IS220221
+# ProyectoHSC22021
+Proyecto didáctico HSC

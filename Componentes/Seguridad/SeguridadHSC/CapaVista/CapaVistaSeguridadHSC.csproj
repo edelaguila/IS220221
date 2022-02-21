@@ -68,11 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="datosUsuario.cs" />
-    <Compile Include="frmModulo.cs">
+    <Compile Include="frmMantenimientoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmModulo.Designer.cs">
-      <DependentUpon>frmModulo.cs</DependentUpon>
+    <Compile Include="frmMantenimientoUsuario.Designer.cs">
+      <DependentUpon>frmMantenimientoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="PendienteDeRevision.cs">
       <SubType>Form</SubType>
@@ -171,8 +171,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmModulo.resx">
-      <DependentUpon>frmModulo.cs</DependentUpon>
+    <EmbeddedResource Include="frmMantenimientoUsuario.resx">
+      <DependentUpon>frmMantenimientoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PendienteDeRevision.resx">
       <DependentUpon>PendienteDeRevision.cs</DependentUpon>

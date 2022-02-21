@@ -387,9 +387,9 @@ namespace DLL.nav
             manipularTextboxs(0);
 
             /* Daniel Enrique Navas Hernandez 0901-18-15032*/
-        //    Bitacora cancelar = new Bitacora();
+            //Bitacora cancelar = new Bitacora();
             //guardar.guardarEnBitacora(idAplicacion, "1", "0012", "guardar");
-          //  cancelar.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "cancelar");
+            //cancelar.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "cancelar");
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -742,8 +742,8 @@ namespace DLL.nav
             cargaData();
 
             /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-           // Bitacora final = new Bitacora();
-           // final.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "Final");
+            //Bitacora final = new Bitacora();
+            //final.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "Final");
         }
 
         private void navegador_Load(object sender, EventArgs e)
@@ -766,8 +766,8 @@ namespace DLL.nav
             actualizarCombo();
 
             /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-           // Bitacora actualizar = new Bitacora();
-           // actualizar.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "actualizar");
+            //Bitacora actualizar = new Bitacora();
+            //actualizar.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "actualizar");
         }
 
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
@@ -776,8 +776,8 @@ namespace DLL.nav
             generic.Close();
 
             /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-           // Bitacora salir = new Bitacora();
-            //salir.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "Salir");
+            Bitacora salir = new Bitacora();
+            salir.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "Salir");
         }
         Form generic;
 
