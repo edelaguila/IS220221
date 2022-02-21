@@ -39,6 +39,7 @@ namespace CapaVistaSeguridadHSC
             this.btnUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAplicacion = new System.Windows.Forms.ToolStripMenuItem();
+            this.módulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPerfiles = new System.Windows.Forms.ToolStripMenuItem();
             this.asignacionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAsignacionDeAplicacionAUsuarios = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +50,7 @@ namespace CapaVistaSeguridadHSC
             this.btnBitacora = new System.Windows.Forms.ToolStripMenuItem();
             this.bitácoraDeLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.módulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,7 +112,8 @@ namespace CapaVistaSeguridadHSC
             // btnUsuarios
             // 
             this.btnUsuarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarUsuarioToolStripMenuItem});
+            this.registrarUsuarioToolStripMenuItem,
+            this.mantenimientoUsuarioToolStripMenuItem});
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(180, 24);
             this.btnUsuarios.Text = "Usuarios";
@@ -120,7 +122,7 @@ namespace CapaVistaSeguridadHSC
             // registrarUsuarioToolStripMenuItem
             // 
             this.registrarUsuarioToolStripMenuItem.Name = "registrarUsuarioToolStripMenuItem";
-            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
+            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.registrarUsuarioToolStripMenuItem.Text = "Registrar Usuario";
             this.registrarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registrarUsuarioToolStripMenuItem_Click);
             // 
@@ -130,6 +132,13 @@ namespace CapaVistaSeguridadHSC
             this.btnAplicacion.Size = new System.Drawing.Size(180, 24);
             this.btnAplicacion.Text = "Aplicaciones";
             this.btnAplicacion.Click += new System.EventHandler(this.btnAplicacion_Click);
+            // 
+            // módulosToolStripMenuItem
+            // 
+            this.módulosToolStripMenuItem.Name = "módulosToolStripMenuItem";
+            this.módulosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.módulosToolStripMenuItem.Text = "Módulos";
+            this.módulosToolStripMenuItem.Click += new System.EventHandler(this.módulosToolStripMenuItem_Click);
             // 
             // btnPerfiles
             // 
@@ -208,12 +217,12 @@ namespace CapaVistaSeguridadHSC
             this.txtUsuario.TabIndex = 5;
             this.txtUsuario.Visible = false;
             // 
-            // módulosToolStripMenuItem
+            // mantenimientoUsuarioToolStripMenuItem
             // 
-            this.módulosToolStripMenuItem.Name = "módulosToolStripMenuItem";
-            this.módulosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.módulosToolStripMenuItem.Text = "Módulos";
-            this.módulosToolStripMenuItem.Click += new System.EventHandler(this.módulosToolStripMenuItem_Click);
+            this.mantenimientoUsuarioToolStripMenuItem.Name = "mantenimientoUsuarioToolStripMenuItem";
+            this.mantenimientoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.mantenimientoUsuarioToolStripMenuItem.Text = "Mantenimiento Usuario";
+            this.mantenimientoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoUsuarioToolStripMenuItem_Click);
             // 
             // frmMIDSeguridad
             // 
@@ -258,5 +267,6 @@ namespace CapaVistaSeguridadHSC
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem módulosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoUsuarioToolStripMenuItem;
     }
 }

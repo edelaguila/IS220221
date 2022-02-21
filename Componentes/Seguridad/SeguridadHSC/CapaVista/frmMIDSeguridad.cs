@@ -157,11 +157,20 @@ namespace CapaVistaSeguridadHSC
         //Kevin Flores 9959-18-17632
         private void módulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmModulo form3 = new frmModulo();
+            frmMantenimientoModulo form3 = new frmMantenimientoModulo();
             form3.MdiParent = this;
             //Jorge González 0901-18-3920
             Bitacora loggear = new Bitacora();
             loggear.guardarEnBitacora(IdUsuario, "1", "0012", "Entrada a la Vista");
+            form3.Show();
+        }
+
+        private void mantenimientoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMantenimientoUsuario form3 = new frmMantenimientoUsuario();
+            form3.MdiParent = this;
+            Bitacora loggear = new Bitacora();
+            loggear.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
             form3.Show();
         }
     }

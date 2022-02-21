@@ -1,10 +1,10 @@
-C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacora.csproj.AssemblyReference.cache
-C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacora.csproj.CoreCompileInputs.cache
-C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\VistaBitacoraLogin.dll
-C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\VistaBitacoraLogin.pdb
-C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\Bitacora.dll
-C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\Dapper.dll
-C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\Bitacora.pdb
-C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacora.csproj.CopyComplete
-C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacoraLogin.dll
-C:\Users\ZUZU\Desktop\ProyectoHSC22021-main\ProyectoHSC22021-main\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacoraLogin.pdb
+F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacora.csproj.AssemblyReference.cache
+F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacora.csproj.CoreCompileInputs.cache
+F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\VistaBitacoraLogin.dll
+F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\VistaBitacoraLogin.pdb
+F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\Bitacora.dll
+F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\Dapper.dll
+F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\Bitacora.pdb
+F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacora.csproj.CopyComplete
+F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacoraLogin.dll
+F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacoraLogin.pdb
