@@ -19,9 +19,9 @@ namespace CapaVistaSeguridadHSC
         {
             InitializeComponent();
             //TextBox[] alias = { txtID, txtCodigoMarca, txtNombre, txtFecha, txtDescripcion, txtStock, txtPrecio, txtEstatus};
-            TextBox[] alias = navegador1.funAsignandoTexts(this);
-            navegador1.funAsignarAliasVista(alias, "usuario", "hotelSanCarlos");
-            navegador1.funAsignarSalidadVista(this);
+            TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
+            navegador1.ObtenerCamposdeTabla(alias, "usuario", "hotelSanCarlos");
+            navegador1.MetodoSalirVista(this);
             // navegador1.funLlenarComboControl(cbxCodMarca, "marcaP", "idMarca", "nombre", "estatus");
 
             //inicio de elementos para dar de baja
@@ -39,12 +39,12 @@ namespace CapaVistaSeguridadHSC
 
 
             // Inicio datos para ejecurar reportes
-            navegador1.funReportesVista("ruta", "idAplicacion", "Reporte");
+            navegador1.LlamarRutaReporte("ruta", "idAplicacion", "Reporte");
             // Final datos para ejecutar reportes
 
-            navegador1.pideGrid(this.dtgUsuarios);
-            navegador1.llenaTabla();
-            navegador1.pedirRef(this);
+            navegador1.ObtenerNombreDGV(this.dtgUsuarios);
+            navegador1.LlenarTabla();
+            navegador1.ObtenerReferenciaFormActual(this);
             //String cadena = txtprueba.Text;
             //navegador1.pruebaMensaje(cadena);
         }
@@ -122,17 +122,17 @@ namespace CapaVistaSeguridadHSC
 
         private void rbnActivo_CheckedChanged(object sender, EventArgs e)
         {
-            navegador1.funCambioEstatusRBVista(txtEstatus, rbnHabilitado, "1");
+            navegador1.CambioEstadoTextbox(txtEstatus, rbnHabilitado, "1");
         }
 
         private void rbnInactivo_CheckedChanged(object sender, EventArgs e)
         {
-            navegador1.funCambioEstatusRBVista(txtEstatus, rbnInhabilitado, "0");
+            navegador1.CambioEstadoTextbox(txtEstatus, rbnInhabilitado, "0");
         }
 
         private void txtEstatus_TextChanged(object sender, EventArgs e)
         {
-            navegador1.funSetearRBVista(rbnHabilitado, rbnInhabilitado, txtEstatus);
+            navegador1.ActivaRadiobtn(rbnHabilitado, rbnInhabilitado, txtEstatus);
         }
     }
 }
