@@ -218,7 +218,7 @@ namespace CapaModeloNav
         /*metodoObtieneRutaReporte
          Obtiene la ruta que proporciona la base de datos según la vista que el usuario tenga activa.
          */
-        public string funReportes(string idAplicacion, string campoRuta, string campoB, string tablaR)
+        public string obtieneRutaReporte(string idAplicacion, string campoRuta, string campoB, string tablaR)
         {
             string ruta = "";
             try
