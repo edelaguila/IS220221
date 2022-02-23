@@ -10,3 +10,9 @@ C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Navegador\DLL
 C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
 C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModeloNav.dll
 C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModeloNav.pdb
+C:\Users\ZUZU\Desktop\CapaVista\Componentes\Navegador\DLLnav\CapaModelo\bin\Debug\CapaModeloNav.dll
+C:\Users\ZUZU\Desktop\CapaVista\Componentes\Navegador\DLLnav\CapaModelo\bin\Debug\CapaModeloNav.pdb
+C:\Users\ZUZU\Desktop\CapaVista\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModelo.csproj.AssemblyReference.cache
+C:\Users\ZUZU\Desktop\CapaVista\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
+C:\Users\ZUZU\Desktop\CapaVista\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModeloNav.dll
+C:\Users\ZUZU\Desktop\CapaVista\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModeloNav.pdb
