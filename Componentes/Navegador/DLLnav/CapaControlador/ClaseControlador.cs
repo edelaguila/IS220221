@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Odbc;
@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaModelo;
+using CapaModeloNav;
 using System.Collections;
 namespace CapaControlador
 {
@@ -16,12 +17,13 @@ namespace CapaControlador
         TextBox[] texts;
         Control control;
 
-        ClaseModelo modelo = new ClaseModelo();
+        ClaseModeloSegunda ModeloSegunda = new ClaseModeloSegunda();
+        ClaseModeloTercera ModeloTercera = new ClaseModeloTercera();
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
         public TextBox[] ordenandoTextos(Control parent)
         {
-            texts = modelo.funTexts(parent);
+            texts = ModeloTercera.AsignaAlias(parent);
             control = parent;
             TextBox[] alias = new TextBox[texts.Length];
 
@@ -36,9 +38,9 @@ namespace CapaControlador
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void funAsignarAliasControl(TextBox[] alias, string tabla, string BD)
+        public void comparaTagscampoBD(TextBox[] alias, string tabla, string BD)
         {
-            errores = modelo.funAsignarAlias(alias, tabla, BD);
+            errores = ModeloTercera.comparaTagscampoBD(alias, tabla, BD);
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
@@ -46,8 +48,8 @@ namespace CapaControlador
         {
             if (String.IsNullOrEmpty(errores))
             {
-                modelo.funSalida(menu);
-                modelo.funDeshabilitarTexts(control);
+                modelo.MetodoSalir(menu);
+                modelo.metodoDeshabilitarTexts(control);
             }
             else
             {
@@ -56,107 +58,107 @@ namespace CapaControlador
             }
         }
 
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public int funUltimoEnteroControl(string tabla)
+        /*2*/
+        public int idSiguienteDeNuevoIngreso(string tabla)
         {
             int longitud = texts.Length;
-            int entero = modelo.funUltimoEntero(tabla, texts[longitud - 1].Tag.ToString());
+            int entero = ModeloTercera.idSiguienteDeNuevoIngreso(tabla, texts[longitud - 1].Tag.ToString());
 
             return entero;
         }
 
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
-        public void funLlenarComboControl(ComboBox cbx, string tabla, string value, string display, string estatus)
+        public void metodoLlenarCombo(ComboBox cbx, string tabla, string value, string display, string estatus)
         {
-            modelo.funLlenarCombo(cbx,tabla,value, display, estatus);
+            ModeloSegunda.metodoLlenarCombo(cbx,tabla,value, display, estatus);
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void funSeleccionarDTControl(DataGridView data)
+        public void SeleccionDeFilaDGV(DataGridView data)
         {
-            modelo.funSeleccionarDT(data);
+            ModeloTercera.SeleccionDeFilaDGV(data);
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void funSetearRBControl(RadioButton activo, RadioButton inactivo, TextBox estatus)
+        public void activaRadiobtn(RadioButton activo, RadioButton inactivo, TextBox estatus)
         {
-            modelo.funSetearRB(activo, inactivo, estatus);
+            ModeloSegunda.activaRadiobtn(activo, inactivo, estatus);
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void funCambioEstatusRBControl(TextBox estado, RadioButton AI, string cadenaEstado)
+        public void CambioEstadoTextBox(TextBox estado, RadioButton AI, string cadenaEstado)
         {
-            modelo.funCambioEstatusRB(estado, AI, cadenaEstado);
+            ModeloTercera.CambioEstadoTextBox(estado, AI, cadenaEstado);
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
-        public void funComboTextboxControl(ComboBox combo, TextBox combotexto)
+        public void enviarDatoCbxaTextbox(ComboBox combo, TextBox combotexto)
         {
-            modelo.funComboTextbox(combo, combotexto);
+            ModeloSegunda.enviarDatoCbxaTextbox(combo, combotexto);
 
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
-        public void funTextboxComboControl(ComboBox combo, TextBox combotexto)
+        public void SeleccionarElementoEnComboBox(ComboBox combo, TextBox combotexto)
         {
-            modelo.funTextboxCombo(combo, combotexto);
+            ModeloTercera.SeleccionarElementoEnComboBox(combo, combotexto);
         }
 
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
-        public void funDPTextBoxControl(DateTimePicker date, TextBox textoDate)
+        public void CambiarFormatoFecha(DateTimePicker date, TextBox textoDate)
         {
-            modelo.funDPTextBox(date,textoDate);
+            ModeloSegunda.CambiarFormatoFecha(date,textoDate);
 
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void funTextBoxDPTControl(DateTimePicker date, TextBox textoDate)
+        public void SeleccionarFechaDTP(DateTimePicker date, TextBox textoDate)
         {
-            modelo.funTextBoxDPT(date, textoDate);
+            ModeloTercera.SeleccionarFechaDTP(date, textoDate);
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
-        public string funReportesControl(string idAplicacion, string campoRuta, string campoB, string tablaR)
+        public string obtieneRutaReporte(string idAplicacion, string campoRuta, string campoB, string tablaR)
         {
-            string ruta = modelo.funReportes(idAplicacion, campoRuta, campoB, tablaR);
+            string ruta = ModeloSegunda.obtieneRutaReporte(idAplicacion, campoRuta, campoB, tablaR);
             return ruta;
         }
 
         //Wilber Segura 0901-18-13952
         public ArrayList consIndividual(string id, string tablas, int cuenta, string referencia)//Metodo necesario para la actualizacion
         {
-            var arList = modelo.consIndividual(id, tablas, cuenta, referencia);
+            var arList = ModeloSegunda.consIndividual(id, tablas, cuenta, referencia);
             return arList;
         }
         
 
-        public DataTable llenarTbl(string tablaDB)//Jaime López 0901-18-735
+        public DataTable ActualizarDGV(string tablaDB)//Jaime López 0901-18-735
         {
             //cambiado 18/10/2021-01:30pm, todo el odbc se paso a realizar solo en la modelo
             //para aumentar la seguridad
-            return modelo.llenarTbl(tablaDB);
+            return ModeloTercera.ActualizarDGV(tablaDB);
         }
         public bool modificar(TextBox[] campos, string tablas)//Modificar de Wilber Enrique Segura Ramirez 0901-18-13952
         {
-          return modelo.modificar(campos, tablas); 
+          return ModeloSegunda.modificar(campos, tablas); 
         }
 
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public bool insertar(TextBox[] campos, string tablas)
+        /*1*/
+        public bool insertarDatostabla(TextBox[] campos, string tablas)
         {
-            return modelo.insertar(campos, tablas);
+            return ModeloSegunda.insertarDatostabla(campos, tablas);
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void funEliminarControl(TextBox[] arreglo, string tabla, string campoEstado)
+        public void InhabilitarRegistro(TextBox[] arreglo, string tabla, string campoEstado)
         {
-            modelo.eliminar(arreglo, tabla, campoEstado);
+            ModeloSegunda.InhabilitarRegistro(arreglo, tabla, campoEstado);
         }
 
         /*Geovani Fernando Mendoza - 9959-18-15407*/
-        public void funAyudaControl(string idAplicacion, string nombreCampo, string tablaA)
+        public void LlamadaAyudas(string idAplicacion, string nombreCampo, string tablaA)
         {
-            modelo.funAyuda(idAplicacion, nombreCampo, tablaA, control);
+            ModeloTercera.LlamadaAyudas(idAplicacion, nombreCampo, tablaA, control);
 
             //MessageBox.Show(tablaA);
 
