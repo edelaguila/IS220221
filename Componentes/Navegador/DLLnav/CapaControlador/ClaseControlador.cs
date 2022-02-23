@@ -48,8 +48,8 @@ namespace CapaControlador
         {
             if (String.IsNullOrEmpty(errores))
             {
-                modelo.MetodoSalir(menu);
-                modelo.metodoDeshabilitarTexts(control);
+                ModeloSegunda.metodoSalir(menu);
+                ModeloSegunda.metodoDeshabilitarTexts(control);
             }
             else
             {
@@ -82,7 +82,7 @@ namespace CapaControlador
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
         public void activaRadiobtn(RadioButton activo, RadioButton inactivo, TextBox estatus)
         {
-            ModeloSegunda.activaRadiobtn(activo, inactivo, estatus);
+            ModeloSegunda.metodoActivaRadiobtn(activo, inactivo, estatus); 
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
@@ -94,7 +94,7 @@ namespace CapaControlador
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
         public void enviarDatoCbxaTextbox(ComboBox combo, TextBox combotexto)
         {
-            ModeloSegunda.enviarDatoCbxaTextbox(combo, combotexto);
+            ModeloSegunda.metodoEnviarDatoCbxaTextbox(combo, combotexto); 
 
         }
 
@@ -107,7 +107,7 @@ namespace CapaControlador
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
         public void CambiarFormatoFecha(DateTimePicker date, TextBox textoDate)
         {
-            ModeloSegunda.CambiarFormatoFecha(date,textoDate);
+            ModeloSegunda.metodoCambiarFormatoFecha(date,textoDate); 
 
         }
 
@@ -124,12 +124,7 @@ namespace CapaControlador
             return ruta;
         }
 
-        //Wilber Segura 0901-18-13952
-        public ArrayList consIndividual(string id, string tablas, int cuenta, string referencia)//Metodo necesario para la actualizacion
-        {
-            var arList = ModeloSegunda.consIndividual(id, tablas, cuenta, referencia);
-            return arList;
-        }
+
         
 
         public DataTable ActualizarDGV(string tablaDB)//Jaime López 0901-18-735
@@ -140,19 +135,19 @@ namespace CapaControlador
         }
         public bool modificar(TextBox[] campos, string tablas)//Modificar de Wilber Enrique Segura Ramirez 0901-18-13952
         {
-          return ModeloSegunda.modificar(campos, tablas); 
+          return ModeloTercera.Modificar(campos, tablas); 
         }
 
         /*1*/
         public bool insertarDatostabla(TextBox[] campos, string tablas)
         {
-            return ModeloSegunda.insertarDatostabla(campos, tablas);
+            return ModeloSegunda.metodoInsertarDatosTabla(campos, tablas);
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
         public void InhabilitarRegistro(TextBox[] arreglo, string tabla, string campoEstado)
         {
-            ModeloSegunda.InhabilitarRegistro(arreglo, tabla, campoEstado);
+            ModeloSegunda.metodoInhabilitarRegistro(arreglo, tabla, campoEstado);
         }
 
         /*Geovani Fernando Mendoza - 9959-18-15407*/
