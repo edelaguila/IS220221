@@ -8,3 +8,14 @@ F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitac
 F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacora.csproj.CopyComplete
 F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacoraLogin.dll
 F:\Ingenieria de Software\Primera revision\Git\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacoraLogin.pdb
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\VistaBitacoraLogin.dll
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\VistaBitacoraLogin.pdb
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\Bitacora.dll
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\Dapper.dll
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\Bitacora.pdb
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\bin\Debug\Dapper.xml
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacora.csprojAssemblyReference.cache
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacora.csproj.CoreCompileInputs.cache
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacora.csproj.CopyComplete
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacoraLogin.dll
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\IS220221\Componentes\Seguridad\CodigoBitacora\VistaBitacoraLogin\obj\Debug\VistaBitacoraLogin.pdb
