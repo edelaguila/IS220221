@@ -398,6 +398,51 @@ namespace CapaModeloNav
             dataTable.Fill(table);
             return table;
         }
+        
+        public bool Modificar(TextBox[] campos, string tablas)//Modificar de Wilber Enrique Segura Ramirez 0901-18-13952
+        {
+            int resultado = 0;
+            Conexion cn = new Conexion();
+            OdbcConnection conn = cn.conexion();
+            string cad = "Entro a la conexion";
+            string sentencia = "update " + tablas + " set ";
+            for (int i = 1; i < campos.Length; i++)
+            {
+                if (i < campos.Length - 1)
+                {
+                    sentencia += campos[i].Tag.ToString() + " = '" + campos[i].Text + "', ";
+                }
+                else
+                {
+                    sentencia += campos[i].Tag.ToString() + " = '" + campos[i].Text + "' ";
+                }
+            }
+            sentencia += "where " + campos[0].Tag.ToString() + " = '" + campos[0].Text + "';";
+            cad = "Sentencia creada " + sentencia;
+            try
+            {
+                OdbcCommand ingreso = new OdbcCommand(sentencia, conn);
+                cad = "Se logró conexion";
+                ingreso.ExecuteNonQuery();
+                cad = "se ejecutó la sentencia";
+                resultado = 1;
+            }
+            catch (OdbcException Error)
+            {
+                cad = Error.Message;
+                Console.WriteLine("Error al actualizar " + Error);
+
+            }
+            cn.desconexion(conn);
+            if (resultado == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 }
