@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="ClaseModelo.cs" />
     <Compile Include="ClaseModeloSegunda.cs" />
+    <Compile Include="ClaseModeloTercera.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
