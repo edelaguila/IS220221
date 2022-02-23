@@ -11,7 +11,7 @@ using CapaModelo;
 
 namespace CapaModeloNav
 {
-    class ClaseModeloTercera
+    public class ClaseModeloTercera
     {
 
         Conexion conexion = new Conexion();
