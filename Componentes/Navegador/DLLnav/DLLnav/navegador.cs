@@ -58,7 +58,7 @@ namespace DLL.nav
             InitializeComponent();
         }
 
-        public void ActualizarPermisos() //Liam Patrick Bernard García 0901-18-10092, Jaime López 0901-18-735
+        public void ActualizaPermisos() //Liam Patrick Bernard García 0901-18-10092, Jaime López 0901-18-735
         {
             CapaControladorSeguridadHSC.Controlador controladorSeguridad = new CapaControladorSeguridadHSC.Controlador();
             idusuario = controladorSeguridad.consultausuario(usuario);
@@ -181,14 +181,14 @@ namespace DLL.nav
         }*/
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public TextBox[] funAsignandoTexts(Control parent)
+        public TextBox[] ClasificaTextboxsegunParent(Control parent)
         {
             controles = parent;
             return control.ordenandoTextos(parent);
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void funAsignarAliasVista(TextBox[] alias, string tabla, string BD)
+        public void ObtenerCamposdeTabla(TextBox[] alias, string tabla, string BD)
         {
             control.funAsignarAliasControl(alias, tabla, BD);
             campos = alias;
@@ -197,13 +197,13 @@ namespace DLL.nav
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void funAsignarSalidadVista(Form menu)
+        public void MetodoSalirVista(Form menu)
         {
             control.funAsignarSalidadControl(menu);
         }
 
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
-        public void funLlenarComboControl(ComboBox cbx, string tabla, string value, string display, string estatus)
+        public void LlenarCombobox(ComboBox cbx, string tabla, string value, string display, string estatus)
         {
             referencia1.Add(tabla);
             referencia2.Add(value);
@@ -215,50 +215,50 @@ namespace DLL.nav
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void funSeleccionarDTVista(DataGridView data)
+        public void SelecciondeFilaDGV(DataGridView data)
         {
             dataE = data;
             control.funSeleccionarDTControl(data);
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void funSetearRBVista(RadioButton activo, RadioButton inactivo, TextBox estatus)
+        public void ActivaRadiobtn(RadioButton activo, RadioButton inactivo, TextBox estatus)
         {
             control.funSetearRBControl(activo, inactivo, estatus);
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void funCambioEstatusRBVista(TextBox estado, RadioButton AI, string cadenaEstado)
+        public void CambioEstadoTextbox(TextBox estado, RadioButton AI, string cadenaEstado)
         {
             control.funCambioEstatusRBControl(estado, AI, cadenaEstado);
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
-        public void funComboTextboxVista(ComboBox combo, TextBox combotexto)
+        public void EnviarDatoComboaTextbox(ComboBox combo, TextBox combotexto)
         {
             control.funComboTextboxControl(combo, combotexto);
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
-        public void funTextboxComboVista(ComboBox combo, TextBox combotexto)
+        public void SeleccionarElementosenCombo(ComboBox combo, TextBox combotexto)
         {
             control.funTextboxComboControl(combo, combotexto);
         }
 
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
-        public void funDPTextBoxVista(DateTimePicker date, TextBox textoDate)
+        public void CambiarFormatoFecha(DateTimePicker date, TextBox textoDate)
         {
             control.funDPTextBoxControl(date, textoDate);
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void funTextBoxDPTVista(DateTimePicker date, TextBox textoDate)
+        public void SeleciconarFechaDTP(DateTimePicker date, TextBox textoDate)
         {
             control.funTextBoxDPTControl(date,textoDate);
         }
 
 
-        private void actualizarCombo()
+        private void ActualizarCombobox()
         {
             for (int i=0; i < referencia0.Count; i++)
             {
@@ -271,37 +271,37 @@ namespace DLL.nav
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void mensaje()
+        public void EnviarMensaje()
         {
             MessageBox.Show("Prueba de Funcion #2");
         }
 
-        public void mensaje2()
+        public void EnviarMensaje2()
         {
             MessageBox.Show("Prueba de Funcion #3");
         }
 
         /*private void pnlBgM_MouseClick(object sender, MouseEventArgs e)
         {
-            mensaje();
+            EnviarMensaje();
         }
 
         private void pnlBgG_MouseClick(object sender, MouseEventArgs e)
         {
-            mensaje2();
+            EnviarMensaje2();
         }
         */
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void pruebaMensaje(string cadena)
+        public void PruebaEnvioMensaje(string cadena)
         {
             MessageBox.Show("La cadena es: " + cadena);
         }
         
-        private void desactivarBotones(int tipo) //Jaime López 0901-18-735
+        private void DesactivarBotones(int tipo) //Jaime López 0901-18-735
         {
 
-            //desactivarBotones cambiara los .Enabled de los botones
+            //DesactivarBotones cambiara los .Enabled de los botones
             //indicados
             /*
              * 0 Desactiva los botones de cancelar y guardar. Activa ingreso, modificación, eliminación, consulta, reporte y actu
@@ -383,8 +383,8 @@ namespace DLL.nav
         private void btnCancelar_Click(object sender, EventArgs e)//Jaime López 0901-18-735
         {
             estado = 0;
-            desactivarBotones(0);
-            manipularTextboxs(0);
+            DesactivarBotones(0);
+            ManipularEstadodeElementosVista(0);
 
             /* Daniel Enrique Navas Hernandez 0901-18-15032*/
         //    Bitacora cancelar = new Bitacora();
@@ -449,9 +449,9 @@ namespace DLL.nav
                     break;
             }
             estado = 0;
-            desactivarBotones(0);
-            manipularTextboxs(0);
-            llenaTabla();//recarga los datos de la tabla
+            DesactivarBotones(0);
+            ManipularEstadodeElementosVista(0);
+            LlenarTabla();//recarga los datos de la tabla
 
             /* Daniel Enrique Navas Hernandez 0901-18-15032*/
             //Bitacora guardar = new Bitacora();
@@ -501,8 +501,8 @@ namespace DLL.nav
             }
 
             estado = 1;
-            desactivarBotones(1);
-            manipularTextboxs(1);
+            DesactivarBotones(1);
+            ManipularEstadodeElementosVista(1);
             /*Daniel Enrique Navas Hernandez 0901-18-15032*/ 
             //Bitacora insertar = new Bitacora();
             //insertar.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "insertar");
@@ -515,7 +515,7 @@ namespace DLL.nav
             {
                 if (dvgConsulta.RowCount - 1 > 0)
                 {
-                    manipularTextboxs(3);
+                    ManipularEstadodeElementosVista(3);
                    /* int cuenta = campos.Length;
                     string referencia = campos[0].Tag.ToString();//Nos sirve para obtener el campo para hacer la consulta
                     string id = dvgConsulta.CurrentRow.Cells[0].Value.ToString();
@@ -525,7 +525,7 @@ namespace DLL.nav
                         campos[i].Text = (string)arList[i];
                     }*/
                     estado = 2;
-                    desactivarBotones(1);
+                    DesactivarBotones(1);
                 }
                 else
                 {
@@ -550,9 +550,9 @@ namespace DLL.nav
             control.funEliminarControl(campos, tablas, campoEstado);
             //control.funSeleccionarDTControl(dataE);
             estado = 3;
-            desactivarBotones(0);
-            manipularTextboxs(0);
-            llenaTabla();
+            DesactivarBotones(0);
+            ManipularEstadodeElementosVista(0);
+            LlenarTabla();
 
             /*Daniel Enrique Navas Hernandez 0901-18-15032*/
             //Bitacora eliminar = new Bitacora();
@@ -563,7 +563,7 @@ namespace DLL.nav
 
 
         //boton de verificacion para navegacion sin registros
-        public Boolean veriNavegar(){//Kevin Rolando González Ramírez 0901-18-1387
+        public Boolean VerificarContenidodeTabla(){//Kevin Rolando González Ramírez 0901-18-1387
             
             if (dvgConsulta.RowCount-1 > 0)
                
@@ -577,13 +577,13 @@ namespace DLL.nav
         //funcion para pedir datagridView
 
         
-        public void pideGrid(DataGridView tabla)//Kevin Rolando González Ramírez 0901-18-1387
+        public void ObtenerNombreDGV(DataGridView tabla)//Kevin Rolando González Ramírez 0901-18-1387
         {
             dvgConsulta = tabla;
         }
 
        
-        public void llenaTabla() //Jaime López 0901-18-735
+        public void LlenarTabla() //Jaime López 0901-18-735
         {
             DataTable dt = control.llenarTbl(tablas);
             dvgConsulta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -595,7 +595,7 @@ namespace DLL.nav
         {
 
             //verificacion de la existencia de registros
-            if (veriNavegar() == false) { 
+            if (VerificarContenidodeTabla() == false) { 
             MessageBox.Show("No tiene registros actualmente, no se puede navegar");
                 return;
               }
@@ -628,7 +628,7 @@ namespace DLL.nav
 
                 }
             }
-            cargaData();
+            ContabilizarCamposenBD();
             /*Daniel Enrique Navas Hernandez 0901-18-15032*/
             //Bitacora botonSiguiente = new Bitacora();
             //botonSiguiente.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "Boton Siguiente");
@@ -637,7 +637,7 @@ namespace DLL.nav
         private void btnAnterior_Click(object sender, EventArgs e)//Kevin Rolando González Ramírez 0901-18-1387
         {
             //verificacion de la existencia de registros
-            if (veriNavegar() == false)
+            if (VerificarContenidodeTabla() == false)
             {
                 MessageBox.Show("No tiene registros actualmente, no se puede navegar");
                 return;
@@ -681,7 +681,7 @@ namespace DLL.nav
 
                 */
             }
-            cargaData();
+            ContabilizarCamposenBD();
             /*Daniel Enrique Navas Hernandez 0901-18-15032*/
             //Bitacora botonAnterior = new Bitacora();
             //botonAnterior.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "Boton Anterior");
@@ -691,7 +691,7 @@ namespace DLL.nav
         {
 
             //verificacion de la existencia de registros
-            if (veriNavegar() == false)
+            if (VerificarContenidodeTabla() == false)
             {
                 MessageBox.Show("No tiene registros actualmente, no se puede navegar");
                 return;
@@ -710,7 +710,7 @@ namespace DLL.nav
                 arList.Add(col);//vamos guardando todos los campos
 
             }
-            cargaData();
+            ContabilizarCamposenBD();
 
             /*Daniel Enrique Navas Hernandez 0901-18-15032*/
             //Bitacora inicio = new Bitacora();
@@ -720,7 +720,7 @@ namespace DLL.nav
         private void btnFinal_Click(object sender, EventArgs e)//Kevin Rolando González Ramírez 0901-18-1387
         {
             //verificacion de la existencia de registros
-            if (veriNavegar() == false)
+            if (VerificarContenidodeTabla() == false)
             {
                 MessageBox.Show("No tiene registros actualmente, no se puede navegar");
                 return;
@@ -739,7 +739,7 @@ namespace DLL.nav
                 arList.Add(col);//vamos guardando todos los campos
 
             }
-            cargaData();
+            ContabilizarCamposenBD();
 
             /*Daniel Enrique Navas Hernandez 0901-18-15032*/
            // Bitacora final = new Bitacora();
@@ -754,7 +754,7 @@ namespace DLL.nav
         /* Daniel Enrique Navas Hernandez 0901-18-15032 */ 
         private void btnActualizar_Click(object sender, EventArgs e)//Daniel Navas
         {
-            llenaTabla();
+            LlenarTabla();
             //falta actu de combos
             for (int i = 0; i < campos.Length; i++)
             {
@@ -763,7 +763,7 @@ namespace DLL.nav
 
             }
 
-            actualizarCombo();
+            ActualizarCombobox();
 
             /*Daniel Enrique Navas Hernandez 0901-18-15032*/
            // Bitacora actualizar = new Bitacora();
@@ -781,7 +781,7 @@ namespace DLL.nav
         }
         Form generic;
 
-        public void pedirRef(Form generico)//Jaime López 0901-18-735
+        public void ObtenerReferenciaFormActual(Form generico)//Jaime López 0901-18-735
         {
             generic = generico;
         }
@@ -802,7 +802,7 @@ namespace DLL.nav
             //ayuda.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "Ayuda");
         }
 
-        private void manipularTextboxs(int modo)//Josue Zapata 9959-18-4829 y Jaime López 0901-18-735
+        private void ManipularEstadodeElementosVista(int modo)//Josue Zapata 9959-18-4829 y Jaime López 0901-18-735
         {
             /*
              * 0 desactiva todos los controles de entrada del usuario y limpia los campos
@@ -901,7 +901,7 @@ namespace DLL.nav
             }
 
         }
-        public void cargaData()//Kevin Rolando González Ramírez 0901-18-1387
+        public void ContabilizarCamposenBD()//Kevin Rolando González Ramírez 0901-18-1387
         {
             int cantidadCampos = dvgConsulta.Columns.Count;
             /* //Liam Patrick
@@ -919,13 +919,13 @@ namespace DLL.nav
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void funReportesVista(string campoRuta, string campoB, string tablaR)
+        public void LlamarRutaReporte(string campoRuta, string campoB, string tablaR)
         {
             formReporte.ruta = control.funReportesControl(idAplicacion, campoRuta, campoB, tablaR);
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void funMostrarFormR()
+        public void MostrarVistaReporte()
         {
             formReporte.Show();
         }
@@ -939,7 +939,7 @@ namespace DLL.nav
             }
             else
             {
-                funMostrarFormR();
+                MostrarVistaReporte();
             }
         }
 
@@ -952,7 +952,7 @@ namespace DLL.nav
             }
             else
             {
-                funMostrarFormR();
+                MostrarVistaReporte();
             }
             /*Daniel Enrique Navas Hernandez 0901-18-15032*/
             //Bitacora reporteador = new Bitacora();
