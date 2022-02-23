@@ -58,7 +58,7 @@ namespace DLL.nav
             InitializeComponent();
         }
 
-        public void funActualizarPermisos() //Liam Patrick Bernard García 0901-18-10092, Jaime López 0901-18-735
+        public void ActualizarPermisos() //Liam Patrick Bernard García 0901-18-10092, Jaime López 0901-18-735
         {
             CapaControladorSeguridadHSC.Controlador controladorSeguridad = new CapaControladorSeguridadHSC.Controlador();
             idusuario = controladorSeguridad.consultausuario(usuario);
