@@ -15,7 +15,7 @@ using CapaModelo;
 
 namespace CapaModeloNav
 {
-    class ClaseModeloSegunda
+    public class ClaseModeloSegunda
     {   
         Conexion conexion = new Conexion();
         string tablaBD = "";
