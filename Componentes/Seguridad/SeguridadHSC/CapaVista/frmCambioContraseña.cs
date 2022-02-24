@@ -41,6 +41,7 @@ namespace CapaVistaSeguridadHSC
                     Bitacora loggear = new Bitacora();
                     loggear.guardarEnBitacora(IdUsuario, "1", "0010", "Confirmar cambio");
                     // Fin bitácora
+                    MessageBox.Show("¡Contraseña Modificada!");
 
                     this.Hide();
                 }
