@@ -118,7 +118,7 @@ namespace CapaVistaSeguridadHSC
         //Kevin Flores 9959-18-17632
         private void registrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRegistrarUsuario form3 = new frmRegistrarUsuario();
+            frmMantenimientoUsuario form3 = new frmMantenimientoUsuario();
             form3.MdiParent = this;
             //Jorge González 0901-18-3920
             Bitacora loggear = new Bitacora();

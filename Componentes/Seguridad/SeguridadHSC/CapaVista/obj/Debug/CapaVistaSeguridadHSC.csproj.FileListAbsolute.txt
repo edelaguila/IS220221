@@ -273,13 +273,11 @@ C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVi
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmCambioContraseña.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmLoginHSC.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmMantenimientoAplicacion.resources
-C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmMantenimientoModulo.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmMantenimientoPerfil.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmMIDSeguridad.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmPerfiles.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmPermisos.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmRecuperarContraseña.resources
-C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmRegistrarUsuario.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.Properties.Resources.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.csproj.GenerateResource.cache
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.csproj.CoreCompileInputs.cache
