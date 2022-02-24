@@ -191,7 +191,7 @@ namespace CapaModeloNav
             //primer If, uso no definido            
             IF1(alias, errores, tabla, BD);
 
-            //segundo If, uso no definido  
+            //segundo If, compara datos de tabla en la BD
             IF2(alias, errores, tabla, BD);
 
 
