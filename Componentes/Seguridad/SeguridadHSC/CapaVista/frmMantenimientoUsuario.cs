@@ -18,7 +18,7 @@ namespace CapaVistaSeguridadHSC
         public frmMantenimientoUsuario()
         {
             InitializeComponent();
-            //TextBox[] alias = { txtID, txtCodigoMarca, txtNombre, txtFecha, txtDescripcion, txtStock, txtPrecio, txtEstatus};
+            //Usuario
             TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
             navegador1.ObtenerCamposdeTabla(alias, "usuario", "hotelSanCarlos");
             navegador1.MetodoSalirVista(this);
@@ -45,8 +45,6 @@ namespace CapaVistaSeguridadHSC
             navegador1.ObtenerNombreDGV(this.dtgUsuarios);
             navegador1.LlenarTabla();
             navegador1.ObtenerReferenciaFormActual(this);
-            //String cadena = txtprueba.Text;
-            //navegador1.pruebaMensaje(cadena);
         }
 
         private void labelClientes_Click(object sender, EventArgs e)

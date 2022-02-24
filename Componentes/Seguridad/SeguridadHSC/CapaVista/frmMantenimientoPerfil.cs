@@ -21,9 +21,33 @@ namespace CapaVistaSeguridadHSC
         public frmMantenimientoPerfil()
         {
             InitializeComponent();
-            CenterToScreen();
-            actualizardatagriew();
-            permisos = bloqueo(usuario, idaplicacion);
+            //Usuario
+            TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
+            navegador1.ObtenerCamposdeTabla(alias, "perfil", "hotelSanCarlos");
+            navegador1.MetodoSalirVista(this);
+            // navegador1.funLlenarComboControl(cbxCodMarca, "marcaP", "idMarca", "nombre", "estatus");
+
+            //inicio de elementos para dar de baja
+            navegador1.campoEstado = "Estado";
+            //fin de elementos para dar de baja
+
+            /* Inicio ID Aplicacion usada para reportes y ayudas */
+            navegador1.idAplicacion = "1002";
+            /* Inicio ID Aplicacion usada para reportes y ayudas */
+
+            //inicio de elementos para ejecutar la ayuda
+            navegador1.tablaAyuda = "Aplicacion";
+            navegador1.campoAyuda = "pkId";
+            //fin de elementos para ejecutar la ayuda
+
+
+            // Inicio datos para ejecurar reportes
+            navegador1.LlamarRutaReporte("ruta", "idAplicacion", "Reporte");
+            // Final datos para ejecutar reportes
+
+            navegador1.ObtenerNombreDGV(this.dtgPerfiles);
+            navegador1.LlenarTabla();
+            navegador1.ObtenerReferenciaFormActual(this);
         }
 
         private string tabla = "perfil";
@@ -33,26 +57,26 @@ namespace CapaVistaSeguridadHSC
         public void actualizardatagriew()
         {
             DataTable dt = cn.llenarTbl(tabla);
-            perfilTabla.DataSource = dt;
+            dtgPerfiles.DataSource = dt;
         }
 
         public void funLimpiar()
         {
             textBox1.Text = "";
             textBox2.Text = "";
-            btnHabilitado.Checked = false;
-            btnInhabilitado.Checked = false;
-            textBox3.Text = "";
+            rbnHabilitado.Checked = false;
+            rbnInhabilitado.Checked = false;
+            txtEstatus.Text = "";
         }
 
         private void btnHabilitado_CheckedChanged(object sender, EventArgs e)
         {
-            textBox3.Text = "1";
+            navegador1.CambioEstadoTextbox(txtEstatus, rbnHabilitado, "1"); /*rbnActivo_CheckedChanged*/
         }
 
         private void btnInhabilitado_CheckedChanged(object sender, EventArgs e)
         {
-            textBox3.Text = "0";
+            navegador1.CambioEstadoTextbox(txtEstatus, rbnInhabilitado, "0"); /*rbnInactivo_CheckedChanged*/
         }
 
         private void frmMantenimientoPerfil_Load(object sender, EventArgs e)
@@ -88,7 +112,7 @@ namespace CapaVistaSeguridadHSC
                     //Jorge González 0901-18-3920
                     loggear.guardarEnBitacora(IdUsuario, "1", "0004", "Inserción realizada");
                     //
-                    cn.insertarPerfil(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text));
+                    cn.insertarPerfil(textBox1.Text, textBox2.Text, int.Parse(txtEstatus.Text));
                     MessageBox.Show("Insercion realizada");
                     funLimpiar();
                 }
@@ -113,7 +137,7 @@ namespace CapaVistaSeguridadHSC
                 Bitacora loggear = new Bitacora();
                 loggear.guardarEnBitacora(IdUsuario, "1", "0004", "Modificación Exitosa");
                 //
-                cn.modificarPerfil(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text));
+                cn.modificarPerfil(textBox1.Text, textBox2.Text, int.Parse(txtEstatus.Text));
                 MessageBox.Show("Insercion realizada");
                 funLimpiar();
             }
@@ -161,17 +185,17 @@ namespace CapaVistaSeguridadHSC
         {
             try
             {
-                textBox1.Text = perfilTabla.CurrentRow.Cells[0].Value.ToString();
-                textBox2.Text = perfilTabla.CurrentRow.Cells[1].Value.ToString();
-                textBox3.Text = perfilTabla.CurrentRow.Cells[2].Value.ToString();
+                textBox1.Text = dtgPerfiles.CurrentRow.Cells[0].Value.ToString();
+                textBox2.Text = dtgPerfiles.CurrentRow.Cells[1].Value.ToString();
+                txtEstatus.Text = dtgPerfiles.CurrentRow.Cells[2].Value.ToString();
 
-                if (textBox3.Text == "1")
+                if (txtEstatus.Text == "1")
                 {
-                    btnHabilitado.Checked = true;
+                    rbnHabilitado.Checked = true;
                 }
-                else if (textBox3.Text == "0")
+                else if (txtEstatus.Text == "0")
                 {
-                    btnInhabilitado.Checked = true;
+                    rbnInhabilitado.Checked = true;
                 }
             }
             catch
@@ -185,6 +209,16 @@ namespace CapaVistaSeguridadHSC
 
 
             return cadena;
+        }
+
+        private void dtgPerfiles_SelectionChanged(object sender, EventArgs e)
+        {
+            navegador1.SelecciondeFilaDGV(dtgPerfiles);
+        }
+
+        private void txtEstatus_TextChanged(object sender, EventArgs e)
+        {
+            navegador1.ActivaRadiobtn(rbnHabilitado, rbnInhabilitado, txtEstatus); /*txtEstatus_TextChanged*/
         }
     }
 }

@@ -31,3 +31,14 @@ C:\Users\ZUZU\Desktop\CapaVista\Componentes\Navegador\DLLnav\CapaControlador\bin
 C:\Users\ZUZU\Desktop\CapaVista\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaModeloNav.pdb
 C:\Users\ZUZU\Desktop\CapaVista\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaModeloSeguridadHSC.pdb
 C:\Users\ZUZU\Desktop\CapaVista\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaControladorNav.dll
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaControladorNav.pdb
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaModeloNav.dll
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaModeloSeguridadHSC.dll
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaModeloNav.pdb
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaModeloSeguridadHSC.pdb
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControlador.csproj.AssemblyReference.cache
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControlador.csproj.CoreCompileInputs.cache
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControladorNav.dll
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControladorNav.pdb
