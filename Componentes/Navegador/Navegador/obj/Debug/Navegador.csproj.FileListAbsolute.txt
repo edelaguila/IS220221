@@ -48,3 +48,11 @@ F:\Ingenieria de Software\Primera revision\Git\Componentes\Navegador\Navegador\o
 F:\Ingenieria de Software\Primera revision\Git\Componentes\Navegador\Navegador\obj\Debug\Navegador.csproj.CopyComplete
 F:\Ingenieria de Software\Primera revision\Git\Componentes\Navegador\Navegador\obj\Debug\Navegador.exe
 F:\Ingenieria de Software\Primera revision\Git\Componentes\Navegador\Navegador\obj\Debug\Navegador.pdb
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\Mantenimiento 2402\Mantenimiento 2702\IS220221\Componentes\Navegador\Navegador\obj\Debug\Navegador.csprojAssemblyReference.cache
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\Mantenimiento 2402\Mantenimiento 2702\IS220221\Componentes\Navegador\Navegador\obj\Debug\Navegador.Form1.resources
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\Mantenimiento 2402\Mantenimiento 2702\IS220221\Componentes\Navegador\Navegador\obj\Debug\Navegador.MDI.resources
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\Mantenimiento 2402\Mantenimiento 2702\IS220221\Componentes\Navegador\Navegador\obj\Debug\Navegador.Properties.Resources.resources
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\Mantenimiento 2402\Mantenimiento 2702\IS220221\Componentes\Navegador\Navegador\obj\Debug\Navegador.csproj.GenerateResource.cache
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\Mantenimiento 2402\Mantenimiento 2702\IS220221\Componentes\Navegador\Navegador\obj\Debug\Navegador.csproj.CoreCompileInputs.cache
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\Mantenimiento 2402\Mantenimiento 2702\IS220221\Componentes\Navegador\Navegador\obj\Debug\Navegador.exe
+C:\Users\Angel\Desktop\Prueba 2022\Nueva Rama\Mantenimiento 2402\Mantenimiento 2702\IS220221\Componentes\Navegador\Navegador\obj\Debug\Navegador.pdb
