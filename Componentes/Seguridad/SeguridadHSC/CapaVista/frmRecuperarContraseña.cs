@@ -44,7 +44,7 @@ namespace CapaVistaSeguridadHSC
                     else
                     {
                         //conAplicacion.recuperarContraseña( cbxUsuario.SelectedIndex.ToString(),txtConfirmacion.Text.Trim());
-                        string password = encriptar.funcEncryptString(key, txtConfirmacion.Text.Trim());
+                        string password = encriptar.metodoEncryptString(key, txtConfirmacion.Text.Trim());
                         conAplicacion.recuperarContraseña(cbxUsuario.SelectedIndex.ToString(), password);
 
                         MessageBox.Show("Modificación Realizada");

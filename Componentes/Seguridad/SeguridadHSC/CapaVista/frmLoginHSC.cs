@@ -51,7 +51,7 @@ namespace CapaVistaSeguridadHSC
             if (contador <= 3)
             {
                 Encriptar encriptar = new Encriptar();
-                string password = encriptar.funcEncryptString(key, txtClave.Text);
+                string password = encriptar.metodoEncryptString(key, txtClave.Text);
                 Console.WriteLine(password);
                 if (conAplicacion.funIniciarSesion(txtUsuario.Text, password) == 1)
                 {

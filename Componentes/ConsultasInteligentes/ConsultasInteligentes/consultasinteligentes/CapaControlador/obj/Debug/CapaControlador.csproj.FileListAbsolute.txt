@@ -16,3 +16,12 @@ C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\ConsultasInteligentes\Consult
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.dll
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.pdb
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\bin\Debug\CapaControlador.dll
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\bin\Debug\CapaControlador.pdb
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\bin\Debug\CapaModelo.dll
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\bin\Debug\CapaModelo.pdb
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.AssemblyReference.cache
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CoreCompileInputs.cache
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.dll
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.pdb

@@ -10,7 +10,7 @@ namespace CapaControladorSeguridadHSC
     {
         //Roberto Lopez 0901-18-4982
         //Funcion para encriptar
-        public string funcEncryptString(string key, string plainText)
+        public string metodoEncryptString(string key, string plainText)
         {
             byte[] iv = new byte[16];
             byte[] array;
@@ -40,7 +40,7 @@ namespace CapaControladorSeguridadHSC
         }
         //Roberto Lopez 0901-18-4982
         //fucion para desencriptar
-        public string funcDecryptString(string key, string cipherText)
+        public string metodoDecryptString(string key, string cipherText)
         {
             byte[] iv = new byte[16];
             byte[] buffer = Convert.FromBase64String(cipherText);
