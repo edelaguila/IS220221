@@ -68,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="datosUsuario.cs" />
+    <Compile Include="frmConfirmarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmarContraseña.Designer.cs">
+      <DependentUpon>frmConfirmarContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMantenimientoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmConfirmarContraseña.resx">
+      <DependentUpon>frmConfirmarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMantenimientoUsuario.resx">
       <DependentUpon>frmMantenimientoUsuario.cs</DependentUpon>
     </EmbeddedResource>

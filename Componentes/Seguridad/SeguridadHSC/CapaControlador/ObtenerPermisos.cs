@@ -4,6 +4,7 @@ namespace CapaControladorSeguridadHSC
 { //Jorge González 0901-18-3920
     public class ObtenerPermisos
     { static string Usuario;
+        static string Clave;
         OtorgarPermisos permisos = new OtorgarPermisos();
         public string funcPermisosPorAplicacion(string strUsuario)
         {
@@ -14,7 +15,11 @@ namespace CapaControladorSeguridadHSC
             get { return Usuario; }
             set { Usuario = value; }
         }
-
+        public string Hash
+        {
+            get { return Clave; }
+            set { Clave = value; }
+        }
 
 
     }

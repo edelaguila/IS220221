@@ -31,7 +31,7 @@ namespace CapaVistaSeguridadHSC
             {
                 if (txtNuevaContraseña.Text == txtConfirmarContraseña.Text)
                 {
-                    string password = encriptar.funcEncryptString(key, txtConfirmarContraseña.Text);
+                    string password = encriptar.metodoEncryptString(key, txtConfirmarContraseña.Text);
                     controladorPerfil.funcModificar_Contraseña(Usuario, password);
                     MessageBox.Show("Contraseña Actualizada");
                     txtNuevaContraseña.Text = "";

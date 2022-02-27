@@ -28,3 +28,18 @@ C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\ConsultasInteligentes\Consult
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.csproj.CopyComplete
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.dll
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.pdb
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\bin\Debug\CapaVista.dll
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\bin\Debug\CapaVista.pdb
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\bin\Debug\CapaControlador.dll
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\bin\Debug\CapaModelo.dll
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\bin\Debug\CapaControlador.pdb
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\bin\Debug\CapaModelo.pdb
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.csproj.AssemblyReference.cache
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.ConsultasInteligentes.resources
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.menuconsultas.resources
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.Properties.Resources.resources
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.csproj.GenerateResource.cache
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.csproj.CoreCompileInputs.cache
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.csproj.CopyComplete
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.dll
+F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.pdb
