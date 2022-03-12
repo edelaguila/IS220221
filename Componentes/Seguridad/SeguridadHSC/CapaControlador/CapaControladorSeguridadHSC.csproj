@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="bloqueos.cs" />
     <Compile Include="Controlador.cs" />
+    <Compile Include="datosUsuario.cs" />
     <Compile Include="Encriptar.cs" />
     <Compile Include="ObtenerPermisos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
