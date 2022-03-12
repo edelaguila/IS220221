@@ -8,6 +8,7 @@ namespace CapaControladorSeguridadHSC
     public class Controlador
     {
         private Sentencias sn = new Sentencias();
+        private SentenciasBitacora bitacora = new SentenciasBitacora();
         private llamarPermisos ll = new llamarPermisos();
         //Permisos de Botones Luis de la Cruz 0901-18-17144
 
@@ -411,6 +412,26 @@ namespace CapaControladorSeguridadHSC
             DataTable table = new DataTable();
             dt.Fill(table);
             return table;
+        }
+
+        public void guardarEnBitacora(string IdUsuario, string IdModulo, string IdAplicacion, string accion)
+        {
+            bitacora.guardarEnBitacora(IdUsuario, IdModulo, IdAplicacion, accion);
+        }
+        public string ObtenerIDUsuario(string usuario)
+        {
+            string res = bitacora.obtenerIdDeUsuario(usuario);
+            return res;
+        }
+        public string ObtenerIDAplicacion(string aplicacion)
+        {
+            string res = bitacora.obtenerIdDeAplicacion(aplicacion);
+            return res;
+        }
+        public string ObtenerIDModulo(string modulo)
+        {
+            string res = bitacora.obtenerIdDeModulo(modulo);
+            return res;
         }
     }
 }

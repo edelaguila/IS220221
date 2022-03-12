@@ -26,7 +26,8 @@ namespace CapaVistaSeguridadHSC
 			//fin de elementos para dar de baja
 
 			/* Inicio ID Aplicacion usada para reportes y ayudas */
-			navegador1.idAplicacion = "1002";
+			navegador1.idAplicacion = "0012";
+			navegador1.idmodulo = "1";
 			/* Inicio ID Aplicacion usada para reportes y ayudas */
 
 			//inicio de elementos para ejecutar la ayuda
