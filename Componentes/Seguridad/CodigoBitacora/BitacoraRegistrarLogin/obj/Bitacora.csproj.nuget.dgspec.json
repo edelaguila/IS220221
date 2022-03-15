@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Ingenieria de Software\\R1\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj": {}
+    "C:\\Users\\achac\\OneDrive\\Escritorio\\Nueva carpeta\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj": {}
   },
   "projects": {
-    "F:\\Ingenieria de Software\\R1\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj": {
+    "C:\\Users\\achac\\OneDrive\\Escritorio\\Nueva carpeta\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Ingenieria de Software\\R1\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj",
+        "projectUniqueName": "C:\\Users\\achac\\OneDrive\\Escritorio\\Nueva carpeta\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj",
         "projectName": "Bitacora",
-        "projectPath": "F:\\Ingenieria de Software\\R1\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj",
-        "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "F:\\Ingenieria de Software\\R1\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\obj\\",
+        "projectPath": "C:\\Users\\achac\\OneDrive\\Escritorio\\Nueva carpeta\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj",
+        "packagesPath": "C:\\Users\\achac\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\achac\\OneDrive\\Escritorio\\Nueva carpeta\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "F:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\achac\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -53,7 +53,7 @@
               "version": "[5.0.0, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }

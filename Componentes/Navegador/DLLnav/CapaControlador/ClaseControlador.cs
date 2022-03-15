@@ -22,39 +22,57 @@ namespace CapaControlador
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
         public TextBox[] ordenandoTextos(Control parent)
-        {
-            texts = ModeloTercera.AsignaAlias(parent);
-            control = parent;
-            TextBox[] alias = new TextBox[texts.Length];
+        {            
+                texts = ModeloTercera.AsignaAlias(parent);
+                control = parent;
+                TextBox[] alias = new TextBox[texts.Length];
 
-            int j = 0;
-            for (int i = (texts.Length - 1); i >= 0; i--)
-            {
-                alias[j] = texts[i];
-                j++;
-            }
+                int j = 0;
+                for (int i = (texts.Length - 1); i >= 0; i--)
+                {
+                    alias[j] = texts[i];
+                    j++;
+                }
 
-            return alias;
+                return alias;            
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
         public void comparaTagscampoBD(TextBox[] alias, string tabla, string BD)
         {
-            errores = ModeloTercera.comparaTagscampoBD(alias, tabla, BD);
+            try
+            {
+                errores = ModeloTercera.comparaTagscampoBD(alias, tabla, BD);
+            }
+            catch
+            {
+
+                MessageBox.Show("Error en la capa controlador, revisar la funcion comparaTagscampoBD");
+
+            }
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
         public void funAsignarSalidadControl(Form menu)
         {
-            if (String.IsNullOrEmpty(errores))
+            try
             {
-                ModeloSegunda.metodoSalir(menu);
-                ModeloSegunda.metodoDeshabilitarTexts(control);
+                if (String.IsNullOrEmpty(errores))
+                {
+                    ModeloSegunda.metodoSalir(menu);
+                    ModeloSegunda.metodoDeshabilitarTexts(control);
+                }
+                else
+                {
+                    MessageBox.Show(errores);
+                    menu.Close();
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show(errores);
-                menu.Close();
+
+                MessageBox.Show("Error en la capa controlador, revisar la funcion funAsignarSalidadControl");
+
             }
         }
 
@@ -70,51 +88,121 @@ namespace CapaControlador
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
         public void metodoLlenarCombo(ComboBox cbx, string tabla, string value, string display, string estatus)
         {
+            try { 
             ModeloSegunda.metodoLlenarCombo(cbx,tabla,value, display, estatus);
+            }
+            catch
+            {
+
+                MessageBox.Show("Error en la capa controlador, revisar la funcion metodoLlenarCombo");
+
+            }
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
         public void SeleccionDeFilaDGV(DataGridView data)
         {
-            ModeloTercera.SeleccionDeFilaDGV(data);
+            try
+            {
+                ModeloTercera.SeleccionDeFilaDGV(data);
+            }
+            catch
+            {
+
+                MessageBox.Show("Error en la capa controlador, revisar la funcion SeleccionDeFilaDGV");
+
+            }
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
         public void activaRadiobtn(RadioButton activo, RadioButton inactivo, TextBox estatus)
         {
-            ModeloSegunda.metodoActivaRadiobtn(activo, inactivo, estatus); 
+            try
+            {
+                ModeloSegunda.metodoActivaRadiobtn(activo, inactivo, estatus);
+            }
+            catch
+            {
+
+                MessageBox.Show("Error en la capa controlador, revisar la funcion activaRadiobtn");
+
+            }
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
         public void CambioEstadoTextBox(TextBox estado, RadioButton AI, string cadenaEstado)
         {
-            ModeloTercera.CambioEstadoTextBox(estado, AI, cadenaEstado);
+            try
+            {
+                ModeloTercera.CambioEstadoTextBox(estado, AI, cadenaEstado);
+            }
+            catch
+            {
+
+                MessageBox.Show("Error en la capa controlador, revisar la funcion CambioEstadoTextBox");
+
+            }
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
         public void enviarDatoCbxaTextbox(ComboBox combo, TextBox combotexto)
         {
-            ModeloSegunda.metodoEnviarDatoCbxaTextbox(combo, combotexto); 
+            try
+            {
+                ModeloSegunda.metodoEnviarDatoCbxaTextbox(combo, combotexto);
+            }
+            catch
+            {
+
+                MessageBox.Show("Error en la capa controlador, revisar la funcion enviarDatoCbxaTextbox");
+
+            }
 
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
         public void SeleccionarElementoEnComboBox(ComboBox combo, TextBox combotexto)
         {
-            ModeloTercera.SeleccionarElementoEnComboBox(combo, combotexto);
+            try
+            {
+                ModeloTercera.SeleccionarElementoEnComboBox(combo, combotexto);
+            }
+            catch
+            {
+
+                MessageBox.Show("Error en la capa controlador, revisar la funcion SeleccionarElementoEnComboBox");
+
+            }
         }
 
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
         public void CambiarFormatoFecha(DateTimePicker date, TextBox textoDate)
         {
-            ModeloSegunda.metodoCambiarFormatoFecha(date,textoDate); 
+            try
+            {
+                ModeloSegunda.metodoCambiarFormatoFecha(date, textoDate);
+            }
+            catch
+            {
 
+                MessageBox.Show("Error en la capa controlador, revisar la funcion CambiarFormatoFecha");
+
+            }
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
         public void SeleccionarFechaDTP(DateTimePicker date, TextBox textoDate)
         {
-            ModeloTercera.SeleccionarFechaDTP(date, textoDate);
+            try
+            {
+                ModeloTercera.SeleccionarFechaDTP(date, textoDate);
+            }
+            catch
+            {
+
+                MessageBox.Show("Error en la capa controlador, revisar la funcion SeleccionarFechaDTP");
+
+            }
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
@@ -147,15 +235,31 @@ namespace CapaControlador
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
         public void InhabilitarRegistro(TextBox[] arreglo, string tabla, string campoEstado)
         {
-            ModeloSegunda.metodoInhabilitarRegistro(arreglo, tabla, campoEstado);
+            try
+            {
+                ModeloSegunda.metodoInhabilitarRegistro(arreglo, tabla, campoEstado);
+            }
+            catch
+            {
+
+                MessageBox.Show("Error en la capa controlador, revisar la funcion InhabilitarRegistro");
+
+            }
         }
 
         /*Geovani Fernando Mendoza - 9959-18-15407*/
         public void LlamadaAyudas(string idAplicacion, string nombreCampo, string tablaA)
         {
-            ModeloTercera.LlamadaAyudas(idAplicacion, nombreCampo, tablaA, control);
+            try
+            {
+                ModeloTercera.LlamadaAyudas(idAplicacion, nombreCampo, tablaA, control);
+            }
+            catch
+            {
 
-            //MessageBox.Show(tablaA);
+                MessageBox.Show("Error en la capa controlador, revisar la funcion LlamadaAyudas");
+
+            }
 
         }
 

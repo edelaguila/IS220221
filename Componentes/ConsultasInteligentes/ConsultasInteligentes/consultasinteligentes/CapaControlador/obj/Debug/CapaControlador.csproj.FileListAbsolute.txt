@@ -25,3 +25,12 @@ F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasIntelige
 F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
 F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.dll
 F:\Ingenieria de Software\R1\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.pdb
+C:\Users\achac\OneDrive\Escritorio\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\bin\Debug\CapaControlador.dll
+C:\Users\achac\OneDrive\Escritorio\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\bin\Debug\CapaControlador.pdb
+C:\Users\achac\OneDrive\Escritorio\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\bin\Debug\CapaModelo.dll
+C:\Users\achac\OneDrive\Escritorio\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\bin\Debug\CapaModelo.pdb
+C:\Users\achac\OneDrive\Escritorio\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.AssemblyReference.cache
+C:\Users\achac\OneDrive\Escritorio\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CoreCompileInputs.cache
+C:\Users\achac\OneDrive\Escritorio\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
+C:\Users\achac\OneDrive\Escritorio\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.dll
+C:\Users\achac\OneDrive\Escritorio\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaControlador\obj\Debug\CapaControlador.pdb
