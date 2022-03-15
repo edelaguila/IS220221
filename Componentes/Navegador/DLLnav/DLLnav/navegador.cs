@@ -63,261 +63,74 @@ namespace DLL.nav
 
         public void ActualizaPermisos() //Liam Patrick Bernard García 0901-18-10092, Jaime López 0901-18-735
         {
-            CapaControladorSeguridadHSC.Controlador controladorSeguridad = new CapaControladorSeguridadHSC.Controlador();
-            
-            
-
-            //MessageBox.Show("La aplicacion es: " + idAplicacion + aplicacion);
-            //MessageBox.Show("El Usuario es: " + idusuario + usuario);
-            //permisos = "11011"; //Escritura, Lectura, Imprimir, Eliminar, Modificar
-
-            permisos = control.funObtienePermisos(idusuario, idAplicacion);
-            //MessageBox.Show("El Usuario y Aplicacion es: " + idusuario + idAplicacion + " " + permisos);
-
-            if (permisos.Length < 5)
+            try
             {
-                MessageBox.Show("El Usuario no tiene permisos para esta aplicacion.");
-                generic.Close();
-                return;
-            }
-
-            if (permisos[0] == '1')
-            {
-                permisoIngreso = true;
-            }
-            else
-            {
-                permisoIngreso = false;
-            }
-
-            if (permisos[1] == '1')
-            {
-
-            }
-            else
-            {
-                MessageBox.Show("Usted No Tiene Permisos de Lectura");
-                generic.Close();
-            }
-
-            if (permisos[2] == '1')
-            {
-                permisoReporteador = true;
-            }
-            else
-            {
-                permisoReporteador = false;
-            }
-
-            if (permisos[3] == '1')
-            {
-                permisoEliminar = true;
-            }
-            else
-            {
-                permisoEliminar = false;
-            }
-
-            if (permisos[4] == '1')
-            {
-                permisoModificar = true;
-            }
-            else
-            {
-                permisoModificar = false;
-            }
-
-            btnGuardar.Enabled = false;
-            btnCancelar.Enabled = false;
-
-            //Habilitación de Permisos, Liam Patrick Bernard García, 0901-18-10092
-
-            if (permisoIngreso == false)
-            {
-                btnIngresar.Enabled = false;
-            }
-            else
-            {
-                btnIngresar.Enabled = true;
-            }
-
-            if (permisoModificar == false)
-            {
-                btnModificar.Enabled = false;
-            }
-            else
-            {
-                btnModificar.Enabled = true;
-            }
-
-            if (permisoEliminar == false)
-            {
-                btnEliminar.Enabled = false;
-            }
-            else
-            {
-                btnEliminar.Enabled = true;
-            }
-
-            if (permisoConsultar == false)
-            {
-                btnConsultar.Enabled = false;
-            }
-            else
-            {
-                btnConsultar.Enabled = true;
-            }
-
-            if (permisoReporteador == false)
-            {
-                btnReporte.Enabled = false;
-            }
-            else
-            {
-                btnReporte.Enabled = true;
-            }
-        }
-
-        /*private void pnlBgIngresar_MouseClick(object sender, MouseEventArgs e)
-        {
-            //MessageBox.Show("Hola");
-        }*/
-
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public TextBox[] ClasificaTextboxsegunParent(Control parent)
-        {
-            controles = parent;
-            return control.ordenandoTextos(parent);
-        }
-
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void ObtenerCamposdeTabla(TextBox[] alias, string tabla, string BD)
-        {
-            control.comparaTagscampoBD(alias, tabla, BD);
-            campos = alias;
-            tablas = tabla;
-            DB = BD;
-        }
-
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void MetodoSalirVista(Form menu)
-        {
-            control.funAsignarSalidadControl(menu);
-        }
-
-        /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
-        public void LlenarCombobox(ComboBox cbx, string tabla, string value, string display, string estatus)
-        {
-            referencia1.Add(tabla);
-            referencia2.Add(value);
-            referencia3.Add(display);
-            referencia4.Add(estatus);
-            referencia0.Add(cbx);
-            control.metodoLlenarCombo(cbx, tabla, value, display, estatus);
-
-        }
-
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void SelecciondeFilaDGV(DataGridView data)
-        {
-            dataE = data;
-            control.SeleccionDeFilaDGV(data);
-        }
-
-        /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void ActivaRadiobtn(RadioButton activo, RadioButton inactivo, TextBox estatus)
-        {
-            control.activaRadiobtn(activo, inactivo, estatus);
-        }
-
-        /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void CambioEstadoTextbox(TextBox estado, RadioButton AI, string cadenaEstado)
-        {
-            control.CambioEstadoTextBox(estado, AI, cadenaEstado);
-        }
-
-        /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
-        public void EnviarDatoComboaTextbox(ComboBox combo, TextBox combotexto)
-        {
-            control.enviarDatoCbxaTextbox(combo, combotexto);
-        }
-
-        /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
-        public void SeleccionarElementosenCombo(ComboBox combo, TextBox combotexto)
-        {
-            control.SeleccionarElementoEnComboBox(combo, combotexto);
-        }
-
-        /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
-        public void CambiarFormatoFecha(DateTimePicker date, TextBox textoDate)
-        {
-            control.CambiarFormatoFecha(date, textoDate);
-        }
-
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void SeleciconarFechaDTP(DateTimePicker date, TextBox textoDate)
-        {
-            control.SeleccionarFechaDTP(date, textoDate);
-        }
+                CapaControladorSeguridadHSC.Controlador controladorSeguridad = new CapaControladorSeguridadHSC.Controlador();
 
 
-        private void ActualizarCombobox()
-        {
-            for (int i = 0; i < referencia0.Count; i++)
-            {
-                //Gabriel Coyoy
-                //ComboBox temporal = (ComboBox)referencia0[i];
-                //MessageBox.Show(temporal.Text + (string)referencia1[i] + (string)referencia2[i] + (string)referencia3[i] + (string)referencia4[i]);
-                control.metodoLlenarCombo((ComboBox)referencia0[i], (string)referencia1[i], (string)referencia2[i], (string)referencia3[i], (string)referencia4[i]);
-            }
 
-        }
 
-        /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void EnviarMensaje()
-        {
-            MessageBox.Show("Prueba de Funcion #2");
-        }
+                permisos = control.funObtienePermisos(idusuario, idAplicacion);
+                
 
-        public void EnviarMensaje2()
-        {
-            MessageBox.Show("Prueba de Funcion #3");
-        }
+                if (permisos.Length < 5)
+                {
+                    MessageBox.Show("El Usuario no tiene permisos para esta aplicacion.");
+                    generic.Close();
+                    return;
+                }
 
-        /*private void pnlBgM_MouseClick(object sender, MouseEventArgs e)
-        {
-            EnviarMensaje();
-        }
+                if (permisos[0] == '1')
+                {
+                    permisoIngreso = true;
+                }
+                else
+                {
+                    permisoIngreso = false;
+                }
 
-        private void pnlBgG_MouseClick(object sender, MouseEventArgs e)
-        {
-            EnviarMensaje2();
-        }
-        */
+                if (permisos[1] == '1')
+                {
 
-        /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
-        public void PruebaEnvioMensaje(string cadena)
-        {
-            MessageBox.Show("La cadena es: " + cadena);
-        }
+                }
+                else
+                {
+                    MessageBox.Show("Usted No Tiene Permisos de Lectura");
+                    generic.Close();
+                }
 
-        private void DesactivarBotones(int tipo) //Jaime López 0901-18-735
-        {
+                if (permisos[2] == '1')
+                {
+                    permisoReporteador = true;
+                }
+                else
+                {
+                    permisoReporteador = false;
+                }
 
-            //DesactivarBotones cambiara los .Enabled de los botones
-            //indicados
-            /*
-             * 0 Desactiva los botones de cancelar y guardar. Activa ingreso, modificación, eliminación, consulta, reporte y actu
-             * 1 Desactiva los botones de insertar, modificar, eliminar, consulta, reporte y actu. Activa guardar y cancelar
-             * 
-             * Cada uno activará lo que el otro desactive
-             * 0 Activa insertar, modificar y eliminar
-             * 1 Actica Cancelar y Guardar
-             */
-            if (tipo == 0)
-            {
-                //activa
-                //Función de Validar Permisos, Liam Patrick Bernard Garcia, 0901-18-10092
+                if (permisos[3] == '1')
+                {
+                    permisoEliminar = true;
+                }
+                else
+                {
+                    permisoEliminar = false;
+                }
+
+                if (permisos[4] == '1')
+                {
+                    permisoModificar = true;
+                }
+                else
+                {
+                    permisoModificar = false;
+                }
+
+                btnGuardar.Enabled = false;
+                btnCancelar.Enabled = false;
+
+                //Habilitación de Permisos, Liam Patrick Bernard García, 0901-18-10092
+
                 if (permisoIngreso == false)
                 {
                     btnIngresar.Enabled = false;
@@ -362,207 +175,483 @@ namespace DLL.nav
                 {
                     btnReporte.Enabled = true;
                 }
-
-                btnActualizar.Enabled = true;
-                //desactiva
-                btnGuardar.Enabled = false;
-                btnCancelar.Enabled = false;
             }
-            else
+            catch
             {
-                //desactiva
-                btnIngresar.Enabled = false;
-                btnModificar.Enabled = false;
-                btnEliminar.Enabled = false;
-                btnConsultar.Enabled = false;
-                btnReporte.Enabled = false;
-                btnActualizar.Enabled = false;
-                //activa
-                btnGuardar.Enabled = true;
-                btnCancelar.Enabled = true;
+
             }
+            
+        }
+
+
+        public TextBox[] ClasificaTextboxsegunParent(Control parent)
+        {
+            try
+            {
+                controles = parent;
+                
+            }
+            catch 
+            {
+              
+            }
+            return control.ordenandoTextos(parent);
+
+        }
+
+        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
+        public void ObtenerCamposdeTabla(TextBox[] alias, string tabla, string BD)
+        {
+            try
+            {
+                control.comparaTagscampoBD(alias, tabla, BD);
+                campos = alias;
+                tablas = tabla;
+                DB = BD;
+            }
+            catch
+            {
+
+            }
+            
+        }
+
+        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
+        public void MetodoSalirVista(Form menu)
+        {
+            try
+            {
+                control.funAsignarSalidadControl(menu);
+            }
+            catch
+            {
+
+            }
+            
+        }
+
+        /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
+        public void LlenarCombobox(ComboBox cbx, string tabla, string value, string display, string estatus)
+        {
+            try
+            {
+                referencia1.Add(tabla);
+                referencia2.Add(value);
+                referencia3.Add(display);
+                referencia4.Add(estatus);
+                referencia0.Add(cbx);
+                control.metodoLlenarCombo(cbx, tabla, value, display, estatus);
+            }
+            catch
+            {
+
+            }
+            
+
+        }
+
+        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
+        public void SelecciondeFilaDGV(DataGridView data)
+        {
+            try
+            {
+                dataE = data;
+                control.SeleccionDeFilaDGV(data);
+            }
+            catch
+            {
+
+            }
+            
+        }
+
+        /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
+        public void ActivaRadiobtn(RadioButton activo, RadioButton inactivo, TextBox estatus)
+        {
+            try
+            {
+                control.activaRadiobtn(activo, inactivo, estatus);
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
+        public void CambioEstadoTextbox(TextBox estado, RadioButton AI, string cadenaEstado)
+        {
+            try
+            {
+                control.CambioEstadoTextBox(estado, AI, cadenaEstado);
+            }
+            catch
+            {
+
+            }
+            
+        }
+
+        /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
+        public void EnviarDatoComboaTextbox(ComboBox combo, TextBox combotexto)
+        {
+            try
+            {
+                control.enviarDatoCbxaTextbox(combo, combotexto);
+
+            }
+            catch
+            {
+
+            }
+            
+        }
+
+        /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
+        public void SeleccionarElementosenCombo(ComboBox combo, TextBox combotexto)
+        {
+            try
+            {
+                control.SeleccionarElementoEnComboBox(combo, combotexto);
+
+            }
+            catch
+            {
+
+            }
+            
+        }
+
+        /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
+        public void CambiarFormatoFecha(DateTimePicker date, TextBox textoDate)
+        {
+            try
+            {
+                control.CambiarFormatoFecha(date, textoDate);
+
+            }
+            catch
+            {
+
+            }
+            
+        }
+
+        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
+        public void SeleciconarFechaDTP(DateTimePicker date, TextBox textoDate)
+        {
+            try
+            {
+                control.SeleccionarFechaDTP(date, textoDate);
+
+            }
+            catch
+            {
+
+            }
+            
+        }
+
+
+        private void ActualizarCombobox()
+        {
+            try
+            {
+                for (int i = 0; i < referencia0.Count; i++)
+                {
+
+                    control.metodoLlenarCombo((ComboBox)referencia0[i], (string)referencia1[i], (string)referencia2[i], (string)referencia3[i], (string)referencia4[i]);
+                }
+
+            }
+            catch
+            {
+
+            }
+            
+
+        }
+
+
+
+        private void DesactivarBotones(int tipo) //Jaime López 0901-18-735
+        {
+            try
+            {
+                if (tipo == 0)
+                {
+                    //activa
+                    //Función de Validar Permisos, Liam Patrick Bernard Garcia, 0901-18-10092
+                    if (permisoIngreso == false)
+                    {
+                        btnIngresar.Enabled = false;
+                    }
+                    else
+                    {
+                        btnIngresar.Enabled = true;
+                    }
+
+                    if (permisoModificar == false)
+                    {
+                        btnModificar.Enabled = false;
+                    }
+                    else
+                    {
+                        btnModificar.Enabled = true;
+                    }
+
+                    if (permisoEliminar == false)
+                    {
+                        btnEliminar.Enabled = false;
+                    }
+                    else
+                    {
+                        btnEliminar.Enabled = true;
+                    }
+
+                    if (permisoConsultar == false)
+                    {
+                        btnConsultar.Enabled = false;
+                    }
+                    else
+                    {
+                        btnConsultar.Enabled = true;
+                    }
+
+                    if (permisoReporteador == false)
+                    {
+                        btnReporte.Enabled = false;
+                    }
+                    else
+                    {
+                        btnReporte.Enabled = true;
+                    }
+
+                    btnActualizar.Enabled = true;
+                    //desactiva
+                    btnGuardar.Enabled = false;
+                    btnCancelar.Enabled = false;
+                }
+                else
+                {
+                    //desactiva
+                    btnIngresar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnEliminar.Enabled = false;
+                    btnConsultar.Enabled = false;
+                    btnReporte.Enabled = false;
+                    btnActualizar.Enabled = false;
+                    //activa
+                    btnGuardar.Enabled = true;
+                    btnCancelar.Enabled = true;
+                }
+
+            }
+            catch
+            {
+
+            }
+
+
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)//Jaime López 0901-18-735
         {
-            estado = 0;
-            DesactivarBotones(0);
-            ManipularEstadodeElementosVista(0);
+            try
+            {
+                estado = 0;
+                DesactivarBotones(0);
+                ManipularEstadodeElementosVista(0);
 
-            /* Daniel Enrique Navas Hernandez 0901-18-15032*/
-            //    Bitacora cancelar = new Bitacora();
-            //guardar.guardarEnBitacora(idAplicacion, "1", "0012", "guardar");
-            //  cancelar.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "cancelar");
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Cancelar");
+
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Cancelar");
+
+            }
+            catch
+            {
+
+            }
+            
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //Metodos de ingresar y eliminar adaptados por Melissa Aldana, al boton guardar
-            switch (estado)
+            try
             {
-                case 1://Ingresar
-                    bool resultadoI;
-                    resultadoI = control.insertarDatostabla(campos, tablas);
-                    if (resultadoI == true)
-                    {
-                        MessageBox.Show("El ingreso se a realizado con éxito!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("El ingreso no se realizó con éxito!");
-                    }
+                //Metodos de ingresar y eliminar adaptados por Melissa Aldana, al boton guardar
+                switch (estado)
+                {
+                    case 1://Ingresar
+                        bool resultadoI;
+                        resultadoI = control.insertarDatostabla(campos, tablas);
+                        if (resultadoI == true)
+                        {
+                            MessageBox.Show("El ingreso se a realizado con éxito!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("El ingreso no se realizó con éxito!");
+                        }
 
-                    break;
+                        break;
 
-                case 2://Modificar de Wilber Enrique Segura Ramirez 0901-18-13952
-                    bool resultado;//Varaible para saber si se ejecutó con éxito la sentencia SQL
-                    resultado = control.modificar(campos, tablas);
-                    if (resultado == true)
-                    {
-                        MessageBox.Show("Modificación realizada con éxito!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Modificación no se realizó con éxito!");
-                    }
-                    break;
+                    case 2://Modificar de Wilber Enrique Segura Ramirez 0901-18-13952
+                        bool resultado;//Varaible para saber si se ejecutó con éxito la sentencia SQL
+                        resultado = control.modificar(campos, tablas);
+                        if (resultado == true)
+                        {
+                            MessageBox.Show("Modificación realizada con éxito!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Modificación no se realizó con éxito!");
+                        }
+                        break;
 
 
-                case 3://Eliminar
-                    /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
+                    case 3://Eliminar
 
-                    //string resultadoE;
-                    control.InhabilitarRegistro(campos, tablas, campoEstado);
-                    //resultadoE = control.ToString();
-                    //bool value = Convert.ToBoolean(resultadoE);
+                        control.InhabilitarRegistro(campos, tablas, campoEstado);
 
-                    //if (value == true)
-                    //{
-                    //  MessageBox.Show("Eliminación realizada con éxito!");
-                    //}
-                    //else
-                    //{
-                    //   MessageBox.Show("Eliminación no se realizó con éxito!");
-                    //}
 
-                    break;
+                        break;
 
-                case 0://Error alguno de los otros casos no hizo su trabajo
-                    MessageBox.Show("Error, no ha seleccionado ninguna función para guardar sus acciones");
-                    break;
+                    case 0://Error alguno de los otros casos no hizo su trabajo
+                        MessageBox.Show("Error, no ha seleccionado ninguna función para guardar sus acciones");
+                        break;
+                }
+                estado = 0;
+                DesactivarBotones(0);
+                ManipularEstadodeElementosVista(0);
+                LlenarTabla();//recarga los datos de la tabla
+
             }
-            estado = 0;
-            DesactivarBotones(0);
-            ManipularEstadodeElementosVista(0);
-            LlenarTabla();//recarga los datos de la tabla
+            catch
+            {
 
-            /* Daniel Enrique Navas Hernandez 0901-18-15032*/
-            //Bitacora guardar = new Bitacora();
-            //guardar.guardarEnBitacora(idAplicacion, "1", "0012", "guardar");
-            //guardar.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "guardar");
+            }
+            
+
+
 
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            int entero = control.idSiguienteDeNuevoIngreso(tablas);
-            int cantidadCampos = campos.Length;
-            campos[0].Text = entero.ToString();
-
-
-            foreach (Control ctr in controles.Controls)
+            try
             {
-                if (ctr is TextBox)
+                int entero = control.idSiguienteDeNuevoIngreso(tablas);
+                int cantidadCampos = campos.Length;
+                campos[0].Text = entero.ToString();
+
+
+                foreach (Control ctr in controles.Controls)
                 {
-                    if (ctr.Tag.ToString() == campos[0].Tag.ToString())
+                    if (ctr is TextBox)
                     {
-                        ctr.Enabled = false;
+                        if (ctr.Tag.ToString() == campos[0].Tag.ToString())
+                        {
+                            ctr.Enabled = false;
+                        }
+                        else
+                        {
+                            ctr.Enabled = true;
+
+                        }
+
                     }
-                    else
+
+                    if (ctr is ComboBox)
                     {
                         ctr.Enabled = true;
-
                     }
 
+                    if (ctr is DateTimePicker)
+                    {
+                        ctr.Enabled = true;
+                    }
+
+                    if (ctr is RadioButton)
+                    {
+                        ctr.Enabled = true;
+                    }
                 }
 
-                if (ctr is ComboBox)
-                {
-                    ctr.Enabled = true;
-                }
+                estado = 1;
+                DesactivarBotones(1);
+                ManipularEstadodeElementosVista(1);
 
-                if (ctr is DateTimePicker)
-                {
-                    ctr.Enabled = true;
-                }
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Insertar");
 
-                if (ctr is RadioButton)
-                {
-                    ctr.Enabled = true;
-                }
             }
+            catch
+            {
 
-            estado = 1;
-            DesactivarBotones(1);
-            ManipularEstadodeElementosVista(1);
-            /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-            //Bitacora insertar = new Bitacora();
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Insertar");
+            }
+            
         }
 
         //Lo hizo Wilber Enrique Segura Ramirez 0901-18-13952
         private void btnModificar_Click(object sender, EventArgs e)//Boton de modificar campos dinámico
         {
-            if (dvgConsulta != null)
+            try
             {
-                if (dvgConsulta.RowCount - 1 > 0)
+                if (dvgConsulta != null)
                 {
-                    ManipularEstadodeElementosVista(3);
-                    /* int cuenta = campos.Length;
-                     string referencia = campos[0].Tag.ToString();//Nos sirve para obtener el campo para hacer la consulta
-                     string id = dvgConsulta.CurrentRow.Cells[0].Value.ToString();
-                     var arList = control.consIndividual(id, tablas, cuenta, referencia);
-                     for(int i=0; i<cuenta; i++)
-                     {
-                         campos[i].Text = (string)arList[i];
-                     }*/
-                    estado = 2;
-                    DesactivarBotones(1);
+                    if (dvgConsulta.RowCount - 1 > 0)
+                    {
+                        ManipularEstadodeElementosVista(3);
+
+                        estado = 2;
+                        DesactivarBotones(1);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No tiene Registros");
+                        return;
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("No tiene Registros");
+                    MessageBox.Show("No existe ninguna datagridview");
                     return;
                 }
 
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Modificar");
+
             }
-            else
+            catch
             {
-                MessageBox.Show("No existe ninguna datagridview");
-                return;
+
             }
-            /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-            //Bitacora modificar = new Bitacora();
-            //modificar.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "modificar");
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Modificar");
+            
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            control.InhabilitarRegistro(campos, tablas, campoEstado);
-            //control.funSeleccionarDTControl(dataE);
-            estado = 3;
-            DesactivarBotones(0);
-            ManipularEstadodeElementosVista(0);
-            LlenarTabla();
+            try
+            {
+                control.InhabilitarRegistro(campos, tablas, campoEstado);
+                //control.funSeleccionarDTControl(dataE);
+                estado = 3;
+                DesactivarBotones(0);
+                ManipularEstadodeElementosVista(0);
+                LlenarTabla();
 
-            /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-            //Bitacora eliminar = new Bitacora();
-            //eliminar.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "eliminar");
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Eliminar");
+
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Eliminar");
+
+            }
+            catch
+            {
+
+            }
+            
 
         }
 
@@ -570,7 +659,15 @@ namespace DLL.nav
         //boton de verificacion para navegacion sin registros
         public Boolean VerificarContenidodeTabla()
         {//Kevin Rolando González Ramírez 0901-18-1387
+            try
+            {
 
+
+            }
+            catch
+            {
+
+            }
             if (dvgConsulta.RowCount - 1 > 0)
 
                 return true;
@@ -585,88 +682,152 @@ namespace DLL.nav
 
         public void ObtenerNombreDGV(DataGridView tabla)//Kevin Rolando González Ramírez 0901-18-1387
         {
-            dvgConsulta = tabla;
+            try
+            {
+                dvgConsulta = tabla;
+
+            }
+            catch
+            {
+
+            }
+            
         }
 
 
         public void LlenarTabla() //Jaime López 0901-18-735
         {
-            DataTable dt = control.ActualizarDGV(tablas);
-            dvgConsulta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dvgConsulta.DataSource = dt;
+            try
+            {
+                DataTable dt = control.ActualizarDGV(tablas);
+                dvgConsulta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dvgConsulta.DataSource = dt;
+
+            }
+            catch
+            {
+
+            }
+            
         }
 
 
         private void btnSiguiente_Click(object sender, EventArgs e)//Kevin Rolando González Ramírez 0901-18-1387
         {
-
-            //verificacion de la existencia de registros
-            if (VerificarContenidodeTabla() == false)
+            try
             {
-                MessageBox.Show("No tiene registros actualmente, no se puede navegar");
-                return;
-            }
-
-            //obtengo el indicie actual
-            int actual = dvgConsulta.CurrentCell.RowIndex;
-
-
-            int numColumnas = dvgConsulta.ColumnCount;//cuenta cuantos columnas 
-            int numFilas = dvgConsulta.RowCount;
-            //MessageBox.Show("cantidad de filas: "+numFilas);
-
-
-            if (actual == numFilas - 2)
-            {
-                dvgConsulta.CurrentCell = dvgConsulta.Rows[0].Cells[0];
-            }
-            else
-            {
-
-                var arList = new ArrayList();//todos los campos a obtener de la tabla
-
-
-                dvgConsulta.CurrentCell = dvgConsulta.Rows[actual + 1].Cells[0];
-                //for para guardar todos los datos de la columnas
-                for (int i = 0; i < numColumnas; i++)
+                //verificacion de la existencia de registros
+                if (VerificarContenidodeTabla() == false)
                 {
-                    string col = dvgConsulta.CurrentRow.Cells[i].Value.ToString();
-                    arList.Add(col);//vamos guardando todos los campos
-
+                    MessageBox.Show("No tiene registros actualmente, no se puede navegar");
+                    return;
                 }
+
+                //obtengo el indicie actual
+                int actual = dvgConsulta.CurrentCell.RowIndex;
+
+
+                int numColumnas = dvgConsulta.ColumnCount;//cuenta cuantos columnas 
+                int numFilas = dvgConsulta.RowCount;
+                //MessageBox.Show("cantidad de filas: "+numFilas);
+
+
+                if (actual == numFilas - 2)
+                {
+                    dvgConsulta.CurrentCell = dvgConsulta.Rows[0].Cells[0];
+                }
+                else
+                {
+
+                    var arList = new ArrayList();//todos los campos a obtener de la tabla
+
+
+                    dvgConsulta.CurrentCell = dvgConsulta.Rows[actual + 1].Cells[0];
+                    //for para guardar todos los datos de la columnas
+                    for (int i = 0; i < numColumnas; i++)
+                    {
+                        string col = dvgConsulta.CurrentRow.Cells[i].Value.ToString();
+                        arList.Add(col);//vamos guardando todos los campos
+
+                    }
+                }
+                ContabilizarCamposenBD();
+
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Boton Siguiente");
+
             }
-            ContabilizarCamposenBD();
-            /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-            //Bitacora botonSiguiente = new Bitacora();
-            //botonSiguiente.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "Boton Siguiente");
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Boton Siguiente");
+            catch
+            {
+
+            }
+
+            
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)//Kevin Rolando González Ramírez 0901-18-1387
         {
-            //verificacion de la existencia de registros
-            if (VerificarContenidodeTabla() == false)
+            try
             {
-                MessageBox.Show("No tiene registros actualmente, no se puede navegar");
-                return;
+                //verificacion de la existencia de registros
+                if (VerificarContenidodeTabla() == false)
+                {
+                    MessageBox.Show("No tiene registros actualmente, no se puede navegar");
+                    return;
+                }
+
+                //obtengo el indicie actual
+                int actual = dvgConsulta.CurrentCell.RowIndex;
+
+
+                //hacer un condicional para ver si no es el primer campo
+
+                if (actual == 0)
+                {
+                    // MessageBox.Show("Lo siento no puede retroceder mas esta en el primer campo");
+                    dvgConsulta.CurrentCell = dvgConsulta.Rows[dvgConsulta.RowCount - 2].Cells[0];
+                }
+                else
+                {
+
+
+                    dvgConsulta.CurrentCell = dvgConsulta.Rows[actual - 1].Cells[0];
+                    var arList = new ArrayList();//todos los campos a obtener de la tabla
+
+                    int numColumnas = dvgConsulta.ColumnCount;//cuenta cuantos columnas 
+
+                    //for para guardar todos los datos de la columnas
+                    for (int i = 0; i < numColumnas; i++)
+                    {
+                        string col = dvgConsulta.CurrentRow.Cells[i].Value.ToString();
+                        arList.Add(col);//vamos guardando todos los campos
+
+                    }
+
+                }
+                ContabilizarCamposenBD();
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Boton Anterior");
+
             }
-
-            //obtengo el indicie actual
-            int actual = dvgConsulta.CurrentCell.RowIndex;
-
-
-            //hacer un condicional para ver si no es el primer campo
-
-            if (actual == 0)
+            catch
             {
-                // MessageBox.Show("Lo siento no puede retroceder mas esta en el primer campo");
-                dvgConsulta.CurrentCell = dvgConsulta.Rows[dvgConsulta.RowCount - 2].Cells[0];
+
             }
-            else
+            
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)//Kevin Rolando González Ramírez 0901-18-1387
+        {
+            try
             {
+                //verificacion de la existencia de registros
+                if (VerificarContenidodeTabla() == false)
+                {
+                    MessageBox.Show("No tiene registros actualmente, no se puede navegar");
+                    return;
+                }
 
+                dvgConsulta.CurrentCell = dvgConsulta.Rows[0].Cells[0];
 
-                dvgConsulta.CurrentCell = dvgConsulta.Rows[actual - 1].Cells[0];
                 var arList = new ArrayList();//todos los campos a obtener de la tabla
 
                 int numColumnas = dvgConsulta.ColumnCount;//cuenta cuantos columnas 
@@ -678,311 +839,360 @@ namespace DLL.nav
                     arList.Add(col);//vamos guardando todos los campos
 
                 }
+                ContabilizarCamposenBD();
 
 
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Inicio");
 
-                //string para ver los datos
-                /*for (int i = 0; i < arList.Count; i++)
-                {
-                    MessageBox.Show("arlist[" + i + "] =" + arList[i]);
-                }
-
-                */
             }
-            ContabilizarCamposenBD();
-            /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-            //Bitacora botonAnterior = new Bitacora();
-            //botonAnterior.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "Boton Anterior");
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Boton Anterior");
-        }
-
-        private void btnInicio_Click(object sender, EventArgs e)//Kevin Rolando González Ramírez 0901-18-1387
-        {
-
-            //verificacion de la existencia de registros
-            if (VerificarContenidodeTabla() == false)
+            catch
             {
-                MessageBox.Show("No tiene registros actualmente, no se puede navegar");
-                return;
-            }
-
-            dvgConsulta.CurrentCell = dvgConsulta.Rows[0].Cells[0];
-
-            var arList = new ArrayList();//todos los campos a obtener de la tabla
-
-            int numColumnas = dvgConsulta.ColumnCount;//cuenta cuantos columnas 
-
-            //for para guardar todos los datos de la columnas
-            for (int i = 0; i < numColumnas; i++)
-            {
-                string col = dvgConsulta.CurrentRow.Cells[i].Value.ToString();
-                arList.Add(col);//vamos guardando todos los campos
 
             }
-            ContabilizarCamposenBD();
-
-            /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-            //Bitacora inicio = new Bitacora();
-            //inicio.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "inicio");
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Inicio");
+            
         }
 
         private void btnFinal_Click(object sender, EventArgs e)//Kevin Rolando González Ramírez 0901-18-1387
         {
-            //verificacion de la existencia de registros
-            if (VerificarContenidodeTabla() == false)
+            try
             {
-                MessageBox.Show("No tiene registros actualmente, no se puede navegar");
-                return;
+                //verificacion de la existencia de registros
+                if (VerificarContenidodeTabla() == false)
+                {
+                    MessageBox.Show("No tiene registros actualmente, no se puede navegar");
+                    return;
+                }
+
+                dvgConsulta.CurrentCell = dvgConsulta.Rows[dvgConsulta.RowCount - 2].Cells[0];
+
+                var arList = new ArrayList();//todos los campos a obtener de la tabla
+
+                int numColumnas = dvgConsulta.ColumnCount;//cuenta cuantos columnas 
+
+
+                for (int i = 0; i < numColumnas; i++)
+                {
+                    string col = dvgConsulta.CurrentRow.Cells[i].Value.ToString();
+                    arList.Add(col);
+
+                }
+                ContabilizarCamposenBD();
+
+
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Final");
+
+            }
+            catch
+            {
+
             }
 
-            dvgConsulta.CurrentCell = dvgConsulta.Rows[dvgConsulta.RowCount - 2].Cells[0];
-
-            var arList = new ArrayList();//todos los campos a obtener de la tabla
-
-            int numColumnas = dvgConsulta.ColumnCount;//cuenta cuantos columnas 
-
-            //for para guardar todos los datos de la columnas
-            for (int i = 0; i < numColumnas; i++)
-            {
-                string col = dvgConsulta.CurrentRow.Cells[i].Value.ToString();
-                arList.Add(col);//vamos guardando todos los campos
-
-            }
-            ContabilizarCamposenBD();
-
-            /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-            // Bitacora final = new Bitacora();
-            // final.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "Final");
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Final");
+            
         }
 
         private void navegador_Load(object sender, EventArgs e)
         {
-
-        }
-
-        /* Daniel Enrique Navas Hernandez 0901-18-15032 */
-        private void btnActualizar_Click(object sender, EventArgs e)//Daniel Navas
-        {
-            LlenarTabla();
-            //falta actu de combos
-            for (int i = 0; i < campos.Length; i++)
+            try
             {
 
-                campos[i].Text = "";
 
             }
+            catch
+            {
 
-            ActualizarCombobox();
+            }
+        }
 
-            /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-            // Bitacora actualizar = new Bitacora();
-            // actualizar.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "actualizar");
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Actualizar");
+        
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //falta actu de combos
+                for (int i = 0; i < campos.Length; i++)
+                {
+
+                    campos[i].Text = "";
+
+                }
+
+                ActualizarCombobox();
+
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Actualizar");
+
+            }
+            catch
+            {
+
+            }
+            LlenarTabla();
+            
         }
 
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            generic.Close();
+            try
+            {
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Salir");
 
-            /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-            // Bitacora salir = new Bitacora();
-            //salir.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "Salir");
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Salir");
+            }
+            catch
+            {
+
+            }
+
+
+            
         }
         Form generic;
 
-        public void ObtenerReferenciaFormActual(Form generico)//Jaime López 0901-18-735
+        public void ObtenerReferenciaFormActual(Form generico)
         {
-            generic = generico;
+            try
+            {
+                generic = generico;
+
+            }
+            catch
+            {
+
+            }
+            
         }
 
 
 
 
-        /*Geovani Fernando Mendoza - 9959-18-15407*/
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            control.LlamadaAyudas(idAplicacion, campoAyuda, tablaAyuda);
-            //   Help.ShowHelp(parent, rutaAyudaCHM, rutaAyudaHTML);
+            try
+            {
+                control.LlamadaAyudas(idAplicacion, campoAyuda, tablaAyuda);
 
-            //Help.ShowHelp(this, "Ayudas/AyudasSistemaReparto.chm", "ManualSistemaReparto.html");
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Ayuda");
 
-            /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-            //Bitacora ayuda = new Bitacora();
-            //ayuda.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "Ayuda");
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Ayuda");
+            }
+            catch
+            {
+
+            }
+            
         }
 
-        private void ManipularEstadodeElementosVista(int modo)//Josue Zapata 9959-18-4829 y Jaime López 0901-18-735
+        private void ManipularEstadodeElementosVista(int modo)
         {
-            /*
-             * 0 desactiva todos los controles de entrada del usuario y limpia los campos
-             * 1 activa todos los controles menos el id
-             */
-            //llamar este metodo desde donde se utilice (al iniciar, guardar, cancelar, ingresar, etc)
-            //basicamente: ingresar, modificar y eliminar activan el modo 1
-            //y el guardar y cancelar usan el modo 0 (desactivan todo porque ya habran completado una operacion)
-
-            int cantidadCampos = campos.Length;
-            if (modo == 0)
+            try
             {
-                foreach (Control ctr in controles.Controls)
+                int cantidadCampos = campos.Length;
+                if (modo == 0)
                 {
-                    if (ctr is TextBox)
+                    foreach (Control ctr in controles.Controls)
                     {
-                        ctr.Enabled = false;
-                        ctr.Text = "";
-                    }
+                        if (ctr is TextBox)
+                        {
+                            ctr.Enabled = false;
+                            ctr.Text = "";
+                        }
 
-                    if (ctr is ComboBox)
-                    {
-                        ctr.Enabled = false;
-                        ctr.Text = "";
-                    }
+                        if (ctr is ComboBox)
+                        {
+                            ctr.Enabled = false;
+                            ctr.Text = "";
+                        }
 
-                    if (ctr is DateTimePicker)
-                    {
-                        ctr.Enabled = false;
-                        //((DateTimePicker)ctr).Value = DateTime.Now;
-                    }
+                        if (ctr is DateTimePicker)
+                        {
+                            ctr.Enabled = false;
 
-                    if (ctr is RadioButton)
-                    {
-                        ctr.Enabled = false;
-                    }
+                        }
 
-                    if (ctr is DataGridView)
-                    {
-                        ctr.Enabled = true;
-                    }
-                }
-            }
-
-            if (modo == 1 || modo == 3)
-            {
-                foreach (Control ctr in controles.Controls)
-                {
-                    if (ctr is TextBox)
-                    {
-                        if (ctr.Tag.ToString() == campos[0].Tag.ToString())
+                        if (ctr is RadioButton)
                         {
                             ctr.Enabled = false;
                         }
-                        else
+
+                        if (ctr is DataGridView)
+                        {
+                            ctr.Enabled = true;
+                        }
+                    }
+                }
+
+                if (modo == 1 || modo == 3)
+                {
+                    foreach (Control ctr in controles.Controls)
+                    {
+                        if (ctr is TextBox)
+                        {
+                            if (ctr.Tag.ToString() == campos[0].Tag.ToString())
+                            {
+                                ctr.Enabled = false;
+                            }
+                            else
+                            {
+                                ctr.Enabled = true;
+                                if (modo == 1)
+                                {
+                                    ctr.Text = "";
+                                }
+
+                            }
+                        }
+
+                        if (ctr is ComboBox)
+                        {
+                            ctr.Enabled = true;
+                        }
+
+                        if (ctr is DateTimePicker)
                         {
                             ctr.Enabled = true;
                             if (modo == 1)
                             {
-                                ctr.Text = "";
+                                ((DateTimePicker)ctr).Value = DateTime.Now;
                             }
 
                         }
-                    }
 
-                    if (ctr is ComboBox)
-                    {
-                        ctr.Enabled = true;
-                    }
-
-                    if (ctr is DateTimePicker)
-                    {
-                        ctr.Enabled = true;
-                        if (modo == 1)
+                        if (ctr is RadioButton)
                         {
-                            ((DateTimePicker)ctr).Value = DateTime.Now;
+                            ctr.Enabled = true;
+                            if (modo == 1)
+                            {
+                                ((RadioButton)ctr).Checked = false;
+                            }
+
                         }
 
-                    }
-
-                    if (ctr is RadioButton)
-                    {
-                        ctr.Enabled = true;
-                        if (modo == 1)
+                        if (ctr is DataGridView)
                         {
-                            ((RadioButton)ctr).Checked = false;
+                            ctr.Enabled = false;
                         }
-
-                    }
-
-                    if (ctr is DataGridView)
-                    {
-                        ctr.Enabled = false;
                     }
                 }
+
+            }
+            catch 
+            {
+
             }
 
+            
+
         }
-        public void ContabilizarCamposenBD()//Kevin Rolando González Ramírez 0901-18-1387
+        public void ContabilizarCamposenBD()
         {
-            int cantidadCampos = dvgConsulta.Columns.Count;
-            /* //Liam Patrick
-            if (cantidadCampos == 0)
+            try
             {
-                return;
+                int cantidadCampos = dvgConsulta.Columns.Count;
+
+                for (int i = 0; i < cantidadCampos; i++)
+                {
+                    campos[i].Text = dvgConsulta.CurrentRow.Cells[i].Value.ToString();
+                }
+
             }
-            */
-            for (int i = 0; i < cantidadCampos; i++)
+            catch 
             {
-                campos[i].Text = dvgConsulta.CurrentRow.Cells[i].Value.ToString();
+
             }
-            //dvgConsulta.CurrentRow();
-            //dvgConsulta.CurrentCellChanged
+            
+
         }
 
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
         public void LlamarRutaReporte(string campoRuta, string campoB, string tablaR)
         {
-            formReporte.ruta = control.obtieneRutaReporte(idAplicacion, campoRuta, campoB, tablaR);
+            try
+            {
+                formReporte.ruta = control.obtieneRutaReporte(idAplicacion, campoRuta, campoB, tablaR);
+
+            }
+            catch 
+            {
+
+            }
+            
         }
 
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
+
         public void MostrarVistaReporte()
         {
-            formReporte.Show();
+            try
+            {
+                formReporte.Show();
+
+            }
+            catch 
+            {
+
+            }
+            
         }
 
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
+
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(formReporte.ruta))
+            try
             {
-                MessageBox.Show("Error con la ruta del reporte, verifique que la Aplicacion existe y que la ruta sea la correcta!");
+                if (String.IsNullOrEmpty(formReporte.ruta))
+                {
+                    MessageBox.Show("Error con la ruta del reporte, verifique que la Aplicacion existe y que la ruta sea la correcta!");
+                }
+                else
+                {
+                    MostrarVistaReporte();
+                }
+
             }
-            else
+            catch 
             {
-                MostrarVistaReporte();
+
             }
+            
         }
 
-        /*Josue Daniel Zapata Azañon - 9959-18-4829*/
+
         private void btnReporte_Click_1(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(formReporte.ruta))
+            try
             {
-                MessageBox.Show("Error con la ruta del reporte, verifique que la Aplicacion existe y que la ruta sea la correcta!");
+                if (String.IsNullOrEmpty(formReporte.ruta))
+                {
+                    MessageBox.Show("Error con la ruta del reporte, verifique que la Aplicacion existe y que la ruta sea la correcta!");
+                }
+                else
+                {
+                    MostrarVistaReporte();
+                }
+
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Reporteador");
+
             }
-            else
+            catch 
             {
-                MostrarVistaReporte();
+
             }
-            /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-            //Bitacora reporteador = new Bitacora();
-            //reporteador.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "reporteador");
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Reporteador");
+
+            
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            ConsultasInteligentes CI = new ConsultasInteligentes();
-            CI.Show();
+            try
+            {
+                ConsultasInteligentes CI = new ConsultasInteligentes();
+                CI.Show();
 
-            /*Daniel Enrique Navas Hernandez 0901-18-15032*/
-            //Bitacora consultar = new Bitacora();
-            //consultar.guardarEnBitacora(idusuario, idmodulo, idAplicacion, "consultar");
-            bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Consulta");
+
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Consulta");
+
+            }
+            catch 
+            {
+
+            }
+            
         }
     }
 }

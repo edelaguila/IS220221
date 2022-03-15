@@ -23,6 +23,7 @@ namespace CapaControlador
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
         public TextBox[] ordenandoTextos(Control parent)
         {
+            
             texts = ModeloTercera.AsignaAlias(parent);
             control = parent;
             TextBox[] alias = new TextBox[texts.Length];
