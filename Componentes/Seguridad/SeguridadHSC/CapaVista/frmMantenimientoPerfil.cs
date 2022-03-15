@@ -21,7 +21,7 @@ namespace CapaVistaSeguridadHSC
         public frmMantenimientoPerfil()
         {
             InitializeComponent();
-            //Usuario
+            //TextBox[] alias = { txtID, txtCodigoMarca, txtNombre, txtFecha, txtDescripcion, txtStock, txtPrecio, txtEstatus};
             TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
             navegador1.ObtenerCamposdeTabla(alias, "perfil", "hotelSanCarlos");
             navegador1.MetodoSalirVista(this);
@@ -32,7 +32,8 @@ namespace CapaVistaSeguridadHSC
             //fin de elementos para dar de baja
 
             /* Inicio ID Aplicacion usada para reportes y ayudas */
-            navegador1.idAplicacion = "1002";
+            navegador1.idAplicacion = "0004";
+            navegador1.idmodulo = "1";
             /* Inicio ID Aplicacion usada para reportes y ayudas */
 
             //inicio de elementos para ejecutar la ayuda
@@ -48,6 +49,8 @@ namespace CapaVistaSeguridadHSC
             navegador1.ObtenerNombreDGV(this.dtgPerfiles);
             navegador1.LlenarTabla();
             navegador1.ObtenerReferenciaFormActual(this);
+            //String cadena = txtprueba.Text;
+            //navegador1.pruebaMensaje(cadena);
         }
 
         private string tabla = "perfil";
