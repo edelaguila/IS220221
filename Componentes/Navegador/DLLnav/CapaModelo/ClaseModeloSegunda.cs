@@ -90,7 +90,7 @@ namespace CapaModeloNav
                 for (int i = 0; i < arreglo.Length; i++)
                 {
                     if (arreglo[i].Tag.ToString() == campoEstado)
-                    {   string sql = "UPDATE" + " " + tabla + " " + "SET" + " " + campoEstado + " =" + "'" + 'I' + "'" + " " + "WHERE" + " " + arreglo[0].Tag.ToString() + " = " + arreglo[0].Text;
+                    {   string sql = "UPDATE" + " " + tabla + " " + "SET" + " " + campoEstado + " =" + "'" + '0' + "'" + " " + "WHERE" + " " + arreglo[0].Tag.ToString() + " = " + arreglo[0].Text;
                         //MessageBox.Show(sql);
                         try
                         {
