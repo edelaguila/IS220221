@@ -46,3 +46,9 @@ C:\Users\GiancarloS\Desktop\1\IS220221\Componentes\Navegador\DLLnav\CapaModelo\o
 C:\Users\GiancarloS\Desktop\1\IS220221\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
 C:\Users\GiancarloS\Desktop\1\IS220221\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModeloNav.dll
 C:\Users\GiancarloS\Desktop\1\IS220221\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModeloNav.pdb
+F:\Ingenieria de Software\R2\Componentes\Navegador\DLLnav\CapaModelo\bin\Debug\CapaModeloNav.dll
+F:\Ingenieria de Software\R2\Componentes\Navegador\DLLnav\CapaModelo\bin\Debug\CapaModeloNav.pdb
+F:\Ingenieria de Software\R2\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModelo.csproj.AssemblyReference.cache
+F:\Ingenieria de Software\R2\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
+F:\Ingenieria de Software\R2\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModeloNav.dll
+F:\Ingenieria de Software\R2\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModeloNav.pdb

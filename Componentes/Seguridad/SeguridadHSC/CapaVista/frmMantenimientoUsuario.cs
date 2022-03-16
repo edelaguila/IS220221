@@ -107,7 +107,10 @@ namespace CapaVistaSeguridadHSC
             }
             catch { }
         }
+        private void dvgConsulta_SelectionChanged(object sender, EventArgs e)
+        {
+            navegador1.SelecciondeFilaDGV(dtgUsuarios);
+        }
 
-     
     }
 }

@@ -935,15 +935,13 @@ namespace DLL.nav
             try
             {
                 bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Salir");
-
+                
             }
             catch
             {
 
             }
-
-
-            
+            generic.Close();            
         }
         Form generic;
 

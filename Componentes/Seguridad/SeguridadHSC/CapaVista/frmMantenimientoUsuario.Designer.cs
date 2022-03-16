@@ -168,6 +168,7 @@ namespace CapaVistaSeguridadHSC
             this.dtgUsuarios.Name = "dtgUsuarios";
             this.dtgUsuarios.Size = new System.Drawing.Size(794, 381);
             this.dtgUsuarios.TabIndex = 75;
+            this.dtgUsuarios.SelectionChanged += new System.EventHandler(this.dvgConsulta_SelectionChanged);
             // 
             // labelestadocliente
             // 
