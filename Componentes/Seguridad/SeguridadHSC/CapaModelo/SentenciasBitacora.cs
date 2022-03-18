@@ -3,9 +3,9 @@ using System.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Dapper;
 using System.Text;
 using System.Threading.Tasks;
-using Dapper;
 
 namespace CapaModeloSeguridadHSC
 {
@@ -139,21 +139,11 @@ namespace CapaModeloSeguridadHSC
         }
 
         /// MELANIE REVOLORIO
-        /// <summary>
-        /// Obtiene todos los datos de la Bitácora 
-        /// </summary>
-        /// <returns></returns>
-        public List<ViewModelBitacora.ViewModelBitacora> leerBitacora()
+        public OdbcDataAdapter llenarTblBitacora(string tabla)// metodo  que obtinene el contenio de una tabla
         {
-            List<ViewModelBitacora.ViewModelBitacora> sqlresultado = new List<ViewModelBitacora.ViewModelBitacora>();
-            OdbcConnection conexionODBC = ODBC.conexion();
-            if (conexionODBC != null)
-            {
-                string sqlconsulta = "SELECT A.pkId, B.nombre AS usuario, A.host, A.ip, D.nombre AS modulo, C.nombre AS aplicacion, A.accion AS accion, A.conexionFecha, A.conexionHora FROM bitacorausuario A JOIN usuario B ON A.fkIdUsuario = B.pkId JOIN aplicacion C ON A.fkIdAplicacion = C.pkId JOIN modulo D ON A.fkIdModulo = D.pkId;";
-                sqlresultado = conexionODBC.Query<ViewModelBitacora.ViewModelBitacora>(sqlconsulta).ToList();
-                ODBC.desconexion(conexionODBC);
-            }
-            return sqlresultado;
+            string sql = "SELECT pkid,  fkidusuario, host, ip, fkidmodulo, fkidaplicacion, accion, conexionfecha, conexionhora FROM " + tabla + "  ;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, ODBC.conexion());
+            return dataTable;
         }
 
     }

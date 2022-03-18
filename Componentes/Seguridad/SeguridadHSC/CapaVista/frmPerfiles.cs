@@ -11,6 +11,7 @@ namespace CapaVistaSeguridadHSC
     public partial class frmPerfiles : Form
     {
         private Controlador cn = new Controlador();
+        
 
         public frmPerfiles()
         {
@@ -48,8 +49,8 @@ namespace CapaVistaSeguridadHSC
         private void button1_Click(object sender, EventArgs e)
         {
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0007", "Consultar");
+            
+            cn.guardarEnBitacora(IdUsuario, "1", "0007", "Consultar");
             //
             string condicion = textBox1.Text;
             actualizardatagriew();
@@ -78,6 +79,7 @@ namespace CapaVistaSeguridadHSC
             string valor2 = textBox3.Text;
             cn.Perfilagregar(tabla3, valor1, valor2);
             actualizardatagriewpersonal();
+            cn.guardarEnBitacora(IdUsuario, "1", "0007", "Asignar");
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -91,6 +93,7 @@ namespace CapaVistaSeguridadHSC
             string valor2 = textBox3.Text;
             cn.Perfileliminar(tabla3, valor1, valor2);
             actualizardatagriewpersonal();
+            cn.guardarEnBitacora(IdUsuario, "1", "0007", "Quitar Asignación");
         }
         //Danny Saldaña 0901-18-18686
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -107,6 +110,7 @@ namespace CapaVistaSeguridadHSC
             string valor1 = textBox1.Text;
             cn.perfilPerfileliminartodo(tabla3, valor1);
             actualizardatagriewpersonal();
+            cn.guardarEnBitacora(IdUsuario, "1", "0007", "Quitar Todas las Asignaciones");
         }
         //Danny Saldaña 0901-18-18686
         private void button4_Click(object sender, EventArgs e)
@@ -139,6 +143,8 @@ namespace CapaVistaSeguridadHSC
             textBox3.Text = "";
             dtgConsulta.DataSource = null;
             dataGridView1.DataSource = null;
+
+            cn.guardarEnBitacora(IdUsuario, "1", "0007", "Limpiar");
         }
         //Danny Saldaña 0901-18-18686
         //Utilizar flechas para moverse entre botones

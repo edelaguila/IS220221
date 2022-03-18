@@ -62,8 +62,8 @@ namespace CapaVistaSeguridadHSC
         private void button1_Click(object sender, EventArgs e)
         {
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0006", "Consulta");
+            
+            cn.guardarEnBitacora(IdUsuario, "1", "0006", "Consulta");
             //
             string condicion = textBox1.Text;
             aplicacionllenarTbl();
@@ -89,8 +89,7 @@ namespace CapaVistaSeguridadHSC
         {
             textBox3.Text = dtgConsulta.CurrentRow.Cells[0].Value.ToString();
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0006", "Asignar");
+            cn.guardarEnBitacora(IdUsuario, "1", "0006", "Asignar");
             //
             string valor1 = textBox1.Text;
             string valor2 = textBox3.Text;
@@ -105,8 +104,7 @@ namespace CapaVistaSeguridadHSC
         private void button2_Click(object sender, EventArgs e)
         {
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0006", "Quitar");
+            cn.guardarEnBitacora(IdUsuario, "1", "0006", "Quitar");
             //
             textBox3.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             string valor1 = textBox1.Text;
@@ -127,8 +125,7 @@ namespace CapaVistaSeguridadHSC
         private void button5_Click(object sender, EventArgs e)
         {
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0006", "Quitar todo");
+            cn.guardarEnBitacora(IdUsuario, "1", "0006", "Quitar todo");
             //
             string valor1 = textBox1.Text;
             cn.aplicacioneliminartodo(tabla3, valor1);
@@ -138,8 +135,7 @@ namespace CapaVistaSeguridadHSC
         private void button4_Click(object sender, EventArgs e)
         {
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0006", "Asignar todo");
+            cn.guardarEnBitacora(IdUsuario, "1", "0006", "Asignar todo");
             //
             string valor1 = textBox1.Text;
             string valor2 = textBox3.Text;
