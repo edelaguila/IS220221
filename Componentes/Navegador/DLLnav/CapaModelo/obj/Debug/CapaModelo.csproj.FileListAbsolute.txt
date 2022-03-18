@@ -52,3 +52,9 @@ F:\Ingenieria de Software\R2\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\C
 F:\Ingenieria de Software\R2\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
 F:\Ingenieria de Software\R2\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModeloNav.dll
 F:\Ingenieria de Software\R2\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModeloNav.pdb
+C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Navegador\DLLnav\CapaModelo\bin\Debug\CapaModeloNav.dll
+C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Navegador\DLLnav\CapaModelo\bin\Debug\CapaModeloNav.pdb
+C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModelo.csproj.AssemblyReference.cache
+C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
+C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModeloNav.dll
+C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Navegador\DLLnav\CapaModelo\obj\Debug\CapaModeloNav.pdb

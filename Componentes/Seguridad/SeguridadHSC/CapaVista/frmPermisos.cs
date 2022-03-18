@@ -34,7 +34,7 @@ namespace CapaVistaSeguridadHSC
         //Heydi Quemé 9959-18-5335
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Bitacora loggear = new Bitacora();
+            CapaControladorSeguridadHSC.Controlador loggear = new CapaControladorSeguridadHSC.Controlador();
             loggear.guardarEnBitacora(IdUsuario, "1", "0008", "Guardar");
 
             if (labelidentidad.Text == "")

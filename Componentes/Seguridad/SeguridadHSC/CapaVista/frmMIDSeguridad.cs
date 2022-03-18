@@ -16,6 +16,8 @@ namespace CapaVistaSeguridadHSC
             CenterToScreen();
             this.WindowState = FormWindowState.Maximized;
         }
+
+        CapaControladorSeguridadHSC.Controlador bitacora = new CapaControladorSeguridadHSC.Controlador();
         //Kevin Flores 9959-18-17632
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
@@ -23,8 +25,8 @@ namespace CapaVistaSeguridadHSC
             if (form.ShowDialog() == DialogResult.OK)
             {
                 //Jorge González 0901-18-3920
-                Bitacora loggear = new Bitacora();
-                loggear.guardarEnBitacora(IdUsuario, "1", "0001", "Cerrar sesión");
+
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0001", "Cerrar sesión");
                 txtUsuario.Text = form.usuario();
             }
             else { this.Close(); }
@@ -43,8 +45,7 @@ namespace CapaVistaSeguridadHSC
             frmMantenimientoAplicacion form3 = new frmMantenimientoAplicacion();
             form3.MdiParent = this;
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0003", "Entrada a la Vista");
+            bitacora.guardarEnBitacora(IdUsuario, "1", "0003", "Entrada a la Vista");
             form3.Show();
         }
 
@@ -57,8 +58,7 @@ namespace CapaVistaSeguridadHSC
             frmMantenimientoPerfil form3 = new frmMantenimientoPerfil();
             form3.MdiParent = this;
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0007", "Entrada a la Vista");
+            bitacora.guardarEnBitacora(IdUsuario, "1", "0007", "Entrada a la Vista");
             form3.Show();
         }
         //Kevin Flores 9959-18-17632
@@ -67,8 +67,7 @@ namespace CapaVistaSeguridadHSC
             frmAplicaciones form3 = new frmAplicaciones();
             form3.MdiParent = this;
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0006", "Entrada a la Vista");
+            bitacora.guardarEnBitacora(IdUsuario, "1", "0006", "Entrada a la Vista");
             form3.Show();
         }
         //Kevin Flores 9959-18-17632
@@ -77,8 +76,7 @@ namespace CapaVistaSeguridadHSC
             frmAplicacionesPerfiles form3 = new frmAplicacionesPerfiles();
             form3.MdiParent = this;
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0005", "Entrada a la Vista");
+            bitacora.guardarEnBitacora(IdUsuario, "1", "0005", "Entrada a la Vista");
             form3.Show();
         }
         //Kevin Flores 9959-18-17632
@@ -87,8 +85,7 @@ namespace CapaVistaSeguridadHSC
             frmCambioContraseña form3 = new frmCambioContraseña();
             form3.MdiParent = this;
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0010", "Entrada a la Vista");
+            bitacora.guardarEnBitacora(IdUsuario, "1", "0010", "Entrada a la Vista");
             form3.Show();
         }
 
@@ -101,29 +98,26 @@ namespace CapaVistaSeguridadHSC
             frmPerfiles form3 = new frmPerfiles();
             form3.MdiParent = this;
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0007", "Asignación de Perfiles a Usuarios");
+            bitacora.guardarEnBitacora(IdUsuario, "1", "0007", "Asignación de Perfiles a Usuarios");
             form3.Show();
         }
         //Kevin Flores 9959-18-17632
         private void bitácoraDeLoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            bitacora.guardarEnBitacora(IdUsuario, "1", "0011", "Entrada a la Vista");
             frmBitacora form3 = new frmBitacora();
             form3.MdiParent = this;
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0011", "Entrada a la Vista");
             form3.Show();
         }
         //Kevin Flores 9959-18-17632
         private void registrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRegistrarUsuario form3 = new frmRegistrarUsuario();
-            form3.MdiParent = this;
+            //frmRegistrarUsuario form3 = new frmRegistrarUsuario();
+            //form3.MdiParent = this;
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
-            form3.Show();
+            //bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+            //form3.Show();
         }
         //Kevin Flores 9959-18-17632
         private void btnPermisos_Click(object sender, EventArgs e)
@@ -131,8 +125,7 @@ namespace CapaVistaSeguridadHSC
             frmPermisos form3 = new frmPermisos();
             form3.MdiParent = this;
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0008", "Entrada a la Vista");
+            bitacora.guardarEnBitacora(IdUsuario, "1", "0008", "Entrada a la Vista");
             form3.Show();
         }
         //Kevin Flores 9959-18-17632
@@ -160,8 +153,7 @@ namespace CapaVistaSeguridadHSC
             frmModulo form3 = new frmModulo();
             form3.MdiParent = this;
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0012", "Entrada a la Vista");
+            bitacora.guardarEnBitacora(IdUsuario, "1", "0012", "Entrada a la Vista");
             form3.Show();
         }
 
@@ -169,8 +161,7 @@ namespace CapaVistaSeguridadHSC
         {
             frmMantenimientoUsuario form3 = new frmMantenimientoUsuario();
             form3.MdiParent = this;
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+            bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
             form3.Show();
         }
     }

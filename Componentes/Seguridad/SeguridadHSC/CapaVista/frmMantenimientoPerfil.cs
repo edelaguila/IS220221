@@ -28,7 +28,7 @@ namespace CapaVistaSeguridadHSC
             // navegador1.funLlenarComboControl(cbxCodMarca, "marcaP", "idMarca", "nombre", "estatus");
 
             //inicio de elementos para dar de baja
-            navegador1.campoEstado = "Estado";
+            navegador1.campoEstado = "estado";
             //fin de elementos para dar de baja
 
             /* Inicio ID Aplicacion usada para reportes y ayudas */

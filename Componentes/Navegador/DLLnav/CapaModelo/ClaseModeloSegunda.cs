@@ -182,11 +182,11 @@ namespace CapaModeloNav
          */
         public void metodoActivaRadiobtn(RadioButton activo, RadioButton inactivo, TextBox estatus)
         {
-            if (estatus.Text == "A")
+            if (estatus.Text == "1")
             {
                 activo.Checked = true;
             }
-            else if (estatus.Text == "I")
+            else if (estatus.Text == "0")
             {
                 inactivo.Checked = true;
             }

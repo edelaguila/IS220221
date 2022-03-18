@@ -164,12 +164,6 @@
     <Compile Include="frmRecuperarContraseña.Designer.cs">
       <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRegistrarUsuario.Designer.cs">
-      <DependentUpon>frmRegistrarUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -231,9 +225,6 @@
     <EmbeddedResource Include="frmRecuperarContraseña.resx">
       <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarUsuario.resx">
-      <DependentUpon>frmRegistrarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
@@ -252,6 +243,7 @@
     <Content Include="Recursos\login_50px.png" />
     <Content Include="Recursos\Logopng.png" />
     <Content Include="Recursos\see %281%29.png" />
+    <None Include="packages.config" />
     <None Include="Recursos\seguridad.jpg" />
   </ItemGroup>
   <ItemGroup />

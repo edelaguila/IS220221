@@ -27,7 +27,7 @@ namespace CapaVistaSeguridadHSC
             navegador1.LlenarTabla();
             navegador1.ObtenerReferenciaFormActual(this);
             //inicio de elementos para dar de baja
-            navegador1.campoEstado = "Estado";
+            navegador1.campoEstado = "estado";
             //fin de elementos para dar de baja
 
             /* Inicio ID Aplicacion usada para reportes y ayudas */

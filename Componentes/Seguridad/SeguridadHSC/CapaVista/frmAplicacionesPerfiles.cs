@@ -82,8 +82,8 @@ namespace CapaVistaSeguridadHSC
                 string valor2 = textBox3.Text;
                 cn.aplicacionagregar(tabla3, valor1, valor2);
                 //Jorge González 0901-18-3920
-                Bitacora loggear = new Bitacora();
-                loggear.guardarEnBitacora(IdUsuario, "1", "0005", "Asignar");
+                
+                cn.guardarEnBitacora(IdUsuario, "1", "0005", "Asignar");
                 //
                 actualizardatagriewpersonal();
                 actualizardatagriewpersonal();
@@ -108,8 +108,8 @@ namespace CapaVistaSeguridadHSC
                 string valor2 = textBox3.Text;
                 cn.aplicacioneliminar(tabla3, valor1, valor2);
                 //Jorge González 0901-18-3920
-                Bitacora loggear = new Bitacora();
-                loggear.guardarEnBitacora(IdUsuario, "1", "0005", "Quitar");
+                
+                cn.guardarEnBitacora(IdUsuario, "1", "0005", "Quitar");
                 //
                 actualizardatagriewpersonal();
                 actualizardatagriewpersonal();
@@ -133,8 +133,8 @@ namespace CapaVistaSeguridadHSC
             try
             {
                 //Jorge González 0901-18-3920
-                Bitacora loggear = new Bitacora();
-                loggear.guardarEnBitacora(IdUsuario, "1", "0005", "Quitar todo");
+                
+                cn.guardarEnBitacora(IdUsuario, "1", "0005", "Quitar todo");
                 //
                 cn.aplicacioneliminartodo(tabla3);
                 actualizardatagriewpersonal();
@@ -169,8 +169,8 @@ namespace CapaVistaSeguridadHSC
         private void button6_Click(object sender, EventArgs e)
         {
             //Jorge González 0901-18-3920
-            Bitacora loggear = new Bitacora();
-            loggear.guardarEnBitacora(IdUsuario, "1", "0005", "Limpiar");
+            
+            cn.guardarEnBitacora(IdUsuario, "1", "0005", "Limpiar");
             //
             textBox3.Text = "";
             dtgConsulta.DataSource = null;

@@ -433,5 +433,13 @@ namespace CapaControladorSeguridadHSC
             string res = bitacora.obtenerIdDeModulo(modulo);
             return res;
         }
+
+        public DataTable llenarTblBitacora(string tabla)
+        {
+            OdbcDataAdapter dt = bitacora.llenarTblBitacora(tabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
     }
 }
