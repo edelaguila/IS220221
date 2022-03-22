@@ -55,7 +55,7 @@ namespace CapaVistaSeguridadHSC
             this.dtgConsulta.AllowUserToAddRows = false;
             this.dtgConsulta.AllowUserToDeleteRows = false;
             this.dtgConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgConsulta.Location = new System.Drawing.Point(400, 134);
+            this.dtgConsulta.Location = new System.Drawing.Point(31, 130);
             this.dtgConsulta.Margin = new System.Windows.Forms.Padding(2);
             this.dtgConsulta.Name = "dtgConsulta";
             this.dtgConsulta.ReadOnly = true;
@@ -100,7 +100,7 @@ namespace CapaVistaSeguridadHSC
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 134);
+            this.dataGridView1.Location = new System.Drawing.Point(400, 134);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -116,7 +116,7 @@ namespace CapaVistaSeguridadHSC
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(58, 27);
             this.button2.TabIndex = 5;
-            this.button2.Text = ">";
+            this.button2.Text = "<";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             this.button2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button2_KeyDown);
@@ -128,7 +128,7 @@ namespace CapaVistaSeguridadHSC
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(58, 27);
             this.button3.TabIndex = 6;
-            this.button3.Text = "<";
+            this.button3.Text = ">";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             this.button3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button3_KeyDown);
@@ -174,7 +174,7 @@ namespace CapaVistaSeguridadHSC
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(58, 27);
             this.button5.TabIndex = 9;
-            this.button5.Text = ">>";
+            this.button5.Text = "<<";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             this.button5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button5_KeyDown);
@@ -205,7 +205,7 @@ namespace CapaVistaSeguridadHSC
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(28, 115);
+            this.label4.Location = new System.Drawing.Point(397, 115);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 13);
@@ -216,7 +216,7 @@ namespace CapaVistaSeguridadHSC
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(397, 115);
+            this.label5.Location = new System.Drawing.Point(29, 115);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 13);
@@ -254,10 +254,10 @@ namespace CapaVistaSeguridadHSC
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.dtgConsulta);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;

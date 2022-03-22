@@ -279,7 +279,6 @@ C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVi
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmPerfiles.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmPermisos.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmRecuperarContraseña.resources
-C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmRegistrarUsuario.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.Properties.Resources.resources
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.csproj.GenerateResource.cache
 C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.csproj.CoreCompileInputs.cache
@@ -719,3 +718,4 @@ C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Seguridad\SeguridadHSC\CapaVi
 C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.csproj.CopyComplete
 C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.dll
 C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.pdb
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaVista\obj\Debug\CapaVistaSeguridadHSC.frmConfirmarContraseña.resources
