@@ -70,3 +70,6 @@ C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Seguridad\SeguridadHSC\CapaMo
 C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.csproj.CopyComplete
 C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.dll
 C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.pdb
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\bin\Debug\Dapper.dll
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\bin\Debug\Dapper.xml
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.csproj.CopyComplete

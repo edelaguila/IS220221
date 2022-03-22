@@ -96,3 +96,5 @@ C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Seguridad\SeguridadHSC\CapaCo
 C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.pdb
 C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\Dapper.dll
 C:\Users\ZUZU\Desktop\RevisionBitacora\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\Dapper.xml
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\Dapper.dll
+C:\Users\GiancarloS\Desktop\3\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\Dapper.xml
