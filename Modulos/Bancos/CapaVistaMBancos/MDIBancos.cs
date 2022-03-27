@@ -72,5 +72,17 @@ namespace CapaVistaMBancos
             CapaVistaReporte.ReporteadorAdmin frm = new CapaVistaReporte.ReporteadorAdmin();
             frm.Show();
         }
+
+        private void bancosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMantenimientosBancos frmb = new frmMantenimientosBancos();
+            frmb.Show();
+        }
+
+        private void monedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMantenimientoMoneda frmm = new frmMantenimientoMoneda();
+            frmm.Show();
+        }
     }
 }
