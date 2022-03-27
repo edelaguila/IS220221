@@ -32,6 +32,8 @@ namespace CapaVistaMBancos
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIBancos));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bancosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaGeneralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasInteligentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +53,7 @@ namespace CapaVistaMBancos
             this.movimientosRealizadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chequesEmitidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.monedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +75,7 @@ namespace CapaVistaMBancos
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.matenimientosToolStripMenuItem,
             this.ayudaGeneralToolStripMenuItem,
             this.herramientasToolStripMenuItem,
             this.cerrarSesionToolStripMenuItem,
@@ -80,10 +84,26 @@ namespace CapaVistaMBancos
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.inicioToolStripMenuItem.Text = "Inicio ";
             // 
+            // matenimientosToolStripMenuItem
+            // 
+            this.matenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bancosToolStripMenuItem,
+            this.monedaToolStripMenuItem});
+            this.matenimientosToolStripMenuItem.Name = "matenimientosToolStripMenuItem";
+            this.matenimientosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.matenimientosToolStripMenuItem.Text = "Matenimientos";
+            // 
+            // bancosToolStripMenuItem
+            // 
+            this.bancosToolStripMenuItem.Name = "bancosToolStripMenuItem";
+            this.bancosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bancosToolStripMenuItem.Text = "Bancos";
+            this.bancosToolStripMenuItem.Click += new System.EventHandler(this.bancosToolStripMenuItem_Click);
+            // 
             // ayudaGeneralToolStripMenuItem
             // 
             this.ayudaGeneralToolStripMenuItem.Name = "ayudaGeneralToolStripMenuItem";
-            this.ayudaGeneralToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.ayudaGeneralToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ayudaGeneralToolStripMenuItem.Text = "Ayuda General";
             // 
             // herramientasToolStripMenuItem
@@ -93,7 +113,7 @@ namespace CapaVistaMBancos
             this.seguridadToolStripMenuItem,
             this.reporteadorToolStripMenuItem});
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
-            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.herramientasToolStripMenuItem.Text = "Herramientas";
             // 
             // consultasInteligentesToolStripMenuItem
@@ -136,14 +156,14 @@ namespace CapaVistaMBancos
             // cerrarSesionToolStripMenuItem
             // 
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -215,6 +235,13 @@ namespace CapaVistaMBancos
             this.txtUsuario.Size = new System.Drawing.Size(58, 20);
             this.txtUsuario.TabIndex = 33;
             // 
+            // monedaToolStripMenuItem
+            // 
+            this.monedaToolStripMenuItem.Name = "monedaToolStripMenuItem";
+            this.monedaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.monedaToolStripMenuItem.Text = "Moneda";
+            this.monedaToolStripMenuItem.Click += new System.EventHandler(this.monedaToolStripMenuItem_Click);
+            // 
             // MDIBancos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,5 +284,8 @@ namespace CapaVistaMBancos
         private System.Windows.Forms.ToolStripMenuItem movimientosRealizadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chequesEmitidosToolStripMenuItem;
         private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.ToolStripMenuItem matenimientosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bancosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem monedaToolStripMenuItem;
     }
 }
