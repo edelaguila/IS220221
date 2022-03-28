@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaVista;
+using CapaVistaRRHH;
 
 namespace EjecutableRRHH
 {
@@ -17,7 +17,7 @@ namespace EjecutableRRHH
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MDIRecursosHumanos());
+			Application.Run(new frmMDIRRHH());
 		}
 	}
 }

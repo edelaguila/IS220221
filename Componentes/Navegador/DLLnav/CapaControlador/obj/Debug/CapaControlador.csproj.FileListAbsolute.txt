@@ -127,3 +127,16 @@ C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\Navegador\DLLnav\Ca
 C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
 C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControladorNav.dll
 C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControladorNav.pdb
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaControladorNav.dll
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaControladorNav.pdb
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaModeloNav.dll
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaModeloSeguridadHSC.dll
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\Dapper.dll
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaModeloNav.pdb
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\CapaModeloSeguridadHSC.pdb
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\bin\Debug\Dapper.xml
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControlador.csproj.AssemblyReference.cache
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControlador.csproj.CoreCompileInputs.cache
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControladorNav.dll
+F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\CapaControlador\obj\Debug\CapaControladorNav.pdb
