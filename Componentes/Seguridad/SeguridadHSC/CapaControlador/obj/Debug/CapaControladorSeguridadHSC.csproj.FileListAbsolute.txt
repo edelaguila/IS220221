@@ -107,3 +107,14 @@ C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\Seguridad\Seguridad
 C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.csproj.CopyComplete
 C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.dll
 C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.pdb
+F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\CapaControladorSeguridadHSC.dll
+F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\CapaControladorSeguridadHSC.pdb
+F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\CapaModeloSeguridadHSC.dll
+F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\CapaModeloSeguridadHSC.pdb
+F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.csproj.AssemblyReference.cache
+F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.csproj.CoreCompileInputs.cache
+F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.csproj.CopyComplete
+F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.dll
+F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.pdb
+F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\Dapper.dll
+F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\Dapper.xml

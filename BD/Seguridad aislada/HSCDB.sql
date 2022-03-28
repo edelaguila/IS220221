@@ -21,7 +21,17 @@ CREATE TABLE puesto (
  -- FOREIGN KEY (fkIdPuestoSuperior) REFERENCES puesto (pkIdPuesto))
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
  
+create table tipofalta(
+pkidTipofalta int primary key,
+nombreTipofalta varchar(35) not null,
+estadoTipofalta varchar(1) not null
+)engine=InnoDB;
 
+create table departamento(
+pkidDepartamento int primary key,
+nombreDepartamento varchar(35) not null,
+estadoDepartamento varchar(1)
+)engine=InnoDB;
 -- ------------------------------------------------------------------------------------------------------------
 -- 	COMPONENTE SEGURIDAD
 -- ------------------------------------------------------------------------------------------------------------
