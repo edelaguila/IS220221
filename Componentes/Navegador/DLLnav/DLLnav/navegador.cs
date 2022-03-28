@@ -339,7 +339,7 @@ namespace DLL.nav
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
-        public void SeleciconarFechaDTP(DateTimePicker date, TextBox textoDate)
+        public void SeleccionarFechaDTP(DateTimePicker date, TextBox textoDate)
         {
             try
             {

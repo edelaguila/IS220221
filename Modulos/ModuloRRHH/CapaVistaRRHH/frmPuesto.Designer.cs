@@ -134,6 +134,7 @@ namespace CapaVistaRRHH
             this.txtIDPuesto.Name = "txtIDPuesto";
             this.txtIDPuesto.Size = new System.Drawing.Size(200, 20);
             this.txtIDPuesto.TabIndex = 89;
+            this.txtIDPuesto.Tag = "pkIdPuesto";
             // 
             // label2
             // 
@@ -150,6 +151,7 @@ namespace CapaVistaRRHH
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 89;
+            this.txtNombre.Tag = "nombre";
             // 
             // label3
             // 
@@ -189,16 +191,16 @@ namespace CapaVistaRRHH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 574);
+            this.ClientSize = new System.Drawing.Size(1185, 574);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtPuestoSuperior);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtAñosExperiencia);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtIDPuesto);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.dgvVistaPrevia);
@@ -208,6 +210,7 @@ namespace CapaVistaRRHH
             this.Name = "frmPuesto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPuesto";
+            this.Load += new System.EventHandler(this.frmPuesto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

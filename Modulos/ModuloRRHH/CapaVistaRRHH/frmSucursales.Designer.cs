@@ -127,7 +127,7 @@ namespace CapaVistaRRHH
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 93;
-            this.txtEstado.Tag = "estado";
+            this.txtEstado.Tag = "estatus";
             this.txtEstado.Visible = false;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
@@ -232,6 +232,7 @@ namespace CapaVistaRRHH
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1188, 579);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtCodigoPostal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTelefono);
@@ -240,11 +241,10 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtIDEmpresa);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtIDSucursal);
+            this.Controls.Add(this.txtIDEmpresa);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.dgvVistaPrevia);

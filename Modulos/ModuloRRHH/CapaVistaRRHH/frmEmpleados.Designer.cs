@@ -66,10 +66,10 @@ namespace CapaVistaRRHH
             this.lblSueldo = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.dgvVistaPrevia = new System.Windows.Forms.DataGridView();
             this.navegador1 = new DLL.nav.navegador();
             this.lblIDEmpleado = new System.Windows.Forms.Label();
             this.txtIDEmpleado = new System.Windows.Forms.TextBox();
+            this.dgvVistaPrevia = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
             this.SuspendLayout();
@@ -127,25 +127,25 @@ namespace CapaVistaRRHH
             // 
             // dtpFinContrato
             // 
-            this.dtpFinContrato.Location = new System.Drawing.Point(329, 404);
+            this.dtpFinContrato.Location = new System.Drawing.Point(12, 404);
             this.dtpFinContrato.Name = "dtpFinContrato";
-            this.dtpFinContrato.Size = new System.Drawing.Size(240, 20);
+            this.dtpFinContrato.Size = new System.Drawing.Size(197, 20);
             this.dtpFinContrato.TabIndex = 83;
             this.dtpFinContrato.ValueChanged += new System.EventHandler(this.dtpFinContrato_ValueChanged);
             // 
             // dtpFechaContratacion
             // 
-            this.dtpFechaContratacion.Location = new System.Drawing.Point(329, 378);
+            this.dtpFechaContratacion.Location = new System.Drawing.Point(12, 371);
             this.dtpFechaContratacion.Name = "dtpFechaContratacion";
-            this.dtpFechaContratacion.Size = new System.Drawing.Size(240, 20);
+            this.dtpFechaContratacion.Size = new System.Drawing.Size(196, 20);
             this.dtpFechaContratacion.TabIndex = 82;
             this.dtpFechaContratacion.ValueChanged += new System.EventHandler(this.dtpFechaContratacion_ValueChanged);
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(329, 197);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(12, 199);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(240, 20);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(197, 20);
             this.dtpFechaNacimiento.TabIndex = 81;
             this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dtpFechaNacimiento_ValueChanged);
             // 
@@ -155,6 +155,8 @@ namespace CapaVistaRRHH
             this.txtIDPuesto.Name = "txtIDPuesto";
             this.txtIDPuesto.Size = new System.Drawing.Size(241, 20);
             this.txtIDPuesto.TabIndex = 79;
+            this.txtIDPuesto.Tag = "fkIdPuesto";
+            this.txtIDPuesto.TextChanged += new System.EventHandler(this.txtIDPuesto_TextChanged);
             // 
             // txtIDEmpresa
             // 
@@ -162,6 +164,8 @@ namespace CapaVistaRRHH
             this.txtIDEmpresa.Name = "txtIDEmpresa";
             this.txtIDEmpresa.Size = new System.Drawing.Size(241, 20);
             this.txtIDEmpresa.TabIndex = 78;
+            this.txtIDEmpresa.Tag = "fkIdEmpresa";
+            this.txtIDEmpresa.TextChanged += new System.EventHandler(this.txtIDEmpresa_TextChanged);
             // 
             // lblIDPuesto
             // 
@@ -390,15 +394,6 @@ namespace CapaVistaRRHH
             this.lblNombre.TabIndex = 64;
             this.lblNombre.Text = "Nombres: ";
             // 
-            // dgvVistaPrevia
-            // 
-            this.dgvVistaPrevia.AllowUserToOrderColumns = true;
-            this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVistaPrevia.Location = new System.Drawing.Point(591, 115);
-            this.dgvVistaPrevia.Name = "dgvVistaPrevia";
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(566, 464);
-            this.dgvVistaPrevia.TabIndex = 52;
-            // 
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
@@ -424,11 +419,23 @@ namespace CapaVistaRRHH
             this.txtIDEmpleado.TabIndex = 71;
             this.txtIDEmpleado.Tag = "pkIdEmpleado";
             // 
+            // dgvVistaPrevia
+            // 
+            this.dgvVistaPrevia.AllowUserToAddRows = false;
+            this.dgvVistaPrevia.AllowUserToDeleteRows = false;
+            this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVistaPrevia.Location = new System.Drawing.Point(591, 118);
+            this.dgvVistaPrevia.Name = "dgvVistaPrevia";
+            this.dgvVistaPrevia.ReadOnly = true;
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(566, 391);
+            this.dgvVistaPrevia.TabIndex = 87;
+            this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
+            // 
             // frmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 609);
+            this.ClientSize = new System.Drawing.Size(1188, 540);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtIDEmpresa);
             this.Controls.Add(this.txtIDPuesto);
@@ -444,12 +451,13 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtIDEmpleado);
+            this.Controls.Add(this.dtpFechaContratacion);
+            this.Controls.Add(this.dtpFechaNacimiento);
+            this.Controls.Add(this.dgvVistaPrevia);
+            this.Controls.Add(this.dtpFinContrato);
             this.Controls.Add(this.cbxIDEmpresa);
             this.Controls.Add(this.cbxIDPuesto);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dtpFinContrato);
-            this.Controls.Add(this.dtpFechaContratacion);
-            this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.lblIDEmpresa);
             this.Controls.Add(this.lblIDPuesto);
@@ -465,7 +473,6 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.lblSueldo);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblIDEmpleado);
-            this.Controls.Add(this.dgvVistaPrevia);
             this.Controls.Add(this.navegador1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEmpleados";
@@ -517,9 +524,9 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.Label lblSueldo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.DataGridView dgvVistaPrevia;
         private DLL.nav.navegador navegador1;
         private System.Windows.Forms.Label lblIDEmpleado;
         private System.Windows.Forms.TextBox txtIDEmpleado;
+        private System.Windows.Forms.DataGridView dgvVistaPrevia;
     }
 }

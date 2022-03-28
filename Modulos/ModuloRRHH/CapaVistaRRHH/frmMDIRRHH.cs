@@ -58,7 +58,7 @@ namespace CapaVistaRRHH
                 bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
                 form3.Show();
             }
-            catch { }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
 
         private void departamentosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace CapaVistaRRHH
                 bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
                 form3.Show();
             }
-            catch { }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
 
         private void puestosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,7 +82,43 @@ namespace CapaVistaRRHH
                 bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
                 form3.Show();
             }
-            catch { }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void tipoDeFaltasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmTipoFalta form3 = new frmTipoFalta();
+                form3.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form3.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void empresasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmEmpresas form3 = new frmEmpresas();
+                form3.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form3.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void sucursalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmSucursales form3 = new frmSucursales();
+                form3.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form3.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
     }
 }
