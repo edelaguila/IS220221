@@ -84,7 +84,7 @@ namespace CapaVistaRRHH
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 106;
-            this.txtEstado.Tag = "estado";
+            this.txtEstado.Tag = "estadoTipofalta";
             this.txtEstado.Visible = false;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
@@ -153,11 +153,11 @@ namespace CapaVistaRRHH
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1195, 583);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtIDDepartamento);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.dgvVistaPrevia);
@@ -165,6 +165,7 @@ namespace CapaVistaRRHH
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTipoFalta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Tag = "estadoTipofalta";
             this.Text = "frmTipoFalta";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

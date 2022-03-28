@@ -189,10 +189,10 @@ namespace CapaModeloNav
 
 
             //primer If, uso no definido            
-            IF1(alias, errores, tabla, BD);
+            validarcampostablascontagsdetextbox(alias, errores, tabla, BD);
 
             //segundo If, uso no definido  
-            IF2(alias, errores, tabla, BD);
+            contarcantidaddecolumnasdetablarequerida(alias, errores, tabla, BD);
 
 
             if (String.IsNullOrEmpty(errores))
@@ -205,7 +205,7 @@ namespace CapaModeloNav
 
 
         //Uso no definido, funAsignarAlias
-        public void IF1(TextBox[] alias, string errores, string tabla, string BD)
+        public void validarcampostablascontagsdetextbox(TextBox[] alias, string errores, string tabla, string BD)
         {
 
             try
@@ -263,7 +263,7 @@ namespace CapaModeloNav
 
 
         //Segundo If funAsignarAlias, uso no definido
-        public void IF2(TextBox[] alias, string errores, string tabla, string BD)
+        public void contarcantidaddecolumnasdetablarequerida(TextBox[] alias, string errores, string tabla, string BD)
         {
             try
             {

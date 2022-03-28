@@ -14,7 +14,7 @@ namespace CapaVistaRRHH
     {
         public frmDepartamentos()
         {
-
+			InitializeComponent();
 			TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
 			navegador1.ObtenerCamposdeTabla(alias, "departamento", "hotelSanCarlos");
 			navegador1.MetodoSalirVista(this);
@@ -22,7 +22,7 @@ namespace CapaVistaRRHH
 			//navegador1.LlenarCombobox(cbxIDEmpresa, "empresa", "idEmpresa", "nombre", "estatus");
 
 			//inicio de elementos para dar de baja
-			navegador1.campoEstado = "estado";
+			navegador1.campoEstado = "estadoDepartamento";
 			//fin de elementos para dar de baja
 
 			/* Inicio ID Aplicacion usada para reportes y ayudas */
@@ -69,5 +69,10 @@ namespace CapaVistaRRHH
 			navegador1.SelecciondeFilaDGV(dgvVistaPrevia);
 
 		}
-	}
+
+        private void dgvVistaPrevia_SelectionChanged_1(object sender, EventArgs e)
+        {
+			navegador1.SelecciondeFilaDGV(dgvVistaPrevia);
+		}
+    }
 }

@@ -71,5 +71,10 @@ namespace CapaVistaRRHH
 				navegador1.SelecciondeFilaDGV(dgvVistaPrevia);
 			
 		}
+
+        private void frmPuesto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

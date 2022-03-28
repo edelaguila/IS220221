@@ -70,46 +70,72 @@ namespace CapaVistaRRHH
 
 		private void txtFinContrato_TextChanged(object sender, EventArgs e)
 		{
-			navegador1.CambiarFormatoFecha(dtpFinContrato, txtFinContrato);
-			navegador1.SeleciconarFechaDTP(dtpFinContrato, txtFinContrato);
+			//navegador1.CambiarFormatoFecha(dtpFinContrato, txtFinContrato);
+			navegador1.SeleccionarFechaDTP(dtpFinContrato, txtFinContrato);
 		}
 
 		private void cbxIDPuesto_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			navegador1.SeleccionarElementosenCombo(cbxIDPuesto, txtIDPuesto);
+			navegador1.EnviarDatoComboaTextbox(cbxIDPuesto, txtIDPuesto);
 		}
 
 		private void cbxIDEmpresa_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			navegador1.SeleccionarElementosenCombo(cbxIDEmpresa, txtIDEmpresa);
+		
+			navegador1.EnviarDatoComboaTextbox(cbxIDEmpresa, txtIDEmpresa);
 		}
 
 		private void dtpFechaNacimiento_ValueChanged(object sender, EventArgs e)
 		{
-			navegador1.SeleciconarFechaDTP(dtpFechaNacimiento, txtFechaNacimiento);
+			try{
+				//navegador1.SeleccionarFechaDTP(dtpFechaNacimiento, txtFechaNacimiento);
+				navegador1.CambiarFormatoFecha(dtpFechaNacimiento, txtFechaNacimiento);
+
+			}
+			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 		}
 
 		private void dtpFechaContratacion_ValueChanged(object sender, EventArgs e)
 		{
-			navegador1.SeleciconarFechaDTP(dtpFechaContratacion, txtFechaContratacion);
+			navegador1.CambiarFormatoFecha(dtpFechaContratacion, txtFechaContratacion);
 		}
 
 		private void dtpFinContrato_ValueChanged(object sender, EventArgs e)
 		{
-			navegador1.SeleciconarFechaDTP(dtpFinContrato, txtFinContrato);
+			navegador1.CambiarFormatoFecha(dtpFinContrato, txtFinContrato);
 		}
 
 		private void txtFechaContratacion_TextChanged(object sender, EventArgs e)
 		{
-			navegador1.CambiarFormatoFecha(dtpFechaContratacion, txtFechaContratacion);
-			navegador1.SeleciconarFechaDTP(dtpFechaContratacion, txtFechaContratacion);
+			//navegador1.CambiarFormatoFecha(dtpFechaContratacion, txtFechaContratacion);
+			navegador1.SeleccionarFechaDTP(dtpFechaContratacion, txtFechaContratacion);
+		
 		}
 
 		private void txtFechaNacimiento_TextChanged(object sender, EventArgs e)
 		{
-			navegador1.CambiarFormatoFecha(dtpFechaNacimiento, txtFechaNacimiento);
-			navegador1.SeleciconarFechaDTP(dtpFechaNacimiento, txtFechaNacimiento);
+			try
+			{
+				//navegador1.CambiarFormatoFecha(dtpFechaNacimiento, txtFechaNacimiento);
+				navegador1.SeleccionarFechaDTP(dtpFechaNacimiento, txtFechaNacimiento);
+			}
+			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 		}
-	}
+
+        private void txtIDEmpresa_TextChanged(object sender, EventArgs e)
+        {
+			navegador1.SeleccionarElementosenCombo(cbxIDEmpresa, txtIDEmpresa);
+		}
+
+        private void txtIDPuesto_TextChanged(object sender, EventArgs e)
+        {
+			navegador1.SeleccionarElementosenCombo(cbxIDPuesto, txtIDPuesto);
+		}
+
+        private void dgvVistaPrevia_SelectionChanged(object sender, EventArgs e)
+        {
+			navegador1.SelecciondeFilaDGV(dgvVistaPrevia);
+		}
+    }
 }
 

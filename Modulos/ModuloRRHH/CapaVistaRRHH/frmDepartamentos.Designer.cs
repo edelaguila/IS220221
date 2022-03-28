@@ -136,6 +136,7 @@ namespace CapaVistaRRHH
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
             this.dgvVistaPrevia.Size = new System.Drawing.Size(693, 464);
             this.dgvVistaPrevia.TabIndex = 91;
+            this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged_1);
             // 
             // navegador1
             // 
@@ -150,11 +151,11 @@ namespace CapaVistaRRHH
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1197, 581);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtIDDepartamento);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.dgvVistaPrevia);

@@ -14,7 +14,7 @@ namespace CapaVistaRRHH
     {
         public frmTipoFalta()
         {
-
+			InitializeComponent();
 			TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
 			navegador1.ObtenerCamposdeTabla(alias, "tipofalta", "hotelSanCarlos");
 			navegador1.MetodoSalirVista(this);
@@ -22,7 +22,7 @@ namespace CapaVistaRRHH
 			//navegador1.LlenarCombobox(cbxIDEmpresa, "empresa", "idEmpresa", "nombre", "estatus");
 
 			//inicio de elementos para dar de baja
-			navegador1.campoEstado = "estado";
+			navegador1.campoEstado = "estadoTipofalta";
 			//fin de elementos para dar de baja
 
 			/* Inicio ID Aplicacion usada para reportes y ayudas */
