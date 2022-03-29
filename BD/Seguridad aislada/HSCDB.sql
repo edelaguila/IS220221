@@ -32,6 +32,22 @@ pkidDepartamento int primary key,
 nombreDepartamento varchar(35) not null,
 estadoDepartamento varchar(1)
 )engine=InnoDB;
+
+CREATE TABLE cuentasContables (
+    pkId VARCHAR(15),
+    nombre VARCHAR(45),
+    codigo VARCHAR(45),
+    estado VARCHAR(1),
+    PRIMARY KEY (pkId)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE concepto (
+    pkId VARCHAR(15),
+    nombre VARCHAR(45),
+    efecto VARCHAR(45),
+    estado VARCHAR(1),
+    PRIMARY KEY (pkId)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 -- ------------------------------------------------------------------------------------------------------------
 -- 	COMPONENTE SEGURIDAD
 -- ------------------------------------------------------------------------------------------------------------
