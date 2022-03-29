@@ -221,18 +221,3 @@ CREATE TABLE registro_consultas (
 -- 	TABLAS GENERALES
 -- ------------------------------------------------------------------------------------------------------------
 
-CREATE TABLE cuentasContables (
-    pkId VARCHAR(15),
-    nombre VARCHAR(45),
-    codigo VARCHAR(45),
-    estado VARCHAR(1),
-    PRIMARY KEY (pkId)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE concepto (
-    pkId VARCHAR(15),
-    nombre VARCHAR(45),
-    efecto VARCHAR(45),
-    estado VARCHAR(1),
-    PRIMARY KEY (pkId)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
