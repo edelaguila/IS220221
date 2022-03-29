@@ -82,3 +82,12 @@ F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaModelo\o
 F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.csproj.CopyComplete
 F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.dll
 F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.pdb
+C:\Users\GiancarloS\Desktop\6\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\bin\Debug\CapaModeloSeguridadHSC.dll
+C:\Users\GiancarloS\Desktop\6\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\bin\Debug\CapaModeloSeguridadHSC.pdb
+C:\Users\GiancarloS\Desktop\6\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\bin\Debug\Dapper.dll
+C:\Users\GiancarloS\Desktop\6\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\bin\Debug\Dapper.xml
+C:\Users\GiancarloS\Desktop\6\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.csproj.AssemblyReference.cache
+C:\Users\GiancarloS\Desktop\6\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.csproj.CoreCompileInputs.cache
+C:\Users\GiancarloS\Desktop\6\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.csproj.CopyComplete
+C:\Users\GiancarloS\Desktop\6\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.dll
+C:\Users\GiancarloS\Desktop\6\IS220221\Componentes\Seguridad\SeguridadHSC\CapaModelo\obj\Debug\CapaModeloSeguridadHSC.pdb

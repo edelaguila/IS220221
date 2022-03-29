@@ -191,7 +191,7 @@ namespace CapaVistaRRHH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1185, 574);
+            this.ClientSize = new System.Drawing.Size(1184, 576);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtPuestoSuperior);
             this.Controls.Add(this.txtAñosExperiencia);

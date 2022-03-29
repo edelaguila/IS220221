@@ -120,5 +120,31 @@ namespace CapaVistaRRHH
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
+
+        private void conceptosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmConceptos form3 = new frmConceptos();
+                form3.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form3.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void cuentasContablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmCuentasContables form3 = new frmCuentasContables();
+                form3.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form3.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
     }
-}
+    }
+    
+

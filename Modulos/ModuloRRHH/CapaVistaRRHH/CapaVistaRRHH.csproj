@@ -36,10 +36,10 @@
       <HintPath>..\..\..\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\CapaControladorSeguridadHSC.dll</HintPath>
     </Reference>
     <Reference Include="CapaVistaSeguridadHSC">
-      <HintPath>F:\Ingenieria de Software\RRHH 2\Componentes\Seguridad\SeguridadHSC\CapaVista\bin\Debug\CapaVistaSeguridadHSC.dll</HintPath>
+      <HintPath>..\..\..\Componentes\Seguridad\SeguridadHSC\CapaVista\bin\Debug\CapaVistaSeguridadHSC.dll</HintPath>
     </Reference>
     <Reference Include="DLLnav">
-      <HintPath>F:\Ingenieria de Software\RRHH 2\Componentes\Navegador\DLLnav\DLLnav\bin\Debug\DLLnav.dll</HintPath>
+      <HintPath>..\..\..\Componentes\Navegador\DLLnav\DLLnav\bin\Debug\DLLnav.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,6 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConceptos.Designer.cs">
+      <DependentUpon>frmConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuentasContables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuentasContables.Designer.cs">
+      <DependentUpon>frmCuentasContables.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDepartamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +121,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmConceptos.resx">
+      <DependentUpon>frmConceptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuentasContables.resx">
+      <DependentUpon>frmCuentasContables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDepartamentos.resx">
       <DependentUpon>frmDepartamentos.cs</DependentUpon>
     </EmbeddedResource>
