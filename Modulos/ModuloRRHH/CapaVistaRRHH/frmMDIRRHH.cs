@@ -144,6 +144,30 @@ namespace CapaVistaRRHH
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
+
+        private void bancosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmBancos form = new frmBancos();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void monedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmMoneda form = new frmMoneda();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
     }
     }
     
