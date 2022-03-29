@@ -58,3 +58,18 @@ C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\ConsultasInteligent
 C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.csproj.CopyComplete
 C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.dll
 C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.pdb
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\bin\Debug\CapaVista.dll
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\bin\Debug\CapaVista.pdb
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\bin\Debug\CapaControlador.dll
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\bin\Debug\CapaModelo.dll
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\bin\Debug\CapaControlador.pdb
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\bin\Debug\CapaModelo.pdb
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.csproj.AssemblyReference.cache
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.ConsultasInteligentes.resources
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.menuconsultas.resources
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.Properties.Resources.resources
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.csproj.GenerateResource.cache
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.csproj.CoreCompileInputs.cache
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.csproj.CopyComplete
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.dll
+C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\ConsultasInteligentes\ConsultasInteligentes\consultasinteligentes\CapaVista\obj\Debug\CapaVista.pdb

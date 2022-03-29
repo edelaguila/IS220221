@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj": {}
+    "C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\Nueva carpeta\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj": {}
   },
   "projects": {
-    "C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj": {
+    "C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\Nueva carpeta\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj",
+        "projectUniqueName": "C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\Nueva carpeta\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj",
         "projectName": "Bitacora",
-        "projectPath": "C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj",
+        "projectPath": "C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\Nueva carpeta\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\Bitacora.csproj",
         "packagesPath": "C:\\Users\\achac\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\obj\\",
+        "outputPath": "C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\Nueva carpeta\\IS220221\\Componentes\\Seguridad\\CodigoBitacora\\BitacoraRegistrarLogin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
