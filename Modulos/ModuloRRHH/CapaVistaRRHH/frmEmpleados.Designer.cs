@@ -77,18 +77,18 @@ namespace CapaVistaRRHH
             // cbxIDEmpresa
             // 
             this.cbxIDEmpresa.FormattingEnabled = true;
-            this.cbxIDEmpresa.Location = new System.Drawing.Point(61, 460);
+            this.cbxIDEmpresa.Location = new System.Drawing.Point(328, 459);
             this.cbxIDEmpresa.Name = "cbxIDEmpresa";
-            this.cbxIDEmpresa.Size = new System.Drawing.Size(121, 21);
+            this.cbxIDEmpresa.Size = new System.Drawing.Size(241, 21);
             this.cbxIDEmpresa.TabIndex = 86;
             this.cbxIDEmpresa.SelectedIndexChanged += new System.EventHandler(this.cbxIDEmpresa_SelectedIndexChanged);
             // 
             // cbxIDPuesto
             // 
             this.cbxIDPuesto.FormattingEnabled = true;
-            this.cbxIDPuesto.Location = new System.Drawing.Point(61, 433);
+            this.cbxIDPuesto.Location = new System.Drawing.Point(328, 433);
             this.cbxIDPuesto.Name = "cbxIDPuesto";
-            this.cbxIDPuesto.Size = new System.Drawing.Size(121, 21);
+            this.cbxIDPuesto.Size = new System.Drawing.Size(241, 21);
             this.cbxIDPuesto.TabIndex = 85;
             this.cbxIDPuesto.SelectedIndexChanged += new System.EventHandler(this.cbxIDPuesto_SelectedIndexChanged);
             // 
@@ -127,25 +127,25 @@ namespace CapaVistaRRHH
             // 
             // dtpFinContrato
             // 
-            this.dtpFinContrato.Location = new System.Drawing.Point(12, 404);
+            this.dtpFinContrato.Location = new System.Drawing.Point(329, 405);
             this.dtpFinContrato.Name = "dtpFinContrato";
-            this.dtpFinContrato.Size = new System.Drawing.Size(197, 20);
+            this.dtpFinContrato.Size = new System.Drawing.Size(240, 20);
             this.dtpFinContrato.TabIndex = 83;
             this.dtpFinContrato.ValueChanged += new System.EventHandler(this.dtpFinContrato_ValueChanged);
             // 
             // dtpFechaContratacion
             // 
-            this.dtpFechaContratacion.Location = new System.Drawing.Point(12, 371);
+            this.dtpFechaContratacion.Location = new System.Drawing.Point(328, 378);
             this.dtpFechaContratacion.Name = "dtpFechaContratacion";
-            this.dtpFechaContratacion.Size = new System.Drawing.Size(196, 20);
+            this.dtpFechaContratacion.Size = new System.Drawing.Size(241, 20);
             this.dtpFechaContratacion.TabIndex = 82;
             this.dtpFechaContratacion.ValueChanged += new System.EventHandler(this.dtpFechaContratacion_ValueChanged);
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(12, 199);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(329, 196);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(197, 20);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(241, 20);
             this.dtpFechaNacimiento.TabIndex = 81;
             this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dtpFechaNacimiento_ValueChanged);
             // 
@@ -156,6 +156,7 @@ namespace CapaVistaRRHH
             this.txtIDPuesto.Size = new System.Drawing.Size(241, 20);
             this.txtIDPuesto.TabIndex = 79;
             this.txtIDPuesto.Tag = "fkIdPuesto";
+            this.txtIDPuesto.Visible = false;
             this.txtIDPuesto.TextChanged += new System.EventHandler(this.txtIDPuesto_TextChanged);
             // 
             // txtIDEmpresa
@@ -165,6 +166,7 @@ namespace CapaVistaRRHH
             this.txtIDEmpresa.Size = new System.Drawing.Size(241, 20);
             this.txtIDEmpresa.TabIndex = 78;
             this.txtIDEmpresa.Tag = "fkIdEmpresa";
+            this.txtIDEmpresa.Visible = false;
             this.txtIDEmpresa.TextChanged += new System.EventHandler(this.txtIDEmpresa_TextChanged);
             // 
             // lblIDPuesto
@@ -192,6 +194,7 @@ namespace CapaVistaRRHH
             this.txtFechaContratacion.Size = new System.Drawing.Size(241, 20);
             this.txtFechaContratacion.TabIndex = 77;
             this.txtFechaContratacion.Tag = "fechaContratacion";
+            this.txtFechaContratacion.Visible = false;
             this.txtFechaContratacion.TextChanged += new System.EventHandler(this.txtFechaContratacion_TextChanged);
             // 
             // lblFechaContratacion
@@ -237,6 +240,7 @@ namespace CapaVistaRRHH
             this.txtFinContrato.Size = new System.Drawing.Size(241, 20);
             this.txtFinContrato.TabIndex = 74;
             this.txtFinContrato.Tag = "finDeContrato";
+            this.txtFinContrato.Visible = false;
             this.txtFinContrato.TextChanged += new System.EventHandler(this.txtFinContrato_TextChanged);
             // 
             // txtDirección
@@ -297,6 +301,7 @@ namespace CapaVistaRRHH
             this.txtFechaNacimiento.Size = new System.Drawing.Size(241, 20);
             this.txtFechaNacimiento.TabIndex = 70;
             this.txtFechaNacimiento.Tag = "fechaDeNacimiento";
+            this.txtFechaNacimiento.Visible = false;
             this.txtFechaNacimiento.TextChanged += new System.EventHandler(this.txtFechaNacimiento_TextChanged);
             // 
             // lblTelefono
@@ -397,7 +402,7 @@ namespace CapaVistaRRHH
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.navegador1.Location = new System.Drawing.Point(-1, -1);
+            this.navegador1.Location = new System.Drawing.Point(0, -1);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(1189, 87);
             this.navegador1.TabIndex = 51;
@@ -427,7 +432,7 @@ namespace CapaVistaRRHH
             this.dgvVistaPrevia.Location = new System.Drawing.Point(591, 118);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
             this.dgvVistaPrevia.ReadOnly = true;
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(566, 391);
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(585, 410);
             this.dgvVistaPrevia.TabIndex = 87;
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
@@ -477,7 +482,7 @@ namespace CapaVistaRRHH
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEmpleados";
+            this.Text = "Empleados";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();

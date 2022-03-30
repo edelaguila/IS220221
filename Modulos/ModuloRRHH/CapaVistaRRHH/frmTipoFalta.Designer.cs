@@ -51,6 +51,7 @@ namespace CapaVistaRRHH
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 110;
+            this.txtNombre.Tag = "nombreTipofalta";
             // 
             // label2
             // 
@@ -67,24 +68,24 @@ namespace CapaVistaRRHH
             this.txtIDDepartamento.Name = "txtIDDepartamento";
             this.txtIDDepartamento.Size = new System.Drawing.Size(200, 20);
             this.txtIDDepartamento.TabIndex = 111;
-            this.txtIDDepartamento.Tag = "pkidDepartamento";
+            this.txtIDDepartamento.Tag = "pkidTipofalta";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(63, 129);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 109;
-            this.label1.Text = "ID Departamento:";
+            this.label1.Text = "ID Tipo Falta:";
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(379, 435);
+            this.txtEstado.Location = new System.Drawing.Point(379, 178);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 106;
-            this.txtEstado.Tag = "estadoTipofalta";
+            this.txtEstado.Tag = "estado";
             this.txtEstado.Visible = false;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
@@ -92,7 +93,7 @@ namespace CapaVistaRRHH
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(173, 435);
+            this.panel1.Location = new System.Drawing.Point(173, 178);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 30);
             this.panel1.TabIndex = 107;
@@ -100,7 +101,7 @@ namespace CapaVistaRRHH
             // rbnEstatusamodulo
             // 
             this.rbnEstatusamodulo.AutoSize = true;
-            this.rbnEstatusamodulo.Location = new System.Drawing.Point(12, 7);
+            this.rbnEstatusamodulo.Location = new System.Drawing.Point(16, 7);
             this.rbnEstatusamodulo.Name = "rbnEstatusamodulo";
             this.rbnEstatusamodulo.Size = new System.Drawing.Size(55, 17);
             this.rbnEstatusamodulo.TabIndex = 8;
@@ -124,7 +125,7 @@ namespace CapaVistaRRHH
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(63, 438);
+            this.lblEstatus.Location = new System.Drawing.Point(63, 181);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(45, 13);
             this.lblEstatus.TabIndex = 105;
@@ -136,14 +137,14 @@ namespace CapaVistaRRHH
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVistaPrevia.Location = new System.Drawing.Point(487, 100);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(693, 464);
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(688, 256);
             this.dgvVistaPrevia.TabIndex = 104;
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.navegador1.Location = new System.Drawing.Point(2, 0);
+            this.navegador1.Location = new System.Drawing.Point(0, -1);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(1189, 87);
             this.navegador1.TabIndex = 103;
@@ -152,7 +153,7 @@ namespace CapaVistaRRHH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1195, 583);
+            this.ClientSize = new System.Drawing.Size(1188, 370);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombre);
@@ -163,10 +164,11 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.dgvVistaPrevia);
             this.Controls.Add(this.navegador1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmTipoFalta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "estadoTipofalta";
-            this.Text = "frmTipoFalta";
+            this.Text = "Tipo Falta";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();

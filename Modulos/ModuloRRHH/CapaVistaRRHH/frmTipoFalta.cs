@@ -22,7 +22,7 @@ namespace CapaVistaRRHH
 			//navegador1.LlenarCombobox(cbxIDEmpresa, "empresa", "idEmpresa", "nombre", "estatus");
 
 			//inicio de elementos para dar de baja
-			navegador1.campoEstado = "estadoTipofalta";
+			navegador1.campoEstado = "estado";
 			//fin de elementos para dar de baja
 
 			/* Inicio ID Aplicacion usada para reportes y ayudas */

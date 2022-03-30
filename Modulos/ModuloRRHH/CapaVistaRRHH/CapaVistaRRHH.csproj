@@ -38,7 +38,8 @@
     <Reference Include="CapaVistaSeguridadHSC">
       <HintPath>..\..\..\Componentes\Seguridad\SeguridadHSC\CapaVista\bin\Debug\CapaVistaSeguridadHSC.dll</HintPath>
     </Reference>
-    <Reference Include="DLLnav">
+    <Reference Include="DLLnav, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Componentes\Navegador\DLLnav\DLLnav\bin\Debug\DLLnav.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -172,6 +173,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Recursos\FONDO.jpg" />
     <Content Include="Recursos\Formas.jpg" />
     <Content Include="Recursos\MDI.jpg" />
     <Content Include="Recursos\human_resources_search_employees_icon_187558.ico" />

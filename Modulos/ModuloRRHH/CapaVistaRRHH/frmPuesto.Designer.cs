@@ -45,6 +45,7 @@ namespace CapaVistaRRHH
             this.txtAñosExperiencia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPuestoSuperior = new System.Windows.Forms.TextBox();
+            this.cbxIDPuesto = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,13 +64,13 @@ namespace CapaVistaRRHH
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVistaPrevia.Location = new System.Drawing.Point(482, 98);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(693, 464);
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(693, 285);
             this.dgvVistaPrevia.TabIndex = 53;
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(374, 433);
+            this.txtEstado.Location = new System.Drawing.Point(374, 229);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 86;
@@ -81,7 +82,7 @@ namespace CapaVistaRRHH
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(168, 433);
+            this.panel1.Location = new System.Drawing.Point(168, 229);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 30);
             this.panel1.TabIndex = 87;
@@ -113,7 +114,7 @@ namespace CapaVistaRRHH
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(58, 436);
+            this.lblEstatus.Location = new System.Drawing.Point(58, 232);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(45, 13);
             this.lblEstatus.TabIndex = 85;
@@ -181,17 +182,29 @@ namespace CapaVistaRRHH
             // 
             // txtPuestoSuperior
             // 
-            this.txtPuestoSuperior.Location = new System.Drawing.Point(168, 202);
+            this.txtPuestoSuperior.Location = new System.Drawing.Point(374, 202);
             this.txtPuestoSuperior.Name = "txtPuestoSuperior";
-            this.txtPuestoSuperior.Size = new System.Drawing.Size(200, 20);
+            this.txtPuestoSuperior.Size = new System.Drawing.Size(39, 20);
             this.txtPuestoSuperior.TabIndex = 89;
             this.txtPuestoSuperior.Tag = "fkIdPuestoSuperior";
+            this.txtPuestoSuperior.Visible = false;
+            this.txtPuestoSuperior.TextChanged += new System.EventHandler(this.txtPuestoSuperior_TextChanged);
+            // 
+            // cbxIDPuesto
+            // 
+            this.cbxIDPuesto.FormattingEnabled = true;
+            this.cbxIDPuesto.Location = new System.Drawing.Point(168, 202);
+            this.cbxIDPuesto.Name = "cbxIDPuesto";
+            this.cbxIDPuesto.Size = new System.Drawing.Size(200, 21);
+            this.cbxIDPuesto.TabIndex = 90;
+            this.cbxIDPuesto.SelectedIndexChanged += new System.EventHandler(this.cbxIDPuesto_SelectedIndexChanged);
             // 
             // frmPuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 576);
+            this.ClientSize = new System.Drawing.Size(1184, 392);
+            this.Controls.Add(this.cbxIDPuesto);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtPuestoSuperior);
             this.Controls.Add(this.txtAñosExperiencia);
@@ -209,7 +222,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "frmPuesto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPuesto";
+            this.Text = "Puesto";
             this.Load += new System.EventHandler(this.frmPuesto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -236,5 +249,6 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.TextBox txtAñosExperiencia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPuestoSuperior;
+        private System.Windows.Forms.ComboBox cbxIDPuesto;
     }
 }
