@@ -19,7 +19,7 @@ namespace CapaVistaRRHH
 			TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
 			navegador1.ObtenerCamposdeTabla(alias, "sucursal", "hotelSanCarlos");
 			navegador1.MetodoSalirVista(this);
-			//navegador1.LlenarCombobox(cbxIDPuesto, "puesto", "pkIdPuesto", "nombre", "estado");
+			navegador1.LlenarCombobox(cbxIDEmpresa, "empresa", "idEmpresa", "nombre", "estado");
 			//navegador1.LlenarCombobox(cbxIDEmpresa, "empresa", "idEmpresa", "nombre", "estatus");
 
 			//inicio de elementos para dar de baja
@@ -78,7 +78,12 @@ namespace CapaVistaRRHH
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+			navegador1.SeleccionarElementosenCombo(cbxIDEmpresa, txtIDEmpresa);
         }
+
+        private void cbxIDEmpresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			navegador1.EnviarDatoComboaTextbox(cbxIDEmpresa, txtIDEmpresa);
+		}
     }
 }

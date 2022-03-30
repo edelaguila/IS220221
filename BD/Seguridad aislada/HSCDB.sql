@@ -9,45 +9,70 @@ create table empresa(
     nombre varchar(35) not null,
     direccion text not null,
     telefono int(10) not null,
-    estatus char(1) not null
+    estado char(1) not null
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+create table sucursal(
+	idSucursal varchar(15) primary key not null,
+	idEmpresa varchar(15) not null,
+    nombre varchar(35) not null,
+    direccion text not null,
+    telefono int(10) not null,
+    codigoPostal varchar(25) not null,
+    estado char(1) not null,
+    
+    foreign key (idEmpresa) references empresa (idEmpresa)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE puesto (
   pkIdPuesto VARCHAR(11) PRIMARY KEY,
   nombre VARCHAR(45) NULL DEFAULT NULL,
   añosDeExperiencia INT NULL DEFAULT NULL,
-  fkIdPuestoSuperior VARCHAR(11) NOT NULL
-
+  fkIdPuestoSuperior VARCHAR(11) NOT NULL,
+  estado char(1) not null
  -- FOREIGN KEY (fkIdPuestoSuperior) REFERENCES puesto (pkIdPuesto))
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
  
 create table tipofalta(
 pkidTipofalta int primary key,
 nombreTipofalta varchar(35) not null,
-estadoTipofalta varchar(1) not null
+estado varchar(1) not null
 )engine=InnoDB;
 
 create table departamento(
 pkidDepartamento int primary key,
 nombreDepartamento varchar(35) not null,
-estadoDepartamento varchar(1)
+estado varchar(1)
 )engine=InnoDB;
 
 CREATE TABLE cuentasContables (
-    pkId VARCHAR(15),
+    pkId VARCHAR(15)primary key,
     nombre VARCHAR(45),
     codigo VARCHAR(45),
-    estado VARCHAR(1),
-    PRIMARY KEY (pkId)
+    estado VARCHAR(1) 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE concepto (
-    pkId VARCHAR(15),
+    pkId VARCHAR(15)primary key,
     nombre VARCHAR(45),
     efecto VARCHAR(45),
-    estado VARCHAR(1),
-    PRIMARY KEY (pkId)
+    estado VARCHAR(1)
+    
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+create table moneda(
+	Pkid varchar(15) primary key,
+	nombreMoneda varchar(30) not null,
+	estado char(1) not null
+)engine=InnoDB DEFAULT CHARSET=latin1;
+
+Create Table banco (
+	IdBanco varchar(15)primary key,
+	nombreBanco varchar(20) NOT NULL,
+	direccionBanco varchar(25) NOT NULL,
+    estado char(1) not null
+)engine=InnoDB DEFAULT CHARSET=latin1;
+
 -- ------------------------------------------------------------------------------------------------------------
 -- 	COMPONENTE SEGURIDAD
 -- ------------------------------------------------------------------------------------------------------------
@@ -66,6 +91,7 @@ CREATE TABLE empleado (
 	finDeContrato DATE NOT NULL,
 	fkIdPuesto VARCHAR(15) NOT NULL,
 	fkIdEmpresa VARCHAR(15) NOT NULL,
+    estado varchar(1) not null,
   
 	FOREIGN KEY (fkIdPuesto) REFERENCES puesto (pkIdPuesto),
 	FOREIGN KEY (fkIdEmpresa) REFERENCES empresa (IdEmpresa)
@@ -77,8 +103,7 @@ CREATE TABLE usuario(
 	nombre VARCHAR(30) NOT NULL,
 	contraseña VARCHAR(100) NOT NULL,
 	estado VARCHAR(1) NOT NULL,
-	intento INT NULL,
-
+	
 	FOREIGN KEY (fkIdEmpleado) REFERENCES empleado(pkIdEmpleado)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -96,6 +121,7 @@ CREATE TABLE aplicacion(
 	estado INT NOT NULL,
 	rutaChm varchar(180) not null,
 	rutaHtml varchar(180) not null,
+    estado varchar(1) not null,
 	FOREIGN KEY (fkIdModulo) REFERENCES modulo(pkId)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

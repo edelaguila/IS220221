@@ -81,18 +81,19 @@ namespace CapaVistaRRHH
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(382, 435);
+            this.txtEstado.Location = new System.Drawing.Point(382, 178);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 93;
-            this.txtEstado.Tag = "estadoDepartamento";
+            this.txtEstado.Tag = "estado";
             this.txtEstado.Visible = false;
+            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(176, 435);
+            this.panel1.Location = new System.Drawing.Point(176, 178);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 30);
             this.panel1.TabIndex = 94;
@@ -107,6 +108,7 @@ namespace CapaVistaRRHH
             this.rbnEstatusamodulo.TabStop = true;
             this.rbnEstatusamodulo.Text = "Activo";
             this.rbnEstatusamodulo.UseVisualStyleBackColor = true;
+            this.rbnEstatusamodulo.CheckedChanged += new System.EventHandler(this.rbnEstatusamodulo_CheckedChanged);
             // 
             // rbnEstatusimodulo
             // 
@@ -118,11 +120,12 @@ namespace CapaVistaRRHH
             this.rbnEstatusimodulo.TabStop = true;
             this.rbnEstatusimodulo.Text = "Inactivo";
             this.rbnEstatusimodulo.UseVisualStyleBackColor = true;
+            this.rbnEstatusimodulo.TextChanged += new System.EventHandler(this.rbnEstatusimodulo_CheckedChanged);
             // 
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(66, 438);
+            this.lblEstatus.Location = new System.Drawing.Point(66, 181);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(45, 13);
             this.lblEstatus.TabIndex = 92;
@@ -132,16 +135,16 @@ namespace CapaVistaRRHH
             // 
             this.dgvVistaPrevia.AllowUserToOrderColumns = true;
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVistaPrevia.Location = new System.Drawing.Point(490, 100);
+            this.dgvVistaPrevia.Location = new System.Drawing.Point(485, 100);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(693, 464);
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(693, 253);
             this.dgvVistaPrevia.TabIndex = 91;
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged_1);
             // 
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.navegador1.Location = new System.Drawing.Point(5, 0);
+            this.navegador1.Location = new System.Drawing.Point(0, -1);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(1189, 87);
             this.navegador1.TabIndex = 90;
@@ -150,7 +153,7 @@ namespace CapaVistaRRHH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 581);
+            this.ClientSize = new System.Drawing.Size(1187, 365);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
@@ -163,7 +166,8 @@ namespace CapaVistaRRHH
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmDepartamentos";
-            this.Text = "frmDepartamentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Departamentos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();

@@ -138,11 +138,11 @@ namespace CapaVistaRRHH
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(375, 435);
+            this.txtEstado.Location = new System.Drawing.Point(375, 256);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 106;
-            this.txtEstado.Tag = "estatus";
+            this.txtEstado.Tag = "estado";
             this.txtEstado.Visible = false;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
@@ -150,7 +150,7 @@ namespace CapaVistaRRHH
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(169, 435);
+            this.panel1.Location = new System.Drawing.Point(169, 256);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 30);
             this.panel1.TabIndex = 107;
@@ -182,7 +182,7 @@ namespace CapaVistaRRHH
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(59, 438);
+            this.lblEstatus.Location = new System.Drawing.Point(59, 259);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(45, 13);
             this.lblEstatus.TabIndex = 105;
@@ -194,7 +194,7 @@ namespace CapaVistaRRHH
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVistaPrevia.Location = new System.Drawing.Point(483, 100);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(693, 464);
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(693, 313);
             this.dgvVistaPrevia.TabIndex = 104;
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
@@ -210,7 +210,7 @@ namespace CapaVistaRRHH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 582);
+            this.ClientSize = new System.Drawing.Size(1186, 426);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.label4);
@@ -230,7 +230,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "frmEmpresas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEmpresas";
+            this.Text = "Empresas";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();

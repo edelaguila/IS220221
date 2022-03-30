@@ -29,6 +29,7 @@ namespace CapaVistaRRHH
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConceptos));
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtAñosExperiencia = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,7 +49,7 @@ namespace CapaVistaRRHH
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(379, 435);
+            this.txtEstado.Location = new System.Drawing.Point(379, 204);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 93;
@@ -112,7 +113,7 @@ namespace CapaVistaRRHH
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(173, 435);
+            this.panel1.Location = new System.Drawing.Point(173, 204);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 30);
             this.panel1.TabIndex = 94;
@@ -144,7 +145,7 @@ namespace CapaVistaRRHH
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(63, 438);
+            this.lblEstatus.Location = new System.Drawing.Point(63, 207);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(45, 13);
             this.lblEstatus.TabIndex = 92;
@@ -156,14 +157,14 @@ namespace CapaVistaRRHH
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVistaPrevia.Location = new System.Drawing.Point(487, 100);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(693, 464);
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(685, 246);
             this.dgvVistaPrevia.TabIndex = 91;
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.navegador1.Location = new System.Drawing.Point(2, 0);
+            this.navegador1.Location = new System.Drawing.Point(1, -1);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(1189, 87);
             this.navegador1.TabIndex = 90;
@@ -172,7 +173,7 @@ namespace CapaVistaRRHH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 576);
+            this.ClientSize = new System.Drawing.Size(1184, 363);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtAñosExperiencia);
             this.Controls.Add(this.label3);
@@ -184,8 +185,11 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.dgvVistaPrevia);
             this.Controls.Add(this.navegador1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmConceptos";
-            this.Text = "frmConceptos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Conceptos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();

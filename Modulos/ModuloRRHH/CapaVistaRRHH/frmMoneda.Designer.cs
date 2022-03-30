@@ -29,6 +29,7 @@ namespace CapaVistaRRHH
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMoneda));
             this.navegador1 = new DLL.nav.navegador();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -47,24 +48,24 @@ namespace CapaVistaRRHH
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.navegador1.Location = new System.Drawing.Point(13, 13);
+            this.navegador1.Location = new System.Drawing.Point(0, -1);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(1189, 87);
             this.navegador1.TabIndex = 0;
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(349, 255);
+            this.txtEstado.Location = new System.Drawing.Point(350, 192);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 113;
-            this.txtEstado.Tag = "Estado_Moneda";
+            this.txtEstado.Tag = "estado";
             this.txtEstado.Visible = false;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(143, 211);
+            this.txtNombre.Location = new System.Drawing.Point(144, 166);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 119;
@@ -73,7 +74,7 @@ namespace CapaVistaRRHH
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 214);
+            this.label2.Location = new System.Drawing.Point(34, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 116;
@@ -81,7 +82,7 @@ namespace CapaVistaRRHH
             // 
             // txtIDPuesto
             // 
-            this.txtIDPuesto.Location = new System.Drawing.Point(143, 185);
+            this.txtIDPuesto.Location = new System.Drawing.Point(144, 140);
             this.txtIDPuesto.Name = "txtIDPuesto";
             this.txtIDPuesto.Size = new System.Drawing.Size(200, 20);
             this.txtIDPuesto.TabIndex = 120;
@@ -90,7 +91,7 @@ namespace CapaVistaRRHH
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 188);
+            this.label1.Location = new System.Drawing.Point(34, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 117;
@@ -100,7 +101,7 @@ namespace CapaVistaRRHH
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(143, 255);
+            this.panel1.Location = new System.Drawing.Point(144, 192);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 30);
             this.panel1.TabIndex = 114;
@@ -132,7 +133,7 @@ namespace CapaVistaRRHH
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(33, 258);
+            this.lblEstatus.Location = new System.Drawing.Point(34, 195);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(43, 13);
             this.lblEstatus.TabIndex = 112;
@@ -141,7 +142,7 @@ namespace CapaVistaRRHH
             // dgvVistaPrevia
             // 
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVistaPrevia.Location = new System.Drawing.Point(466, 144);
+            this.dgvVistaPrevia.Location = new System.Drawing.Point(441, 120);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
             this.dgvVistaPrevia.Size = new System.Drawing.Size(734, 294);
             this.dgvVistaPrevia.TabIndex = 121;
@@ -151,7 +152,7 @@ namespace CapaVistaRRHH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1212, 450);
+            this.ClientSize = new System.Drawing.Size(1187, 427);
             this.Controls.Add(this.dgvVistaPrevia);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtNombre);
@@ -161,8 +162,11 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.navegador1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmMoneda";
-            this.Text = "frmMoneda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Moneda";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
