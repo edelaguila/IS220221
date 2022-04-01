@@ -1,3 +1,5 @@
+
+create database hotelsancarlos;
 USE hotelSanCarlos;
 
 -- ------------------------------------------------------------------------------------------------------------
@@ -118,7 +120,6 @@ CREATE TABLE aplicacion(
 	pkId VARCHAR(15) PRIMARY KEY,
 	fkIdModulo VARCHAR(15) NOT NULL,
 	nombre VARCHAR(45) NULL,
-	estado INT NOT NULL,
 	rutaChm varchar(180) not null,
 	rutaHtml varchar(180) not null,
     estado varchar(1) not null,

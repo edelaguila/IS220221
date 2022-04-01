@@ -149,5 +149,8 @@
   <ItemGroup>
     <None Include="img\iOSFilled\salir2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\reportes.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
