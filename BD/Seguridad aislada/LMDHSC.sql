@@ -74,3 +74,12 @@ INSERT INTO reporte VALUES ('3','Sucursales','C:\\Users\\ZUZU\\Desktop\\AyudasyR
 INSERT INTO reporte VALUES ('4','Puestos','C:\\Users\\ZUZU\\Desktop\\AyudasyReportes\\Modulos\\ModuloRRHH\\CapaVistaRRHH\\ReportePuestos.rpt','0016','1');
 INSERT INTO reporte VALUES ('5','Empresas','C:\\Users\\ZUZU\\Desktop\\AyudasyReportes\\Modulos\\ModuloRRHH\\CapaVistaRRHH\\ReporteEmpresas.rpt','0017','1');
 INSERT INTO reporte VALUES ('6','Empleados','C:\\Users\\ZUZU\\Desktop\\AyudasyReportes\\Modulos\\ModuloRRHH\\CapaVistaRRHH\\ReporteEmpleados.rpt','0018','1');
+
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\Ayudas-Pareja1\\AyudaDepartamentos.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\Ayudas-Pareja1\\AyudaDepartamentos.html' WHERE pkId='0013';
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\Ayudas-Pareja1\\AyudaTipoFalta.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\Ayudas-Pareja1\\AyudaTipoFalta.html' WHERE pkId='0014';
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\Ayudas-Pareja1\\AyudaSucursales.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\Ayudas-Pareja1\\AyudaSucursales.html' WHERE pkId='0015';
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\Ayudas-Pareja1\\AyudaPuestos.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\Ayudas-Pareja1\\AyudaPuestos.html' WHERE pkId='0016';
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\Ayudas-Pareja1\\AyudaEmpresas.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\Ayudas-Pareja1\\AyudaEmpresas.html' WHERE pkId='0017';
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\Ayudas-Pareja1\\AyudaEmpleados.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\Ayudas-Pareja1\\AyudaEmpleados.html' WHERE pkId='0018';
+
+

@@ -1,0 +1,17 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=AyudaEmpresas.chm
+Contents file=AyudaEmpresas.hhc
+Default Window=Ayuda Empresas
+Display compile progress=No
+Language=0x100a Español (Guatemala)
+
+[WINDOWS]
+Ayuda Empresas=,"AyudaEmpresas.hhc",,"AyudaEmpresas.html","AyudaEmpresas.html",,,,,0x3520,,0xc387e,,,,,,,,0
+
+
+[FILES]
+AyudaEmpresas.html
+
+[INFOTYPES]
+
