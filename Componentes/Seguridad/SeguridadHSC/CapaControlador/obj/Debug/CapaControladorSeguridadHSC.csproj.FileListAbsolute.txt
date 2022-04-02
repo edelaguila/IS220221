@@ -138,3 +138,5 @@ C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\Segur
 C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.csproj.CopyComplete
 C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.dll
 C:\Users\achac\OneDrive\Escritorio\RRHH\Nueva carpeta\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\obj\Debug\CapaControladorSeguridadHSC.pdb
+C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\Dapper.dll
+C:\Users\achac\OneDrive\Escritorio\RRHH\IS220221\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\Dapper.xml

@@ -27,8 +27,8 @@ namespace CapaVistaRRHH
 			//fin de elementos para dar de baja
 
 			/* Inicio ID Aplicacion usada para reportes y ayudas */
-			navegador1.idAplicacion = "0010";
-			navegador1.idmodulo = "1";
+			navegador1.idAplicacion = "0016";
+			navegador1.idmodulo = "3";
 			/* Inicio ID Aplicacion usada para reportes y ayudas */
 
 			//inicio de elementos para ejecutar la ayuda
@@ -68,5 +68,10 @@ namespace CapaVistaRRHH
         {
 			navegador1.SelecciondeFilaDGV(dgvVistaPrevia);
 		}
+
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
