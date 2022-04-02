@@ -168,6 +168,34 @@ namespace CapaVistaRRHH
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
+
+        private void conceptosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                frmConcepto form = new frmConcepto();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+
+        }
+
+        private void tipoConceptoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                frmTipoConcepto form = new frmTipoConcepto();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+
+        }
     }
     }
     

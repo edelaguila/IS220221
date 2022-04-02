@@ -61,11 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conceptos.Designer.cs">
+      <DependentUpon>Conceptos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBancos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBancos.Designer.cs">
       <DependentUpon>frmBancos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConcepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConcepto.Designer.cs">
+      <DependentUpon>frmConcepto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConceptos.cs">
       <SubType>Form</SubType>
@@ -121,6 +133,12 @@
     <Compile Include="frmSucursales.Designer.cs">
       <DependentUpon>frmSucursales.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTipoConcepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoConcepto.Designer.cs">
+      <DependentUpon>frmTipoConcepto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTipoFalta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +150,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteBancos.cs" />
+    <Compile Include="ReporteBancos.Designer.cs">
+      <DependentUpon>ReporteBancos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteBancos1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteBancos.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteConceptos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteConceptos.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ReporteDepartamentos1.cs">
       <AutoGen>True</AutoGen>
@@ -151,6 +184,15 @@
       <DependentUpon>ReporteEmpresas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ReporteMoneda.cs" />
+    <Compile Include="ReporteMoneda.Designer.cs">
+      <DependentUpon>ReporteMoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteMoneda1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteMoneda.rpt</DependentUpon>
+    </Compile>
     <Compile Include="ReportePuestos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -162,6 +204,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReporteSucursales.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteTipoConcepto.cs" />
+    <Compile Include="ReporteTipoConcepto.Designer.cs">
+      <DependentUpon>ReporteTipoConcepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteTipoConcepto1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteTipoConcepto.rpt</DependentUpon>
     </Compile>
     <Compile Include="ReporteTipoFalta.cs">
       <AutoGen>True</AutoGen>
@@ -177,8 +228,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Conceptos.resx">
+      <DependentUpon>Conceptos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBancos.resx">
       <DependentUpon>frmBancos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConcepto.resx">
+      <DependentUpon>frmConcepto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConceptos.resx">
       <DependentUpon>frmConceptos.cs</DependentUpon>
@@ -207,12 +264,26 @@
     <EmbeddedResource Include="frmSucursales.resx">
       <DependentUpon>frmSucursales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoConcepto.resx">
+      <DependentUpon>frmTipoConcepto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTipoFalta.resx">
       <DependentUpon>frmTipoFalta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteBancos.resx">
+      <DependentUpon>ReporteBancos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteBancos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteBancos1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteConceptos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteConceptos.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteDepartamentos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -226,6 +297,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteEmpresas.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteMoneda.resx">
+      <DependentUpon>ReporteMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteMoneda.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteMoneda1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportePuestos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportePuestos.cs</LastGenOutput>
@@ -233,6 +311,13 @@
     <EmbeddedResource Include="ReporteSucursales.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteSucursales.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteTipoConcepto.resx">
+      <DependentUpon>ReporteTipoConcepto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteTipoConcepto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteTipoConcepto1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteTipoFalta.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
