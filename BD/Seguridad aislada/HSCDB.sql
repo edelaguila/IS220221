@@ -75,6 +75,22 @@ Create Table banco (
     estado char(1) not null
 )engine=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE concepto (
+    pkIdConcepto VARCHAR(15) NOT NULL,         
+    nombreConcepto VARCHAR(60) NOT NULL,               
+    efectoConcepto VARCHAR(20) NOT NULL,         
+    aplicableConcepto VARCHAR(60) NOT NULL,     
+    formulaConcepto VARCHAR(60) NOT NULL,    
+    estado VARCHAR(1) NOT NULL,        
+    PRIMARY KEY (pkIdConcepto)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE tipoConcepto (
+    pkIdTipoConcepto VARCHAR(15),         
+    nombreTipoConcepto VARCHAR(50),         
+    estado VARCHAR(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 -- ------------------------------------------------------------------------------------------------------------
 -- 	COMPONENTE SEGURIDAD
 -- ------------------------------------------------------------------------------------------------------------
