@@ -41,16 +41,17 @@ namespace CapaVistaRRHH
             this.tipoDeFaltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sucursalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.conceptosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasContablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bancosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conceptosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoConceptoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conceptosAEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excepciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.conceptosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoConceptoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,7 +101,6 @@ namespace CapaVistaRRHH
             this.tipoDeFaltasToolStripMenuItem,
             this.empresasToolStripMenuItem,
             this.sucursalesToolStripMenuItem,
-            this.conceptosToolStripMenuItem,
             this.cuentasContablesToolStripMenuItem,
             this.bancosToolStripMenuItem,
             this.monedaToolStripMenuItem,
@@ -152,13 +152,6 @@ namespace CapaVistaRRHH
             this.sucursalesToolStripMenuItem.Text = "Sucursales";
             this.sucursalesToolStripMenuItem.Click += new System.EventHandler(this.sucursalesToolStripMenuItem_Click);
             // 
-            // conceptosToolStripMenuItem
-            // 
-            this.conceptosToolStripMenuItem.Name = "conceptosToolStripMenuItem";
-            this.conceptosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.conceptosToolStripMenuItem.Text = "Conceptos";
-            this.conceptosToolStripMenuItem.Click += new System.EventHandler(this.conceptosToolStripMenuItem_Click);
-            // 
             // cuentasContablesToolStripMenuItem
             // 
             this.cuentasContablesToolStripMenuItem.Name = "cuentasContablesToolStripMenuItem";
@@ -180,11 +173,42 @@ namespace CapaVistaRRHH
             this.monedaToolStripMenuItem.Text = "Moneda";
             this.monedaToolStripMenuItem.Click += new System.EventHandler(this.monedaToolStripMenuItem_Click);
             // 
+            // conceptosToolStripMenuItem1
+            // 
+            this.conceptosToolStripMenuItem1.Name = "conceptosToolStripMenuItem1";
+            this.conceptosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.conceptosToolStripMenuItem1.Text = "Conceptos";
+            this.conceptosToolStripMenuItem1.Click += new System.EventHandler(this.conceptosToolStripMenuItem1_Click);
+            // 
+            // tipoConceptoToolStripMenuItem
+            // 
+            this.tipoConceptoToolStripMenuItem.Name = "tipoConceptoToolStripMenuItem";
+            this.tipoConceptoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoConceptoToolStripMenuItem.Text = "Tipo Concepto";
+            this.tipoConceptoToolStripMenuItem.Click += new System.EventHandler(this.tipoConceptoToolStripMenuItem_Click);
+            // 
             // procesosToolStripMenuItem
             // 
+            this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.conceptosAEmpleadosToolStripMenuItem,
+            this.excepciToolStripMenuItem});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.procesosToolStripMenuItem.Text = "Procesos";
+            // 
+            // conceptosAEmpleadosToolStripMenuItem
+            // 
+            this.conceptosAEmpleadosToolStripMenuItem.Name = "conceptosAEmpleadosToolStripMenuItem";
+            this.conceptosAEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.conceptosAEmpleadosToolStripMenuItem.Text = "Conceptos a Empleados";
+            this.conceptosAEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.conceptosAEmpleadosToolStripMenuItem_Click);
+            // 
+            // excepciToolStripMenuItem
+            // 
+            this.excepciToolStripMenuItem.Name = "excepciToolStripMenuItem";
+            this.excepciToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.excepciToolStripMenuItem.Text = "Excepciones conceptos a Empleados";
+            this.excepciToolStripMenuItem.Click += new System.EventHandler(this.excepciToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -205,20 +229,6 @@ namespace CapaVistaRRHH
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 3;
             this.txtUsuario.Visible = false;
-            // 
-            // conceptosToolStripMenuItem1
-            // 
-            this.conceptosToolStripMenuItem1.Name = "conceptosToolStripMenuItem1";
-            this.conceptosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.conceptosToolStripMenuItem1.Text = "Conceptos";
-            this.conceptosToolStripMenuItem1.Click += new System.EventHandler(this.conceptosToolStripMenuItem1_Click);
-            // 
-            // tipoConceptoToolStripMenuItem
-            // 
-            this.tipoConceptoToolStripMenuItem.Name = "tipoConceptoToolStripMenuItem";
-            this.tipoConceptoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tipoConceptoToolStripMenuItem.Text = "Tipo Concepto";
-            this.tipoConceptoToolStripMenuItem.Click += new System.EventHandler(this.tipoConceptoToolStripMenuItem_Click);
             // 
             // frmMDIRRHH
             // 
@@ -261,11 +271,12 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudasToolStripMenuItem;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.ToolStripMenuItem conceptosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuentasContablesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bancosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem monedaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem conceptosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tipoConceptoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conceptosAEmpleadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem excepciToolStripMenuItem;
     }
 }
