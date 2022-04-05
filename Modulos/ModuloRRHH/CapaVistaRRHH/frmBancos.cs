@@ -27,8 +27,8 @@ namespace CapaVistaRRHH
 			//fin de elementos para dar de baja
 
 			/* Inicio ID Aplicacion usada para reportes y ayudas */
-			navegador1.idAplicacion = "0016";
-			navegador1.idmodulo = "3";
+			navegador1.idAplicacion = "0009";
+			navegador1.idmodulo = "2";
 			/* Inicio ID Aplicacion usada para reportes y ayudas */
 
 			//inicio de elementos para ejecutar la ayuda

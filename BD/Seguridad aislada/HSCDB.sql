@@ -93,12 +93,12 @@ CREATE TABLE tipoConcepto (
 
 CREATE TABLE detalle_personalizado_unicamente (
     fkIdEmpleado VARCHAR(15),        
-    fkIdConcepto VARCHAR(15),        
+    fkIdConcepto VARCHAR(15)        
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE detalle_personalizado_excepto (
     fkIdEmpleado VARCHAR(15),        
-    fkIdConcepto VARCHAR(15),        
+    fkIdConcepto VARCHAR(15)       
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ------------------------------------------------------------------------------------------------------------

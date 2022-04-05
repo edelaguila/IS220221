@@ -1,0 +1,18 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=AyudaConceptosExcepciones.chm
+Contents file=AyudasConceptosExcepciones.hhc
+Default Window=AyudaConceptosExcepciones
+Display compile progress=No
+Language=0xc0a Español (España, internacional)
+
+[WINDOWS]
+AyudaConceptosExcepciones="Ayuda para los matenimientos de conceptos y excepciones","AyudasConceptosExcepciones.hhc",,,,"Ayuda-para-la-vista-del-mantenimiento-de-conceptos.html","Ayuda-para-la-vista-del-mantenimiento-de-conceptos","Ayuda-para-la-vista-del-mantenimiento-de-Excepciones.html","Ayuda-para-la-vista-del-mantenimiento-de-Excepciones",0x2120,,0xc387e,,,,,,,,0
+
+
+[FILES]
+Ayuda-para-la-vista-del-mantenimiento-de-conceptos.html
+Ayuda-para-la-vista-del-mantenimiento-de-Excepciones.html
+
+[INFOTYPES]
+
