@@ -243,6 +243,7 @@ namespace CapaVistaRRHH
             this.txtExcepcion.Size = new System.Drawing.Size(43, 20);
             this.txtExcepcion.TabIndex = 129;
             this.txtExcepcion.Tag = "fkIdExcepcion";
+            this.txtExcepcion.Visible = false;
             // 
             // txtEfecto
             // 
@@ -251,6 +252,7 @@ namespace CapaVistaRRHH
             this.txtEfecto.Size = new System.Drawing.Size(46, 20);
             this.txtEfecto.TabIndex = 130;
             this.txtEfecto.Tag = "efectoConcepto";
+            this.txtEfecto.Visible = false;
             this.txtEfecto.TextChanged += new System.EventHandler(this.txtEfecto_TextChanged_1);
             // 
             // Conceptos
@@ -279,7 +281,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "Conceptos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmConceptos";
+            this.Text = "Conceptos";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
