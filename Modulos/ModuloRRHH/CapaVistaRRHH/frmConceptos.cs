@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace CapaVistaRRHH
 {
-    public partial class frmConceptos : Form
+    public partial class Conceptos : Form
     {
-        public frmConceptos()
+        public Conceptos()
         {
-			InitializeComponent();
-
+            InitializeComponent();
 
 			TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
 			navegador1.ObtenerCamposdeTabla(alias, "concepto", "hotelSanCarlos");
 			navegador1.MetodoSalirVista(this);
-			//navegador1.LlenarCombobox(cbxIDPuesto, "puesto", "pkIdPuesto", "nombre", "estado");
+			navegador1.LlenarCombobox(cbxExcepcion, "excepciones", "pkIdExcepcion", "nombreExcepcion", "estado");
 			//navegador1.LlenarCombobox(cbxIDEmpresa, "empresa", "idEmpresa", "nombre", "estatus");
 
 			//inicio de elementos para dar de baja
@@ -28,8 +27,8 @@ namespace CapaVistaRRHH
 			//fin de elementos para dar de baja
 
 			/* Inicio ID Aplicacion usada para reportes y ayudas */
-			navegador1.idAplicacion = "0010";
-			navegador1.idmodulo = "1";
+			navegador1.idAplicacion = "0007";
+			navegador1.idmodulo = "2";
 			/* Inicio ID Aplicacion usada para reportes y ayudas */
 
 			//inicio de elementos para ejecutar la ayuda
@@ -46,35 +45,75 @@ namespace CapaVistaRRHH
 			navegador1.LlenarTabla();
 			navegador1.ObtenerReferenciaFormActual(this);
 			//String cadena = txtprueba.Text;
-			//navegador1.pruebaMensaje(cadena);
+			//navegador1.pruebaMensaje(cadena);			
+
 		}
 
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            navegador1.EnviarDatoComboaTextbox(cbxExcepcion, txtExcepcion);
+        }
 
-		private void txtEstado_TextChanged(object sender, EventArgs e)
-		{
-			navegador1.ActivaRadiobtn(rbnEstatusamodulo, rbnEstatusimodulo, txtEstado);
+        private void txtExcepcion_TextChanged(object sender, EventArgs e)
+        {
+            navegador1.SeleccionarElementosenCombo(cbxExcepcion, txtExcepcion);
+        }
+
+        private void dgvVistaPrevia_SelectionChanged(object sender, EventArgs e)
+        {
+			navegador1.SelecciondeFilaDGV(dgvVistaPrevia);
 		}
 
-		private void rbnEstatusamodulo_CheckedChanged(object sender, EventArgs e)
-		{
+        private void rbnPercepcion_CheckedChanged(object sender, EventArgs e)
+        {
+			navegador1.CambioEstadoTextbox(txtEfecto, rbnPercepcion, "+");
+		}
+
+        private void rbnDeduccion_CheckedChanged(object sender, EventArgs e)
+        {
+			navegador1.CambioEstadoTextbox(txtEfecto, rbnDeduccion, "-");
+		}
+
+        private void txtEfecto_TextChanged(object sender, EventArgs e)
+        {
+			navegador1.ActivaRadiobtn(rbnPercepcion, rbnDeduccion, txtEfecto);
+		}
+
+        private void rbnEstatusamodulo_CheckedChanged(object sender, EventArgs e)
+        {
 			navegador1.CambioEstadoTextbox(txtEstado, rbnEstatusamodulo, "1");
 		}
 
-		private void rbnEstatusimodulo_CheckedChanged(object sender, EventArgs e)
-		{
+        private void rbnEstatusimodulo_CheckedChanged(object sender, EventArgs e)
+        {
 			navegador1.CambioEstadoTextbox(txtEstado, rbnEstatusimodulo, "0");
 		}
 
-		private void dgvVistaPrevia_SelectionChanged(object sender, EventArgs e)
-		{
-
-			navegador1.SelecciondeFilaDGV(dgvVistaPrevia);
-
+        private void txtEstado_TextChanged(object sender, EventArgs e)
+        {
+			navegador1.ActivaRadiobtn(rbnEstatusamodulo, rbnEstatusimodulo, txtEstado);
 		}
 
-        private void txtNombre_TextChanged(object sender, EventArgs e)
+        private void txtExcepcion_TextChanged_1(object sender, EventArgs e)
         {
 
         }
+
+        private void txtEfecto_TextChanged_1(object sender, EventArgs e)
+        {
+			navegador1.ActivaRadiobtn(rbnDeduccion, rbnPercepcion, txtEfecto);
+
+			if (txtEfecto.Text == "-")
+			{
+				rbnDeduccion.Checked = true;
+			}
+
+
+			if (txtEfecto.Text == "+")
+			{
+				rbnPercepcion.Checked = true;
+			}
+
+		}
     }
 }

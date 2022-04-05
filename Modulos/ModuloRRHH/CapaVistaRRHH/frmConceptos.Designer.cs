@@ -1,7 +1,7 @@
 ﻿
 namespace CapaVistaRRHH
 {
-    partial class frmConceptos
+    partial class Conceptos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,94 +29,101 @@ namespace CapaVistaRRHH
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConceptos));
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.txtAñosExperiencia = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Conceptos));
+            this.navegador1 = new DLL.nav.navegador();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rbnPercepcion = new System.Windows.Forms.RadioButton();
+            this.rbnDeduccion = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtIDPuesto = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbnEstatusamodulo = new System.Windows.Forms.RadioButton();
             this.rbnEstatusimodulo = new System.Windows.Forms.RadioButton();
             this.lblEstatus = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtIdConcepto = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtFormula = new System.Windows.Forms.TextBox();
+            this.cbxExcepcion = new System.Windows.Forms.ComboBox();
             this.dgvVistaPrevia = new System.Windows.Forms.DataGridView();
-            this.navegador1 = new DLL.nav.navegador();
+            this.txtExcepcion = new System.Windows.Forms.TextBox();
+            this.txtEfecto = new System.Windows.Forms.TextBox();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtEstado
+            // navegador1
             // 
-            this.txtEstado.Location = new System.Drawing.Point(379, 204);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(39, 20);
-            this.txtEstado.TabIndex = 93;
-            this.txtEstado.Tag = "estado";
-            this.txtEstado.Visible = false;
-            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
+            this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.navegador1.Location = new System.Drawing.Point(0, -4);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(1189, 87);
+            this.navegador1.TabIndex = 0;
             // 
-            // txtAñosExperiencia
+            // panel2
             // 
-            this.txtAñosExperiencia.Location = new System.Drawing.Point(173, 178);
-            this.txtAñosExperiencia.Name = "txtAñosExperiencia";
-            this.txtAñosExperiencia.Size = new System.Drawing.Size(200, 20);
-            this.txtAñosExperiencia.TabIndex = 100;
-            this.txtAñosExperiencia.Tag = "efecto";
+            this.panel2.Controls.Add(this.rbnPercepcion);
+            this.panel2.Controls.Add(this.rbnDeduccion);
+            this.panel2.Location = new System.Drawing.Point(150, 182);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 30);
+            this.panel2.TabIndex = 117;
             // 
-            // label3
+            // rbnPercepcion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 181);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 96;
-            this.label3.Text = "Efecto";
+            this.rbnPercepcion.AutoSize = true;
+            this.rbnPercepcion.Location = new System.Drawing.Point(12, 7);
+            this.rbnPercepcion.Name = "rbnPercepcion";
+            this.rbnPercepcion.Size = new System.Drawing.Size(79, 17);
+            this.rbnPercepcion.TabIndex = 8;
+            this.rbnPercepcion.TabStop = true;
+            this.rbnPercepcion.Text = "Percepcion";
+            this.rbnPercepcion.UseVisualStyleBackColor = true;
+            this.rbnPercepcion.CheckedChanged += new System.EventHandler(this.rbnPercepcion_CheckedChanged);
             // 
-            // txtNombre
+            // rbnDeduccion
             // 
-            this.txtNombre.Location = new System.Drawing.Point(173, 152);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(200, 20);
-            this.txtNombre.TabIndex = 101;
-            this.txtNombre.Tag = "nombre";
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.rbnDeduccion.AutoSize = true;
+            this.rbnDeduccion.Location = new System.Drawing.Point(120, 7);
+            this.rbnDeduccion.Name = "rbnDeduccion";
+            this.rbnDeduccion.Size = new System.Drawing.Size(77, 17);
+            this.rbnDeduccion.TabIndex = 9;
+            this.rbnDeduccion.TabStop = true;
+            this.rbnDeduccion.Text = "Deduccion";
+            this.rbnDeduccion.UseVisualStyleBackColor = true;
+            this.rbnDeduccion.CheckedChanged += new System.EventHandler(this.rbnDeduccion_CheckedChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 155);
+            this.label2.Location = new System.Drawing.Point(40, 234);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 97;
-            this.label2.Text = "Nombre:";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 115;
+            this.label2.Text = "Excepción:";
             // 
-            // txtIDPuesto
+            // txtEstado
             // 
-            this.txtIDPuesto.Location = new System.Drawing.Point(173, 126);
-            this.txtIDPuesto.Name = "txtIDPuesto";
-            this.txtIDPuesto.Size = new System.Drawing.Size(200, 20);
-            this.txtIDPuesto.TabIndex = 102;
-            this.txtIDPuesto.Tag = "pkId";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 98;
-            this.label1.Text = "ID Concepto:";
+            this.txtEstado.Location = new System.Drawing.Point(358, 313);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(39, 20);
+            this.txtEstado.TabIndex = 113;
+            this.txtEstado.Tag = "estado";
+            this.txtEstado.Visible = false;
+            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(173, 204);
+            this.panel1.Location = new System.Drawing.Point(152, 313);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 30);
-            this.panel1.TabIndex = 94;
+            this.panel1.TabIndex = 114;
             // 
             // rbnEstatusamodulo
             // 
@@ -145,51 +152,136 @@ namespace CapaVistaRRHH
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(63, 207);
+            this.lblEstatus.Location = new System.Drawing.Point(53, 313);
             this.lblEstatus.Name = "lblEstatus";
-            this.lblEstatus.Size = new System.Drawing.Size(45, 13);
-            this.lblEstatus.TabIndex = 92;
-            this.lblEstatus.Text = "Estatus:";
+            this.lblEstatus.Size = new System.Drawing.Size(43, 13);
+            this.lblEstatus.TabIndex = 112;
+            this.lblEstatus.Text = "Estado:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(32, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 118;
+            this.label1.Text = "Id Concepto:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(53, 156);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 119;
+            this.label3.Text = "Nombre:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(59, 189);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.TabIndex = 120;
+            this.label4.Text = "Efecto:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(53, 271);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 121;
+            this.label5.Text = "Formula:";
+            // 
+            // txtIdConcepto
+            // 
+            this.txtIdConcepto.Location = new System.Drawing.Point(160, 116);
+            this.txtIdConcepto.Name = "txtIdConcepto";
+            this.txtIdConcepto.Size = new System.Drawing.Size(100, 20);
+            this.txtIdConcepto.TabIndex = 122;
+            this.txtIdConcepto.Tag = "pkIdConcepto";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(160, 156);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 123;
+            this.txtNombre.Tag = "nombreConcepto";
+            // 
+            // txtFormula
+            // 
+            this.txtFormula.Location = new System.Drawing.Point(160, 268);
+            this.txtFormula.Name = "txtFormula";
+            this.txtFormula.Size = new System.Drawing.Size(100, 20);
+            this.txtFormula.TabIndex = 125;
+            this.txtFormula.Tag = "formulaConcepto";
+            // 
+            // cbxExcepcion
+            // 
+            this.cbxExcepcion.FormattingEnabled = true;
+            this.cbxExcepcion.Location = new System.Drawing.Point(160, 230);
+            this.cbxExcepcion.Name = "cbxExcepcion";
+            this.cbxExcepcion.Size = new System.Drawing.Size(121, 21);
+            this.cbxExcepcion.TabIndex = 126;
+            this.cbxExcepcion.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dgvVistaPrevia
             // 
-            this.dgvVistaPrevia.AllowUserToOrderColumns = true;
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVistaPrevia.Location = new System.Drawing.Point(487, 100);
+            this.dgvVistaPrevia.Location = new System.Drawing.Point(453, 106);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(685, 246);
-            this.dgvVistaPrevia.TabIndex = 91;
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(719, 332);
+            this.dgvVistaPrevia.TabIndex = 127;
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
-            // navegador1
+            // txtExcepcion
             // 
-            this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.navegador1.Location = new System.Drawing.Point(1, -1);
-            this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(1189, 87);
-            this.navegador1.TabIndex = 90;
+            this.txtExcepcion.Location = new System.Drawing.Point(287, 231);
+            this.txtExcepcion.Name = "txtExcepcion";
+            this.txtExcepcion.Size = new System.Drawing.Size(43, 20);
+            this.txtExcepcion.TabIndex = 129;
+            this.txtExcepcion.Tag = "fkIdExcepcion";
             // 
-            // frmConceptos
+            // txtEfecto
+            // 
+            this.txtEfecto.Location = new System.Drawing.Point(358, 186);
+            this.txtEfecto.Name = "txtEfecto";
+            this.txtEfecto.Size = new System.Drawing.Size(46, 20);
+            this.txtEfecto.TabIndex = 130;
+            this.txtEfecto.Tag = "efectoConcepto";
+            this.txtEfecto.TextChanged += new System.EventHandler(this.txtEfecto_TextChanged_1);
+            // 
+            // Conceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 363);
+            this.ClientSize = new System.Drawing.Size(1184, 450);
             this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.txtAñosExperiencia);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtFormula);
+            this.Controls.Add(this.txtExcepcion);
+            this.Controls.Add(this.txtEfecto);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtIDPuesto);
+            this.Controls.Add(this.txtIdConcepto);
+            this.Controls.Add(this.dgvVistaPrevia);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblEstatus);
-            this.Controls.Add(this.dgvVistaPrevia);
             this.Controls.Add(this.navegador1);
+            this.Controls.Add(this.cbxExcepcion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "frmConceptos";
+            this.Name = "Conceptos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Conceptos";
+            this.Text = "frmConceptos";
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
@@ -200,18 +292,26 @@ namespace CapaVistaRRHH
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.TextBox txtAñosExperiencia;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombre;
+        private DLL.nav.navegador navegador1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton rbnPercepcion;
+        private System.Windows.Forms.RadioButton rbnDeduccion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIDPuesto;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton rbnEstatusamodulo;
         private System.Windows.Forms.RadioButton rbnEstatusimodulo;
         private System.Windows.Forms.Label lblEstatus;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtIdConcepto;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtFormula;
+        private System.Windows.Forms.ComboBox cbxExcepcion;
         private System.Windows.Forms.DataGridView dgvVistaPrevia;
-        private DLL.nav.navegador navegador1;
+        private System.Windows.Forms.TextBox txtExcepcion;
+        private System.Windows.Forms.TextBox txtEfecto;
     }
 }
