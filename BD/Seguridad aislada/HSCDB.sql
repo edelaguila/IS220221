@@ -54,14 +54,6 @@ CREATE TABLE cuentasContables (
     estado VARCHAR(1) 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE concepto (
-    pkId VARCHAR(15)primary key,
-    nombre VARCHAR(45),
-    efecto VARCHAR(45),
-    estado VARCHAR(1)
-    
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 create table moneda(
 	Pkid varchar(15) primary key,
 	nombreMoneda varchar(30) not null,
@@ -74,16 +66,6 @@ Create Table banco (
 	direccionBanco varchar(25) NOT NULL,
     estado char(1) not null
 )engine=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE concepto (
-    pkIdConcepto VARCHAR(15) NOT NULL,         
-    nombreConcepto VARCHAR(60) NOT NULL,               
-    efectoConcepto VARCHAR(20) NOT NULL,         
-    aplicableConcepto VARCHAR(60) NOT NULL,     
-    formulaConcepto VARCHAR(60) NOT NULL,    
-    estado VARCHAR(1) NOT NULL,        
-    PRIMARY KEY (pkIdConcepto)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE tipoConcepto (
     pkIdTipoConcepto VARCHAR(15),         

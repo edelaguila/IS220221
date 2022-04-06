@@ -50,7 +50,7 @@ namespace CapaVistaRRHH
             this.txtNombre.Location = new System.Drawing.Point(176, 152);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
-            this.txtNombre.TabIndex = 101;
+            this.txtNombre.TabIndex = 2;
             this.txtNombre.Tag = "nombreDepartamento";
             // 
             // label2
@@ -67,7 +67,7 @@ namespace CapaVistaRRHH
             this.txtIDDepartamento.Location = new System.Drawing.Point(176, 126);
             this.txtIDDepartamento.Name = "txtIDDepartamento";
             this.txtIDDepartamento.Size = new System.Drawing.Size(200, 20);
-            this.txtIDDepartamento.TabIndex = 102;
+            this.txtIDDepartamento.TabIndex = 1;
             this.txtIDDepartamento.Tag = "pkidDepartamento";
             // 
             // label1
@@ -104,7 +104,7 @@ namespace CapaVistaRRHH
             this.rbnEstatusamodulo.Location = new System.Drawing.Point(12, 7);
             this.rbnEstatusamodulo.Name = "rbnEstatusamodulo";
             this.rbnEstatusamodulo.Size = new System.Drawing.Size(55, 17);
-            this.rbnEstatusamodulo.TabIndex = 8;
+            this.rbnEstatusamodulo.TabIndex = 3;
             this.rbnEstatusamodulo.TabStop = true;
             this.rbnEstatusamodulo.Text = "Activo";
             this.rbnEstatusamodulo.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@ namespace CapaVistaRRHH
             this.rbnEstatusimodulo.Location = new System.Drawing.Point(134, 7);
             this.rbnEstatusimodulo.Name = "rbnEstatusimodulo";
             this.rbnEstatusimodulo.Size = new System.Drawing.Size(63, 17);
-            this.rbnEstatusimodulo.TabIndex = 9;
+            this.rbnEstatusimodulo.TabIndex = 4;
             this.rbnEstatusimodulo.TabStop = true;
             this.rbnEstatusimodulo.Text = "Inactivo";
             this.rbnEstatusimodulo.UseVisualStyleBackColor = true;

@@ -79,7 +79,7 @@ namespace CapaVistaRRHH
             this.rbnPercepcion.Location = new System.Drawing.Point(12, 7);
             this.rbnPercepcion.Name = "rbnPercepcion";
             this.rbnPercepcion.Size = new System.Drawing.Size(79, 17);
-            this.rbnPercepcion.TabIndex = 8;
+            this.rbnPercepcion.TabIndex = 3;
             this.rbnPercepcion.TabStop = true;
             this.rbnPercepcion.Text = "Percepcion";
             this.rbnPercepcion.UseVisualStyleBackColor = true;
@@ -91,7 +91,7 @@ namespace CapaVistaRRHH
             this.rbnDeduccion.Location = new System.Drawing.Point(120, 7);
             this.rbnDeduccion.Name = "rbnDeduccion";
             this.rbnDeduccion.Size = new System.Drawing.Size(77, 17);
-            this.rbnDeduccion.TabIndex = 9;
+            this.rbnDeduccion.TabIndex = 4;
             this.rbnDeduccion.TabStop = true;
             this.rbnDeduccion.Text = "Deduccion";
             this.rbnDeduccion.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@ namespace CapaVistaRRHH
             this.rbnEstatusamodulo.Location = new System.Drawing.Point(12, 7);
             this.rbnEstatusamodulo.Name = "rbnEstatusamodulo";
             this.rbnEstatusamodulo.Size = new System.Drawing.Size(55, 17);
-            this.rbnEstatusamodulo.TabIndex = 8;
+            this.rbnEstatusamodulo.TabIndex = 7;
             this.rbnEstatusamodulo.TabStop = true;
             this.rbnEstatusamodulo.Text = "Activo";
             this.rbnEstatusamodulo.UseVisualStyleBackColor = true;
@@ -143,7 +143,7 @@ namespace CapaVistaRRHH
             this.rbnEstatusimodulo.Location = new System.Drawing.Point(134, 7);
             this.rbnEstatusimodulo.Name = "rbnEstatusimodulo";
             this.rbnEstatusimodulo.Size = new System.Drawing.Size(63, 17);
-            this.rbnEstatusimodulo.TabIndex = 9;
+            this.rbnEstatusimodulo.TabIndex = 8;
             this.rbnEstatusimodulo.TabStop = true;
             this.rbnEstatusimodulo.Text = "Inactivo";
             this.rbnEstatusimodulo.UseVisualStyleBackColor = true;
@@ -199,7 +199,7 @@ namespace CapaVistaRRHH
             this.txtIdConcepto.Location = new System.Drawing.Point(160, 116);
             this.txtIdConcepto.Name = "txtIdConcepto";
             this.txtIdConcepto.Size = new System.Drawing.Size(100, 20);
-            this.txtIdConcepto.TabIndex = 122;
+            this.txtIdConcepto.TabIndex = 1;
             this.txtIdConcepto.Tag = "pkIdConcepto";
             // 
             // txtNombre
@@ -207,7 +207,7 @@ namespace CapaVistaRRHH
             this.txtNombre.Location = new System.Drawing.Point(160, 156);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 123;
+            this.txtNombre.TabIndex = 2;
             this.txtNombre.Tag = "nombreConcepto";
             // 
             // txtFormula
@@ -215,7 +215,7 @@ namespace CapaVistaRRHH
             this.txtFormula.Location = new System.Drawing.Point(160, 268);
             this.txtFormula.Name = "txtFormula";
             this.txtFormula.Size = new System.Drawing.Size(100, 20);
-            this.txtFormula.TabIndex = 125;
+            this.txtFormula.TabIndex = 6;
             this.txtFormula.Tag = "formulaConcepto";
             // 
             // cbxExcepcion
@@ -224,7 +224,7 @@ namespace CapaVistaRRHH
             this.cbxExcepcion.Location = new System.Drawing.Point(160, 230);
             this.cbxExcepcion.Name = "cbxExcepcion";
             this.cbxExcepcion.Size = new System.Drawing.Size(121, 21);
-            this.cbxExcepcion.TabIndex = 126;
+            this.cbxExcepcion.TabIndex = 5;
             this.cbxExcepcion.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dgvVistaPrevia
