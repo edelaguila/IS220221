@@ -44,6 +44,7 @@ namespace CapaVistaRRHH
             this.cuentasContablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bancosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excepcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conceptosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conceptosAEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@ namespace CapaVistaRRHH
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.excepcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,17 +95,17 @@ namespace CapaVistaRRHH
             // catálogosToolStripMenuItem
             // 
             this.catálogosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.empleadoToolStripMenuItem,
-            this.departamentosToolStripMenuItem,
-            this.puestosToolStripMenuItem,
-            this.tipoDeFaltasToolStripMenuItem,
-            this.empresasToolStripMenuItem,
-            this.sucursalesToolStripMenuItem,
-            this.cuentasContablesToolStripMenuItem,
             this.bancosToolStripMenuItem,
-            this.monedaToolStripMenuItem,
+            this.conceptosToolStripMenuItem1,
+            this.cuentasContablesToolStripMenuItem,
+            this.departamentosToolStripMenuItem,
+            this.empleadoToolStripMenuItem,
+            this.empresasToolStripMenuItem,
             this.excepcionesToolStripMenuItem,
-            this.conceptosToolStripMenuItem1});
+            this.monedaToolStripMenuItem,
+            this.puestosToolStripMenuItem,
+            this.sucursalesToolStripMenuItem,
+            this.tipoDeFaltasToolStripMenuItem});
             this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
             this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.catálogosToolStripMenuItem.Text = "Catálogos";
@@ -173,6 +173,13 @@ namespace CapaVistaRRHH
             this.monedaToolStripMenuItem.Text = "Moneda";
             this.monedaToolStripMenuItem.Click += new System.EventHandler(this.monedaToolStripMenuItem_Click);
             // 
+            // excepcionesToolStripMenuItem
+            // 
+            this.excepcionesToolStripMenuItem.Name = "excepcionesToolStripMenuItem";
+            this.excepcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.excepcionesToolStripMenuItem.Text = "Excepciones";
+            this.excepcionesToolStripMenuItem.Click += new System.EventHandler(this.excepcionesToolStripMenuItem_Click);
+            // 
             // conceptosToolStripMenuItem1
             // 
             this.conceptosToolStripMenuItem1.Name = "conceptosToolStripMenuItem1";
@@ -222,13 +229,6 @@ namespace CapaVistaRRHH
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 3;
             this.txtUsuario.Visible = false;
-            // 
-            // excepcionesToolStripMenuItem
-            // 
-            this.excepcionesToolStripMenuItem.Name = "excepcionesToolStripMenuItem";
-            this.excepcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.excepcionesToolStripMenuItem.Text = "Excepciones";
-            this.excepcionesToolStripMenuItem.Click += new System.EventHandler(this.excepcionesToolStripMenuItem_Click);
             // 
             // frmMDIRRHH
             // 

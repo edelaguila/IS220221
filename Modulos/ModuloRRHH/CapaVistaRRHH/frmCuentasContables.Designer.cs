@@ -62,7 +62,7 @@ namespace CapaVistaRRHH
             this.txtAñosExperiencia.Location = new System.Drawing.Point(169, 177);
             this.txtAñosExperiencia.Name = "txtAñosExperiencia";
             this.txtAñosExperiencia.Size = new System.Drawing.Size(200, 20);
-            this.txtAñosExperiencia.TabIndex = 100;
+            this.txtAñosExperiencia.TabIndex = 3;
             this.txtAñosExperiencia.Tag = "codigo";
             // 
             // label3
@@ -79,7 +79,7 @@ namespace CapaVistaRRHH
             this.txtNombre.Location = new System.Drawing.Point(169, 151);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
-            this.txtNombre.TabIndex = 101;
+            this.txtNombre.TabIndex = 2;
             this.txtNombre.Tag = "nombre";
             // 
             // label2
@@ -96,7 +96,7 @@ namespace CapaVistaRRHH
             this.txtIDPuesto.Location = new System.Drawing.Point(169, 125);
             this.txtIDPuesto.Name = "txtIDPuesto";
             this.txtIDPuesto.Size = new System.Drawing.Size(200, 20);
-            this.txtIDPuesto.TabIndex = 102;
+            this.txtIDPuesto.TabIndex = 1;
             this.txtIDPuesto.Tag = "pkId";
             // 
             // label1
@@ -123,7 +123,7 @@ namespace CapaVistaRRHH
             this.rbnEstatusamodulo.Location = new System.Drawing.Point(12, 7);
             this.rbnEstatusamodulo.Name = "rbnEstatusamodulo";
             this.rbnEstatusamodulo.Size = new System.Drawing.Size(55, 17);
-            this.rbnEstatusamodulo.TabIndex = 8;
+            this.rbnEstatusamodulo.TabIndex = 4;
             this.rbnEstatusamodulo.TabStop = true;
             this.rbnEstatusamodulo.Text = "Activo";
             this.rbnEstatusamodulo.UseVisualStyleBackColor = true;
@@ -135,7 +135,7 @@ namespace CapaVistaRRHH
             this.rbnEstatusimodulo.Location = new System.Drawing.Point(134, 7);
             this.rbnEstatusimodulo.Name = "rbnEstatusimodulo";
             this.rbnEstatusimodulo.Size = new System.Drawing.Size(63, 17);
-            this.rbnEstatusimodulo.TabIndex = 9;
+            this.rbnEstatusimodulo.TabIndex = 5;
             this.rbnEstatusimodulo.TabStop = true;
             this.rbnEstatusimodulo.Text = "Inactivo";
             this.rbnEstatusimodulo.UseVisualStyleBackColor = true;

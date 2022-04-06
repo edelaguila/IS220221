@@ -59,7 +59,7 @@ namespace CapaVistaRRHH
             this.txtTelefono.Location = new System.Drawing.Point(171, 228);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(200, 20);
-            this.txtTelefono.TabIndex = 99;
+            this.txtTelefono.TabIndex = 5;
             this.txtTelefono.Tag = "telefono";
             // 
             // label4
@@ -76,7 +76,7 @@ namespace CapaVistaRRHH
             this.txtDireccion.Location = new System.Drawing.Point(171, 202);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(200, 20);
-            this.txtDireccion.TabIndex = 100;
+            this.txtDireccion.TabIndex = 4;
             this.txtDireccion.Tag = "direccion";
             // 
             // label3
@@ -93,7 +93,7 @@ namespace CapaVistaRRHH
             this.txtNombre.Location = new System.Drawing.Point(171, 176);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
-            this.txtNombre.TabIndex = 101;
+            this.txtNombre.TabIndex = 3;
             this.txtNombre.Tag = "nombre";
             // 
             // label2
@@ -110,7 +110,7 @@ namespace CapaVistaRRHH
             this.txtIDSucursal.Location = new System.Drawing.Point(171, 124);
             this.txtIDSucursal.Name = "txtIDSucursal";
             this.txtIDSucursal.Size = new System.Drawing.Size(200, 20);
-            this.txtIDSucursal.TabIndex = 102;
+            this.txtIDSucursal.TabIndex = 1;
             this.txtIDSucursal.Tag = "idSucursal";
             // 
             // label1
@@ -147,7 +147,7 @@ namespace CapaVistaRRHH
             this.rbnEstatusamodulo.Location = new System.Drawing.Point(12, 7);
             this.rbnEstatusamodulo.Name = "rbnEstatusamodulo";
             this.rbnEstatusamodulo.Size = new System.Drawing.Size(55, 17);
-            this.rbnEstatusamodulo.TabIndex = 8;
+            this.rbnEstatusamodulo.TabIndex = 7;
             this.rbnEstatusamodulo.TabStop = true;
             this.rbnEstatusamodulo.Text = "Activo";
             this.rbnEstatusamodulo.UseVisualStyleBackColor = true;
@@ -159,7 +159,7 @@ namespace CapaVistaRRHH
             this.rbnEstatusimodulo.Location = new System.Drawing.Point(134, 7);
             this.rbnEstatusimodulo.Name = "rbnEstatusimodulo";
             this.rbnEstatusimodulo.Size = new System.Drawing.Size(63, 17);
-            this.rbnEstatusimodulo.TabIndex = 9;
+            this.rbnEstatusimodulo.TabIndex = 8;
             this.rbnEstatusimodulo.TabStop = true;
             this.rbnEstatusimodulo.Text = "Inactivo";
             this.rbnEstatusimodulo.UseVisualStyleBackColor = true;
@@ -226,7 +226,7 @@ namespace CapaVistaRRHH
             this.txtCodigoPostal.Location = new System.Drawing.Point(171, 254);
             this.txtCodigoPostal.Name = "txtCodigoPostal";
             this.txtCodigoPostal.Size = new System.Drawing.Size(200, 20);
-            this.txtCodigoPostal.TabIndex = 99;
+            this.txtCodigoPostal.TabIndex = 6;
             this.txtCodigoPostal.Tag = "codigoPostal";
             // 
             // cbxIDEmpresa
@@ -235,7 +235,7 @@ namespace CapaVistaRRHH
             this.cbxIDEmpresa.Location = new System.Drawing.Point(171, 149);
             this.cbxIDEmpresa.Name = "cbxIDEmpresa";
             this.cbxIDEmpresa.Size = new System.Drawing.Size(200, 21);
-            this.cbxIDEmpresa.TabIndex = 103;
+            this.cbxIDEmpresa.TabIndex = 2;
             this.cbxIDEmpresa.SelectedIndexChanged += new System.EventHandler(this.cbxIDEmpresa_SelectedIndexChanged);
             // 
             // frmSucursales
