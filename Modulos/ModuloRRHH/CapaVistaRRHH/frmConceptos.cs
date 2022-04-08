@@ -115,5 +115,15 @@ namespace CapaVistaRRHH
 			}
 
 		}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+			try
+			{
+				frmFormula frm = new frmFormula();
+				frm.Show();
+			}
+			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+		}
     }
 }
