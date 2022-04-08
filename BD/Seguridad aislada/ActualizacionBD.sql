@@ -39,3 +39,10 @@ INSERT INTO reporte VALUES ('2','Reporte 2','C:\\Users\\achac\\OneDrive\\Escrito
 -- inserts a la tabla de modulo para los reportes de conceptos y las excepciones
 insert into modulo values ('2','Banco','Modulo Bancos','1');
 insert into modulo values ('3','Conceptos','Modulo Coceptos','1');
+
+
+-- Tabla para guardar las sentencias SQl
+CREATE TABLE sentenciaSqlPlanilla (      
+    fkIdConcepto VARCHAR(15), 
+    sentenciaSql VARCHAR(100)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
