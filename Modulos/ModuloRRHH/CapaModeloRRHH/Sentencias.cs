@@ -141,5 +141,62 @@ namespace CapaModeloRRHH
             OdbcCommand consulta2 = new OdbcCommand(sql2, cn.conexion());
             consulta2.ExecuteNonQuery();
         }
+
+
+
+
+
+
+
+
+        public OdbcDataAdapter FormulasLlenarComboTablas()
+        {
+            //Obtiene todas las tablas
+            string sql = "SHOW TABLES FROM hotelsancarlos;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+        public OdbcDataAdapter FormulasLlenarComboCampos(String tabla)
+        {
+            //Obtiene todos los campos de la tabla seleccionada
+            string sql = "show columns from " + tabla + ";";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+        public OdbcDataAdapter FormulasTodosLosConceptos()
+        {
+            //Obtiene todos los conceptos
+            string sql = "SELECT pkIdConcepto, nombreConcepto FROM concepto;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+        public void FormulasAsignarConcepto(string formula, string pkIdConcepto)
+        {
+            string sql = "UPDATE concepto SET formulaConcepto = '" + formula + "' WHERE pkIdConcepto = '" + pkIdConcepto + "';";
+            OdbcCommand consulta2 = new OdbcCommand(sql, cn.conexion());
+            consulta2.ExecuteNonQuery();
+        }
+
+
+
+
+
+
+
+
+        public void GuradarSentenciaSql(string valor1, string valor2)
+        {
+            string sql = "INSERT INTO sentenciaSqlPlanilla (fkIdConcepto, sentenciaSql) Values( '" + valor1 + "', '" + valor2 + "');";
+            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+            consulta.ExecuteNonQuery();
+        }
+
+
+
+
+
     }
 }

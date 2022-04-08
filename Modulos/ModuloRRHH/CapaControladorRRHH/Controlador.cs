@@ -121,5 +121,64 @@ namespace CapaControladorRRHH
             sn.Exceptoagregartodo(tabla3, valor1, valor2, tabla2);
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+        public DataTable FormulasLlenarComboTablas()
+        {
+            OdbcDataAdapter dt = sn.FormulasLlenarComboTablas();
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        public DataTable FormulasLlenarComboCampos(String tabla)
+        {
+            OdbcDataAdapter dt = sn.FormulasLlenarComboCampos(tabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+        public DataTable FormulasTodosLosConceptos()
+        {
+            OdbcDataAdapter dt = sn.FormulasTodosLosConceptos();
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        public void FormulasAsignarConcepto(string formula, string pkIdConcepto)
+        {
+            sn.FormulasAsignarConcepto(formula, pkIdConcepto);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public void GuradarSentenciaSql(string valor1, string valor2)
+        {
+            sn.GuradarSentenciaSql(valor1, valor2);
+        }
     }
 }

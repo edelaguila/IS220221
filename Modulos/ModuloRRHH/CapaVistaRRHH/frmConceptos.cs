@@ -115,5 +115,16 @@ namespace CapaVistaRRHH
 			}
 
 		}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+			try
+			{
+				frmFormula form3 = new frmFormula();
+				form3.MdiParent = this;
+				form3.Show();
+			}
+			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+		}
     }
 }

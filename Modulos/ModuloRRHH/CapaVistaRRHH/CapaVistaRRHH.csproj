@@ -103,6 +103,12 @@
     <Compile Include="frmExcepciones.Designer.cs">
       <DependentUpon>frmExcepciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFormula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFormula.designer.cs">
+      <DependentUpon>frmFormula.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMDIRRHH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmExcepciones.resx">
       <DependentUpon>frmExcepciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFormula.resx">
+      <DependentUpon>frmFormula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMDIRRHH.resx">
       <DependentUpon>frmMDIRRHH.cs</DependentUpon>
