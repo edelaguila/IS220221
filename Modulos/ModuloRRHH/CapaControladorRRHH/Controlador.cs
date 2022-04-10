@@ -60,20 +60,41 @@ namespace CapaControladorRRHH
             sn.Unicamenteagregartodo(tabla3, valor1, valor2, tabla2);
         }
 
+        //Primer consulta de todos los registros del historial ISR
+        public DataTable llenarDGVTodosReg()//Llena el datagrid con los datos obtenidos en la funcion de consultas 
+        {
+            OdbcDataAdapter dt = sn.llenarDGVTodosReg();
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
 
+        //Segunda consulta de todos los registros del historial ISR por año
+        public DataTable llenarDGVRegMes(string anio)//Llena el datagrid con los datos obtenidos en la funcion de consultas 
+        {
+            OdbcDataAdapter dt = sn.llenarDGVRegMes(anio);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
 
+        //Tercer consulta de todos los registros del historial ISR por mes
+        public DataTable llenarDGVTodosRegAnio(string anio)//Llena el datagrid con los datos obtenidos en la funcion de consultas 
+        {
+            OdbcDataAdapter dt = sn.llenarDGVTodosRegAnio(anio);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
 
-
-
-
-
-
-
-
-
-
-
-
+        //Cuarta consulta de todos los registros detalles del historial ISR por ID Registrado
+        public DataTable llenarDGVRegDetalle(string Id)//Llena el datagrid con los datos obtenidos en la funcion de consultas 
+        {
+            OdbcDataAdapter dt = sn.llenarDGVRegDetalle(Id);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
 
         //Danny Saldaña 0901-18-18686
         public DataTable ExceptollenarTbl(string tabla2)

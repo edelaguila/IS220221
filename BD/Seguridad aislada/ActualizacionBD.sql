@@ -46,3 +46,57 @@ CREATE TABLE sentenciaSqlPlanilla (
     fkIdConcepto VARCHAR(15), 
     sentenciaSql VARCHAR(100)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+-- --------------------------------------------------------------------------------------------------------------------------------------
+-- Tercer sprint - Angel Chacón - Tabla ISR ENCABEZADO Y DETALLE E INSERTS - Fecha: 09/04/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE isrencabezado (
+    pkIdISR VARCHAR(15),
+    periodoInicio DATE NOT NULL,
+    periodoFinal DATE NOT NULL,
+    isrTotal DOUBLE(10,2) NOT NULL,
+    estado VARCHAR(1) NOT NULL,
+    PRIMARY KEY (pkIdISR)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE isrdetalle (
+    fkIdISR VARCHAR(15) NOT NULL,     
+    fkIdEmpleado VARCHAR(15) NOT NULL,
+    isrSubTotal DOUBLE(10,2) NOT NULL,
+    estado VARCHAR(1) NOT NULL,
+    FOREIGN KEY (fkIdISR) REFERENCES isrencabezado (pkIdISR),
+    FOREIGN KEY (fkIdEmpleado) REFERENCES empleado (pkIdEmpleado)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `hotelsancarlos`.`empleado` (`pkIdEmpleado`, `nombre`, `apellido`, `fechaDeNacimiento`, `sueldo`, `correo`, `direccion`, `contratado`, `añosDeExperiencia`, `telefono`, `fechaContratacion`, `finDeContrato`, `fkIdPuesto`, `fkIdEmpresa`, `estado`) VALUES ('2', 'Pedro', 'Sanchez', '1998-05-23', '3500', 'spedro@gmail.com', 'zona 2', '4', '5', '65985874', '2016-11-03', '2021-12-01', '1', '1', '1');
+
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('1', '2017-01-01', '2017-01-31', '13750', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('2', '2017-02-01', '2017-02-28', '13650', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('3', '2017-03-01', '2017-03-31', '13850', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('4', '2017-04-01', '2017-04-30', '13750', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('5', '2017-05-01', '2017-05-31', '13650', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('6', '2017-06-01', '2017-06-30', '13850', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('7', '2017-07-01', '2017-07-31', '13750', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('8', '2017-08-01', '2017-08-31', '13650', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('9', '2017-09-01', '2017-09-30', '13850', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('10', '2017-10-01', '2017-10-31', '13750', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('11', '2017-11-01', '2017-11-30', '13650', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('12', '2017-12-01', '2017-12-31', '13850', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('13', '2017-01-01', '2017-12-31', '165000', '1');
+INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('14', '2018-01-01', '2018-01-31', '13750', '1');
+
+insert into isrdetalle values ('1','1','2750','1');
+insert into isrdetalle values ('1','2','2750','1');
+insert into isrdetalle values ('1','4','2750','1');
+insert into isrdetalle values ('1','5','2750','1');
+insert into isrdetalle values ('1','6','2750','1');
+
+insert into isrdetalle values ('13','1','33000','1');
+insert into isrdetalle values ('13','2','33000','1');
+insert into isrdetalle values ('13','4','33000','1');
+insert into isrdetalle values ('13','5','33000','1');
+insert into isrdetalle values ('13','6','33000','1');
+
+

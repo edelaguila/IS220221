@@ -157,6 +157,12 @@
     <Compile Include="frmTipoFalta.Designer.cs">
       <DependentUpon>frmTipoFalta.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistorialISR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistorialISR.Designer.cs">
+      <DependentUpon>HistorialISR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -266,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTipoFalta.resx">
       <DependentUpon>frmTipoFalta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialISR.resx">
+      <DependentUpon>HistorialISR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
