@@ -70,18 +70,39 @@ namespace CapaModeloRRHH
             consulta2.ExecuteNonQuery();
         }
 
+        //Primer consulta de todos los registros del historial ISR
+        public OdbcDataAdapter llenarDGVTodosReg()// metodo  que obtinene el contenio de una tabla en la BD
+        {
+            string sql = "SELECT * FROM isrencabezado WHERE periodoInicio LIKE '%-%-%';";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
 
+        //Segunda consulta de todos los registros del historial ISR por año
+        public OdbcDataAdapter llenarDGVTodosRegAnio(string anio)// metodo  que obtinene el contenio de una tabla en la BD
+        {
+            string sql = "SELECT * FROM isrencabezado WHERE periodoInicio LIKE '"+ anio + "-%-%' and periodoFinal LIKE '"+ anio + "-%-%';";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
 
+        //Tercer consulta de todos los registros del historial ISR por mes
+        public OdbcDataAdapter llenarDGVRegMes(string mes)// metodo  que obtinene el contenio de una tabla en la BD
+        {
+            string sql = "SELECT * FROM isrencabezado WHERE periodoInicio LIKE '%-" + mes + "-%' and periodoFinal LIKE '%-" + mes + "-%';";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
 
+        //Cuarta consulta de todos los registros detalles del historial ISR por ID Registrado
+        public OdbcDataAdapter llenarDGVRegDetalle(string Id)// metodo  que obtinene el contenio de una tabla en la BD
+        {
+            string sql = "select isrencabezado.pkIdISR,isrencabezado.periodoInicio,isrencabezado.periodoFinal,isrdetalle.fkIdEmpleado,empleado.nombre,isrdetalle.isrSubTotal from isrdetalle,isrencabezado,empleado where isrencabezado.pkIdISR=isrdetalle.fkIdISR and empleado.pkIdEmpleado = isrdetalle.fkIdEmpleado and isrencabezado.pkIdISR='"+Id+"';";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
 
-
-
-
-
-
-
-
-
+        
 
         //Danny Saldaña 0901-18-18686
         public OdbcDataAdapter ExceptollenarTbl(string tabla2)
