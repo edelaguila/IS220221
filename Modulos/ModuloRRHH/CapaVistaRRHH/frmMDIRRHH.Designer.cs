@@ -50,9 +50,10 @@ namespace CapaVistaRRHH
             this.conceptosAEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excepciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialISRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.historialISRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generaciónDeNóminaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -192,7 +193,8 @@ namespace CapaVistaRRHH
             // 
             this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.conceptosAEmpleadosToolStripMenuItem,
-            this.excepciToolStripMenuItem});
+            this.excepciToolStripMenuItem,
+            this.generaciónDeNóminaToolStripMenuItem});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.procesosToolStripMenuItem.Text = "Procesos";
@@ -219,6 +221,13 @@ namespace CapaVistaRRHH
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
+            // historialISRToolStripMenuItem
+            // 
+            this.historialISRToolStripMenuItem.Name = "historialISRToolStripMenuItem";
+            this.historialISRToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.historialISRToolStripMenuItem.Text = "Historial ISR";
+            this.historialISRToolStripMenuItem.Click += new System.EventHandler(this.historialISRToolStripMenuItem_Click);
+            // 
             // ayudasToolStripMenuItem
             // 
             this.ayudasToolStripMenuItem.Name = "ayudasToolStripMenuItem";
@@ -233,12 +242,12 @@ namespace CapaVistaRRHH
             this.txtUsuario.TabIndex = 3;
             this.txtUsuario.Visible = false;
             // 
-            // historialISRToolStripMenuItem
+            // generaciónDeNóminaToolStripMenuItem
             // 
-            this.historialISRToolStripMenuItem.Name = "historialISRToolStripMenuItem";
-            this.historialISRToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.historialISRToolStripMenuItem.Text = "Historial ISR";
-            this.historialISRToolStripMenuItem.Click += new System.EventHandler(this.historialISRToolStripMenuItem_Click);
+            this.generaciónDeNóminaToolStripMenuItem.Name = "generaciónDeNóminaToolStripMenuItem";
+            this.generaciónDeNóminaToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.generaciónDeNóminaToolStripMenuItem.Text = "Generación de Nómina";
+            this.generaciónDeNóminaToolStripMenuItem.Click += new System.EventHandler(this.generaciónDeNóminaToolStripMenuItem_Click);
             // 
             // frmMDIRRHH
             // 
@@ -289,5 +298,6 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.ToolStripMenuItem excepciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem excepcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historialISRToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem generaciónDeNóminaToolStripMenuItem;
     }
 }
