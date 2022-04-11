@@ -142,7 +142,7 @@ namespace CapaControladorRRHH
             sn.Exceptoagregartodo(tabla3, valor1, valor2, tabla2);
         }
 
-
+       
 
 
 
@@ -188,18 +188,15 @@ namespace CapaControladorRRHH
 
 
 
-
-
-
-
-
-
-
-
-
         public void GuradarSentenciaSql(string valor1, string valor2)
         {
             sn.GuradarSentenciaSql(valor1, valor2);
+        }
+
+        //Heydi Quemé 9959-18-5335
+        public void generarNomina(string fechaInicio, string fechaFin)
+        {
+            sn.generarNomina(fechaInicio, fechaFin);
         }
     }
 }

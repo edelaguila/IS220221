@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Odbc;
+using System.Windows.Forms;
+using System.Data;
 
 namespace CapaModeloRRHH
 {
@@ -210,13 +212,136 @@ namespace CapaModeloRRHH
 
         public void GuradarSentenciaSql(string valor1, string valor2)
         {
-            string sql = "INSERT INTO sentenciaSqlPlanilla (fkIdConcepto, sentenciaSql) Values( '" + valor1 + "', '" + valor2 + "');";
-            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
-            consulta.ExecuteNonQuery();
+            try 
+            { 
+                string sql = "INSERT INTO sentenciaSqlPlanilla (fkIdConcepto, sentenciaSql) Values( '" + valor1 + "', '" + valor2 + "');";
+                OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+                consulta.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error" + ex);
+            }
         }
 
 
+        //Generación de Nómina Heydi Quemé 9959-18-5335 
 
+              
+        public void generarNomina(string fechaInicio, string fechaFin)
+        {
+            string[,] Vectornomina;
+            int dimensionalEmpleados = 0;
+            int dimensionalConceptos = 0;
+            string tabla = "";
+            string querydimensionale = "";
+            string conceptos = "";
+            string empleados = "";
+            try
+            {
+                tabla = "concepto";
+                querydimensionale = "SELECT count(*) from " + tabla + ";";
+                DataTable dt = PasarCalculoTabla(querydimensionale);
+                string dta = string.Join(Environment.NewLine, dt.Rows.OfType<DataRow>().Select(l => string.Join(" ; ", l.ItemArray)));
+                conceptos = dta;
+                dimensionalConceptos = Int32.Parse(conceptos);
+                MessageBox.Show("El número de elementos en " + tabla + " son:" + conceptos);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar conceptos:" + ex);
+            }
+            try
+            {
+                tabla = "empleado";
+                querydimensionale = "SELECT count(*) from " + tabla + ";";
+                DataTable dt = PasarCalculoTabla(querydimensionale);
+                string dta = string.Join(Environment.NewLine, dt.Rows.OfType<DataRow>().Select(l => string.Join(" ; ", l.ItemArray)));
+                empleados = dta;
+                dimensionalEmpleados = Int32.Parse(empleados);
+                MessageBox.Show("El número de elementos en " + tabla + " son:" + empleados);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar conceptos:" + ex);
+            }
+
+            Vectornomina = new string[dimensionalEmpleados, dimensionalConceptos];
+            for (int x = 0; x < dimensionalEmpleados; x++)
+            {
+                for (int z = 0; z < dimensionalConceptos; z++)
+                {
+                    int contador = z + 1;
+                    string reemplazo = contador.ToString().Trim();
+                    string id = "";
+                    string Query = "SELECT * FROM detalle_personalizado_unicamente WHERE fkidempleado='" + reemplazo + "';";
+
+                    OdbcCommand consulta = new OdbcCommand(Query, cn.conexion());
+                    consulta.ExecuteNonQuery();
+
+                    OdbcDataReader busqueda;
+                    busqueda = consulta.ExecuteReader();
+
+                    if (busqueda.Read())
+                    {
+
+                        id = busqueda["fkidconcepto"].ToString();
+                    }
+
+
+                    string sql = "";
+                    string Query2 = "SELECT * FROM sentenciasqlplanilla WHERE fkidconcepto='" + id + "';";
+
+                    OdbcCommand consulta2 = new OdbcCommand(Query2, cn.conexion());
+                    consulta2.ExecuteNonQuery();
+
+                    OdbcDataReader busqueda2;
+                    busqueda2 = consulta2.ExecuteReader();
+
+                    if (busqueda2.Read())
+                    {
+                        sql = busqueda2["sentenciasql"].ToString();
+                    }
+
+                    string reemplazoComillas = "'" + reemplazo + "'";
+                    string sentenciaComillas = sql.Replace('"', ' ');
+                    string sentenciaReplace = sentenciaComillas.Replace("+ condicion +", reemplazoComillas);
+                    string calculo = "";
+                    try
+                    {
+                        DataTable dt = PasarCalculoTabla(sentenciaReplace);
+                        string dta = string.Join(Environment.NewLine, dt.Rows.OfType<DataRow>().Select(l => string.Join(" ; ", l.ItemArray)));
+                        calculo = dta;
+                        MessageBox.Show("El calculo es:" + calculo);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error en Asignación:" + ex);
+                    }
+                    int idconcepto = Int32.Parse(id);
+                    Vectornomina[z, x] = Vectornomina[z, x] + calculo;
+
+                    MessageBox.Show("El valor registrado es: " + Vectornomina[z, x]);
+                    z++;
+                }
+                x++;
+            }
+
+        }
+        public OdbcDataAdapter ExtraerDatoCalculado(string condicion)
+        {
+            //Obtiene todos los calculos realizados
+            string sql = condicion;
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+        public DataTable PasarCalculoTabla(string sentencia)
+        {
+            OdbcDataAdapter dt = ExtraerDatoCalculado(sentencia);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
 
 
     }
