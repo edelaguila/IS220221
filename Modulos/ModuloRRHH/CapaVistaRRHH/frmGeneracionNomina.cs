@@ -64,14 +64,6 @@ namespace CapaVistaRRHH
             navegador1.CambiarFormatoFecha(dtpFin, txtFin);
         }
 
-        private void btnConsulataNomina_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                frmConsultaNomina frm = new frmConsultaNomina();
-                frm.Show();
-            }
-            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
-        }
+       
     }
 }
