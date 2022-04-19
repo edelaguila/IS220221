@@ -37,18 +37,19 @@ namespace CapaVistaRRHH
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtInicio = new System.Windows.Forms.TextBox();
             this.txtFin = new System.Windows.Forms.TextBox();
+            this.txtInicio = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.navegador1 = new DLL.nav.navegador();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGeneraNomina
             // 
-            this.btnGeneraNomina.Location = new System.Drawing.Point(34, 147);
+            this.btnGeneraNomina.Location = new System.Drawing.Point(45, 181);
+            this.btnGeneraNomina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGeneraNomina.Name = "btnGeneraNomina";
-            this.btnGeneraNomina.Size = new System.Drawing.Size(103, 23);
+            this.btnGeneraNomina.Size = new System.Drawing.Size(137, 28);
             this.btnGeneraNomina.TabIndex = 0;
             this.btnGeneraNomina.Text = "Generar Nomina";
             this.btnGeneraNomina.UseVisualStyleBackColor = true;
@@ -56,44 +57,50 @@ namespace CapaVistaRRHH
             // 
             // btnConsulataNomina
             // 
-            this.btnConsulataNomina.Location = new System.Drawing.Point(207, 147);
+            this.btnConsulataNomina.Location = new System.Drawing.Point(276, 181);
+            this.btnConsulataNomina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsulataNomina.Name = "btnConsulataNomina";
-            this.btnConsulataNomina.Size = new System.Drawing.Size(103, 23);
+            this.btnConsulataNomina.Size = new System.Drawing.Size(137, 28);
             this.btnConsulataNomina.TabIndex = 0;
             this.btnConsulataNomina.Text = "Consultar Nomina";
             this.btnConsulataNomina.UseVisualStyleBackColor = true;
+            this.btnConsulataNomina.Click += new System.EventHandler(this.btnConsulataNomina_Click);
             // 
             // dtpInicio
             // 
-            this.dtpInicio.Location = new System.Drawing.Point(111, 39);
+            this.dtpInicio.Location = new System.Drawing.Point(148, 48);
+            this.dtpInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(200, 20);
+            this.dtpInicio.Size = new System.Drawing.Size(265, 22);
             this.dtpInicio.TabIndex = 1;
             this.dtpInicio.ValueChanged += new System.EventHandler(this.dtpInicio_ValueChanged);
             // 
             // dtpFin
             // 
-            this.dtpFin.Location = new System.Drawing.Point(111, 65);
+            this.dtpFin.Location = new System.Drawing.Point(148, 80);
+            this.dtpFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFin.Name = "dtpFin";
-            this.dtpFin.Size = new System.Drawing.Size(200, 20);
+            this.dtpFin.Size = new System.Drawing.Size(265, 22);
             this.dtpFin.TabIndex = 1;
             this.dtpFin.ValueChanged += new System.EventHandler(this.dtpFin_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 45);
+            this.label1.Location = new System.Drawing.Point(11, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.Size = new System.Drawing.Size(120, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Inicio del Periodo:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 71);
+            this.label2.Location = new System.Drawing.Point(11, 87);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
+            this.label2.Size = new System.Drawing.Size(118, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Final del Periodo:";
             // 
@@ -106,55 +113,61 @@ namespace CapaVistaRRHH
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dtpInicio);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(11, 9);
+            this.panel1.Location = new System.Drawing.Point(15, 11);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(318, 112);
+            this.panel1.Size = new System.Drawing.Size(424, 138);
             this.panel1.TabIndex = 3;
+            // 
+            // txtFin
+            // 
+            this.txtFin.Location = new System.Drawing.Point(148, 79);
+            this.txtFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFin.Name = "txtFin";
+            this.txtFin.Size = new System.Drawing.Size(228, 22);
+            this.txtFin.TabIndex = 3;
+            this.txtFin.Visible = false;
+            // 
+            // txtInicio
+            // 
+            this.txtInicio.Location = new System.Drawing.Point(148, 47);
+            this.txtInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtInicio.Name = "txtInicio";
+            this.txtInicio.Size = new System.Drawing.Size(228, 22);
+            this.txtInicio.TabIndex = 3;
+            this.txtInicio.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 11);
+            this.label3.Location = new System.Drawing.Point(125, 14);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 13);
+            this.label3.Size = new System.Drawing.Size(150, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Seleccione un Periodo";
-            // 
-            // txtInicio
-            // 
-            this.txtInicio.Location = new System.Drawing.Point(111, 38);
-            this.txtInicio.Name = "txtInicio";
-            this.txtInicio.Size = new System.Drawing.Size(172, 20);
-            this.txtInicio.TabIndex = 3;
-            this.txtInicio.Visible = false;
-            // 
-            // txtFin
-            // 
-            this.txtFin.Location = new System.Drawing.Point(111, 64);
-            this.txtFin.Name = "txtFin";
-            this.txtFin.Size = new System.Drawing.Size(172, 20);
-            this.txtFin.TabIndex = 3;
-            this.txtFin.Visible = false;
             // 
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.navegador1.Location = new System.Drawing.Point(9, -96);
+            this.navegador1.Location = new System.Drawing.Point(12, -118);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(1189, 87);
+            this.navegador1.Size = new System.Drawing.Size(1585, 107);
             this.navegador1.TabIndex = 4;
             this.navegador1.Visible = false;
             // 
             // frmGeneracionNomina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 189);
+            this.ClientSize = new System.Drawing.Size(457, 233);
             this.Controls.Add(this.navegador1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnConsulataNomina);
             this.Controls.Add(this.btnGeneraNomina);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmGeneracionNomina";
