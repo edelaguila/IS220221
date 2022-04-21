@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CapaModeloRRHH;
 using System.Data;
 using System.Data.Odbc;
-
+using System.Windows.Forms;
 
 namespace CapaControladorRRHH
 {
@@ -196,7 +196,90 @@ namespace CapaControladorRRHH
         //Heydi Quemé 9959-18-5335
         public void generarNomina(string fechaInicio, string fechaFin)
         {
-            sn.generarNomina(fechaInicio, fechaFin);
+            //sn.generarNomina(fechaInicio, fechaFin);
         }
-    }
+        public DataTable EncabezadoNominaControlador(string tabla,string sentencia)
+        {
+            DataTable encabazado = new DataTable();
+            try
+            {
+                encabazado=sn.EncabezadoNominaSetencias(tabla,sentencia);
+            }
+            catch (Exception ex) { MessageBox.Show("Error en obtener encabezado Nomina capa Controlador " + ex); }
+            return (encabazado);
+        }
+        public int idSiguienteDeNuevoIngreso(string tabla, string campo)
+        {
+            
+            int entero = sn.idSiguienteDeNuevoIngreso(tabla,campo);
+
+            return entero;
+        }
+        public DataTable calculoConcepto( int idConcepto, int IdEmpleado)
+        {
+            DataTable table = new DataTable();
+            try
+            {
+                table = sn.calculoConceptoSentencias(idConcepto, IdEmpleado);
+            }
+            catch (Exception ex) { MessageBox.Show("Error en obtener calculo Nomina Capa Controlador " + ex); }
+            return (table);
+        }
+        public int cantidadTabla(string tabla)
+        {
+            int CT = sn.cantidadTB(tabla);
+            return (CT);
+        }
+
+        public Boolean validarRelacion(int idEmpleado, int idConcepto, string tabla)
+        {
+            Boolean respuesta = sn.validarRelacion(idEmpleado, idConcepto, tabla);
+            return respuesta;
+        }
+        public Boolean validarEfecto(int idConcepto)
+        {
+            Boolean respuesta = sn.validarEfecto(idConcepto);
+            return respuesta;
+        }
+
+        public void guardarNominaEncabezado(string id, string fechai, string fechaf, string totalp, string totald, string total, string estado)
+        {
+            sn.guardarNominaEncabezado(id, fechai, fechaf, totalp, totald, total, estado);
+        }
+        public void guardarNominaDetalleBD(string nomina_e, string empleado, string concepto, string sueldob, string calculo, string liquido, string estado)
+        {
+            sn.guardarNominaDetalleBD(nomina_e, empleado, concepto, sueldob, calculo, liquido, estado);
+        }
+        public OdbcDataReader llenarCombo(string tabla)
+        {
+            return sn.llenarCombo(tabla);
+        }
+        public string optnerIDEmpleado(string nombre)
+        {
+            string respuesta = sn.optnerIDEmpleado(nombre);
+            return respuesta;
+        }
+
+        public DataTable consultarPeriodo(string fechainicio, string fechafin)
+        {
+            DataTable table = new DataTable();
+            try
+            {
+                OdbcDataAdapter dt = sn.consultarPeriodo(fechainicio, fechafin);
+                dt.Fill(table);              
+            }
+            catch (Exception ex) { MessageBox.Show("Error en obtener información del periodo Capa Controlador " + ex); }
+            return (table);
+        }
+        public DataTable consultarDetalles(string idnomina)
+        {
+            DataTable table = new DataTable();
+            try
+            {
+                table = sn.consultarDetalles(idnomina);
+            }
+            catch (Exception ex) { MessageBox.Show("Error en obtener información del periodo Capa Controlador " + ex); }
+            return (table);
+        }
+        }
 }

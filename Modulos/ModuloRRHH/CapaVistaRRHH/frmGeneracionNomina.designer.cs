@@ -31,37 +31,27 @@ namespace CapaVistaRRHH
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGeneracionNomina));
             this.btnGeneraNomina = new System.Windows.Forms.Button();
-            this.btnConsulataNomina = new System.Windows.Forms.Button();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.dtpFin = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtInicio = new System.Windows.Forms.TextBox();
             this.txtFin = new System.Windows.Forms.TextBox();
+            this.txtInicio = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.navegador1 = new DLL.nav.navegador();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGeneraNomina
             // 
-            this.btnGeneraNomina.Location = new System.Drawing.Point(34, 147);
+            this.btnGeneraNomina.Location = new System.Drawing.Point(116, 142);
             this.btnGeneraNomina.Name = "btnGeneraNomina";
             this.btnGeneraNomina.Size = new System.Drawing.Size(103, 23);
             this.btnGeneraNomina.TabIndex = 0;
             this.btnGeneraNomina.Text = "Generar Nomina";
             this.btnGeneraNomina.UseVisualStyleBackColor = true;
             this.btnGeneraNomina.Click += new System.EventHandler(this.btnGeneraNomina_Click);
-            // 
-            // btnConsulataNomina
-            // 
-            this.btnConsulataNomina.Location = new System.Drawing.Point(207, 147);
-            this.btnConsulataNomina.Name = "btnConsulataNomina";
-            this.btnConsulataNomina.Size = new System.Drawing.Size(103, 23);
-            this.btnConsulataNomina.TabIndex = 0;
-            this.btnConsulataNomina.Text = "Consultar Nomina";
-            this.btnConsulataNomina.UseVisualStyleBackColor = true;
             // 
             // dtpInicio
             // 
@@ -111,14 +101,13 @@ namespace CapaVistaRRHH
             this.panel1.Size = new System.Drawing.Size(318, 112);
             this.panel1.TabIndex = 3;
             // 
-            // label3
+            // txtFin
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Seleccione un Periodo";
+            this.txtFin.Location = new System.Drawing.Point(111, 64);
+            this.txtFin.Name = "txtFin";
+            this.txtFin.Size = new System.Drawing.Size(172, 20);
+            this.txtFin.TabIndex = 3;
+            this.txtFin.Visible = false;
             // 
             // txtInicio
             // 
@@ -128,18 +117,20 @@ namespace CapaVistaRRHH
             this.txtInicio.TabIndex = 3;
             this.txtInicio.Visible = false;
             // 
-            // txtFin
+            // label3
             // 
-            this.txtFin.Location = new System.Drawing.Point(111, 64);
-            this.txtFin.Name = "txtFin";
-            this.txtFin.Size = new System.Drawing.Size(172, 20);
-            this.txtFin.TabIndex = 3;
-            this.txtFin.Visible = false;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(94, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Seleccione un Periodo";
             // 
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.navegador1.Location = new System.Drawing.Point(9, -96);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(1189, 87);
             this.navegador1.TabIndex = 4;
@@ -152,7 +143,6 @@ namespace CapaVistaRRHH
             this.ClientSize = new System.Drawing.Size(343, 189);
             this.Controls.Add(this.navegador1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnConsulataNomina);
             this.Controls.Add(this.btnGeneraNomina);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -169,7 +159,6 @@ namespace CapaVistaRRHH
         #endregion
 
         private System.Windows.Forms.Button btnGeneraNomina;
-        private System.Windows.Forms.Button btnConsulataNomina;
         private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.DateTimePicker dtpFin;
         private System.Windows.Forms.Label label1;

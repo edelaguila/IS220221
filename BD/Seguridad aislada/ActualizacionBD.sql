@@ -99,4 +99,34 @@ insert into isrdetalle values ('13','4','33000','1');
 insert into isrdetalle values ('13','5','33000','1');
 insert into isrdetalle values ('13','6','33000','1');
 
+-- --------------------------------------------------------------------------------------------------------------------------------------
+-- Tercer sprint - Heydi Quemé, Kevin Flores - Tabla nomina detalle y encabezado - Fecha: 18/04/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
+create table nomina_e
+(
+CodigoNominaE varchar (15) primary key,
+FechaInicialN date not null,
+FechaFinalN date not null,
+TotalPercepciones float,
+TotalDeducciones float,
+TotalLiquido float,
+ estado char(1) not null
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+create table nomina_d
+(
+CodigoNominaE varchar (15) not null,
+pkIdEmpleado varchar (15) not null,
+pkIdConcepto varchar (15) not null,
+SueldoBase decimal not null,
+CalculoConcepto float not null,
+SueldoLiquido float not null,
+estado varchar(1) not null,
+
+foreign key (CodigoNominaE) references
+nomina_e(CodigoNominaE),
+foreign key (pkIdEmpleado) references
+empleado(pkIdEmpleado),
+foreign key (pkIdConcepto) references
+concepto(pkIdConcepto)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;

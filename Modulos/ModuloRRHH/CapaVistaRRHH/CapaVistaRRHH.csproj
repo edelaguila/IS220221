@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="frmBancos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +73,12 @@
     </Compile>
     <Compile Include="frmConceptos.Designer.cs">
       <DependentUpon>frmConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaNomina.Designer.cs">
+      <DependentUpon>frmConsultaNomina.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCuentasContables.cs">
       <SubType>Form</SubType>
@@ -138,6 +145,12 @@
     </Compile>
     <Compile Include="frmNomina.designer.cs">
       <DependentUpon>frmNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPeriodosNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPeriodosNomina.Designer.cs">
+      <DependentUpon>frmPeriodosNomina.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUnicamente.cs">
       <SubType>Form</SubType>
@@ -243,6 +256,9 @@
     <EmbeddedResource Include="frmConceptos.resx">
       <DependentUpon>frmConceptos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaNomina.resx">
+      <DependentUpon>frmConsultaNomina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCuentasContables.resx">
       <DependentUpon>frmCuentasContables.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNomina.resx">
       <DependentUpon>frmNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPeriodosNomina.resx">
+      <DependentUpon>frmPeriodosNomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUnicamente.resx">
       <DependentUpon>frmUnicamente.cs</DependentUpon>
@@ -339,6 +358,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\DGVPrinterHelper.DGVPrinter.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
