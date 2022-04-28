@@ -130,3 +130,23 @@ empleado(pkIdEmpleado),
 foreign key (pkIdConcepto) references
 concepto(pkIdConcepto)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------------------------------------------------------------------------------------
+-- Cuarto sprint - Angel Chacón - Tabla conceptos - Fecha: 28/04/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
+
+use hotelsancarlos;
+
+DROP TABLE concepto;
+DROP TABLE excepciones;
+
+CREATE TABLE concepto (
+    pkIdConcepto VARCHAR(15) NOT NULL,           #001
+    nombreConcepto VARCHAR(60) NOT NULL,        #Horas Extras          
+    efectoConcepto VARCHAR(1) NOT NULL,         #/Ingreso, Descuento/
+    aplicacion VARCHAR(25) NOT NULL,     #/Todos, Unicamente a, Exepto a/
+    formulaConcepto VARCHAR(200) NOT NULL,      #/Abrir modulo formulas/
+    estado VARCHAR(1) NOT NULL       #/A, I/
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+insert into concepto values ("1","Concepto 1","+","todos","250","1");

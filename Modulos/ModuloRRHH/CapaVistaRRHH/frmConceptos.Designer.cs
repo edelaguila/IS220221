@@ -47,14 +47,20 @@ namespace CapaVistaRRHH
             this.txtIdConcepto = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtFormula = new System.Windows.Forms.TextBox();
-            this.cbxExcepcion = new System.Windows.Forms.ComboBox();
             this.dgvVistaPrevia = new System.Windows.Forms.DataGridView();
-            this.txtExcepcion = new System.Windows.Forms.TextBox();
+            this.txtAplicacion = new System.Windows.Forms.TextBox();
             this.txtEfecto = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.rbnTodos = new System.Windows.Forms.RadioButton();
+            this.rbnUnicamente = new System.Windows.Forms.RadioButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.rbnExcepto = new System.Windows.Forms.RadioButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // navegador1
@@ -103,13 +109,13 @@ namespace CapaVistaRRHH
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(40, 234);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 115;
-            this.label2.Text = "Excepción:";
+            this.label2.Text = "Aplicación:";
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(358, 313);
+            this.txtEstado.Location = new System.Drawing.Point(358, 362);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 113;
@@ -121,7 +127,7 @@ namespace CapaVistaRRHH
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(152, 313);
+            this.panel1.Location = new System.Drawing.Point(152, 362);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 30);
             this.panel1.TabIndex = 114;
@@ -153,7 +159,7 @@ namespace CapaVistaRRHH
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(53, 313);
+            this.lblEstatus.Location = new System.Drawing.Point(53, 362);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(43, 13);
             this.lblEstatus.TabIndex = 112;
@@ -189,7 +195,7 @@ namespace CapaVistaRRHH
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(53, 271);
+            this.label5.Location = new System.Drawing.Point(53, 320);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 121;
@@ -213,20 +219,11 @@ namespace CapaVistaRRHH
             // 
             // txtFormula
             // 
-            this.txtFormula.Location = new System.Drawing.Point(160, 268);
+            this.txtFormula.Location = new System.Drawing.Point(160, 317);
             this.txtFormula.Name = "txtFormula";
             this.txtFormula.Size = new System.Drawing.Size(100, 20);
             this.txtFormula.TabIndex = 6;
             this.txtFormula.Tag = "formulaConcepto";
-            // 
-            // cbxExcepcion
-            // 
-            this.cbxExcepcion.FormattingEnabled = true;
-            this.cbxExcepcion.Location = new System.Drawing.Point(160, 230);
-            this.cbxExcepcion.Name = "cbxExcepcion";
-            this.cbxExcepcion.Size = new System.Drawing.Size(121, 21);
-            this.cbxExcepcion.TabIndex = 5;
-            this.cbxExcepcion.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dgvVistaPrevia
             // 
@@ -237,14 +234,15 @@ namespace CapaVistaRRHH
             this.dgvVistaPrevia.TabIndex = 127;
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
-            // txtExcepcion
+            // txtAplicacion
             // 
-            this.txtExcepcion.Location = new System.Drawing.Point(287, 231);
-            this.txtExcepcion.Name = "txtExcepcion";
-            this.txtExcepcion.Size = new System.Drawing.Size(43, 20);
-            this.txtExcepcion.TabIndex = 129;
-            this.txtExcepcion.Tag = "fkIdExcepcion";
-            this.txtExcepcion.Visible = false;
+            this.txtAplicacion.Location = new System.Drawing.Point(361, 234);
+            this.txtAplicacion.Name = "txtAplicacion";
+            this.txtAplicacion.Size = new System.Drawing.Size(43, 20);
+            this.txtAplicacion.TabIndex = 129;
+            this.txtAplicacion.Tag = "aplicacion";
+            this.txtAplicacion.Visible = false;
+            this.txtAplicacion.TextChanged += new System.EventHandler(this.txtAplicacion_TextChanged);
             // 
             // txtEfecto
             // 
@@ -258,7 +256,7 @@ namespace CapaVistaRRHH
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(270, 271);
+            this.button1.Location = new System.Drawing.Point(270, 320);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 131;
@@ -266,19 +264,74 @@ namespace CapaVistaRRHH
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.rbnTodos);
+            this.panel3.Controls.Add(this.rbnUnicamente);
+            this.panel3.Location = new System.Drawing.Point(152, 231);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 30);
+            this.panel3.TabIndex = 118;
+            // 
+            // rbnTodos
+            // 
+            this.rbnTodos.AutoSize = true;
+            this.rbnTodos.Location = new System.Drawing.Point(12, 7);
+            this.rbnTodos.Name = "rbnTodos";
+            this.rbnTodos.Size = new System.Drawing.Size(55, 17);
+            this.rbnTodos.TabIndex = 3;
+            this.rbnTodos.TabStop = true;
+            this.rbnTodos.Text = "Todos";
+            this.rbnTodos.UseVisualStyleBackColor = true;
+            this.rbnTodos.CheckedChanged += new System.EventHandler(this.rbnTodos_CheckedChanged);
+            // 
+            // rbnUnicamente
+            // 
+            this.rbnUnicamente.AutoSize = true;
+            this.rbnUnicamente.Location = new System.Drawing.Point(115, 7);
+            this.rbnUnicamente.Name = "rbnUnicamente";
+            this.rbnUnicamente.Size = new System.Drawing.Size(82, 17);
+            this.rbnUnicamente.TabIndex = 4;
+            this.rbnUnicamente.TabStop = true;
+            this.rbnUnicamente.Text = "Unicamente";
+            this.rbnUnicamente.UseVisualStyleBackColor = true;
+            this.rbnUnicamente.CheckedChanged += new System.EventHandler(this.rbnUnicamente_CheckedChanged);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.rbnExcepto);
+            this.panel4.Location = new System.Drawing.Point(152, 267);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(108, 30);
+            this.panel4.TabIndex = 132;
+            // 
+            // rbnExcepto
+            // 
+            this.rbnExcepto.AutoSize = true;
+            this.rbnExcepto.Location = new System.Drawing.Point(12, 7);
+            this.rbnExcepto.Name = "rbnExcepto";
+            this.rbnExcepto.Size = new System.Drawing.Size(64, 17);
+            this.rbnExcepto.TabIndex = 3;
+            this.rbnExcepto.TabStop = true;
+            this.rbnExcepto.Text = "Excepto";
+            this.rbnExcepto.UseVisualStyleBackColor = true;
+            this.rbnExcepto.CheckedChanged += new System.EventHandler(this.rbnExcepto_CheckedChanged);
+            // 
             // Conceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 450);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtFormula);
-            this.Controls.Add(this.txtExcepcion);
+            this.Controls.Add(this.txtAplicacion);
             this.Controls.Add(this.txtEfecto);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtIdConcepto);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvVistaPrevia);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -288,7 +341,6 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.navegador1);
-            this.Controls.Add(this.cbxExcepcion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Conceptos";
@@ -299,6 +351,10 @@ namespace CapaVistaRRHH
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,10 +379,14 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.TextBox txtIdConcepto;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtFormula;
-        private System.Windows.Forms.ComboBox cbxExcepcion;
         private System.Windows.Forms.DataGridView dgvVistaPrevia;
-        private System.Windows.Forms.TextBox txtExcepcion;
+        private System.Windows.Forms.TextBox txtAplicacion;
         private System.Windows.Forms.TextBox txtEfecto;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.RadioButton rbnTodos;
+        private System.Windows.Forms.RadioButton rbnUnicamente;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.RadioButton rbnExcepto;
     }
 }
