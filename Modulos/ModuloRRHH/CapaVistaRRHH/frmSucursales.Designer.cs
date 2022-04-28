@@ -265,7 +265,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "frmSucursales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sucursales";
+            this.Text = "2109 Sucursales";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();

@@ -56,19 +56,17 @@ namespace CapaVistaRRHH
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(558, 57);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(418, 46);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 17);
+            this.label7.Size = new System.Drawing.Size(69, 13);
             this.label7.TabIndex = 128;
             this.label7.Text = "Total líquido:";
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(900, 27);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEstado.Location = new System.Drawing.Point(675, 22);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(51, 22);
+            this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 126;
             this.txtEstado.Tag = "estado";
             this.txtEstado.Visible = false;
@@ -78,20 +76,18 @@ namespace CapaVistaRRHH
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(836, 52);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(627, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(179, 33);
+            this.panel1.Size = new System.Drawing.Size(134, 27);
             this.panel1.TabIndex = 125;
             // 
             // rbnEstatusamodulo
             // 
             this.rbnEstatusamodulo.AutoSize = true;
             this.rbnEstatusamodulo.Enabled = false;
-            this.rbnEstatusamodulo.Location = new System.Drawing.Point(16, 9);
-            this.rbnEstatusamodulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbnEstatusamodulo.Location = new System.Drawing.Point(12, 7);
             this.rbnEstatusamodulo.Name = "rbnEstatusamodulo";
-            this.rbnEstatusamodulo.Size = new System.Drawing.Size(67, 21);
+            this.rbnEstatusamodulo.Size = new System.Drawing.Size(55, 17);
             this.rbnEstatusamodulo.TabIndex = 6;
             this.rbnEstatusamodulo.TabStop = true;
             this.rbnEstatusamodulo.Text = "Activo";
@@ -102,10 +98,9 @@ namespace CapaVistaRRHH
             // 
             this.rbnEstatusimodulo.AutoSize = true;
             this.rbnEstatusimodulo.Enabled = false;
-            this.rbnEstatusimodulo.Location = new System.Drawing.Point(91, 9);
-            this.rbnEstatusimodulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbnEstatusimodulo.Location = new System.Drawing.Point(68, 7);
             this.rbnEstatusimodulo.Name = "rbnEstatusimodulo";
-            this.rbnEstatusimodulo.Size = new System.Drawing.Size(77, 21);
+            this.rbnEstatusimodulo.Size = new System.Drawing.Size(63, 17);
             this.rbnEstatusimodulo.TabIndex = 7;
             this.rbnEstatusimodulo.TabStop = true;
             this.rbnEstatusimodulo.Text = "Inactivo";
@@ -115,117 +110,111 @@ namespace CapaVistaRRHH
             // txtTotal
             // 
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(706, 57);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTotal.Location = new System.Drawing.Point(530, 46);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(123, 22);
+            this.txtTotal.Size = new System.Drawing.Size(93, 20);
             this.txtTotal.TabIndex = 124;
             this.txtTotal.Text = "0.00";
             // 
             // txtsumaded
             // 
             this.txtsumaded.Enabled = false;
-            this.txtsumaded.Location = new System.Drawing.Point(706, 28);
-            this.txtsumaded.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtsumaded.Location = new System.Drawing.Point(530, 23);
+            this.txtsumaded.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtsumaded.Name = "txtsumaded";
-            this.txtsumaded.Size = new System.Drawing.Size(123, 22);
+            this.txtsumaded.Size = new System.Drawing.Size(93, 20);
             this.txtsumaded.TabIndex = 123;
             this.txtsumaded.Text = "0.00";
             // 
             // txtsumaper
             // 
             this.txtsumaper.Enabled = false;
-            this.txtsumaper.Location = new System.Drawing.Point(417, 53);
-            this.txtsumaper.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtsumaper.Location = new System.Drawing.Point(313, 43);
+            this.txtsumaper.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtsumaper.Name = "txtsumaper";
-            this.txtsumaper.Size = new System.Drawing.Size(123, 22);
+            this.txtsumaper.Size = new System.Drawing.Size(93, 20);
             this.txtsumaper.TabIndex = 122;
             this.txtsumaper.Text = "0.00";
             // 
             // txtFin
             // 
             this.txtFin.Enabled = false;
-            this.txtFin.Location = new System.Drawing.Point(417, 25);
-            this.txtFin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFin.Location = new System.Drawing.Point(313, 20);
+            this.txtFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFin.Name = "txtFin";
-            this.txtFin.Size = new System.Drawing.Size(123, 22);
+            this.txtFin.Size = new System.Drawing.Size(93, 20);
             this.txtFin.TabIndex = 121;
             // 
             // txtInicio
             // 
             this.txtInicio.Enabled = false;
-            this.txtInicio.Location = new System.Drawing.Point(123, 53);
-            this.txtInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtInicio.Location = new System.Drawing.Point(92, 43);
+            this.txtInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtInicio.Name = "txtInicio";
-            this.txtInicio.Size = new System.Drawing.Size(123, 22);
+            this.txtInicio.Size = new System.Drawing.Size(93, 20);
             this.txtInicio.TabIndex = 120;
             // 
             // txtIdNomina
             // 
             this.txtIdNomina.Enabled = false;
-            this.txtIdNomina.Location = new System.Drawing.Point(123, 25);
-            this.txtIdNomina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIdNomina.Location = new System.Drawing.Point(92, 20);
+            this.txtIdNomina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtIdNomina.Name = "txtIdNomina";
-            this.txtIdNomina.Size = new System.Drawing.Size(123, 22);
+            this.txtIdNomina.Size = new System.Drawing.Size(93, 20);
             this.txtIdNomina.TabIndex = 119;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(836, 30);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(627, 24);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 17);
+            this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 117;
             this.label6.Text = "Estado:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(558, 27);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(418, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 17);
+            this.label5.Size = new System.Drawing.Size(107, 13);
             this.label5.TabIndex = 116;
             this.label5.Text = "Deducciones totales:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(269, 28);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(202, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 115;
             this.label3.Text = "Fecha final:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(269, 57);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(202, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 17);
+            this.label4.Size = new System.Drawing.Size(109, 13);
             this.label4.TabIndex = 114;
             this.label4.Text = "Percepciones totales:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 52);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(10, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 113;
             this.label2.Text = "Fecha inicial:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(10, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 118;
             this.label1.Text = "ID Nomina:";
             // 
@@ -242,19 +231,18 @@ namespace CapaVistaRRHH
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvNomina.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvNomina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNomina.Location = new System.Drawing.Point(15, 93);
-            this.dgvNomina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvNomina.Location = new System.Drawing.Point(11, 76);
             this.dgvNomina.Name = "dgvNomina";
             this.dgvNomina.ReadOnly = true;
             this.dgvNomina.RowHeadersWidth = 51;
-            this.dgvNomina.Size = new System.Drawing.Size(1000, 515);
+            this.dgvNomina.Size = new System.Drawing.Size(750, 418);
             this.dgvNomina.TabIndex = 112;
             // 
             // frmConsultaNomina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 641);
+            this.ClientSize = new System.Drawing.Size(771, 521);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.panel1);
@@ -272,11 +260,10 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvNomina);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmConsultaNomina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Consulta Nómina";
+            this.Text = "2201 Consulta Nómina";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNomina)).EndInit();

@@ -168,7 +168,7 @@ namespace CapaVistaRRHH
             this.Name = "frmTipoFalta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "estadoTipofalta";
-            this.Text = "Tipo Falta";
+            this.Text = "2111 Tipo Falta";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();

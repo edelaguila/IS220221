@@ -167,7 +167,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "frmDepartamentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Departamentos";
+            this.Text = "2104 Departamentos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();

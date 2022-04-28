@@ -188,7 +188,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "frmCuentasContables";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cuentas Contables";
+            this.Text = "2103 Cuentas Contables";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();

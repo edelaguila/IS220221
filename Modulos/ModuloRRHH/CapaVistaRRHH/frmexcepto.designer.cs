@@ -262,7 +262,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "frmExcepto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "0007 Excepción de Conceptos a Empleado ";
+            this.Text = "2202 Excepción de Conceptos a Empleado ";
             this.Load += new System.EventHandler(this.fmConsulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsulta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

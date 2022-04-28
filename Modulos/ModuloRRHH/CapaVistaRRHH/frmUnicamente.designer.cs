@@ -262,7 +262,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "frmUnicamente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "0007 Asignación de Conceptos a Empleado ";
+            this.Text = "2205 Asignación de Conceptos a Empleado ";
             this.Load += new System.EventHandler(this.fmConsulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsulta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

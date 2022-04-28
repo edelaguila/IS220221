@@ -222,7 +222,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "frmPuesto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Puesto";
+            this.Text = "2108 Puesto";
             this.Load += new System.EventHandler(this.frmPuesto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -230,7 +230,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "frmEmpresas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Empresas";
+            this.Text = "2106 Empresas";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();

@@ -166,7 +166,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "frmMoneda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Moneda";
+            this.Text = "2107 Moneda";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
