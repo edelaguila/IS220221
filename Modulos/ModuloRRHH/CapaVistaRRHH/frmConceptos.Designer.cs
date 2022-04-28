@@ -293,7 +293,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "Conceptos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Conceptos";
+            this.Text = "2102 Conceptos";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

@@ -47,7 +47,7 @@ namespace CapaVistaRRHH
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(117, 239);
+            this.label3.Location = new System.Drawing.Point(73, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 14;
@@ -57,7 +57,7 @@ namespace CapaVistaRRHH
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 194);
+            this.label2.Location = new System.Drawing.Point(8, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 20);
             this.label2.TabIndex = 13;
@@ -65,7 +65,7 @@ namespace CapaVistaRRHH
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(229, 241);
+            this.textBox3.Location = new System.Drawing.Point(185, 143);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 20);
             this.textBox3.TabIndex = 12;
@@ -73,7 +73,7 @@ namespace CapaVistaRRHH
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(229, 194);
+            this.textBox1.Location = new System.Drawing.Point(185, 115);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 20);
             this.textBox1.TabIndex = 11;
@@ -82,7 +82,7 @@ namespace CapaVistaRRHH
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.navegador1.Location = new System.Drawing.Point(13, 13);
+            this.navegador1.Location = new System.Drawing.Point(0, -1);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(1189, 87);
             this.navegador1.TabIndex = 15;
@@ -90,16 +90,16 @@ namespace CapaVistaRRHH
             // dgvVistaPrevia
             // 
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVistaPrevia.Location = new System.Drawing.Point(442, 147);
+            this.dgvVistaPrevia.Location = new System.Drawing.Point(434, 101);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(742, 279);
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(742, 267);
             this.dgvVistaPrevia.TabIndex = 16;
             this.dgvVistaPrevia.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgvVistaPrevia_Scroll);
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(322, 286);
+            this.txtEstado.Location = new System.Drawing.Point(334, 186);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(34, 20);
             this.txtEstado.TabIndex = 65;
@@ -111,7 +111,7 @@ namespace CapaVistaRRHH
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(234, 300);
+            this.radioButton2.Location = new System.Drawing.Point(237, 182);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(82, 24);
             this.radioButton2.TabIndex = 64;
@@ -124,7 +124,7 @@ namespace CapaVistaRRHH
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(234, 282);
+            this.radioButton1.Location = new System.Drawing.Point(161, 182);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(70, 24);
             this.radioButton1.TabIndex = 63;
@@ -137,7 +137,7 @@ namespace CapaVistaRRHH
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(117, 282);
+            this.label6.Location = new System.Drawing.Point(73, 184);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 20);
             this.label6.TabIndex = 62;
@@ -147,7 +147,7 @@ namespace CapaVistaRRHH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1227, 450);
+            this.ClientSize = new System.Drawing.Size(1188, 382);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -160,7 +160,7 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.textBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTipoConcepto";
-            this.Text = "frmTipoConcepto";
+            this.Text = "2110 Tipo Concepto";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

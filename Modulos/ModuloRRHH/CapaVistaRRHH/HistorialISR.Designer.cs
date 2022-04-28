@@ -331,7 +331,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "HistorialISR";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Historico ISR";
+            this.Text = "3001 Historico ISR";
             this.Load += new System.EventHandler(this.HistorialISR_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialISR)).EndInit();
             this.ResumeLayout(false);

@@ -40,9 +40,9 @@ namespace CapaVistaRRHH
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbnEstatusamodulo = new System.Windows.Forms.RadioButton();
+            this.rbnEstatusimodulo = new System.Windows.Forms.RadioButton();
             this.lblEstatus = new System.Windows.Forms.Label();
             this.dgvVistaPrevia = new System.Windows.Forms.DataGridView();
-            this.rbnEstatusimodulo = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
             this.SuspendLayout();
@@ -138,6 +138,18 @@ namespace CapaVistaRRHH
             this.rbnEstatusamodulo.UseVisualStyleBackColor = true;
             this.rbnEstatusamodulo.CheckedChanged += new System.EventHandler(this.rbnEstatusamodulo_CheckedChanged);
             // 
+            // rbnEstatusimodulo
+            // 
+            this.rbnEstatusimodulo.AutoSize = true;
+            this.rbnEstatusimodulo.Location = new System.Drawing.Point(134, 7);
+            this.rbnEstatusimodulo.Name = "rbnEstatusimodulo";
+            this.rbnEstatusimodulo.Size = new System.Drawing.Size(63, 17);
+            this.rbnEstatusimodulo.TabIndex = 5;
+            this.rbnEstatusimodulo.TabStop = true;
+            this.rbnEstatusimodulo.Text = "Inactivo";
+            this.rbnEstatusimodulo.UseVisualStyleBackColor = true;
+            this.rbnEstatusimodulo.CheckedChanged += new System.EventHandler(this.rbnEstatusimodulo_CheckedChanged);
+            // 
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
@@ -155,18 +167,6 @@ namespace CapaVistaRRHH
             this.dgvVistaPrevia.Size = new System.Drawing.Size(754, 285);
             this.dgvVistaPrevia.TabIndex = 112;
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
-            // 
-            // rbnEstatusimodulo
-            // 
-            this.rbnEstatusimodulo.AutoSize = true;
-            this.rbnEstatusimodulo.Location = new System.Drawing.Point(134, 7);
-            this.rbnEstatusimodulo.Name = "rbnEstatusimodulo";
-            this.rbnEstatusimodulo.Size = new System.Drawing.Size(63, 17);
-            this.rbnEstatusimodulo.TabIndex = 5;
-            this.rbnEstatusimodulo.TabStop = true;
-            this.rbnEstatusimodulo.Text = "Inactivo";
-            this.rbnEstatusimodulo.UseVisualStyleBackColor = true;
-            this.rbnEstatusimodulo.CheckedChanged += new System.EventHandler(this.rbnEstatusimodulo_CheckedChanged);
             // 
             // frmBancos
             // 
@@ -188,7 +188,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "frmBancos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bancos";
+            this.Text = "2101 Bancos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
