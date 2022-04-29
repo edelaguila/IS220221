@@ -110,6 +110,12 @@
     <Compile Include="frmExcepciones.Designer.cs">
       <DependentUpon>frmExcepciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmexcepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmexcepto.designer.cs">
+      <DependentUpon>frmexcepto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFormula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,12 +140,6 @@
     <Compile Include="frmMoneda.Designer.cs">
       <DependentUpon>frmMoneda.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmexcepto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmexcepto.designer.cs">
-      <DependentUpon>frmexcepto.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmNomina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,12 +151,6 @@
     </Compile>
     <Compile Include="frmPeriodosNomina.Designer.cs">
       <DependentUpon>frmPeriodosNomina.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmUnicamente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUnicamente.designer.cs">
-      <DependentUpon>frmUnicamente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPuesto.cs">
       <SubType>Form</SubType>
@@ -181,6 +175,12 @@
     </Compile>
     <Compile Include="frmTipoFalta.Designer.cs">
       <DependentUpon>frmTipoFalta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnicamente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnicamente.designer.cs">
+      <DependentUpon>frmUnicamente.cs</DependentUpon>
     </Compile>
     <Compile Include="HistorialISR.cs">
       <SubType>Form</SubType>
@@ -274,6 +274,9 @@
     <EmbeddedResource Include="frmExcepciones.resx">
       <DependentUpon>frmExcepciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmexcepto.resx">
+      <DependentUpon>frmexcepto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFormula.resx">
       <DependentUpon>frmFormula.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,17 +289,11 @@
     <EmbeddedResource Include="frmMoneda.resx">
       <DependentUpon>frmMoneda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmexcepto.resx">
-      <DependentUpon>frmexcepto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmNomina.resx">
       <DependentUpon>frmNomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPeriodosNomina.resx">
       <DependentUpon>frmPeriodosNomina.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmUnicamente.resx">
-      <DependentUpon>frmUnicamente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPuesto.resx">
       <DependentUpon>frmPuesto.cs</DependentUpon>
@@ -309,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTipoFalta.resx">
       <DependentUpon>frmTipoFalta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnicamente.resx">
+      <DependentUpon>frmUnicamente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistorialISR.resx">
       <DependentUpon>HistorialISR.cs</DependentUpon>

@@ -48,14 +48,19 @@ namespace CapaVistaRRHH
         //Danny Saldaña 0901-18-18686
         private void button1_Click(object sender, EventArgs e)
         {
-            //Jorge González 0901-18-3920
-            
+            try
+            {
+                string condicion = textBox1.Text;
+                actualizardatagriew();
+                ExceptollenarNombre();
+                actualizardatagriewpersonal();
 
-            //
-            string condicion = textBox1.Text;
-            actualizardatagriew();
-            ExceptollenarNombre();
-            actualizardatagriewpersonal();
+            }
+            catch
+            {
+
+            }
+            
         }
         //Danny Saldaña 0901-18-18686
         private void dtgConsulta_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -225,6 +230,29 @@ namespace CapaVistaRRHH
             {
                 e.Handled = true;//elimina el sonido
                 textBox1.Focus();//Mueve al siguiente boton
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string valor1 = textBox1.Text;
+            string valor2 = textBox3.Text;
+            string str;
+            cn.ExceptoExceptoeliminartodo(tabla3, valor1);
+            actualizardatagriewpersonal();
+
+            int CantidadFilas = dtgConsulta.RowCount;
+
+            for (int i = 0; i < CantidadFilas; i++)
+            {
+                dtgConsulta.CurrentCell = dtgConsulta.Rows[i].Cells[0];
+                str = dtgConsulta.Rows[i].Cells[0].Value.ToString();
+
+                textBox3.Text = str;
+                //MessageBox.Show(str, str);
+                cn.Exceptoagregar(tabla3, valor1, str);
+                actualizardatagriewpersonal();
+
             }
         }
     }
