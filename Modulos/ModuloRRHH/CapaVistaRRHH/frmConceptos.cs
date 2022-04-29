@@ -122,16 +122,16 @@ namespace CapaVistaRRHH
 			
 			if (rbnTodos.Checked == true)
 			{
-				rbnUnicamente.Checked = false;
+				rbnAlgunos.Checked = false;
 				rbnExcepto.Checked = false;
 			}
 		}
 
         private void rbnUnicamente_CheckedChanged(object sender, EventArgs e)
         {
-			navegador1.CambioEstadoTextbox(txtAplicacion, rbnUnicamente, "unicamente");
+			navegador1.CambioEstadoTextbox(txtAplicacion, rbnAlgunos, "algunos");
 
-			if (rbnUnicamente.Checked == true)
+			if (rbnAlgunos.Checked == true)
 			{
 				rbnTodos.Checked = false; 
 				rbnExcepto.Checked = false;
@@ -144,7 +144,7 @@ namespace CapaVistaRRHH
 
 			if (rbnExcepto.Checked == true)
 			{
-				rbnUnicamente.Checked = false;
+				rbnAlgunos.Checked = false;
 				rbnTodos.Checked = false; 
 			}
 		}
@@ -156,14 +156,41 @@ namespace CapaVistaRRHH
 				rbnTodos.Checked = true;
 			}
 
-			if (txtAplicacion.Text == "unicamente")
+			if (txtAplicacion.Text == "algunos")
 			{
-				rbnUnicamente.Checked = true;
+				rbnAlgunos.Checked = true;
 			}
 
 			if (txtAplicacion.Text == "excepto")
 			{
 				rbnExcepto.Checked = true;
+			}
+		}
+
+        private void rbnValorU_CheckedChanged(object sender, EventArgs e)
+        {
+			if (rbnValorU.Checked)
+			{
+				rbnPorcentaje.Checked = false;
+				rbnFormula.Checked = false;
+			}
+		}
+
+        private void rbnPorcentaje_CheckedChanged(object sender, EventArgs e)
+        {
+			if (rbnPorcentaje.Checked)
+			{
+				rbnValorU.Checked = false;
+				rbnFormula.Checked = false;
+			}
+		}
+
+        private void rbnFormula_CheckedChanged(object sender, EventArgs e)
+        {
+			if (rbnFormula.Checked)
+			{
+				rbnValorU.Checked = false;
+				rbnPorcentaje.Checked = false;
 			}
 		}
     }

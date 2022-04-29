@@ -43,7 +43,6 @@ namespace CapaVistaRRHH
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtIdConcepto = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtFormula = new System.Windows.Forms.TextBox();
@@ -53,14 +52,20 @@ namespace CapaVistaRRHH
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.rbnTodos = new System.Windows.Forms.RadioButton();
-            this.rbnUnicamente = new System.Windows.Forms.RadioButton();
+            this.rbnAlgunos = new System.Windows.Forms.RadioButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.rbnExcepto = new System.Windows.Forms.RadioButton();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.rbnFormula = new System.Windows.Forms.RadioButton();
+            this.rbnValorU = new System.Windows.Forms.RadioButton();
+            this.rbnPorcentaje = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // navegador1
@@ -75,7 +80,7 @@ namespace CapaVistaRRHH
             // 
             this.panel2.Controls.Add(this.rbnPercepcion);
             this.panel2.Controls.Add(this.rbnDeduccion);
-            this.panel2.Location = new System.Drawing.Point(150, 182);
+            this.panel2.Location = new System.Drawing.Point(150, 189);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 30);
             this.panel2.TabIndex = 117;
@@ -107,7 +112,7 @@ namespace CapaVistaRRHH
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 234);
+            this.label2.Location = new System.Drawing.Point(40, 241);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 115;
@@ -115,7 +120,7 @@ namespace CapaVistaRRHH
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(358, 362);
+            this.txtEstado.Location = new System.Drawing.Point(358, 412);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 113;
@@ -127,7 +132,7 @@ namespace CapaVistaRRHH
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(152, 362);
+            this.panel1.Location = new System.Drawing.Point(152, 412);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 30);
             this.panel1.TabIndex = 114;
@@ -159,7 +164,7 @@ namespace CapaVistaRRHH
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(53, 362);
+            this.lblEstatus.Location = new System.Drawing.Point(53, 412);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(43, 13);
             this.lblEstatus.TabIndex = 112;
@@ -186,20 +191,11 @@ namespace CapaVistaRRHH
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 189);
+            this.label4.Location = new System.Drawing.Point(59, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 120;
             this.label4.Text = "Efecto:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(53, 320);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 121;
-            this.label5.Text = "Formula:";
             // 
             // txtIdConcepto
             // 
@@ -219,7 +215,7 @@ namespace CapaVistaRRHH
             // 
             // txtFormula
             // 
-            this.txtFormula.Location = new System.Drawing.Point(160, 317);
+            this.txtFormula.Location = new System.Drawing.Point(267, 347);
             this.txtFormula.Name = "txtFormula";
             this.txtFormula.Size = new System.Drawing.Size(100, 20);
             this.txtFormula.TabIndex = 6;
@@ -236,7 +232,7 @@ namespace CapaVistaRRHH
             // 
             // txtAplicacion
             // 
-            this.txtAplicacion.Location = new System.Drawing.Point(361, 234);
+            this.txtAplicacion.Location = new System.Drawing.Point(361, 241);
             this.txtAplicacion.Name = "txtAplicacion";
             this.txtAplicacion.Size = new System.Drawing.Size(43, 20);
             this.txtAplicacion.TabIndex = 129;
@@ -246,7 +242,7 @@ namespace CapaVistaRRHH
             // 
             // txtEfecto
             // 
-            this.txtEfecto.Location = new System.Drawing.Point(358, 186);
+            this.txtEfecto.Location = new System.Drawing.Point(358, 193);
             this.txtEfecto.Name = "txtEfecto";
             this.txtEfecto.Size = new System.Drawing.Size(46, 20);
             this.txtEfecto.TabIndex = 130;
@@ -256,7 +252,7 @@ namespace CapaVistaRRHH
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(270, 320);
+            this.button1.Location = new System.Drawing.Point(372, 345);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 131;
@@ -267,8 +263,8 @@ namespace CapaVistaRRHH
             // panel3
             // 
             this.panel3.Controls.Add(this.rbnTodos);
-            this.panel3.Controls.Add(this.rbnUnicamente);
-            this.panel3.Location = new System.Drawing.Point(152, 231);
+            this.panel3.Controls.Add(this.rbnAlgunos);
+            this.panel3.Location = new System.Drawing.Point(152, 238);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 30);
             this.panel3.TabIndex = 118;
@@ -285,22 +281,22 @@ namespace CapaVistaRRHH
             this.rbnTodos.UseVisualStyleBackColor = true;
             this.rbnTodos.CheckedChanged += new System.EventHandler(this.rbnTodos_CheckedChanged);
             // 
-            // rbnUnicamente
+            // rbnAlgunos
             // 
-            this.rbnUnicamente.AutoSize = true;
-            this.rbnUnicamente.Location = new System.Drawing.Point(115, 7);
-            this.rbnUnicamente.Name = "rbnUnicamente";
-            this.rbnUnicamente.Size = new System.Drawing.Size(82, 17);
-            this.rbnUnicamente.TabIndex = 4;
-            this.rbnUnicamente.TabStop = true;
-            this.rbnUnicamente.Text = "Unicamente";
-            this.rbnUnicamente.UseVisualStyleBackColor = true;
-            this.rbnUnicamente.CheckedChanged += new System.EventHandler(this.rbnUnicamente_CheckedChanged);
+            this.rbnAlgunos.AutoSize = true;
+            this.rbnAlgunos.Location = new System.Drawing.Point(115, 7);
+            this.rbnAlgunos.Name = "rbnAlgunos";
+            this.rbnAlgunos.Size = new System.Drawing.Size(63, 17);
+            this.rbnAlgunos.TabIndex = 4;
+            this.rbnAlgunos.TabStop = true;
+            this.rbnAlgunos.Text = "Algunos";
+            this.rbnAlgunos.UseVisualStyleBackColor = true;
+            this.rbnAlgunos.CheckedChanged += new System.EventHandler(this.rbnUnicamente_CheckedChanged);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.rbnExcepto);
-            this.panel4.Location = new System.Drawing.Point(152, 267);
+            this.panel4.Location = new System.Drawing.Point(152, 274);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(108, 30);
             this.panel4.TabIndex = 132;
@@ -317,11 +313,68 @@ namespace CapaVistaRRHH
             this.rbnExcepto.UseVisualStyleBackColor = true;
             this.rbnExcepto.CheckedChanged += new System.EventHandler(this.rbnExcepto_CheckedChanged);
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.rbnFormula);
+            this.panel5.Controls.Add(this.rbnValorU);
+            this.panel5.Controls.Add(this.rbnPorcentaje);
+            this.panel5.Location = new System.Drawing.Point(152, 320);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(98, 77);
+            this.panel5.TabIndex = 142;
+            // 
+            // rbnFormula
+            // 
+            this.rbnFormula.AutoSize = true;
+            this.rbnFormula.Location = new System.Drawing.Point(14, 53);
+            this.rbnFormula.Name = "rbnFormula";
+            this.rbnFormula.Size = new System.Drawing.Size(62, 17);
+            this.rbnFormula.TabIndex = 5;
+            this.rbnFormula.TabStop = true;
+            this.rbnFormula.Text = "Formula";
+            this.rbnFormula.UseVisualStyleBackColor = true;
+            this.rbnFormula.CheckedChanged += new System.EventHandler(this.rbnFormula_CheckedChanged);
+            // 
+            // rbnValorU
+            // 
+            this.rbnValorU.AutoSize = true;
+            this.rbnValorU.Location = new System.Drawing.Point(12, 7);
+            this.rbnValorU.Name = "rbnValorU";
+            this.rbnValorU.Size = new System.Drawing.Size(80, 17);
+            this.rbnValorU.TabIndex = 3;
+            this.rbnValorU.TabStop = true;
+            this.rbnValorU.Text = "Valor Unico";
+            this.rbnValorU.UseVisualStyleBackColor = true;
+            this.rbnValorU.CheckedChanged += new System.EventHandler(this.rbnValorU_CheckedChanged);
+            // 
+            // rbnPorcentaje
+            // 
+            this.rbnPorcentaje.AutoSize = true;
+            this.rbnPorcentaje.Location = new System.Drawing.Point(13, 30);
+            this.rbnPorcentaje.Name = "rbnPorcentaje";
+            this.rbnPorcentaje.Size = new System.Drawing.Size(76, 17);
+            this.rbnPorcentaje.TabIndex = 4;
+            this.rbnPorcentaje.TabStop = true;
+            this.rbnPorcentaje.Text = "Porcentaje";
+            this.rbnPorcentaje.UseVisualStyleBackColor = true;
+            this.rbnPorcentaje.CheckedChanged += new System.EventHandler(this.rbnPorcentaje_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(-3, 320);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 13);
+            this.label6.TabIndex = 143;
+            this.label6.Text = "Tipo de valor aplicacion:";
+            // 
             // Conceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtFormula);
             this.Controls.Add(this.txtAplicacion);
@@ -332,7 +385,6 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.dgvVistaPrevia);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -355,6 +407,8 @@ namespace CapaVistaRRHH
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,7 +429,6 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtIdConcepto;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtFormula;
@@ -385,8 +438,13 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RadioButton rbnTodos;
-        private System.Windows.Forms.RadioButton rbnUnicamente;
+        private System.Windows.Forms.RadioButton rbnAlgunos;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.RadioButton rbnExcepto;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.RadioButton rbnFormula;
+        private System.Windows.Forms.RadioButton rbnValorU;
+        private System.Windows.Forms.RadioButton rbnPorcentaje;
+        private System.Windows.Forms.Label label6;
     }
 }
