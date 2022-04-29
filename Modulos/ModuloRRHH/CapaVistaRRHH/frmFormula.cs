@@ -194,7 +194,7 @@ namespace CapaVistaRRHH
                         string valor = txtValor.Text;
                         string puente = cadenaFormula + "@" + tabla + "." + campo;
                         textBox1.Text = puente;
-                        txtsql.Text = txtsql.Text + "(SELECT " + tabla + "." + campo + " WHERE pkIdEmpleado = \" + condicion + \" AND " + tabla +".periodo = \" + condicion + \")";               
+                        txtsql.Text = txtsql.Text + "(SELECT " + tabla + "." + campo + " WHERE pkIdEmpleado = \" + condicion + \" AND " + tabla +".periodo = \" + condicion2 + \")";               
 
                     }
                     else if (cadenaFormula != "")
