@@ -19,8 +19,6 @@ namespace CapaVistaRRHH
 			TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
 			navegador1.ObtenerCamposdeTabla(alias, "concepto", "hotelSanCarlos");
 			navegador1.MetodoSalirVista(this);
-			navegador1.LlenarCombobox(cbxExcepcion, "excepciones", "pkIdExcepcion", "nombreExcepcion", "estado");
-			//navegador1.LlenarCombobox(cbxIDEmpresa, "empresa", "idEmpresa", "nombre", "estatus");
 
 			//inicio de elementos para dar de baja
 			navegador1.campoEstado = "estado";
@@ -49,15 +47,7 @@ namespace CapaVistaRRHH
 
 		}
 
-		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            navegador1.EnviarDatoComboaTextbox(cbxExcepcion, txtExcepcion);
-        }
 
-        private void txtExcepcion_TextChanged(object sender, EventArgs e)
-        {
-            navegador1.SeleccionarElementosenCombo(cbxExcepcion, txtExcepcion);
-        }
 
         private void dgvVistaPrevia_SelectionChanged(object sender, EventArgs e)
         {
@@ -124,6 +114,57 @@ namespace CapaVistaRRHH
 				frm.Show();
 			}
 			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+		}
+
+        private void rbnTodos_CheckedChanged(object sender, EventArgs e)
+        {
+			navegador1.CambioEstadoTextbox(txtAplicacion, rbnTodos, "todos");
+			
+			if (rbnTodos.Checked == true)
+			{
+				rbnUnicamente.Checked = false;
+				rbnExcepto.Checked = false;
+			}
+		}
+
+        private void rbnUnicamente_CheckedChanged(object sender, EventArgs e)
+        {
+			navegador1.CambioEstadoTextbox(txtAplicacion, rbnUnicamente, "unicamente");
+
+			if (rbnUnicamente.Checked == true)
+			{
+				rbnTodos.Checked = false; 
+				rbnExcepto.Checked = false;
+			}
+		}
+
+        private void rbnExcepto_CheckedChanged(object sender, EventArgs e)
+        {
+			navegador1.CambioEstadoTextbox(txtAplicacion, rbnExcepto, "excepto");
+
+			if (rbnExcepto.Checked == true)
+			{
+				rbnUnicamente.Checked = false;
+				rbnTodos.Checked = false; 
+			}
+		}
+
+        private void txtAplicacion_TextChanged(object sender, EventArgs e)
+        {
+			if (txtAplicacion.Text == "todos")
+			{
+				rbnTodos.Checked = true;
+			}
+
+			if (txtAplicacion.Text == "unicamente")
+			{
+				rbnUnicamente.Checked = true;
+			}
+
+			if (txtAplicacion.Text == "excepto")
+			{
+				rbnExcepto.Checked = true;
+			}
 		}
     }
 }
