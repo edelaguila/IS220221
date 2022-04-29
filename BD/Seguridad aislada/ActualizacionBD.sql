@@ -141,7 +141,7 @@ DROP TABLE concepto;
 DROP TABLE excepciones;
 
 CREATE TABLE concepto (
-    pkIdConcepto VARCHAR(15) NOT NULL,           #001
+    pkIdConcepto VARCHAR(15) PRIMARY KEY,           #001
     nombreConcepto VARCHAR(60) NOT NULL,        #Horas Extras          
     efectoConcepto VARCHAR(1) NOT NULL,         #/Ingreso, Descuento/
     aplicacion VARCHAR(25) NOT NULL,     #/Todos, Unicamente a, Exepto a/
