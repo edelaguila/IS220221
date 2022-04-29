@@ -46,6 +46,7 @@ namespace CapaVistaRRHH
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -108,6 +109,7 @@ namespace CapaVistaRRHH
             this.dataGridView1.Size = new System.Drawing.Size(256, 254);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // button2
             // 
@@ -235,12 +237,24 @@ namespace CapaVistaRRHH
             this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button6_KeyDown);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(311, 205);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(58, 27);
+            this.button7.TabIndex = 16;
+            this.button7.Text = ">>";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // frmUnicamente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(690, 450);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -262,7 +276,7 @@ namespace CapaVistaRRHH
             this.MaximizeBox = false;
             this.Name = "frmUnicamente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "2205 Asignación de Conceptos a Empleado ";
+            this.Text = "0007 Asignación de Conceptos a Empleado ";
             this.Load += new System.EventHandler(this.fmConsulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsulta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -289,5 +303,6 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
