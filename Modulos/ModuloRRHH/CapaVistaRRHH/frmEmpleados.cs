@@ -24,7 +24,7 @@ namespace CapaVistaRRHH
 			navegador1.MetodoSalirVista(this);
 			navegador1.LlenarCombobox(cbxIDPuesto, "puesto", "pkIdPuesto", "nombre", "estado");
 			navegador1.LlenarCombobox(cbxIDEmpresa, "empresa", "idEmpresa", "nombre", "estado");
-
+			navegador1.LlenarCombobox(cbxJornada, "jornada", "pkId", "nombre", "estado");
 			//inicio de elementos para dar de baja
 			navegador1.campoEstado = "estado";
 			//fin de elementos para dar de baja

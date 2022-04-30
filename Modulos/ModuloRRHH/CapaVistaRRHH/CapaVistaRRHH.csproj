@@ -128,6 +128,18 @@
     <Compile Include="frmGeneracionNomina.designer.cs">
       <DependentUpon>frmGeneracionNomina.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJornada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJornada.Designer.cs">
+      <DependentUpon>frmJornada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMDIRRHH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     </Compile>
     <Compile Include="frmNomina.designer.cs">
       <DependentUpon>frmNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPeriodo.Designer.cs">
+      <DependentUpon>frmPeriodo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPeriodosNomina.cs">
       <SubType>Form</SubType>
@@ -283,6 +301,12 @@
     <EmbeddedResource Include="frmGeneracionNomina.resx">
       <DependentUpon>frmGeneracionNomina.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmJornada.resx">
+      <DependentUpon>frmJornada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMDIRRHH.resx">
       <DependentUpon>frmMDIRRHH.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNomina.resx">
       <DependentUpon>frmNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPeriodo.resx">
+      <DependentUpon>frmPeriodo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPeriodosNomina.resx">
       <DependentUpon>frmPeriodosNomina.cs</DependentUpon>
@@ -353,6 +380,11 @@
   <ItemGroup>
     <Content Include="Recursos\FONDO.jpg" />
     <Content Include="Recursos\Formas.jpg" />
+    <Content Include="Recursos\loader %281%29.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recursos\loader.gif" />
+    <Content Include="Recursos\loader.png" />
     <Content Include="Recursos\MDI.jpg" />
     <Content Include="Recursos\human_resources_search_employees_icon_187558.ico" />
   </ItemGroup>

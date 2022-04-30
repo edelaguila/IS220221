@@ -255,6 +255,30 @@ namespace CapaVistaRRHH
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
+
+        private void jornadaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmJornada form = new frmJornada();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void periodoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmPeriodo form = new frmPeriodo();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
     }
 }
     
