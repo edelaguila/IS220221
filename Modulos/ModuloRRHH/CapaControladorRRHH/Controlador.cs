@@ -14,46 +14,78 @@ namespace CapaControladorRRHH
     {
         private Sentencias sn = new Sentencias();
 
-        //Danny Saldaña 0901-18-18686
-        public DataTable UnicamentellenarTbl(string tabla2)
+        //9959-18-5201 Angel Chacón
+        //Muestra todos los empleados disponibles para asignarle al concepto
+        public DataTable llenarTblDatosEmpleados(string IdConcepto)
         {
-            OdbcDataAdapter dt = sn.UnicamentellenarTbl(tabla2);
+            OdbcDataAdapter dt = sn.llenarTblDatosEmpleados(IdConcepto);
             DataTable table = new DataTable();
             dt.Fill(table);
             return table;
         }
 
-        //Danny Saldaña 0901-18-18686
-        public DataTable UnicamentellenarTblPersonal(string tabla2, string condicion)
+        //9959-18-5201 Angel Chacón
+        //Muestra todos los empleados asignados al concepto
+        public DataTable llenarTblEmpleadosAsignadosConcepto(string tablaempleados, string IdConcepto)
         {
-            OdbcDataAdapter dt = sn.UnicamentellenarTblPersonal(tabla2, condicion);
+            OdbcDataAdapter dt = sn.llenarTblEmpleadosAsignadosConcepto(tablaempleados, IdConcepto);
             DataTable table = new DataTable();
             dt.Fill(table);
             return table;
         }
-        //Danny Saldaña 0901-18-18686
-        public DataTable UnicamentellenarNombre(string tabla, string condicion)
+
+        //9959-18-5201 Angel Chacón
+        public DataTable DatosConcepto(string IdConcepto)
         {
-            OdbcDataAdapter dt = sn.UnicamentellenarNombre(tabla, condicion);
+            //Obtiene todos los datos del concepto al que se le van a asignar empleados
+            OdbcDataAdapter dt = sn.DatosConcepto(IdConcepto);
             DataTable table = new DataTable();
             dt.Fill(table);
             return table;
         }
-        //Danny Saldaña 0901-18-18686
-        public void Unicamenteagregar(string tabla3, string valor1, string valor2)
+
+        //9959-18-5201 Angel Chacón
+        //Asinar un empleado al concepto
+        public void AsignarEmpleados(string tabla3, string valor1, string valor2)
         {
-            sn.Unicamenteagregar(tabla3, valor1, valor2);
+            sn.AsignarEmpleados(tabla3, valor1, valor2);
         }
-        //Danny Saldaña 0901-18-18686
-        public void Unicamenteeliminar(string tabla3, string valor1, string valor2)
+
+        //9959-18-5201 Angel Chacón
+        //Asigna todos los empleados al concepto
+        public void AsignarATodosLosEmpleados(string tabla3, string valor1)
         {
-            sn.Unicamenteeliminar(tabla3, valor1, valor2);
+            sn.AsignarATodosLosEmpleados(tabla3, valor1);
         }
-        //Danny Saldaña 0901-18-18686
-        public void UnicamenteUnicamenteeliminartodo(string tabla3, string valor1)
+
+        //9959-18-5201 Angel Chacón
+        //Se elima a un empleado asignado al concepto
+        public void EliminarUnEmpleadoAsignado(string tabla3, string valor1, string valor2)
         {
-            sn.Unicamenteeliminartodo(tabla3, valor1);
+            sn.EliminarUnEmpleadoAsignado(tabla3, valor1, valor2);
         }
+
+        //9959-18-5201 Angel Chacón
+        //Se eliminan todos los empleados asignados al concepto
+        public void EliminarTodasLasAsignacionesEmpleados(string tabla3, string valor1)
+        {
+            sn.EliminarTodasLasAsignacionesEmpleados(tabla3, valor1);
+        }
+
+        //Angel Chacón 9959-18-5201 
+        //Funcion para mostrar id en el combobox de los conceptos existentes
+        public OdbcDataReader IdConcepto(string nombreA)
+        {
+            return sn.IdConcepto(nombreA);
+        }
+
+        //Angel Chacón 9959-18-5201 
+        //Funcion para obtener el nombre de los conceptos creados en el combobox
+        public OdbcDataReader llenarcbxConcepto()
+        {
+            return sn.llenarcbxConcepto();
+        }
+
         //Danny Saldaña 0901-18-18686
         public void UnicamenteUnicamenteagregartodo(string tabla3, string valor1, string valor2, string tabla2)
         {
@@ -95,57 +127,6 @@ namespace CapaControladorRRHH
             dt.Fill(table);
             return table;
         }
-
-        //Danny Saldaña 0901-18-18686
-        public DataTable ExceptollenarTbl(string tabla2)
-        {
-            OdbcDataAdapter dt = sn.ExceptollenarTbl(tabla2);
-            DataTable table = new DataTable();
-            dt.Fill(table);
-            return table;
-        }
-
-        //Danny Saldaña 0901-18-18686
-        public DataTable ExceptollenarTblPersonal(string tabla2, string condicion)
-        {
-            OdbcDataAdapter dt = sn.ExceptollenarTblPersonal(tabla2, condicion);
-            DataTable table = new DataTable();
-            dt.Fill(table);
-            return table;
-        }
-        //Danny Saldaña 0901-18-18686
-        public DataTable ExceptollenarNombre(string tabla, string condicion)
-        {
-            OdbcDataAdapter dt = sn.ExceptollenarNombre(tabla, condicion);
-            DataTable table = new DataTable();
-            dt.Fill(table);
-            return table;
-        }
-        //Danny Saldaña 0901-18-18686
-        public void Exceptoagregar(string tabla3, string valor1, string valor2)
-        {
-            sn.Exceptoagregar(tabla3, valor1, valor2);
-        }
-        //Danny Saldaña 0901-18-18686
-        public void Exceptoeliminar(string tabla3, string valor1, string valor2)
-        {
-            sn.Exceptoeliminar(tabla3, valor1, valor2);
-        }
-        //Danny Saldaña 0901-18-18686
-        public void ExceptoExceptoeliminartodo(string tabla3, string valor1)
-        {
-            sn.Exceptoeliminartodo(tabla3, valor1);
-        }
-        //Danny Saldaña 0901-18-18686
-        public void Exceptoagregartodo(string tabla3, string valor1, string valor2, string tabla2)
-        {
-            sn.Exceptoagregartodo(tabla3, valor1, valor2, tabla2);
-        }
-
-       
-
-
-
 
 
 

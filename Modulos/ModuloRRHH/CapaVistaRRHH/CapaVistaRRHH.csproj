@@ -62,6 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DGVPrinter.cs" />
+    <Compile Include="frmAsignacionEmpleadosaConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignacionEmpleadosaConceptos.Designer.cs">
+      <DependentUpon>frmAsignacionEmpleadosaConceptos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBancos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,12 +115,6 @@
     </Compile>
     <Compile Include="frmExcepciones.Designer.cs">
       <DependentUpon>frmExcepciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmexcepto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmexcepto.designer.cs">
-      <DependentUpon>frmexcepto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFormula.cs">
       <SubType>Form</SubType>
@@ -194,12 +194,6 @@
     <Compile Include="frmTipoFalta.Designer.cs">
       <DependentUpon>frmTipoFalta.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUnicamente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUnicamente.designer.cs">
-      <DependentUpon>frmUnicamente.cs</DependentUpon>
-    </Compile>
     <Compile Include="HistorialISR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +262,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmAsignacionEmpleadosaConceptos.resx">
+      <DependentUpon>frmAsignacionEmpleadosaConceptos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBancos.resx">
       <DependentUpon>frmBancos.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,9 +288,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmExcepciones.resx">
       <DependentUpon>frmExcepciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmexcepto.resx">
-      <DependentUpon>frmexcepto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFormula.resx">
       <DependentUpon>frmFormula.cs</DependentUpon>
@@ -333,9 +327,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTipoFalta.resx">
       <DependentUpon>frmTipoFalta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmUnicamente.resx">
-      <DependentUpon>frmUnicamente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistorialISR.resx">
       <DependentUpon>HistorialISR.cs</DependentUpon>

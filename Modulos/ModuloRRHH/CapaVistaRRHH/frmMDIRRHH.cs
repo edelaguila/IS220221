@@ -183,23 +183,7 @@ namespace CapaVistaRRHH
 
         }
 
-        private void excepciToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        
-            frmExcepto form = new frmExcepto();
-            form.MdiParent = this;
-            bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
-            form.Show();
 
-        }
-
-        private void conceptosAEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmUnicamente form = new frmUnicamente();
-            form.MdiParent = this;
-            bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
-            form.Show();
-        }
 
         private void excepcionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -273,6 +257,18 @@ namespace CapaVistaRRHH
             try
             {
                 frmPeriodo form = new frmPeriodo();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void asignaciónDeEmpleadosAConceptosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmAsignacionEmpleadosaConceptos form = new frmAsignacionEmpleadosaConceptos();
                 form.MdiParent = this;
                 bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
                 form.Show();
