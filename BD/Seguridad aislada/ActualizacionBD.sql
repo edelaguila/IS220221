@@ -21,7 +21,7 @@ CREATE TABLE concepto (
     nombreConcepto VARCHAR(60) NOT NULL,        #Horas Extras          
     efectoConcepto VARCHAR(1) NOT NULL,         #/Ingreso, Descuento/
     fkIdExcepcion VARCHAR(15) NOT NULL,     #/Todos, ninguno, Unicamente a, Exepto a/
-    formulaConcepto VARCHAR(60) NOT NULL,      #/Abrir modulo formulas/
+    formulaConcepto VARCHAR(800) NOT NULL,      #/Abrir modulo formulas/
     estado VARCHAR(1) NOT NULL,        #/A, I/
     PRIMARY KEY (pkIdConcepto),    
     FOREIGN KEY (fkIdExcepcion) REFERENCES excepciones (pkIdExcepcion)
@@ -145,8 +145,48 @@ CREATE TABLE concepto (
     nombreConcepto VARCHAR(60) NOT NULL,        #Horas Extras          
     efectoConcepto VARCHAR(1) NOT NULL,         #/Ingreso, Descuento/
     aplicacion VARCHAR(25) NOT NULL,     #/Todos, Unicamente a, Exepto a/
-    formulaConcepto VARCHAR(200) NOT NULL,      #/Abrir modulo formulas/
+    formulaConcepto VARCHAR(800) NOT NULL,      #/Abrir modulo formulas/
     estado VARCHAR(1) NOT NULL       #/A, I/
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 insert into concepto values ("1","Concepto 1","+","todos","250","1");
+
+
+-- --------------------------------------------------------------------------------------------------------------------------------------
+-- Tercer sprint - Heydi Quemé, Kevin Flores - tabla jornada, empleado y periodo - Fecha: 18/04/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE jornada (
+    pkId VARCHAR(15) PRIMARY KEY,   
+    nombre VARCHAR(60) NOT NULL,              
+    horaInicio time NULL,
+    horaFin time NULL,    
+    horasJornada VARCHAR(10) not NULL, 
+    estado VARCHAR(1) NOT NULL       
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE periodo (
+    pkId VARCHAR(15) PRIMARY KEY,           
+    nombre VARCHAR(60) NOT NULL,                  
+    inicio date NOT NULL,         
+    fin date NOT NULL,    
+    estado VARCHAR(1) NOT NULL       
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `hotelsancarlos`.`empleado` 
+CHANGE COLUMN `contratado` `fkIdJornada` VARCHAR(15) NOT NULL ;
+
+ALTER TABLE `hotelsancarlos`.`empleado` 
+ADD CONSTRAINT `jornada_ibfk_1`
+  FOREIGN KEY (`fkIdJornada`)
+  REFERENCES `hotelsancarlos`.`jornada` (`pkId`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+  
+  ALTER TABLE empleado ADD FOREIGN KEY (fkIdJornada) REFERENCES jornada(pkid);
+  
+  INSERT INTO JORNADA VALUES ("1","Matutina", "8:00:00","17:00:00","8","1");
+  INSERT INTO JORNADA VALUES ("2","Diurna", "15:00:00","22:00:00","6","1");
+  
+  

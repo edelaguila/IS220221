@@ -21,6 +21,7 @@ namespace CapaVistaRRHH
         int cantidadConceptos = 0, cantidadEmpleados=0;
         DataTable idEmpleado, nombreEmpleado, sueldoEmpleado, nombreConcepto = new DataTable();
         DataTable tabalaNomina = new DataTable();
+       
         public frmNomina()
         {
             InitializeComponent();
@@ -153,6 +154,11 @@ namespace CapaVistaRRHH
             printer.Footer = "Módulo Recursos Humanos";
             printer.FooterSpacing = 15;
             printer.PrintDataGridView(dgvNomina);
+        }
+
+        private void frmNomina_Load(object sender, EventArgs e)
+        {
+          
         }
 
         // calculoSueldoLiquido: Calcula el sueldo líquido por empleado y la suma total en planilla.

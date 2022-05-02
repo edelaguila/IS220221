@@ -41,6 +41,7 @@ namespace CapaVistaRRHH
             this.departamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jornadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excepcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +57,7 @@ namespace CapaVistaRRHH
             this.historialISRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.periodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +73,7 @@ namespace CapaVistaRRHH
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,20 +83,20 @@ namespace CapaVistaRRHH
             this.cerrarSeciónToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // cerrarSeciónToolStripMenuItem
             // 
             this.cerrarSeciónToolStripMenuItem.Name = "cerrarSeciónToolStripMenuItem";
-            this.cerrarSeciónToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.cerrarSeciónToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.cerrarSeciónToolStripMenuItem.Text = "Cerrar Seción";
             this.cerrarSeciónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSeciónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -107,89 +109,98 @@ namespace CapaVistaRRHH
             this.departamentosToolStripMenuItem,
             this.empleadoToolStripMenuItem,
             this.empresasToolStripMenuItem,
+            this.jornadaToolStripMenuItem,
             this.excepcionesToolStripMenuItem,
             this.monedaToolStripMenuItem,
+            this.periodoToolStripMenuItem,
             this.puestosToolStripMenuItem,
             this.sucursalesToolStripMenuItem,
             this.tipoDeFaltasToolStripMenuItem});
             this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
-            this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.catálogosToolStripMenuItem.Text = "Catálogos";
             // 
             // bancosToolStripMenuItem
             // 
             this.bancosToolStripMenuItem.Name = "bancosToolStripMenuItem";
-            this.bancosToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.bancosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.bancosToolStripMenuItem.Text = "Bancos";
             this.bancosToolStripMenuItem.Click += new System.EventHandler(this.bancosToolStripMenuItem_Click);
             // 
             // conceptosToolStripMenuItem1
             // 
             this.conceptosToolStripMenuItem1.Name = "conceptosToolStripMenuItem1";
-            this.conceptosToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
+            this.conceptosToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.conceptosToolStripMenuItem1.Text = "Conceptos";
             this.conceptosToolStripMenuItem1.Click += new System.EventHandler(this.conceptosToolStripMenuItem1_Click);
             // 
             // cuentasContablesToolStripMenuItem
             // 
             this.cuentasContablesToolStripMenuItem.Name = "cuentasContablesToolStripMenuItem";
-            this.cuentasContablesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.cuentasContablesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.cuentasContablesToolStripMenuItem.Text = "Cuentas Contables";
             this.cuentasContablesToolStripMenuItem.Click += new System.EventHandler(this.cuentasContablesToolStripMenuItem_Click);
             // 
             // departamentosToolStripMenuItem
             // 
             this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
-            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.departamentosToolStripMenuItem.Text = "Departamentos";
             this.departamentosToolStripMenuItem.Click += new System.EventHandler(this.departamentosToolStripMenuItem_Click);
             // 
             // empleadoToolStripMenuItem
             // 
             this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
-            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.empleadoToolStripMenuItem.Text = "Empleados";
             this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click);
             // 
             // empresasToolStripMenuItem
             // 
             this.empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
-            this.empresasToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.empresasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.empresasToolStripMenuItem.Text = "Empresas";
             this.empresasToolStripMenuItem.Click += new System.EventHandler(this.empresasToolStripMenuItem_Click);
+            // 
+            // jornadaToolStripMenuItem
+            // 
+            this.jornadaToolStripMenuItem.Name = "jornadaToolStripMenuItem";
+            this.jornadaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.jornadaToolStripMenuItem.Text = "Jornada";
+            this.jornadaToolStripMenuItem.Click += new System.EventHandler(this.jornadaToolStripMenuItem_Click);
             // 
             // excepcionesToolStripMenuItem
             // 
             this.excepcionesToolStripMenuItem.Name = "excepcionesToolStripMenuItem";
-            this.excepcionesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.excepcionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.excepcionesToolStripMenuItem.Text = "Excepciones";
             this.excepcionesToolStripMenuItem.Click += new System.EventHandler(this.excepcionesToolStripMenuItem_Click);
             // 
             // monedaToolStripMenuItem
             // 
             this.monedaToolStripMenuItem.Name = "monedaToolStripMenuItem";
-            this.monedaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.monedaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.monedaToolStripMenuItem.Text = "Moneda";
             this.monedaToolStripMenuItem.Click += new System.EventHandler(this.monedaToolStripMenuItem_Click);
             // 
             // puestosToolStripMenuItem
             // 
             this.puestosToolStripMenuItem.Name = "puestosToolStripMenuItem";
-            this.puestosToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.puestosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.puestosToolStripMenuItem.Text = "Puestos";
             this.puestosToolStripMenuItem.Click += new System.EventHandler(this.puestosToolStripMenuItem_Click);
             // 
             // sucursalesToolStripMenuItem
             // 
             this.sucursalesToolStripMenuItem.Name = "sucursalesToolStripMenuItem";
-            this.sucursalesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.sucursalesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sucursalesToolStripMenuItem.Text = "Sucursales";
             this.sucursalesToolStripMenuItem.Click += new System.EventHandler(this.sucursalesToolStripMenuItem_Click);
             // 
             // tipoDeFaltasToolStripMenuItem
             // 
             this.tipoDeFaltasToolStripMenuItem.Name = "tipoDeFaltasToolStripMenuItem";
-            this.tipoDeFaltasToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.tipoDeFaltasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.tipoDeFaltasToolStripMenuItem.Text = "Tipo de Faltas";
             this.tipoDeFaltasToolStripMenuItem.Click += new System.EventHandler(this.tipoDeFaltasToolStripMenuItem_Click);
             // 
@@ -200,20 +211,20 @@ namespace CapaVistaRRHH
             this.excepciToolStripMenuItem,
             this.generaciónDeNóminaToolStripMenuItem});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
-            this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.procesosToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.procesosToolStripMenuItem.Text = "Procesos";
             // 
             // conceptosAEmpleadosToolStripMenuItem
             // 
             this.conceptosAEmpleadosToolStripMenuItem.Name = "conceptosAEmpleadosToolStripMenuItem";
-            this.conceptosAEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.conceptosAEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(335, 26);
             this.conceptosAEmpleadosToolStripMenuItem.Text = "Conceptos a Empleados";
             this.conceptosAEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.conceptosAEmpleadosToolStripMenuItem_Click);
             // 
             // excepciToolStripMenuItem
             // 
             this.excepciToolStripMenuItem.Name = "excepciToolStripMenuItem";
-            this.excepciToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.excepciToolStripMenuItem.Size = new System.Drawing.Size(335, 26);
             this.excepciToolStripMenuItem.Text = "Excepciones conceptos a Empleados";
             this.excepciToolStripMenuItem.Click += new System.EventHandler(this.excepciToolStripMenuItem_Click);
             // 
@@ -223,21 +234,21 @@ namespace CapaVistaRRHH
             this.consultaNóminaToolStripMenuItem,
             this.generaciónDeNóminaToolStripMenuItem1});
             this.generaciónDeNóminaToolStripMenuItem.Name = "generaciónDeNóminaToolStripMenuItem";
-            this.generaciónDeNóminaToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.generaciónDeNóminaToolStripMenuItem.Size = new System.Drawing.Size(335, 26);
             this.generaciónDeNóminaToolStripMenuItem.Text = "Generación de Nómina";
             this.generaciónDeNóminaToolStripMenuItem.Click += new System.EventHandler(this.generaciónDeNóminaToolStripMenuItem_Click);
             // 
             // consultaNóminaToolStripMenuItem
             // 
             this.consultaNóminaToolStripMenuItem.Name = "consultaNóminaToolStripMenuItem";
-            this.consultaNóminaToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.consultaNóminaToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
             this.consultaNóminaToolStripMenuItem.Text = "Consulta Nómina";
             this.consultaNóminaToolStripMenuItem.Click += new System.EventHandler(this.consultaNóminaToolStripMenuItem_Click);
             // 
             // generaciónDeNóminaToolStripMenuItem1
             // 
             this.generaciónDeNóminaToolStripMenuItem1.Name = "generaciónDeNóminaToolStripMenuItem1";
-            this.generaciónDeNóminaToolStripMenuItem1.Size = new System.Drawing.Size(196, 22);
+            this.generaciónDeNóminaToolStripMenuItem1.Size = new System.Drawing.Size(245, 26);
             this.generaciónDeNóminaToolStripMenuItem1.Text = "Generación de Nómina";
             this.generaciónDeNóminaToolStripMenuItem1.Click += new System.EventHandler(this.generaciónDeNóminaToolStripMenuItem1_Click);
             // 
@@ -246,20 +257,20 @@ namespace CapaVistaRRHH
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.historialISRToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // historialISRToolStripMenuItem
             // 
             this.historialISRToolStripMenuItem.Name = "historialISRToolStripMenuItem";
-            this.historialISRToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.historialISRToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.historialISRToolStripMenuItem.Text = "Historial ISR";
             this.historialISRToolStripMenuItem.Click += new System.EventHandler(this.historialISRToolStripMenuItem_Click);
             // 
             // ayudasToolStripMenuItem
             // 
             this.ayudasToolStripMenuItem.Name = "ayudasToolStripMenuItem";
-            this.ayudasToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.ayudasToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.ayudasToolStripMenuItem.Text = "Ayudas";
             // 
             // txtUsuario
@@ -269,6 +280,13 @@ namespace CapaVistaRRHH
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 3;
             this.txtUsuario.Visible = false;
+            // 
+            // periodoToolStripMenuItem
+            // 
+            this.periodoToolStripMenuItem.Name = "periodoToolStripMenuItem";
+            this.periodoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.periodoToolStripMenuItem.Text = "Periodo";
+            this.periodoToolStripMenuItem.Click += new System.EventHandler(this.periodoToolStripMenuItem_Click);
             // 
             // frmMDIRRHH
             // 
@@ -322,5 +340,7 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.ToolStripMenuItem generaciónDeNóminaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaNóminaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generaciónDeNóminaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem jornadaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem periodoToolStripMenuItem;
     }
 }

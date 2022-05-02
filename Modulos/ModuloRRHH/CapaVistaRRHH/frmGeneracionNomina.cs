@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaControladorRRHH;
@@ -20,8 +21,9 @@ namespace CapaVistaRRHH
         }
         CapaControladorRRHH.Controlador controlador = new CapaControladorRRHH.Controlador();
         // string[][] vectorNomina;
+        frmLoading Loading;
         private void btnGeneraNomina_Click(object sender, EventArgs e)
-        {
+        {            
             string fechaInicio = txtInicio.Text.ToString();
             string fechaFin = txtFin.Text.ToString();
             string[,] vectorNomina = new string[1000, 100];
@@ -37,8 +39,10 @@ namespace CapaVistaRRHH
             {
                 try
                 {
+                    show();
                     frmNomina frm = new frmNomina();
                     frm.Show();
+                    hide();
                 }
                 catch (Exception ex) { MessageBox.Show("Error: " + ex); }
             }
@@ -63,7 +67,16 @@ namespace CapaVistaRRHH
             navegador1.CambiarFormatoFecha(dtpInicio, txtInicio);
             navegador1.CambiarFormatoFecha(dtpFin, txtFin);
         }
-
+              
+        public void show()
+        {
+            Loading = new frmLoading();
+            Loading.Show();
+        }
+        public void hide()
+        {
+            Loading.Close();
+        }
        
     }
 }
