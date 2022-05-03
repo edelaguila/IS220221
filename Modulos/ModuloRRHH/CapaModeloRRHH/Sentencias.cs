@@ -13,59 +13,109 @@ namespace CapaModeloRRHH
     {
         private Conexion cn = new Conexion();
 
-        //Danny Saldaña 0901-18-18686
-        public OdbcDataAdapter UnicamentellenarTbl(string tabla2)
+        //9959-18-5201 Angel Chacón
+        //Muestra todos los empleados disponibles para asignarle al concepto
+        public OdbcDataAdapter llenarTblDatosEmpleados(string IdConcepto)
         {
-            //Obtiene todos los conceptos
-            string sql = "SELECT pkIdConcepto, nombreConcepto FROM " + tabla2 + "  ;";
+            //Obtiene todos los empleados
+            string sql = "SELECT pkIdEmpleado, nombre FROM empleado  WHERE pkIdEmpleado NOT IN(SELECT fkIdEmpleado FROM empleado_concepto where fkIdConcepto = '" + IdConcepto + "');";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
             return dataTable;
-
         }
 
-        //Danny Saldaña 0901-18-18686
-        public OdbcDataAdapter UnicamentellenarTblPersonal(string tabla2, string condicion)
+        //9959-18-5201 Angel Chacón
+        //Muestra todos los empleados asignados al concepto
+        public OdbcDataAdapter llenarTblEmpleadosAsignadosConcepto(string tablaempleados, string IdConcepto)
         {
             //Obtiene todos los conceptos asignados a un emepleado especifico
-            string sql = "SELECT concepto.pkIdConcepto, concepto.nombreConcepto FROM " + tabla2 + "  LEFT JOIN detalle_personalizado_unicamente ON concepto.pkIdConcepto = detalle_personalizado_unicamente.fkIdConcepto LEFT JOIN empleado ON detalle_personalizado_unicamente.fkIdEmpleado = empleado.pkIdEmpleado WHERE empleado.pkIdEmpleado = " + condicion + " ORDER BY concepto.pkIdConcepto;";
+            string sql = "SELECT empleado.pkIdEmpleado, empleado.nombre FROM " + tablaempleados + " LEFT JOIN empleado_concepto ON empleado.pkIdEmpleado = empleado_concepto.fkIdEmpleado LEFT JOIN concepto ON empleado_concepto.fkIdConcepto = concepto.pkIdConcepto WHERE concepto.pkIdConcepto = '" + IdConcepto + "' ORDER BY empleado.pkIdEmpleado;";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
             return dataTable;
 
         }
-        //Danny Saldaña 0901-18-18686
-        public OdbcDataAdapter UnicamentellenarNombre(string tabla, string condicion)
-        {
-            //Obtiene el nombre del empleado
-            string sql = "SELECT nombre FROM " + tabla + " WHERE pkIdEmpleado = " + condicion + "  ;";
-            OdbcDataAdapter dataName = new OdbcDataAdapter(sql, cn.conexion());
-            return dataName;
 
-        }
-        //Danny Saldaña 0901-18-18686
-        public void Unicamenteagregar(string tabla3, string valor1, string valor2)
+        //9959-18-5201 Angel Chacón
+        public OdbcDataAdapter DatosConcepto(string IdConcepto)
         {
-            string sql = "INSERT INTO " + tabla3 + " (fkIdEmpleado, fkIdConcepto) Values( '" + valor1 + "', '" + valor2 + "');";
+            //Obtiene todos los datos del concepto al que se le van a asignar empleados
+            string sql = "SELECT * FROM concepto where pkIdConcepto='" + IdConcepto + "';";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+        //9959-18-5201 Angel Chacón
+        //Asinar un empleado al concepto
+        public void AsignarEmpleados(string tabla3, string valor1, string valor2)
+        {
+            string sql = "INSERT INTO " + tabla3 + " (fkIdConcepto, fkIdEmpleado) Values( '" + valor1 + "', '" + valor2 + "');";
             OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
             consulta.ExecuteNonQuery();
 
         }
 
-        //Danny Saldaña 0901-18-18686
-        public void Unicamenteeliminar(string tabla3, string valor1, string valor2)
+        //9959-18-5201 Angel Chacón
+        //Asigna todos los empleados al concepto
+        public void AsignarATodosLosEmpleados(string tabla3, string valor1)
         {
-            string sql = "DELETE FROM " + tabla3 + " WHERE fkIdEmpleado = '" + valor1 + "' AND  fkIdConcepto='" + valor2 + "';";
+            string sql = "DELETE FROM " + tabla3 + " WHERE fkIdConcepto = '" + valor1 + "';";
             OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
             consulta.ExecuteNonQuery();
-
         }
-        //Danny Saldaña 0901-18-18686
-        public void Unicamenteeliminartodo(string tabla3, string valor1)
+
+        //9959-18-5201 Angel Chacón
+        //Se elima a un empleado asignado al concepto
+        public void EliminarUnEmpleadoAsignado(string tabla3, string valor1, string valor2)
         {
-            string sql = "DELETE FROM " + tabla3 + " WHERE fkIdEmpleado = '" + valor1 + "';";
+            string sql = "DELETE FROM " + tabla3 + " WHERE fkIdConcepto = '" + valor1 + "' AND  fkIdEmpleado='" + valor2 + "';";
             OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
             consulta.ExecuteNonQuery();
-
         }
+
+        //9959-18-5201 Angel Chacón
+        //Se eliminan todos los empleados asignados al concepto
+        public void EliminarTodasLasAsignacionesEmpleados(string tabla3, string valor1)
+        {
+            string sql = "DELETE FROM " + tabla3 + " WHERE fkIdConcepto = '" + valor1 + "';";
+            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+            consulta.ExecuteNonQuery();
+        }
+
+        //Angel Chacón 9959-18-5201
+        //funcion para mostrar id en el combobox de los conceptos existentes
+        public OdbcDataReader IdConcepto(string nombreA)//conexion para obtener el IdConcepto para el Combobox
+        {
+            string cadena = "Select pkIdConcepto from concepto where nombreConcepto = '" + nombreA + "';";
+            try
+            {
+                OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
+                OdbcDataReader leer = consulta.ExecuteReader();
+                return leer;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error en Capa Modelo --> Consultas: " + e);
+                return null;
+            }
+        }
+
+        //9959-18-5201 Angel Chacón
+        //Función para obtener el nombre de los conceptos creados en el combobox
+        public OdbcDataReader llenarcbxConcepto()
+        {
+            string sql = "SELECT nombreConcepto FROM hotelsancarlos.concepto;";
+            try
+            {
+                OdbcCommand datos = new OdbcCommand(sql, cn.conexion());
+                OdbcDataReader leer = datos.ExecuteReader();
+                return leer;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+
         //Danny Saldaña 0901-18-18686
         public void Unicamenteagregartodo(string tabla3, string valor1, string valor2, string tabla2)
         {
@@ -105,7 +155,7 @@ namespace CapaModeloRRHH
             return dataTable;
 
         }
-
+        //9959-18-5201 Angel Chacón
         //Cuarta consulta de todos los registros detalles del historial ISR por ID Registrado
         public OdbcDataAdapter llenarDGVRegDetalle(string Id)// metodo  que obtinene el contenio de una tabla en la BD
         {
@@ -114,79 +164,6 @@ namespace CapaModeloRRHH
             return dataTable;
 
         }
-
-
-
-        //Danny Saldaña 0901-18-18686
-        public OdbcDataAdapter ExceptollenarTbl(string tabla2)
-        {
-            //Obtiene todos los conceptos
-            string sql = "SELECT pkIdConcepto, nombreConcepto FROM " + tabla2 + "  ;";
-            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
-            return dataTable;
-
-        }
-
-        //Danny Saldaña 0901-18-18686
-        public OdbcDataAdapter ExceptollenarTblPersonal(string tabla2, string condicion)
-        {
-            //Obtiene todos los conceptos asignados a un emepleado especifico
-            string sql = "SELECT concepto.pkIdConcepto, concepto.nombreConcepto FROM " + tabla2 + "  LEFT JOIN detalle_personalizado_excepto ON concepto.pkIdConcepto = detalle_personalizado_excepto.fkIdConcepto LEFT JOIN empleado ON detalle_personalizado_excepto.fkIdEmpleado = empleado.pkIdEmpleado WHERE empleado.pkIdEmpleado = " + condicion + " ORDER BY concepto.pkIdConcepto;";
-            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
-            return dataTable;
-
-        }
-        //Danny Saldaña 0901-18-18686
-        public OdbcDataAdapter ExceptollenarNombre(string tabla, string condicion)
-        {
-            //Obtiene el nombre del empleado
-            string sql = "SELECT nombre FROM " + tabla + " WHERE pkIdEmpleado = " + condicion + "  ;";
-            OdbcDataAdapter dataName = new OdbcDataAdapter(sql, cn.conexion());
-            return dataName;
-
-        }
-        //Danny Saldaña 0901-18-18686
-        public void Exceptoagregar(string tabla3, string valor1, string valor2)
-        {
-            string sql = "INSERT INTO " + tabla3 + " (fkIdEmpleado, fkIdConcepto) Values( '" + valor1 + "', '" + valor2 + "');";
-            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
-            consulta.ExecuteNonQuery();
-
-        }
-
-        //Danny Saldaña 0901-18-18686
-        public void Exceptoeliminar(string tabla3, string valor1, string valor2)
-        {
-            string sql = "DELETE FROM " + tabla3 + " WHERE fkIdEmpleado = '" + valor1 + "' AND  fkIdConcepto='" + valor2 + "';";
-            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
-            consulta.ExecuteNonQuery();
-
-        }
-        //Danny Saldaña 0901-18-18686
-        public void Exceptoeliminartodo(string tabla3, string valor1)
-        {
-            string sql = "DELETE FROM " + tabla3 + " WHERE fkIdEmpleado = '" + valor1 + "';";
-            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
-            consulta.ExecuteNonQuery();
-
-        }
-        //Danny Saldaña 0901-18-18686
-        public void Exceptoagregartodo(string tabla3, string valor1, string valor2, string tabla2)
-        {
-            string sql = "INSERT INTO detalle_personalizado_excepto (fkIdEmpleado, fkIdConcepto) SELECT NULL, pkidConcepto FROM concepto;";
-            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
-            consulta.ExecuteNonQuery();
-
-            string sql2 = "UPDATE detalle_personalizado_excepto SET " + tabla3 + " = '" + valor1 + "' WHERE fkIdEmpleado = '';";
-            OdbcCommand consulta2 = new OdbcCommand(sql2, cn.conexion());
-            consulta2.ExecuteNonQuery();
-
-        }
-
-
-
-
-
 
 
 
