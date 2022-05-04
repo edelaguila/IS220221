@@ -197,3 +197,45 @@ create table empleado_concepto(
 fkIdConcepto varchar(15) not null,
 fkIdEmpleado varchar(15) not null
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+-- --------------------------------------------------------------------------------------------------------------------------------------
+-- Tercer sprint - Angel Chacón, Danny Saldaña - Tabla Cuentas Contables, Formulas, Conceptos - Fecha: 04/05/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE cuentasContables (
+    pkId VARCHAR(15) primary key,
+    nomenclatura VARCHAR(45),  -- 1001
+    nombre VARCHAR(45), -- Caja, Bancos
+    efecto VARCHAR(1), -- 1 = Deudor o 2 = Acreedor
+    estado VARCHAR(1) 
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+insert into cuentascontables values ("1","1001","Caja","2","1");
+insert into cuentascontables values ("2","1002","Banco","2","1");
+insert into cuentascontables values ("3","1003","Bienes Muebles","2","1");
+
+CREATE TABLE formula (
+    pkIdFormula VARCHAR(15) PRIMARY KEY,               
+    valorFormula VARCHAR(800),     
+    estado VARCHAR(1) NOT NULL     
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+insert into formula values ("0","NA","1");
+insert into formula values ("1","250","1");
+
+drop table if exists concepto;
+CREATE TABLE concepto (
+    pkIdConcepto VARCHAR(15) PRIMARY KEY,           
+    nombreConcepto VARCHAR(60) NOT NULL,                
+    efectoConcepto VARCHAR(1) NOT NULL,         
+    aplicacion VARCHAR(1) NOT NULL,    -- Identificacion:    1=todos, 2=algunos, 3=todos,excepto
+    fkformulaConcepto VARCHAR(15) DEFAULT NULL,     -- llave Foranea formulaConcepto
+    valorConcepto VARCHAR(25), 
+    fkCuentaContable VARCHAR(15),      -- llave Foranea CuentaContable
+    estado VARCHAR(1) NOT NULL,
+    foreign key (fkformulaConcepto) references  formula (pkIdFormula),
+    foreign key (fkCuentaContable) references  cuentasContables (pkId)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE CONCEPTO MODIFY COLUMN  fkformulaConcepto VARCHAR(15) DEFAULT NULL;
