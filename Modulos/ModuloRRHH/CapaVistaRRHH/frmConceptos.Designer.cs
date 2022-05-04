@@ -59,6 +59,11 @@ namespace CapaVistaRRHH
             this.rbnFormula = new System.Windows.Forms.RadioButton();
             this.rbnValorU = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbxFormulaConcepto = new System.Windows.Forms.ComboBox();
+            this.cbxCuentaContable = new System.Windows.Forms.ComboBox();
+            this.txtIdFormulaConcepto = new System.Windows.Forms.TextBox();
+            this.txtIdCuentaContable = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
@@ -119,7 +124,7 @@ namespace CapaVistaRRHH
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(358, 412);
+            this.txtEstado.Location = new System.Drawing.Point(356, 462);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 113;
@@ -131,7 +136,7 @@ namespace CapaVistaRRHH
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(152, 412);
+            this.panel1.Location = new System.Drawing.Point(150, 462);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 30);
             this.panel1.TabIndex = 114;
@@ -163,7 +168,7 @@ namespace CapaVistaRRHH
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(53, 412);
+            this.lblEstatus.Location = new System.Drawing.Point(51, 462);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(43, 13);
             this.lblEstatus.TabIndex = 112;
@@ -214,18 +219,19 @@ namespace CapaVistaRRHH
             // 
             // txtFormula
             // 
-            this.txtFormula.Location = new System.Drawing.Point(267, 347);
+            this.txtFormula.Location = new System.Drawing.Point(267, 338);
             this.txtFormula.Name = "txtFormula";
             this.txtFormula.Size = new System.Drawing.Size(100, 20);
             this.txtFormula.TabIndex = 6;
-            this.txtFormula.Tag = "formulaConcepto";
+            this.txtFormula.Tag = "valorConcepto";
+            this.txtFormula.TextChanged += new System.EventHandler(this.txtFormula_TextChanged);
             // 
             // dgvVistaPrevia
             // 
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVistaPrevia.Location = new System.Drawing.Point(453, 106);
+            this.dgvVistaPrevia.Location = new System.Drawing.Point(475, 106);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(719, 332);
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(697, 426);
             this.dgvVistaPrevia.TabIndex = 127;
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
@@ -251,7 +257,7 @@ namespace CapaVistaRRHH
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(372, 345);
+            this.button1.Location = new System.Drawing.Point(394, 350);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 131;
@@ -317,7 +323,7 @@ namespace CapaVistaRRHH
             // 
             this.panel5.Controls.Add(this.rbnFormula);
             this.panel5.Controls.Add(this.rbnValorU);
-            this.panel5.Location = new System.Drawing.Point(152, 320);
+            this.panel5.Location = new System.Drawing.Point(153, 327);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(98, 77);
             this.panel5.TabIndex = 142;
@@ -349,26 +355,77 @@ namespace CapaVistaRRHH
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(-3, 320);
+            this.label6.Location = new System.Drawing.Point(19, 327);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 13);
+            this.label6.Size = new System.Drawing.Size(82, 13);
             this.label6.TabIndex = 143;
-            this.label6.Text = "Tipo de valor aplicacion:";
+            this.label6.Text = "Valor concepto:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 423);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 13);
+            this.label5.TabIndex = 144;
+            this.label5.Text = "Cuenta Contable:";
+            // 
+            // cbxFormulaConcepto
+            // 
+            this.cbxFormulaConcepto.FormattingEnabled = true;
+            this.cbxFormulaConcepto.Location = new System.Drawing.Point(257, 364);
+            this.cbxFormulaConcepto.Name = "cbxFormulaConcepto";
+            this.cbxFormulaConcepto.Size = new System.Drawing.Size(121, 21);
+            this.cbxFormulaConcepto.TabIndex = 146;
+            this.cbxFormulaConcepto.SelectedIndexChanged += new System.EventHandler(this.cbxFormulaConcepto_SelectedIndexChanged);
+            // 
+            // cbxCuentaContable
+            // 
+            this.cbxCuentaContable.FormattingEnabled = true;
+            this.cbxCuentaContable.Location = new System.Drawing.Point(153, 423);
+            this.cbxCuentaContable.Name = "cbxCuentaContable";
+            this.cbxCuentaContable.Size = new System.Drawing.Size(121, 21);
+            this.cbxCuentaContable.TabIndex = 147;
+            this.cbxCuentaContable.SelectedIndexChanged += new System.EventHandler(this.cbxCuentaContable_SelectedIndexChanged);
+            // 
+            // txtIdFormulaConcepto
+            // 
+            this.txtIdFormulaConcepto.Location = new System.Drawing.Point(401, 353);
+            this.txtIdFormulaConcepto.Name = "txtIdFormulaConcepto";
+            this.txtIdFormulaConcepto.Size = new System.Drawing.Size(45, 20);
+            this.txtIdFormulaConcepto.TabIndex = 148;
+            this.txtIdFormulaConcepto.Tag = "fkformulaConcepto";
+            this.txtIdFormulaConcepto.Visible = false;
+            this.txtIdFormulaConcepto.TextChanged += new System.EventHandler(this.txtIdFormulaConcepto_TextChanged);
+            // 
+            // txtIdCuentaContable
+            // 
+            this.txtIdCuentaContable.Location = new System.Drawing.Point(302, 423);
+            this.txtIdCuentaContable.Name = "txtIdCuentaContable";
+            this.txtIdCuentaContable.Size = new System.Drawing.Size(45, 20);
+            this.txtIdCuentaContable.TabIndex = 149;
+            this.txtIdCuentaContable.Tag = "fkCuentaContable";
+            this.txtIdCuentaContable.Visible = false;
+            this.txtIdCuentaContable.TextChanged += new System.EventHandler(this.txtIdCuentaContable_TextChanged);
             // 
             // Conceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 450);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.panel5);
+            this.ClientSize = new System.Drawing.Size(1184, 544);
             this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.txtIdCuentaContable);
             this.Controls.Add(this.txtFormula);
+            this.Controls.Add(this.txtIdFormulaConcepto);
             this.Controls.Add(this.txtAplicacion);
             this.Controls.Add(this.txtEfecto);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtIdConcepto);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbxCuentaContable);
+            this.Controls.Add(this.cbxFormulaConcepto);
             this.Controls.Add(this.dgvVistaPrevia);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
@@ -380,6 +437,7 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.navegador1);
+            this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Conceptos";
@@ -432,5 +490,10 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.RadioButton rbnFormula;
         private System.Windows.Forms.RadioButton rbnValorU;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbxFormulaConcepto;
+        private System.Windows.Forms.ComboBox cbxCuentaContable;
+        private System.Windows.Forms.TextBox txtIdFormulaConcepto;
+        private System.Windows.Forms.TextBox txtIdCuentaContable;
     }
 }
