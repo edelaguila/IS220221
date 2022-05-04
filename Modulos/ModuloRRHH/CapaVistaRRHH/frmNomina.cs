@@ -59,6 +59,7 @@ namespace CapaVistaRRHH
         {
             try
             {
+                string fechaPeriodo = txtInicio.Text;
                 DataTable calculoConcepto, matrizNomina = new DataTable();
                 matrizNomina.Columns.Add("Id Empleado");
                 matrizNomina.Columns.Add("Nombre Empleado");
@@ -69,38 +70,38 @@ namespace CapaVistaRRHH
                 }
                 matrizNomina.Columns.Add("Sueldo Líquido");
                 tabalaNomina = matrizNomina;
-                dgvNomina.DataSource = tabalaNomina;               
+                dgvNomina.DataSource = tabalaNomina;
                 float sumaPercepciones = float.Parse(txtsumaper.Text);
                 float sumaDeducciones = float.Parse(txtsumaded.Text);
                 for (int y = 0; y < cantidadEmpleados; y++)
-                { 
+                {
                     DataRow row = matrizNomina.NewRow();
                     row["Id Empleado"] = (y + 1).ToString();
                     row["Nombre Empleado"] = (nombreEmpleado.Rows[y][0].ToString());
-                    row["Sueldo Empleado"] = (sueldoEmpleado.Rows[y][0].ToString());                                                      
+                    row["Sueldo Empleado"] = (sueldoEmpleado.Rows[y][0].ToString());
                     for (int z = 0; z < cantidadConceptos; z++)
-                    {    
-                        calculoConcepto = controlador.calculoConcepto(z + 1, y + 1);string calculoConceptoSigno = "";       
-                        Boolean respuesta= controlador.validarRelacion((y+1),(z+1), "detalle_personalizado_unicamente");         
-                        if (respuesta==true)
+                    {
+                        calculoConcepto = controlador.calculoConcepto(z + 1, y + 1, fechaPeriodo); string calculoConceptoSigno = "";
+                        Boolean respuesta = controlador.validarRelacion((y + 1), (z + 1), "detalle_personalizado_unicamente");
+                        if (respuesta == true)
                         {
                             Boolean efecto = controlador.validarEfecto(z + 1);
-                            if (efecto==true)
+                            if (efecto == true)
                             {
-                                calculoConceptoSigno = ("+"+calculoConcepto.Rows[0][0].ToString());
+                                calculoConceptoSigno = ("+" + calculoConcepto.Rows[0][0].ToString());
                                 sumaPercepciones = sumaPercepciones + float.Parse(calculoConcepto.Rows[0][0].ToString());
                                 txtsumaper.Text = sumaPercepciones.ToString();
                             }
-                            else if (efecto==false)
+                            else if (efecto == false)
                             {
-                                calculoConceptoSigno = ("-"+calculoConcepto.Rows[0][0].ToString());
+                                calculoConceptoSigno = ("-" + calculoConcepto.Rows[0][0].ToString());
                                 sumaDeducciones = sumaDeducciones + float.Parse(calculoConcepto.Rows[0][0].ToString());
                                 txtsumaded.Text = sumaDeducciones.ToString();
                             }
-                            else{MessageBox.Show("No se encontró un efecto para este concepto");}
+                            else { MessageBox.Show("No se encontró un efecto para este concepto"); }
                         }
-                        else if(respuesta==false){calculoConceptoSigno = "+0.00";}
-                        else{MessageBox.Show("No se encontró calculo relacionado.");}
+                        else if (respuesta == false) { calculoConceptoSigno = "+0.00"; }
+                        else { MessageBox.Show("No se encontró calculo relacionado."); }
                         row[nombreConcepto.Rows[z][0].ToString()] = (calculoConceptoSigno);
                     }
                     matrizNomina.Rows.Add(row);

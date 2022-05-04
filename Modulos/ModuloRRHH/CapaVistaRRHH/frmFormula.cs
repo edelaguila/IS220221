@@ -194,8 +194,9 @@ namespace CapaVistaRRHH
                         string valor = txtValor.Text;
                         string puente = cadenaFormula + "@" + tabla + "." + campo;
                         textBox1.Text = puente;
-                        txtsql.Text = txtsql.Text + "(SELECT " + tabla + "." + campo + " WHERE pkIdEmpleado = \" + condicion + \" AND " + tabla +".periodo = \" + condicion + \")";               
 
+                        txtsql.Text = txtsql.Text + "(SELECT " + tabla + "." + campo + " WHERE pkIdEmpleado = \" + condicion + \" AND " + tabla + ".periodo = \" + condicion2 + \")";
+                        //SELECT((SELECT 250)+(SELECT horasextrastrabajadas.valor WHERE pkIdEmpleado = "1" AND horasextrastrabajadas.periodo = "2022-01-01")) FROM `empleado` INNER JOIN horasextrastrabajadas ON empleado.pkIdEmpleado = horasextrastrabajadas.fkIdEmpleado WHERE pkIdEmpleado = "1";
                     }
                     else if (cadenaFormula != "")
                     {
@@ -208,10 +209,12 @@ namespace CapaVistaRRHH
                             string valor = txtValor.Text;
                             string puente = cadenaFormula + "@" + tabla + "." + campo;
                             textBox1.Text = puente;
-                            txtsql.Text = txtsql.Text + "(SELECT " + tabla + "." + campo + " WHERE pkIdEmpleado = \" + condicion + \" AND " + tabla + ".periodo = \" + condicion + \")";
+                            txtsql.Text = txtsql.Text + "(SELECT " + tabla + "." + campo + " WHERE pkIdEmpleado = \" + condicion + \" AND " + tabla + ".periodo = \" + condicion2 + \")";
                         }
                     }
+                    label7.Text = tabla;
                 }
+                
             }
 
             
@@ -331,10 +334,27 @@ namespace CapaVistaRRHH
                 cn.FormulasAsignarConcepto(formula, pkIdConcepto);
                 MessageBox.Show("Asignacion Correcta", "Formulas RRHH");
 
+                string tabla2 = label7.Text;
+                tabla2 = label7.Text;
+                string valor2;
 
-                string valor2 = "SELECT(" + txtsql.Text + ") FROM `empleado` WHERE pkIdEmpleado = \" + condicion + \";";
+
+                if (formula.Contains("@"))
+                {
+                    valor2 = "SELECT(" + txtsql.Text + ") FROM `empleado` INNER JOIN " + tabla2 + " ON empleado.pkIdEmpleado = " + tabla2 + ".fkIdEmpleado WHERE pkIdEmpleado = \" + condicion + \";";
+
+                } else
+                {
+                    valor2 = "SELECT(" + txtsql.Text + ") FROM `empleado` WHERE pkIdEmpleado = \" + condicion + \";";
+                }
+
+
+                
+                
                 string valor1 = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 cn.GuradarSentenciaSql(valor1, valor2);
+
+                
             }
             else
             {

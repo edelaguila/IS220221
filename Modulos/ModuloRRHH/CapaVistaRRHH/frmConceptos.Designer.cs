@@ -58,7 +58,6 @@ namespace CapaVistaRRHH
             this.panel5 = new System.Windows.Forms.Panel();
             this.rbnFormula = new System.Windows.Forms.RadioButton();
             this.rbnValorU = new System.Windows.Forms.RadioButton();
-            this.rbnPorcentaje = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -258,6 +257,7 @@ namespace CapaVistaRRHH
             this.button1.TabIndex = 131;
             this.button1.Text = "f(x)";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
@@ -317,7 +317,6 @@ namespace CapaVistaRRHH
             // 
             this.panel5.Controls.Add(this.rbnFormula);
             this.panel5.Controls.Add(this.rbnValorU);
-            this.panel5.Controls.Add(this.rbnPorcentaje);
             this.panel5.Location = new System.Drawing.Point(152, 320);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(98, 77);
@@ -326,7 +325,7 @@ namespace CapaVistaRRHH
             // rbnFormula
             // 
             this.rbnFormula.AutoSize = true;
-            this.rbnFormula.Location = new System.Drawing.Point(14, 53);
+            this.rbnFormula.Location = new System.Drawing.Point(10, 37);
             this.rbnFormula.Name = "rbnFormula";
             this.rbnFormula.Size = new System.Drawing.Size(62, 17);
             this.rbnFormula.TabIndex = 5;
@@ -338,7 +337,7 @@ namespace CapaVistaRRHH
             // rbnValorU
             // 
             this.rbnValorU.AutoSize = true;
-            this.rbnValorU.Location = new System.Drawing.Point(12, 7);
+            this.rbnValorU.Location = new System.Drawing.Point(10, 14);
             this.rbnValorU.Name = "rbnValorU";
             this.rbnValorU.Size = new System.Drawing.Size(80, 17);
             this.rbnValorU.TabIndex = 3;
@@ -346,18 +345,6 @@ namespace CapaVistaRRHH
             this.rbnValorU.Text = "Valor Unico";
             this.rbnValorU.UseVisualStyleBackColor = true;
             this.rbnValorU.CheckedChanged += new System.EventHandler(this.rbnValorU_CheckedChanged);
-            // 
-            // rbnPorcentaje
-            // 
-            this.rbnPorcentaje.AutoSize = true;
-            this.rbnPorcentaje.Location = new System.Drawing.Point(13, 30);
-            this.rbnPorcentaje.Name = "rbnPorcentaje";
-            this.rbnPorcentaje.Size = new System.Drawing.Size(76, 17);
-            this.rbnPorcentaje.TabIndex = 4;
-            this.rbnPorcentaje.TabStop = true;
-            this.rbnPorcentaje.Text = "Porcentaje";
-            this.rbnPorcentaje.UseVisualStyleBackColor = true;
-            this.rbnPorcentaje.CheckedChanged += new System.EventHandler(this.rbnPorcentaje_CheckedChanged);
             // 
             // label6
             // 
@@ -444,7 +431,6 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.RadioButton rbnFormula;
         private System.Windows.Forms.RadioButton rbnValorU;
-        private System.Windows.Forms.RadioButton rbnPorcentaje;
         private System.Windows.Forms.Label label6;
     }
 }

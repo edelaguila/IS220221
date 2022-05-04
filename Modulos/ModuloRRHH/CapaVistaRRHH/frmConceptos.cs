@@ -171,18 +171,14 @@ namespace CapaVistaRRHH
         {
 			if (rbnValorU.Checked)
 			{
-				rbnPorcentaje.Checked = false;
+				button1.Visible = false;
 				rbnFormula.Checked = false;
 			}
 		}
 
         private void rbnPorcentaje_CheckedChanged(object sender, EventArgs e)
         {
-			if (rbnPorcentaje.Checked)
-			{
-				rbnValorU.Checked = false;
-				rbnFormula.Checked = false;
-			}
+			
 		}
 
         private void rbnFormula_CheckedChanged(object sender, EventArgs e)
@@ -190,7 +186,7 @@ namespace CapaVistaRRHH
 			if (rbnFormula.Checked)
 			{
 				rbnValorU.Checked = false;
-				rbnPorcentaje.Checked = false;
+				button1.Visible = true;
 			}
 		}
     }
