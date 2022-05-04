@@ -213,6 +213,10 @@ namespace CapaModeloRRHH
         {
             try
             {
+
+                string sqlBorrar = "DELETE FROM sentenciasqlplanilla WHERE fkIdConcepto = '" + valor1 + "';";
+                OdbcCommand consultaBorrar = new OdbcCommand(sqlBorrar, cn.conexion());
+                consultaBorrar.ExecuteNonQuery();
                 string sql = "INSERT INTO sentenciaSqlPlanilla (fkIdConcepto, sentenciaSql) Values( '" + valor1 + "', '" + valor2 + "');";
                 OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
                 consulta.ExecuteNonQuery();
@@ -287,7 +291,7 @@ namespace CapaModeloRRHH
 
             return enteroSumado;
         }
-        public DataTable calculoConceptoSentencias(int idConcepto, int idEmpleado)
+        public DataTable calculoConceptoSentencias(int idConcepto, int idEmpleado, string IdPeriodo)
         {
             DataTable tabla = new DataTable();
             try
@@ -306,11 +310,31 @@ namespace CapaModeloRRHH
                 // SE ADAPTA LA FORMULA PARA ENVIARLA COMO QUERY
                 string reemplazoComillas = "'" + idEmpleado.ToString() + "'", sentenciaComillas = sql.Replace('"', ' ');
                 string sentenciaReplace = sentenciaComillas.Replace("+ condicion +", reemplazoComillas);
-                string sentenciafinal = sentenciaReplace + ";";               
+                string sentenciaReplace2;
+                string sentenciafinal = "";
+                string idperiodoingreso = "'" + IdPeriodo.ToString() + "'";
+                sentenciafinal = sentenciaReplace;
+
+                if (sentenciaReplace.Contains("+ condicion2 +") == true)
+                {
+                    sentenciaReplace2 = sentenciaReplace.Replace("+ condicion2 +", idperiodoingreso);
+                    sentenciafinal = sentenciaReplace2;
+
+                }
+
+
+                //sentenciafinal = sentenciaReplace + ";";
+
+
+
+
+
+
+
                 //SE ENVIA COMO QUERY LA FORMULA DEL CONCEPTO
                 try
                 {
-                    tabla = PasarCalculoTabla(sentenciafinal);                   
+                    tabla = PasarCalculoTabla(sentenciafinal);
                 }
                 catch (Exception ex)
                 {

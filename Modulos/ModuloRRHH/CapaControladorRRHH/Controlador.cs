@@ -196,12 +196,12 @@ namespace CapaControladorRRHH
 
             return entero;
         }
-        public DataTable calculoConcepto( int idConcepto, int IdEmpleado)
+        public DataTable calculoConcepto(int idConcepto, int IdEmpleado, string IdPeriodo)
         {
             DataTable table = new DataTable();
             try
             {
-                table = sn.calculoConceptoSentencias(idConcepto, IdEmpleado);
+                table = sn.calculoConceptoSentencias(idConcepto, IdEmpleado, IdPeriodo);
             }
             catch (Exception ex) { MessageBox.Show("Error en obtener calculo Nomina Capa Controlador " + ex); }
             return (table);
