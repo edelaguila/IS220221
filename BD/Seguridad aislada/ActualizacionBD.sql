@@ -239,3 +239,23 @@ CREATE TABLE concepto (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 ALTER TABLE CONCEPTO MODIFY COLUMN  fkformulaConcepto VARCHAR(15) DEFAULT NULL;
+
+-- --------------------------------------------------------------------------------------------------------------------------------------
+-- Tercer sprint - Angel Chacón - Tabla AsignarSaldosPorEmpleado - Fecha: 08/05/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
+
+create table saldosporempleados(
+pkid varchar (15) not null primary key,
+fkIdConcepto varchar(15) not null,
+fkIdEmpleado varchar(15) not null,
+saldo double(10,2) not null,
+estado varchar(1) not null,
+foreign key (fkIdConcepto) references concepto (pkIdConcepto),
+foreign key (fkIdEmpleado) references empleado (pkIdEmpleado)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `hotelsancarlos`.`saldosporempleados` (`pkid`, `fkIdConcepto`, `fkIdEmpleado`, `saldo`, `estado`) VALUES ('1', '2', '1', '250', '1');
+INSERT INTO `hotelsancarlos`.`saldosporempleados` (`pkid`, `fkIdConcepto`, `fkIdEmpleado`, `saldo`, `estado`) VALUES ('2', '2', '3', '300', '1');
+INSERT INTO `hotelsancarlos`.`saldosporempleados` (`pkid`, `fkIdConcepto`, `fkIdEmpleado`, `saldo`, `estado`) VALUES ('3', '2', '4', '190', '1');
+INSERT INTO `hotelsancarlos`.`saldosporempleados` (`pkid`, `fkIdConcepto`, `fkIdEmpleado`, `saldo`, `estado`) VALUES ('4', '2', '6', '150', '1');

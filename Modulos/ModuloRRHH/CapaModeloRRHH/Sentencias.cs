@@ -24,6 +24,16 @@ namespace CapaModeloRRHH
         }
 
         //9959-18-5201 Angel Chacón
+        //Muestra todos los empleados con saldos asignados
+        public OdbcDataAdapter llenartblSaldosEmpleadosAsignados()
+        {
+            //Obtiene todos los empleados
+            string sql = "select saldosporempleados.pkid,concepto.nombreConcepto,empleado.nombre,saldosporempleados.saldo from saldosporempleados,concepto,empleado where concepto.pkIdConcepto=saldosporempleados.fkIdConcepto and empleado.pkIdEmpleado=saldosporempleados.fkIdEmpleado;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+        
+        //9959-18-5201 Angel Chacón
         //Muestra todos los empleados asignados al concepto
         public OdbcDataAdapter llenarTblEmpleadosAsignadosConcepto(string tablaempleados, string IdConcepto)
         {
