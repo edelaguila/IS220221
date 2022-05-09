@@ -68,6 +68,12 @@
     <Compile Include="frmAsignacionEmpleadosaConceptos.Designer.cs">
       <DependentUpon>frmAsignacionEmpleadosaConceptos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAsignarSaldosIndividualesaEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignarSaldosIndividualesaEmpleados.Designer.cs">
+      <DependentUpon>frmAsignarSaldosIndividualesaEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBancos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmAsignacionEmpleadosaConceptos.resx">
       <DependentUpon>frmAsignacionEmpleadosaConceptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignarSaldosIndividualesaEmpleados.resx">
+      <DependentUpon>frmAsignarSaldosIndividualesaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBancos.resx">
       <DependentUpon>frmBancos.cs</DependentUpon>

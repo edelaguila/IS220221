@@ -49,7 +49,7 @@ namespace CapaVistaRRHH
         {
             DataTable dt = cn.llenarTblDatosEmpleados(cbxIdConcepto.Text);
             dvgTodosEmpleados.DataSource = dt;
-        }
+        }        
 
         //9959-18-5201 Angel Chacón
         //Muestra todos los empleados asignados al concepto
@@ -193,6 +193,13 @@ namespace CapaVistaRRHH
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(@"C:\\Users\\achac\\OneDrive\\Escritorio\\ayudas\\Ayuda Asignacion Empleado Concepto\\Ayuda para la asignacionEmpleadosAConceptos.pdf");
+        }
+
+        private void btnAsignarSaldo_Click(object sender, EventArgs e)
+        {
+            string nombreConcepto = cbxNombreConcepto.Text;
+            frmAsignarSaldosIndividualesaEmpleados formE = new frmAsignarSaldosIndividualesaEmpleados(nombreConcepto);
+            formE.Show();
         }
     }
 }

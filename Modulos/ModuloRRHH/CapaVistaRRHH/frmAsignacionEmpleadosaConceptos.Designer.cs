@@ -48,6 +48,7 @@ namespace CapaVistaRRHH
             this.cbxIdConcepto = new System.Windows.Forms.ComboBox();
             this.cbxNombreConcepto = new System.Windows.Forms.ComboBox();
             this.btnAyuda = new System.Windows.Forms.Button();
+            this.btnAsignarSaldo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvgEmpleadosAsignados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgTodosEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgDatosConcepto)).BeginInit();
@@ -91,7 +92,7 @@ namespace CapaVistaRRHH
             // 
             // btnAsignarTodosEmp
             // 
-            this.btnAsignarTodosEmp.Location = new System.Drawing.Point(374, 256);
+            this.btnAsignarTodosEmp.Location = new System.Drawing.Point(374, 234);
             this.btnAsignarTodosEmp.Margin = new System.Windows.Forms.Padding(2);
             this.btnAsignarTodosEmp.Name = "btnAsignarTodosEmp";
             this.btnAsignarTodosEmp.Size = new System.Drawing.Size(58, 27);
@@ -102,7 +103,7 @@ namespace CapaVistaRRHH
             // 
             // btnNuevaConsulta
             // 
-            this.btnNuevaConsulta.Location = new System.Drawing.Point(364, 414);
+            this.btnNuevaConsulta.Location = new System.Drawing.Point(365, 438);
             this.btnNuevaConsulta.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevaConsulta.Name = "btnNuevaConsulta";
             this.btnNuevaConsulta.Size = new System.Drawing.Size(77, 41);
@@ -137,7 +138,7 @@ namespace CapaVistaRRHH
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(356, 300);
+            this.label3.Location = new System.Drawing.Point(356, 278);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 13);
@@ -148,7 +149,7 @@ namespace CapaVistaRRHH
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(357, 200);
+            this.label2.Location = new System.Drawing.Point(357, 178);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
@@ -157,7 +158,7 @@ namespace CapaVistaRRHH
             // 
             // btnAsignarUnEmpleado
             // 
-            this.btnAsignarUnEmpleado.Location = new System.Drawing.Point(374, 225);
+            this.btnAsignarUnEmpleado.Location = new System.Drawing.Point(374, 203);
             this.btnAsignarUnEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.btnAsignarUnEmpleado.Name = "btnAsignarUnEmpleado";
             this.btnAsignarUnEmpleado.Size = new System.Drawing.Size(58, 27);
@@ -168,7 +169,7 @@ namespace CapaVistaRRHH
             // 
             // quitarunemp
             // 
-            this.quitarunemp.Location = new System.Drawing.Point(373, 325);
+            this.quitarunemp.Location = new System.Drawing.Point(373, 303);
             this.quitarunemp.Margin = new System.Windows.Forms.Padding(2);
             this.quitarunemp.Name = "quitarunemp";
             this.quitarunemp.Size = new System.Drawing.Size(58, 27);
@@ -179,7 +180,7 @@ namespace CapaVistaRRHH
             // 
             // quietatodosemp
             // 
-            this.quietatodosemp.Location = new System.Drawing.Point(373, 357);
+            this.quietatodosemp.Location = new System.Drawing.Point(373, 335);
             this.quietatodosemp.Margin = new System.Windows.Forms.Padding(2);
             this.quietatodosemp.Name = "quietatodosemp";
             this.quietatodosemp.Size = new System.Drawing.Size(58, 27);
@@ -236,11 +237,23 @@ namespace CapaVistaRRHH
             this.btnAyuda.UseVisualStyleBackColor = true;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
+            // btnAsignarSaldo
+            // 
+            this.btnAsignarSaldo.Location = new System.Drawing.Point(360, 376);
+            this.btnAsignarSaldo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAsignarSaldo.Name = "btnAsignarSaldo";
+            this.btnAsignarSaldo.Size = new System.Drawing.Size(85, 48);
+            this.btnAsignarSaldo.TabIndex = 49;
+            this.btnAsignarSaldo.Text = "Asignar Saldo Individual a Empleados";
+            this.btnAsignarSaldo.UseVisualStyleBackColor = true;
+            this.btnAsignarSaldo.Click += new System.EventHandler(this.btnAsignarSaldo_Click);
+            // 
             // frmAsignacionEmpleadosaConceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 511);
+            this.Controls.Add(this.btnAsignarSaldo);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.cbxIdConcepto);
             this.Controls.Add(this.cbxNombreConcepto);
@@ -292,5 +305,6 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.ComboBox cbxIdConcepto;
         private System.Windows.Forms.ComboBox cbxNombreConcepto;
         private System.Windows.Forms.Button btnAyuda;
+        private System.Windows.Forms.Button btnAsignarSaldo;
     }
 }
