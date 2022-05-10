@@ -198,7 +198,8 @@ namespace CapaVistaRRHH
         private void btnAsignarSaldo_Click(object sender, EventArgs e)
         {
             string nombreConcepto = cbxNombreConcepto.Text;
-            frmAsignarSaldosIndividualesaEmpleados formE = new frmAsignarSaldosIndividualesaEmpleados(nombreConcepto);
+            string idConcepto = cbxIdConcepto.Text;
+            frmAsignarSaldosIndividualesaEmpleados formE = new frmAsignarSaldosIndividualesaEmpleados(nombreConcepto, idConcepto);
             formE.Show();
         }
     }

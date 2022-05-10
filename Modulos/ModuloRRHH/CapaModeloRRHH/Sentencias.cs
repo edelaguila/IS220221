@@ -24,16 +24,6 @@ namespace CapaModeloRRHH
         }
 
         //9959-18-5201 Angel Chacón
-        //Muestra todos los empleados con saldos asignados
-        public OdbcDataAdapter llenartblSaldosEmpleadosAsignados()
-        {
-            //Obtiene todos los empleados
-            string sql = "select saldosporempleados.pkid,concepto.nombreConcepto,empleado.nombre,saldosporempleados.saldo from saldosporempleados,concepto,empleado where concepto.pkIdConcepto=saldosporempleados.fkIdConcepto and empleado.pkIdEmpleado=saldosporempleados.fkIdEmpleado;";
-            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
-            return dataTable;
-        }
-        
-        //9959-18-5201 Angel Chacón
         //Muestra todos los empleados asignados al concepto
         public OdbcDataAdapter llenarTblEmpleadosAsignadosConcepto(string tablaempleados, string IdConcepto)
         {
@@ -42,7 +32,8 @@ namespace CapaModeloRRHH
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
             return dataTable;
 
-        }
+        }       
+        
 
         //9959-18-5201 Angel Chacón
         public OdbcDataAdapter DatosConcepto(string IdConcepto)
@@ -108,11 +99,47 @@ namespace CapaModeloRRHH
             }
         }
 
+        //Angel Chacón 9959-18-5201
+        //funcion para mostrar id en el combobox de los empleados existentes
+        public OdbcDataReader IdEmpleado(string nombreE)//conexion para obtener el IdConcepto para el Combobox
+        {
+            string cadena = "select pkIdEmpleado from empleado where nombre =  '" + nombreE + "';";
+            try
+            {
+                OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
+                OdbcDataReader leer = consulta.ExecuteReader();
+                return leer;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error en Capa Modelo --> Consultas: " + e);
+                return null;
+            }
+        }
+
         //9959-18-5201 Angel Chacón
         //Función para obtener el nombre de los conceptos creados en el combobox
         public OdbcDataReader llenarcbxConcepto()
         {
             string sql = "SELECT nombreConcepto FROM hotelsancarlos.concepto;";
+            try
+            {
+                OdbcCommand datos = new OdbcCommand(sql, cn.conexion());
+                OdbcDataReader leer = datos.ExecuteReader();
+                return leer;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+
+        //9959-18-5201 Angel Chacón
+        //Muestra todos los empleados que no tengan asignado un monto o saldo
+        public OdbcDataReader llenarcbxEmpleados(string idConcepto)
+        {
+            string sql = "SELECT nombre FROM empleado  WHERE pkIdEmpleado NOT IN(SELECT fkIdEmpleado FROM saldosporempleados where fkIdConcepto = " + idConcepto+ ");";
             try
             {
                 OdbcCommand datos = new OdbcCommand(sql, cn.conexion());
