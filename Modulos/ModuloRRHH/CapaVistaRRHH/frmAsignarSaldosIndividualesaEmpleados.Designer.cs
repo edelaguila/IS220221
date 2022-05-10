@@ -31,11 +31,8 @@ namespace CapaVistaRRHH
         {
             this.lblConcepto = new System.Windows.Forms.Label();
             this.txtIdConcepto = new System.Windows.Forms.TextBox();
-            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.navegador1 = new DLL.nav.navegador();
             this.txtIdAsignacion = new System.Windows.Forms.TextBox();
-            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.txtSaldo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,8 +45,9 @@ namespace CapaVistaRRHH
             this.lblEstatus = new System.Windows.Forms.Label();
             this.cbxEmpleado = new System.Windows.Forms.ComboBox();
             this.dvgConsulta = new System.Windows.Forms.DataGridView();
-            this.cbxNombreConcepto = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
+            this.lblIdConcepto = new System.Windows.Forms.Label();
+            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
+            this.cbxIdEmpleado = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgConsulta)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +55,7 @@ namespace CapaVistaRRHH
             // lblConcepto
             // 
             this.lblConcepto.AutoSize = true;
-            this.lblConcepto.Location = new System.Drawing.Point(167, 166);
+            this.lblConcepto.Location = new System.Drawing.Point(167, 190);
             this.lblConcepto.Name = "lblConcepto";
             this.lblConcepto.Size = new System.Drawing.Size(153, 13);
             this.lblConcepto.TabIndex = 47;
@@ -65,32 +63,13 @@ namespace CapaVistaRRHH
             // 
             // txtIdConcepto
             // 
-            this.txtIdConcepto.Location = new System.Drawing.Point(304, 187);
+            this.txtIdConcepto.Location = new System.Drawing.Point(326, 187);
             this.txtIdConcepto.Name = "txtIdConcepto";
             this.txtIdConcepto.Size = new System.Drawing.Size(49, 20);
             this.txtIdConcepto.TabIndex = 48;
             this.txtIdConcepto.Tag = "fkIdConcepto";
             this.txtIdConcepto.Visible = false;
             this.txtIdConcepto.TextChanged += new System.EventHandler(this.txtIdConcepto_TextChanged);
-            // 
-            // dgvEmpleados
-            // 
-            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpleados.Location = new System.Drawing.Point(142, 443);
-            this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.Size = new System.Drawing.Size(660, 150);
-            this.dgvEmpleados.TabIndex = 49;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(140, 427);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 13);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Asignacionaciones a empleados realizadas";
             // 
             // navegador1
             // 
@@ -107,16 +86,6 @@ namespace CapaVistaRRHH
             this.txtIdAsignacion.Size = new System.Drawing.Size(100, 20);
             this.txtIdAsignacion.TabIndex = 52;
             this.txtIdAsignacion.Tag = "pkid";
-            // 
-            // txtIdEmpleado
-            // 
-            this.txtIdEmpleado.Location = new System.Drawing.Point(304, 233);
-            this.txtIdEmpleado.Name = "txtIdEmpleado";
-            this.txtIdEmpleado.Size = new System.Drawing.Size(49, 20);
-            this.txtIdEmpleado.TabIndex = 54;
-            this.txtIdEmpleado.Tag = "fkIdEmpleado";
-            this.txtIdEmpleado.Visible = false;
-            this.txtIdEmpleado.TextChanged += new System.EventHandler(this.txtIdEmpleado_TextChanged);
             // 
             // txtSaldo
             // 
@@ -222,6 +191,7 @@ namespace CapaVistaRRHH
             this.cbxEmpleado.Size = new System.Drawing.Size(121, 21);
             this.cbxEmpleado.TabIndex = 118;
             this.cbxEmpleado.SelectedIndexChanged += new System.EventHandler(this.cbxEmpleado_SelectedIndexChanged);
+            this.cbxEmpleado.Click += new System.EventHandler(this.cbxEmpleado_Click);
             // 
             // dvgConsulta
             // 
@@ -233,26 +203,48 @@ namespace CapaVistaRRHH
             this.dvgConsulta.SelectionChanged += new System.EventHandler(this.dvgConsulta_SelectionChanged);
             this.dvgConsulta.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dvgConsulta_UserAddedRow);
             // 
-            // cbxNombreConcepto
+            // lblIdConcepto
             // 
-            this.cbxNombreConcepto.FormattingEnabled = true;
-            this.cbxNombreConcepto.Location = new System.Drawing.Point(170, 187);
-            this.cbxNombreConcepto.Name = "cbxNombreConcepto";
-            this.cbxNombreConcepto.Size = new System.Drawing.Size(121, 21);
-            this.cbxNombreConcepto.TabIndex = 120;
-            this.cbxNombreConcepto.SelectedIndexChanged += new System.EventHandler(this.cbxNombreConcepto_SelectedIndexChanged);
+            this.lblIdConcepto.AutoSize = true;
+            this.lblIdConcepto.Location = new System.Drawing.Point(323, 171);
+            this.lblIdConcepto.Name = "lblIdConcepto";
+            this.lblIdConcepto.Size = new System.Drawing.Size(62, 13);
+            this.lblIdConcepto.TabIndex = 121;
+            this.lblIdConcepto.Text = "IdConcepto";
+            this.lblIdConcepto.Visible = false;
+            // 
+            // txtIdEmpleado
+            // 
+            this.txtIdEmpleado.Location = new System.Drawing.Point(391, 236);
+            this.txtIdEmpleado.Name = "txtIdEmpleado";
+            this.txtIdEmpleado.Size = new System.Drawing.Size(49, 20);
+            this.txtIdEmpleado.TabIndex = 54;
+            this.txtIdEmpleado.Tag = "fkIdEmpleado";
+            this.txtIdEmpleado.Visible = false;
+            this.txtIdEmpleado.TextChanged += new System.EventHandler(this.txtIdEmpleado_TextChanged);
+            // 
+            // cbxIdEmpleado
+            // 
+            this.cbxIdEmpleado.FormattingEnabled = true;
+            this.cbxIdEmpleado.Location = new System.Drawing.Point(297, 236);
+            this.cbxIdEmpleado.Name = "cbxIdEmpleado";
+            this.cbxIdEmpleado.Size = new System.Drawing.Size(121, 21);
+            this.cbxIdEmpleado.TabIndex = 122;
+            this.cbxIdEmpleado.Visible = false;
+            this.cbxIdEmpleado.SelectedIndexChanged += new System.EventHandler(this.cbxIdEmpleado_SelectedIndexChanged_1);
             // 
             // frmAsignarSaldosIndividualesaEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1185, 615);
+            this.ClientSize = new System.Drawing.Size(1185, 404);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtSaldo);
             this.Controls.Add(this.txtIdEmpleado);
             this.Controls.Add(this.txtIdConcepto);
             this.Controls.Add(this.txtIdAsignacion);
-            this.Controls.Add(this.cbxNombreConcepto);
+            this.Controls.Add(this.cbxIdEmpleado);
+            this.Controls.Add(this.lblIdConcepto);
             this.Controls.Add(this.dvgConsulta);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.panel1);
@@ -262,14 +254,11 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxEmpleado);
             this.Controls.Add(this.navegador1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.lblConcepto);
             this.Name = "frmAsignarSaldosIndividualesaEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "1112 Asignar Saldos Individuales a Empleados";
             this.Load += new System.EventHandler(this.frmAsignarSaldosIndividualesaEmpleados_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgConsulta)).EndInit();
@@ -281,11 +270,8 @@ namespace CapaVistaRRHH
         #endregion
         private System.Windows.Forms.Label lblConcepto;
         private System.Windows.Forms.TextBox txtIdConcepto;
-        private System.Windows.Forms.DataGridView dgvEmpleados;
-        private System.Windows.Forms.Label label2;
         private DLL.nav.navegador navegador1;
         private System.Windows.Forms.TextBox txtIdAsignacion;
-        private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.TextBox txtSaldo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -298,6 +284,8 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.Label lblEstatus;
         private System.Windows.Forms.ComboBox cbxEmpleado;
         private System.Windows.Forms.DataGridView dvgConsulta;
-        private System.Windows.Forms.ComboBox cbxNombreConcepto;
+        private System.Windows.Forms.Label lblIdConcepto;
+        private System.Windows.Forms.TextBox txtIdEmpleado;
+        private System.Windows.Forms.ComboBox cbxIdEmpleado;
     }
 }

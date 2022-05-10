@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,25 +22,15 @@ namespace CapaVistaRRHH
             InitializeComponent();
         }
 
-        //9959-18-5201 Angel Chacón
-        //Muestra todos los empleados con saldos asignados
-        public void llenartblSaldosEmpleadosAsignados()
-        {
-            DataTable dt = cn.llenartblSaldosEmpleadosAsignados();
-            dgvEmpleados.DataSource = dt;
-        }
-
-        public frmAsignarSaldosIndividualesaEmpleados(string nombreConcepto)
+        public frmAsignarSaldosIndividualesaEmpleados(string nombreConcepto,string idConcepto)
         {
             InitializeComponent();
-            lblConcepto.Text = "Nombre Concepto Gestionado: "+nombreConcepto;
-            llenartblSaldosEmpleadosAsignados();
+            lblConcepto.Text = nombreConcepto;
+            lblIdConcepto.Text = idConcepto;
 
             TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
             navegador1.ObtenerCamposdeTabla(alias, "saldosporempleados", "hotelSanCarlos");
             navegador1.MetodoSalirVista(this);
-            navegador1.LlenarCombobox(cbxEmpleado, "empleado", "pkIdEmpleado", "nombre", "estado");
-            navegador1.LlenarCombobox(cbxNombreConcepto, "concepto", "pkIdConcepto", "nombreConcepto", "estado");
 
             //inicio de elementos para dar de baja
             navegador1.campoEstado = "estado";
@@ -62,7 +53,7 @@ namespace CapaVistaRRHH
             navegador1.ObtenerNombreDGV(this.dvgConsulta);
             navegador1.LlenarTabla();
             navegador1.ObtenerReferenciaFormActual(this);
-
+            llenarcbxEmpleados();
         }
 
         private void frmAsignarSaldosIndividualesaEmpleados_Load(object sender, EventArgs e)
@@ -72,12 +63,11 @@ namespace CapaVistaRRHH
 
         private void cbxEmpleado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            navegador1.EnviarDatoComboaTextbox(cbxEmpleado, txtIdEmpleado);
+            IdEmpleado();
         }
 
         private void txtIdEmpleado_TextChanged(object sender, EventArgs e)
         {
-            navegador1.SeleccionarElementosenCombo(cbxEmpleado, txtIdEmpleado);
         }
 
         private void rbnEstatusamodulo_CheckedChanged(object sender, EventArgs e)
@@ -95,14 +85,43 @@ namespace CapaVistaRRHH
             navegador1.ActivaRadiobtn(rbnEstatusamodulo, rbnEstatusimodulo, txtEstado);
         }
 
-        private void cbxNombreConcepto_SelectedIndexChanged(object sender, EventArgs e)
+        //Angel Chacón 9959-18-5201 
+        //Muestra todos los empleados que no tengan asignado un monto o saldo
+        public void llenarcbxEmpleados()
         {
-            navegador1.EnviarDatoComboaTextbox(cbxNombreConcepto, txtIdConcepto);
+            try
+            {
+                cbxEmpleado.Items.Clear();
+                OdbcDataReader datareader = cn.llenarcbxEmpleados(lblIdConcepto.Text);
+                while (datareader.Read())
+                {
+                    cbxEmpleado.Items.Add(datareader[0].ToString());
+                }
+                cbxEmpleado.SelectedIndex = 0;
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        //Angel Chacón 9959-18-5201 
+        //funcion para mostrar id en el combobox de los empleados existentes
+        public void IdEmpleado()
+        {
+            try
+            {
+                cbxIdEmpleado.Items.Clear();
+                OdbcDataReader datareader = cn.IdEmpleado(cbxEmpleado.Text);
+                while (datareader.Read())
+                {
+                    cbxIdEmpleado.Items.Add(datareader[0].ToString());
+                }
+                cbxIdEmpleado.SelectedIndex = 0;
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
 
         private void txtIdConcepto_TextChanged(object sender, EventArgs e)
         {
-            navegador1.SeleccionarElementosenCombo(cbxNombreConcepto, txtIdConcepto);
+           
         }
 
         private void dvgConsulta_UserAddedRow(object sender, DataGridViewRowEventArgs e)
@@ -113,6 +132,21 @@ namespace CapaVistaRRHH
         private void dvgConsulta_SelectionChanged(object sender, EventArgs e)
         {
             navegador1.SelecciondeFilaDGV(dvgConsulta);
+        }
+
+
+        private void cbxEmpleado_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbxIdEmpleado_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+            if (cbxIdEmpleado.SelectedIndex > -1) {
+                txtIdEmpleado.Text = cbxIdEmpleado.Text;
+                txtIdConcepto.Text = lblIdConcepto.Text;
+            }
         }
     }
 }

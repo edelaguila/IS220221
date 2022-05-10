@@ -25,16 +25,6 @@ namespace CapaControladorRRHH
         }
 
         //9959-18-5201 Angel Chacón
-        //Muestra todos los empleados con saldos asignados
-        public DataTable llenartblSaldosEmpleadosAsignados()
-        {
-            OdbcDataAdapter dt = sn.llenartblSaldosEmpleadosAsignados();
-            DataTable table = new DataTable();
-            dt.Fill(table);
-            return table;
-        }
-
-        //9959-18-5201 Angel Chacón
         //Muestra todos los empleados asignados al concepto
         public DataTable llenarTblEmpleadosAsignadosConcepto(string tablaempleados, string IdConcepto)
         {
@@ -90,10 +80,24 @@ namespace CapaControladorRRHH
         }
 
         //Angel Chacón 9959-18-5201 
+        //funcion para mostrar id en el combobox de los empleados existentes
+        public OdbcDataReader IdEmpleado(string nombreE)
+        {
+            return sn.IdEmpleado(nombreE);
+        }
+
+        //Angel Chacón 9959-18-5201 
         //Funcion para obtener el nombre de los conceptos creados en el combobox
         public OdbcDataReader llenarcbxConcepto()
         {
             return sn.llenarcbxConcepto();
+        }
+
+        //Angel Chacón 9959-18-5201 
+        //Muestra todos los empleados que no tengan asignado un monto o saldo
+        public OdbcDataReader llenarcbxEmpleados(string idConcepto)
+        {
+            return sn.llenarcbxEmpleados(idConcepto);
         }
 
         //Danny Saldaña 0901-18-18686
