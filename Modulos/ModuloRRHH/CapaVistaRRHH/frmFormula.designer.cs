@@ -307,7 +307,6 @@ namespace CapaVistaRRHH
             this.txtsql.Name = "txtsql";
             this.txtsql.Size = new System.Drawing.Size(393, 20);
             this.txtsql.TabIndex = 111;
-            this.txtsql.Visible = false;
             // 
             // label7
             // 
@@ -443,7 +442,6 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtsql;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label8;
@@ -451,5 +449,6 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox txtsql;
     }
 }

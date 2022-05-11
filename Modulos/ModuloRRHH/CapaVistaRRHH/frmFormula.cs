@@ -354,16 +354,19 @@ namespace CapaVistaRRHH
 
                 //string valor1 = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 string valor1 = textBox2.Text;
-                cn.GuradarSentenciaSql(valor1, valor2);
+                //cn.GuradarSentenciaSql(valor1, valor2);
                 //cn.GuradarFormula(valor1, valor3);
 
-
+                txtsql.Text = valor2;
             }
             else
             {
                 MessageBox.Show("Error en estructura", "Formulas RRHH");
             }
-            
+
+
+         Conceptos frmConceptos = Owner as Conceptos; 
+         frmConceptos.labelsqlformula.Text = this.txtsql.Text;    
         }
 
         private void button3_Click(object sender, EventArgs e)

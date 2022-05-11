@@ -65,6 +65,7 @@ namespace CapaVistaRRHH
             this.txtIdFormulaConcepto = new System.Windows.Forms.TextBox();
             this.txtIdCuentaContable = new System.Windows.Forms.TextBox();
             this.labelsqlvalor = new System.Windows.Forms.Label();
+            this.labelsqlformula = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
@@ -412,17 +413,28 @@ namespace CapaVistaRRHH
             // labelsqlvalor
             // 
             this.labelsqlvalor.AutoSize = true;
-            this.labelsqlvalor.Location = new System.Drawing.Point(11, 519);
+            this.labelsqlvalor.Location = new System.Drawing.Point(12, 499);
             this.labelsqlvalor.Name = "labelsqlvalor";
             this.labelsqlvalor.Size = new System.Drawing.Size(0, 13);
             this.labelsqlvalor.TabIndex = 150;
             this.labelsqlvalor.Visible = false;
+            // 
+            // labelsqlformula
+            // 
+            this.labelsqlformula.AutoSize = true;
+            this.labelsqlformula.Location = new System.Drawing.Point(0, 529);
+            this.labelsqlformula.Name = "labelsqlformula";
+            this.labelsqlformula.Size = new System.Drawing.Size(0, 13);
+            this.labelsqlformula.TabIndex = 151;
+            this.labelsqlformula.Visible = false;
+            this.labelsqlformula.TextChanged += new System.EventHandler(this.labelsqlformula_TextChanged);
             // 
             // Conceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 544);
+            this.Controls.Add(this.labelsqlformula);
             this.Controls.Add(this.labelsqlvalor);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtIdCuentaContable);
@@ -507,5 +519,6 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.TextBox txtIdCuentaContable;
         private System.Windows.Forms.Label labelsqlvalor;
         public System.Windows.Forms.TextBox txtIdConcepto;
+        public System.Windows.Forms.Label labelsqlformula;
     }
 }

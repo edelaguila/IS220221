@@ -209,9 +209,18 @@ namespace CapaVistaRRHH
 				button1.Visible = true;
 				txtFormula.Text = "0";
 				txtFormula.Visible = false;
-				cbxFormulaConcepto.Visible = true;				
+				cbxFormulaConcepto.Visible = false;				
 			}
 			txtFormula.Visible = false;
+
+			if ((rbnFormula.Checked) && (button1.Visible == true))
+			{
+				string valor1 = txtIdConcepto.Text;
+				string valor2 = labelsqlformula.Text;
+				cn.GuradarSentenciaSql(valor1, valor2);
+			}
+
+
 		}
 
         private void cbxFormulaConcepto_SelectedIndexChanged(object sender, EventArgs e)
@@ -226,18 +235,20 @@ namespace CapaVistaRRHH
 
         private void txtIdFormulaConcepto_TextChanged(object sender, EventArgs e)
         {
-			navegador1.LlenarCombobox(cbxFormulaConcepto, "formula", "pkIdFormula", "valorFormula", "estado");
+			
 			navegador1.SeleccionarElementosenCombo(cbxFormulaConcepto, txtIdFormulaConcepto);
 
 			if (txtIdFormulaConcepto.Text != "0")
 			{
-				cbxFormulaConcepto.Visible = true;
+				cbxFormulaConcepto.Visible = false;
 				txtFormula.Visible = false;
 			}
 			else
 			{
 				cbxFormulaConcepto.Visible = false;
 			}
+
+			
 
 		}
 
@@ -274,7 +285,6 @@ namespace CapaVistaRRHH
 
 			if ((rbnValorU.Checked) && (txtFormula.Enabled==true) && ((txtFormula.Text != "0") || (txtFormula.Text != "")))
 			{
-				
 				string valor1 = txtIdConcepto.Text;
 				string valorUnico = txtFormula.Text;
 				string valorPuente = "(SELECT " + valorUnico + ")";
@@ -283,6 +293,16 @@ namespace CapaVistaRRHH
 				cn.GuradarSentenciaSql(valor1, valor2);
 			}
 
+		}
+
+        private void labelsqlformula_TextChanged(object sender, EventArgs e)
+        {
+			if ((rbnFormula.Checked) && (button1.Visible == true))
+			{
+				string valor1 = txtIdConcepto.Text;
+				string valor2 = labelsqlformula.Text;
+				cn.GuradarSentenciaSql(valor1, valor2);
+			}
 		}
     }
 }
