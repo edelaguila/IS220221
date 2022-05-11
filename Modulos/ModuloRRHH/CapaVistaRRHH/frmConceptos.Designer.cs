@@ -64,6 +64,7 @@ namespace CapaVistaRRHH
             this.cbxCuentaContable = new System.Windows.Forms.ComboBox();
             this.txtIdFormulaConcepto = new System.Windows.Forms.TextBox();
             this.txtIdCuentaContable = new System.Windows.Forms.TextBox();
+            this.labelsqlvalor = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
@@ -408,11 +409,21 @@ namespace CapaVistaRRHH
             this.txtIdCuentaContable.Visible = false;
             this.txtIdCuentaContable.TextChanged += new System.EventHandler(this.txtIdCuentaContable_TextChanged);
             // 
+            // labelsqlvalor
+            // 
+            this.labelsqlvalor.AutoSize = true;
+            this.labelsqlvalor.Location = new System.Drawing.Point(11, 519);
+            this.labelsqlvalor.Name = "labelsqlvalor";
+            this.labelsqlvalor.Size = new System.Drawing.Size(0, 13);
+            this.labelsqlvalor.TabIndex = 150;
+            this.labelsqlvalor.Visible = false;
+            // 
             // Conceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 544);
+            this.Controls.Add(this.labelsqlvalor);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtIdCuentaContable);
             this.Controls.Add(this.txtFormula);
@@ -474,7 +485,6 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtIdConcepto;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtFormula;
         private System.Windows.Forms.DataGridView dgvVistaPrevia;
@@ -495,5 +505,7 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.ComboBox cbxCuentaContable;
         private System.Windows.Forms.TextBox txtIdFormulaConcepto;
         private System.Windows.Forms.TextBox txtIdCuentaContable;
+        private System.Windows.Forms.Label labelsqlvalor;
+        public System.Windows.Forms.TextBox txtIdConcepto;
     }
 }

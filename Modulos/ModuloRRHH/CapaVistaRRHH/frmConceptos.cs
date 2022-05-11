@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaControladorRRHH;
+using System.Text.RegularExpressions;
+using static datosUsuario;
 
 namespace CapaVistaRRHH
 {
     public partial class Conceptos : Form
     {
-        public Conceptos()
+		private Controlador cn = new Controlador();
+		public Conceptos()
         {
             InitializeComponent();
 			rbnExcepto.Visible = false;
@@ -112,8 +116,13 @@ namespace CapaVistaRRHH
         {
 			try
 			{
-				frmFormula frm = new frmFormula();
-				frm.Show();
+				//Conceptos frmConceptos = Owner as Conceptos; frmConceptos.txtIdFormulaConcepto.Text = this.txtFormula.Text;
+				frmFormula frmFormula = new frmFormula();
+				AddOwnedForm(frmFormula);
+				frmFormula.textBox2.Text = this.txtIdConcepto.Text;
+				frmFormula.Show();
+				//frmFormula frm = new frmFormula();
+				//frm.Show();
 			}
 			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 		}
@@ -180,6 +189,10 @@ namespace CapaVistaRRHH
 				cbxFormulaConcepto.Visible = false;
 				txtFormula.Visible = true;
 				txtIdFormulaConcepto.Text = "0";
+
+				
+				
+
 			}
 		}
 
@@ -213,6 +226,7 @@ namespace CapaVistaRRHH
 
         private void txtIdFormulaConcepto_TextChanged(object sender, EventArgs e)
         {
+			navegador1.LlenarCombobox(cbxFormulaConcepto, "formula", "pkIdFormula", "valorFormula", "estado");
 			navegador1.SeleccionarElementosenCombo(cbxFormulaConcepto, txtIdFormulaConcepto);
 
 			if (txtIdFormulaConcepto.Text != "0")
@@ -253,6 +267,20 @@ namespace CapaVistaRRHH
 			{
 				rbnFormula.Checked = true;
 				rbnValorU.Checked = false;
+			}
+
+
+
+
+			if ((rbnValorU.Checked) && (txtFormula.Enabled==true) && ((txtFormula.Text != "0") || (txtFormula.Text != "")))
+			{
+				
+				string valor1 = txtIdConcepto.Text;
+				string valorUnico = txtFormula.Text;
+				string valorPuente = "(SELECT " + valorUnico + ")";
+				string valor2 = "SELECT(" + valorPuente + ") FROM `empleado` WHERE pkIdEmpleado = \" + condicion + \";";
+				labelsqlvalor.Text = valor2;
+				cn.GuradarSentenciaSql(valor1, valor2);
 			}
 
 		}
