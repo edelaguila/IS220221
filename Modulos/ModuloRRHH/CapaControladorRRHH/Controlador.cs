@@ -188,6 +188,11 @@ namespace CapaControladorRRHH
             sn.GuradarSentenciaSql(valor1, valor2);
         }
 
+        public void GuradarFormula(string valor1, string valor2)
+        {
+            sn.GuradarFormula(valor1, valor2);
+        }
+
         //Heydi Quemé 9959-18-5335
         public void generarNomina(string fechaInicio, string fechaFin)
         {

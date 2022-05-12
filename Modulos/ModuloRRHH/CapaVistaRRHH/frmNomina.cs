@@ -82,7 +82,7 @@ namespace CapaVistaRRHH
                     for (int z = 0; z < cantidadConceptos; z++)
                     {
                         calculoConcepto = controlador.calculoConcepto(z + 1, y + 1, fechaPeriodo); string calculoConceptoSigno = "";
-                        Boolean respuesta = controlador.validarRelacion((y + 1), (z + 1), "detalle_personalizado_unicamente");
+                        Boolean respuesta = controlador.validarRelacion((y + 1), (z + 1), "empleado_concepto");
                         if (respuesta == true)
                         {
                             Boolean efecto = controlador.validarEfecto(z + 1);

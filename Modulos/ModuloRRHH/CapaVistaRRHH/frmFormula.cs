@@ -22,7 +22,7 @@ namespace CapaVistaRRHH
             comboBox1.Visible = false;
             comboBox2.Visible = false;
             txtValor.Visible = false;
-            textBox1.Enabled = false;
+            txtFormula.Enabled = false;
             FormulasTodosLosConceptos();
         }
         int contadorParentesis = 0;
@@ -119,12 +119,12 @@ namespace CapaVistaRRHH
         {
             if (rbn1.Checked == true)
             {
-                string cadenaFormula = textBox1.Text;
+                string cadenaFormula = txtFormula.Text;
                 if (cadenaFormula == "")
                 {
                     string valor = txtValor.Text;
                     string puente = cadenaFormula + valor;
-                    textBox1.Text = puente;
+                    txtFormula.Text = puente;
                     txtsql.Text = txtsql.Text+"(SELECT " + valor + ")";
 
                 }
@@ -137,7 +137,7 @@ namespace CapaVistaRRHH
                     {
                         string valor = txtValor.Text;
                         string puente = cadenaFormula + valor;
-                        textBox1.Text = puente;
+                        txtFormula.Text = puente;
                         txtsql.Text = txtsql.Text + "(SELECT " + valor + ")";
 
 
@@ -154,12 +154,12 @@ namespace CapaVistaRRHH
                 {
                     string tabla = Convert.ToString(comboBox1.SelectedValue);
                     string campo = Convert.ToString(comboBox2.SelectedValue);
-                    string cadenaFormula = textBox1.Text;
+                    string cadenaFormula = txtFormula.Text;
                     if (cadenaFormula == "")
                     {
                         string valor = txtValor.Text;
                         string puente = cadenaFormula + tabla + "." + campo;
-                        textBox1.Text = puente;
+                        txtFormula.Text = puente;
                         txtsql.Text = txtsql.Text + "(SELECT " + tabla + "." + campo + " WHERE pkIdEmpleado = \" + condicion + \")";
 
                     }
@@ -173,7 +173,7 @@ namespace CapaVistaRRHH
                         {
                             string valor = txtValor.Text;
                             string puente = cadenaFormula + tabla + "." + campo;
-                            textBox1.Text = puente;
+                            txtFormula.Text = puente;
                             txtsql.Text = txtsql.Text + "(SELECT " + tabla + "." + campo + " WHERE pkIdEmpleado = \" + condicion + \")";
 
 
@@ -188,12 +188,12 @@ namespace CapaVistaRRHH
                 {
                     string tabla = Convert.ToString(comboBox1.SelectedValue);
                     string campo = Convert.ToString(comboBox2.SelectedValue);
-                    string cadenaFormula = textBox1.Text;
+                    string cadenaFormula = txtFormula.Text;
                     if (cadenaFormula == "")
                     {
                         string valor = txtValor.Text;
                         string puente = cadenaFormula + "@" + tabla + "." + campo;
-                        textBox1.Text = puente;
+                        txtFormula.Text = puente;
 
                         txtsql.Text = txtsql.Text + "(SELECT " + tabla + "." + campo + " WHERE pkIdEmpleado = \" + condicion + \" AND " + tabla + ".periodo = \" + condicion2 + \")";
                         //SELECT((SELECT 250)+(SELECT horasextrastrabajadas.valor WHERE pkIdEmpleado = "1" AND horasextrastrabajadas.periodo = "2022-01-01")) FROM `empleado` INNER JOIN horasextrastrabajadas ON empleado.pkIdEmpleado = horasextrastrabajadas.fkIdEmpleado WHERE pkIdEmpleado = "1";
@@ -208,7 +208,7 @@ namespace CapaVistaRRHH
                         {
                             string valor = txtValor.Text;
                             string puente = cadenaFormula + "@" + tabla + "." + campo;
-                            textBox1.Text = puente;
+                            txtFormula.Text = puente;
                             txtsql.Text = txtsql.Text + "(SELECT " + tabla + "." + campo + " WHERE pkIdEmpleado = \" + condicion + \" AND " + tabla + ".periodo = \" + condicion2 + \")";
                         }
                     }
@@ -222,14 +222,14 @@ namespace CapaVistaRRHH
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string cadenaFormula = textBox1.Text;
+            string cadenaFormula = txtFormula.Text;
             if (cadenaFormula != "")
             {
                 string compararSiHayOtroSigno = cadenaFormula.Substring(cadenaFormula.Length - 1, 1);
                 if ((compararSiHayOtroSigno !="+") && (compararSiHayOtroSigno !="-") && (compararSiHayOtroSigno !="*") && (compararSiHayOtroSigno !="/") && (compararSiHayOtroSigno !="("))
                 {
                     string puente = cadenaFormula + " +";
-                    textBox1.Text = puente;
+                    txtFormula.Text = puente;
                     txtsql.Text = txtsql.Text + "+";
 
 
@@ -243,14 +243,14 @@ namespace CapaVistaRRHH
 
         private void button6_Click(object sender, EventArgs e)
         {
-            string cadenaFormula = textBox1.Text;
+            string cadenaFormula = txtFormula.Text;
             if (cadenaFormula != "")
             {
                 string compararSiHayOtroSigno = cadenaFormula.Substring(cadenaFormula.Length - 1, 1);
                 if (compararSiHayOtroSigno != "+" && compararSiHayOtroSigno != "-" && compararSiHayOtroSigno != "*" && compararSiHayOtroSigno != "/" && compararSiHayOtroSigno != "(")
                 {
                     string puente = cadenaFormula + " -";
-                    textBox1.Text = puente;
+                    txtFormula.Text = puente;
                     txtsql.Text = txtsql.Text + "-";
                 }
             }
@@ -261,14 +261,14 @@ namespace CapaVistaRRHH
 
         private void button7_Click(object sender, EventArgs e)
         {
-            string cadenaFormula = textBox1.Text;
+            string cadenaFormula = txtFormula.Text;
             if (cadenaFormula != "")
             {
                 string compararSiHayOtroSigno = cadenaFormula.Substring(cadenaFormula.Length - 1, 1);
                 if (compararSiHayOtroSigno != "+" && compararSiHayOtroSigno != "-" && compararSiHayOtroSigno != "*" && compararSiHayOtroSigno != "/" && compararSiHayOtroSigno != "(")
                 {
                     string puente = cadenaFormula + " *";
-                    textBox1.Text = puente;
+                    txtFormula.Text = puente;
                     txtsql.Text = txtsql.Text + "*";
                 }
             }
@@ -279,14 +279,14 @@ namespace CapaVistaRRHH
 
         private void button8_Click(object sender, EventArgs e)
         {
-            string cadenaFormula = textBox1.Text;
+            string cadenaFormula = txtFormula.Text;
             if (cadenaFormula != "")
             {
                 string compararSiHayOtroSigno = cadenaFormula.Substring(cadenaFormula.Length - 1, 1);
                 if (compararSiHayOtroSigno != "+" && compararSiHayOtroSigno != "-" && compararSiHayOtroSigno != "*" && compararSiHayOtroSigno != "/" && compararSiHayOtroSigno != "(")
                 {
                     string puente = cadenaFormula + " /";
-                    textBox1.Text = puente;
+                    txtFormula.Text = puente;
                     txtsql.Text = txtsql.Text + "/";
                 }
             }
@@ -297,10 +297,10 @@ namespace CapaVistaRRHH
 
         private void button9_Click(object sender, EventArgs e)
         {
-            string cadenaFormula = textBox1.Text;
+            string cadenaFormula = txtFormula.Text;
             
                     string puente = cadenaFormula + " (";
-                    textBox1.Text = puente;
+                    txtFormula.Text = puente;
                     txtsql.Text = txtsql.Text + "(";
                     contadorParentesis = contadorParentesis + 1;
 
@@ -308,14 +308,14 @@ namespace CapaVistaRRHH
 
         private void button10_Click(object sender, EventArgs e)
         {
-            string cadenaFormula = textBox1.Text;
+            string cadenaFormula = txtFormula.Text;
             if (cadenaFormula != "")
             {
                 string compararSiHayOtroSigno = cadenaFormula.Substring(cadenaFormula.Length - 1, 1);
                 if (compararSiHayOtroSigno != "+" && compararSiHayOtroSigno != "-" && compararSiHayOtroSigno != "*" && compararSiHayOtroSigno != "/" && compararSiHayOtroSigno != "(")
                 {
                     string puente = cadenaFormula + " )";
-                    textBox1.Text = puente;
+                    txtFormula.Text = puente;
                     txtsql.Text = txtsql.Text + ")";
                     contadorParentesis2 = contadorParentesis2 + 1;
                 }
@@ -329,14 +329,15 @@ namespace CapaVistaRRHH
         {
             if (contadorParentesis == contadorParentesis2)
             {
-                string formula = textBox1.Text;
+                string formula = txtFormula.Text;
                 string pkIdConcepto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                cn.FormulasAsignarConcepto(formula, pkIdConcepto);
+                //cn.FormulasAsignarConcepto(formula, pkIdConcepto);
                 MessageBox.Show("Asignacion Correcta", "Formulas RRHH");
 
                 string tabla2 = label7.Text;
                 tabla2 = label7.Text;
                 string valor2;
+                string valor3= txtFormula.Text;
 
 
                 if (formula.Contains("@"))
@@ -349,25 +350,126 @@ namespace CapaVistaRRHH
                 }
 
 
-                
-                
-                string valor1 = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                cn.GuradarSentenciaSql(valor1, valor2);
 
-                
+
+                //string valor1 = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                string valor1 = textBox2.Text;
+                //cn.GuradarSentenciaSql(valor1, valor2);
+                //cn.GuradarFormula(valor1, valor3);
+
+                txtsql.Text = valor2;
             }
             else
             {
                 MessageBox.Show("Error en estructura", "Formulas RRHH");
             }
-            
+
+
+         Conceptos frmConceptos = Owner as Conceptos; 
+         frmConceptos.labelsqlformula.Text = this.txtsql.Text;    
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            txtFormula.Text = "";
             txtsql.Text = "";
             txtValor.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string formula = txtFormula.Text;
+                string id = textBox2.Text;
+                //cn.GuradarFormula(id, formula);
+            }
+            catch
+            {
+                MessageBox.Show("Error en el guardado", "Formulas RRHH");
+            }
+
+            if (contadorParentesis == contadorParentesis2)
+            {
+                string formula = txtFormula.Text;
+                //string pkIdConcepto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                //cn.FormulasAsignarConcepto(formula, pkIdConcepto);
+               // MessageBox.Show("Asignacion Correcta", "Formulas RRHH");
+
+                string tabla2 = label7.Text;
+                tabla2 = label7.Text;
+                string valor2;
+
+
+                if (formula.Contains("@"))
+                {
+                    valor2 = "SELECT(" + txtsql.Text + ") FROM `empleado` INNER JOIN " + tabla2 + " ON empleado.pkIdEmpleado = " + tabla2 + ".fkIdEmpleado WHERE pkIdEmpleado = \" + condicion + \";";
+
+                }
+                else
+                {
+                    valor2 = "SELECT(" + txtsql.Text + ") FROM `empleado` WHERE pkIdEmpleado = \" + condicion + \";";
+                }
+
+
+
+                string valor1 = textBox2.Text;
+                //string valor1 = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                cn.GuradarSentenciaSql(valor1, valor2);
+
+
+            }
+            else
+            {
+                MessageBox.Show("Error en estructura", "Formulas RRHH");
+            }
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (contadorParentesis == contadorParentesis2)
+            {
+                string formula = txtFormula.Text;
+                string pkIdConcepto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                //cn.FormulasAsignarConcepto(formula, pkIdConcepto);
+                
+
+                string tabla2 = label7.Text;
+                tabla2 = label7.Text;
+                string valor2;
+
+
+                if (formula.Contains("@"))
+                {
+                    valor2 = "SELECT(" + txtsql.Text + ") FROM `empleado` INNER JOIN " + tabla2 + " ON empleado.pkIdEmpleado = " + tabla2 + ".fkIdEmpleado WHERE pkIdEmpleado = \" + condicion + \";";
+
+                }
+                else
+                {
+                    valor2 = "SELECT(" + txtsql.Text + ") FROM `empleado` WHERE pkIdEmpleado = \" + condicion + \";";
+                }
+
+
+
+                txtsql.Text = valor2;
+                MessageBox.Show(valor2, "Formulas RRHH");
+                //string valor1 = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                //cn.GuradarSentenciaSql(valor1, valor2);
+
+
+            }
+            else
+            {
+                MessageBox.Show("Error en estructura", "Formulas RRHH");
+            }
+            //Conceptos frmConceptos = Owner as Conceptos; frmConceptos.txtIdFormulaConcepto.Text = this.txtFormula.Text;
+
+            Conceptos frmConceptos = new Conceptos(); AddOwnedForm(frmConceptos); 
+            //frmConceptos.txtEnvioFormula.Text = this.txtFormula.Text;
+            //frmConceptos.labelsql2.Text = this.txtsql.Text;
         }
     }
 }

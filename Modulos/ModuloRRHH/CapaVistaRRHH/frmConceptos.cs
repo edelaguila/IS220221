@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaControladorRRHH;
+using System.Text.RegularExpressions;
+using static datosUsuario;
 
 namespace CapaVistaRRHH
 {
     public partial class Conceptos : Form
     {
-        public Conceptos()
-        {
-            InitializeComponent();
+		private Controlador cn = new Controlador();
+		public Conceptos()
+		{
+			InitializeComponent();
 			rbnExcepto.Visible = false;
 			TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
 			navegador1.ObtenerCamposdeTabla(alias, "concepto", "hotelSanCarlos");
@@ -46,7 +50,8 @@ namespace CapaVistaRRHH
 			navegador1.ObtenerReferenciaFormActual(this);
 			//String cadena = txtprueba.Text;
 			//navegador1.pruebaMensaje(cadena);		
-
+			rbnValorU.Checked = false;
+			rbnFormula.Checked = false;
 		}
 
 
@@ -112,8 +117,13 @@ namespace CapaVistaRRHH
         {
 			try
 			{
-				frmFormula frm = new frmFormula();
-				frm.Show();
+				//Conceptos frmConceptos = Owner as Conceptos; frmConceptos.txtIdFormulaConcepto.Text = this.txtFormula.Text;
+				frmFormula frmFormula = new frmFormula();
+				AddOwnedForm(frmFormula);
+				frmFormula.textBox2.Text = this.txtIdConcepto.Text;
+				frmFormula.Show();
+				//frmFormula frm = new frmFormula();
+				//frm.Show();
 			}
 			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 		}
@@ -177,9 +187,13 @@ namespace CapaVistaRRHH
 			{
 				button1.Visible = false;
 				rbnFormula.Checked = false;
-				cbxFormulaConcepto.Visible = false;
+				//cbxFormulaConcepto.Visible = false;
 				txtFormula.Visible = true;
 				txtIdFormulaConcepto.Text = "0";
+
+				
+				
+
 			}
 		}
 
@@ -196,9 +210,18 @@ namespace CapaVistaRRHH
 				button1.Visible = true;
 				txtFormula.Text = "0";
 				txtFormula.Visible = false;
-				cbxFormulaConcepto.Visible = true;				
+				//cbxFormulaConcepto.Visible = false;				
 			}
 			txtFormula.Visible = false;
+
+			if ((rbnFormula.Checked) && (button1.Visible == true))
+			{
+				string valor1 = txtIdConcepto.Text;
+				string valor2 = labelsqlformula.Text;
+				cn.GuradarSentenciaSql(valor1, valor2);
+			}
+
+
 		}
 
         private void cbxFormulaConcepto_SelectedIndexChanged(object sender, EventArgs e)
@@ -213,23 +236,27 @@ namespace CapaVistaRRHH
 
         private void txtIdFormulaConcepto_TextChanged(object sender, EventArgs e)
         {
+			
 			navegador1.SeleccionarElementosenCombo(cbxFormulaConcepto, txtIdFormulaConcepto);
 
 			if (txtIdFormulaConcepto.Text != "0")
 			{
-				cbxFormulaConcepto.Visible = true;
+				//cbxFormulaConcepto.Visible = false;
 				txtFormula.Visible = false;
 			}
 			else
 			{
-				cbxFormulaConcepto.Visible = false;
+				//cbxFormulaConcepto.Visible = false;
 			}
+
+			
 
 		}
 
         private void txtIdCuentaContable_TextChanged(object sender, EventArgs e)
         {
 			navegador1.SeleccionarElementosenCombo(cbxCuentaContable, txtIdCuentaContable);
+			cbxFormulaConcepto.SelectedIndex=cbxFormulaConcepto.Items.Count-1;
 		}
 
         private void txtFormula_TextChanged(object sender, EventArgs e)
@@ -255,6 +282,29 @@ namespace CapaVistaRRHH
 				rbnValorU.Checked = false;
 			}
 
+
+
+
+			if ((rbnValorU.Checked) && (txtFormula.Enabled==true) && ((txtFormula.Text != "0") || (txtFormula.Text != "")))
+			{
+				string valor1 = txtIdConcepto.Text;
+				string valorUnico = txtFormula.Text;
+				string valorPuente = "(SELECT " + valorUnico + ")";
+				string valor2 = "SELECT(" + valorPuente + ") FROM `empleado` WHERE pkIdEmpleado = \" + condicion + \";";
+				labelsqlvalor.Text = valor2;
+				cn.GuradarSentenciaSql(valor1, valor2);
+			}
+
+		}
+
+        private void labelsqlformula_TextChanged(object sender, EventArgs e)
+        {
+			if ((rbnFormula.Checked) && (button1.Visible == true))
+			{
+				string valor1 = txtIdConcepto.Text;
+				string valor2 = labelsqlformula.Text;
+				cn.GuradarSentenciaSql(valor1, valor2);
+			}
 		}
     }
 }
