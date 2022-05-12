@@ -27,7 +27,6 @@ namespace CapaVistaRRHH
             InitializeComponent();
             lblConcepto.Text = nombreConcepto;
             lblIdConcepto.Text = idConcepto;
-
             TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
             navegador1.ObtenerCamposdeTabla(alias, "saldosporempleados", "hotelSanCarlos");
             navegador1.MetodoSalirVista(this);
@@ -54,6 +53,7 @@ namespace CapaVistaRRHH
             navegador1.LlenarTabla();
             navegador1.ObtenerReferenciaFormActual(this);
             llenarcbxEmpleados();
+            tblSaldoEmpleados();
         }
 
         private void frmAsignarSaldosIndividualesaEmpleados_Load(object sender, EventArgs e)
@@ -99,7 +99,10 @@ namespace CapaVistaRRHH
                 }
                 cbxEmpleado.SelectedIndex = 0;
             }
-            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+            catch
+            {
+                MessageBox.Show("Debe asignar al empleado para ingresarle un saldo o monto");
+            }
         }
 
         //Angel Chacón 9959-18-5201 
@@ -117,6 +120,14 @@ namespace CapaVistaRRHH
                 cbxIdEmpleado.SelectedIndex = 0;
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        //9959-18-5201 Angel Chacón
+        //Muestra todos los saldos asignados a los empleados
+        public void tblSaldoEmpleados()
+        {
+            DataTable dt = cn.tblSaldoEmpleados();
+            dgvAsignacionSaldos.DataSource = dt;
         }
 
         private void txtIdConcepto_TextChanged(object sender, EventArgs e)
@@ -147,6 +158,11 @@ namespace CapaVistaRRHH
                 txtIdEmpleado.Text = cbxIdEmpleado.Text;
                 txtIdConcepto.Text = lblIdConcepto.Text;
             }
+        }
+
+        private void btnActualizarTabla_Click(object sender, EventArgs e)
+        {
+            tblSaldoEmpleados();
         }
     }
 }

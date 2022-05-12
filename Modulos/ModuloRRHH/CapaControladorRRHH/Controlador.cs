@@ -25,6 +25,16 @@ namespace CapaControladorRRHH
         }
 
         //9959-18-5201 Angel Chacón
+        ///Muestra todos los saldos asignados a los empleados
+        public DataTable tblSaldoEmpleados()
+        {
+            OdbcDataAdapter dt = sn.tblSaldoEmpleados();
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        //9959-18-5201 Angel Chacón
         //Muestra todos los empleados asignados al concepto
         public DataTable llenarTblEmpleadosAsignadosConcepto(string tablaempleados, string IdConcepto)
         {
