@@ -267,6 +267,27 @@ namespace CapaModeloRRHH
         }
 
 
+        public void GuradarFormula(string valor1, string valor2)
+        {
+            try
+            {
+
+                string sqlBorrar = "DELETE FROM formula WHERE fkIdConcepto = '" + valor1 + "';";
+                OdbcCommand consultaBorrar = new OdbcCommand(sqlBorrar, cn.conexion());
+                consultaBorrar.ExecuteNonQuery();
+                string sql = "INSERT INTO formula (pkIdFormula, valorFormula, estado) Values( '" + valor1 + "', '" + valor2 + "','1');";
+                OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+                consulta.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error" + ex);
+            }
+
+        }
+
+
         //Generación de Nómina Heydi Quemé 9959-18-5335 Kevin Flores 9959-18-17632
 
         public OdbcDataAdapter ExtraerDatoCalculado(string condicion)
