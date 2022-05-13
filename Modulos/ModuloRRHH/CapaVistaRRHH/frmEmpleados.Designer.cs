@@ -71,27 +71,30 @@ namespace CapaVistaRRHH
             this.txtIDEmpleado = new System.Windows.Forms.TextBox();
             this.dgvVistaPrevia = new System.Windows.Forms.DataGridView();
             this.cbxJornada = new System.Windows.Forms.ComboBox();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.btnSelecionImagen = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtIdFoto = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxIDEmpresa
             // 
             this.cbxIDEmpresa.FormattingEnabled = true;
-            this.cbxIDEmpresa.Location = new System.Drawing.Point(437, 565);
-            this.cbxIDEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxIDEmpresa.Location = new System.Drawing.Point(328, 445);
             this.cbxIDEmpresa.Name = "cbxIDEmpresa";
-            this.cbxIDEmpresa.Size = new System.Drawing.Size(320, 24);
+            this.cbxIDEmpresa.Size = new System.Drawing.Size(241, 21);
             this.cbxIDEmpresa.TabIndex = 86;
             this.cbxIDEmpresa.SelectedIndexChanged += new System.EventHandler(this.cbxIDEmpresa_SelectedIndexChanged);
             // 
             // cbxIDPuesto
             // 
             this.cbxIDPuesto.FormattingEnabled = true;
-            this.cbxIDPuesto.Location = new System.Drawing.Point(437, 533);
-            this.cbxIDPuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxIDPuesto.Location = new System.Drawing.Point(328, 419);
             this.cbxIDPuesto.Name = "cbxIDPuesto";
-            this.cbxIDPuesto.Size = new System.Drawing.Size(320, 24);
+            this.cbxIDPuesto.Size = new System.Drawing.Size(241, 21);
             this.cbxIDPuesto.TabIndex = 85;
             this.cbxIDPuesto.SelectedIndexChanged += new System.EventHandler(this.cbxIDPuesto_SelectedIndexChanged);
             // 
@@ -99,19 +102,17 @@ namespace CapaVistaRRHH
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(432, 602);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(324, 475);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 37);
+            this.panel1.Size = new System.Drawing.Size(200, 30);
             this.panel1.TabIndex = 84;
             // 
             // rbnEstatusamodulo
             // 
             this.rbnEstatusamodulo.AutoSize = true;
-            this.rbnEstatusamodulo.Location = new System.Drawing.Point(16, 9);
-            this.rbnEstatusamodulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbnEstatusamodulo.Location = new System.Drawing.Point(12, 7);
             this.rbnEstatusamodulo.Name = "rbnEstatusamodulo";
-            this.rbnEstatusamodulo.Size = new System.Drawing.Size(67, 21);
+            this.rbnEstatusamodulo.Size = new System.Drawing.Size(55, 17);
             this.rbnEstatusamodulo.TabIndex = 8;
             this.rbnEstatusamodulo.TabStop = true;
             this.rbnEstatusamodulo.Text = "Activo";
@@ -121,10 +122,9 @@ namespace CapaVistaRRHH
             // rbnEstatusimodulo
             // 
             this.rbnEstatusimodulo.AutoSize = true;
-            this.rbnEstatusimodulo.Location = new System.Drawing.Point(179, 9);
-            this.rbnEstatusimodulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbnEstatusimodulo.Location = new System.Drawing.Point(134, 7);
             this.rbnEstatusimodulo.Name = "rbnEstatusimodulo";
-            this.rbnEstatusimodulo.Size = new System.Drawing.Size(77, 21);
+            this.rbnEstatusimodulo.Size = new System.Drawing.Size(63, 17);
             this.rbnEstatusimodulo.TabIndex = 9;
             this.rbnEstatusimodulo.TabStop = true;
             this.rbnEstatusimodulo.Text = "Inactivo";
@@ -133,37 +133,33 @@ namespace CapaVistaRRHH
             // 
             // dtpFinContrato
             // 
-            this.dtpFinContrato.Location = new System.Drawing.Point(439, 498);
-            this.dtpFinContrato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFinContrato.Location = new System.Drawing.Point(329, 391);
             this.dtpFinContrato.Name = "dtpFinContrato";
-            this.dtpFinContrato.Size = new System.Drawing.Size(319, 22);
+            this.dtpFinContrato.Size = new System.Drawing.Size(240, 20);
             this.dtpFinContrato.TabIndex = 83;
             this.dtpFinContrato.ValueChanged += new System.EventHandler(this.dtpFinContrato_ValueChanged);
             // 
             // dtpFechaContratacion
             // 
-            this.dtpFechaContratacion.Location = new System.Drawing.Point(437, 465);
-            this.dtpFechaContratacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaContratacion.Location = new System.Drawing.Point(328, 364);
             this.dtpFechaContratacion.Name = "dtpFechaContratacion";
-            this.dtpFechaContratacion.Size = new System.Drawing.Size(320, 22);
+            this.dtpFechaContratacion.Size = new System.Drawing.Size(241, 20);
             this.dtpFechaContratacion.TabIndex = 82;
             this.dtpFechaContratacion.ValueChanged += new System.EventHandler(this.dtpFechaContratacion_ValueChanged);
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(439, 241);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(329, 182);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(320, 22);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(241, 20);
             this.dtpFechaNacimiento.TabIndex = 81;
             this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dtpFechaNacimiento_ValueChanged);
             // 
             // txtIDPuesto
             // 
-            this.txtIDPuesto.Location = new System.Drawing.Point(437, 534);
-            this.txtIDPuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIDPuesto.Location = new System.Drawing.Point(328, 420);
             this.txtIDPuesto.Name = "txtIDPuesto";
-            this.txtIDPuesto.Size = new System.Drawing.Size(320, 22);
+            this.txtIDPuesto.Size = new System.Drawing.Size(241, 20);
             this.txtIDPuesto.TabIndex = 79;
             this.txtIDPuesto.Tag = "fkIdPuesto";
             this.txtIDPuesto.Visible = false;
@@ -171,10 +167,9 @@ namespace CapaVistaRRHH
             // 
             // txtIDEmpresa
             // 
-            this.txtIDEmpresa.Location = new System.Drawing.Point(437, 566);
-            this.txtIDEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIDEmpresa.Location = new System.Drawing.Point(328, 446);
             this.txtIDEmpresa.Name = "txtIDEmpresa";
-            this.txtIDEmpresa.Size = new System.Drawing.Size(320, 22);
+            this.txtIDEmpresa.Size = new System.Drawing.Size(241, 20);
             this.txtIDEmpresa.TabIndex = 78;
             this.txtIDEmpresa.Tag = "fkIdEmpresa";
             this.txtIDEmpresa.Visible = false;
@@ -183,29 +178,26 @@ namespace CapaVistaRRHH
             // lblIDPuesto
             // 
             this.lblIDPuesto.AutoSize = true;
-            this.lblIDPuesto.Location = new System.Drawing.Point(287, 538);
-            this.lblIDPuesto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIDPuesto.Location = new System.Drawing.Point(215, 423);
             this.lblIDPuesto.Name = "lblIDPuesto";
-            this.lblIDPuesto.Size = new System.Drawing.Size(73, 17);
+            this.lblIDPuesto.Size = new System.Drawing.Size(57, 13);
             this.lblIDPuesto.TabIndex = 65;
             this.lblIDPuesto.Text = "ID Puesto:";
             // 
             // lblIDEmpresa
             // 
             this.lblIDEmpresa.AutoSize = true;
-            this.lblIDEmpresa.Location = new System.Drawing.Point(284, 569);
-            this.lblIDEmpresa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIDEmpresa.Location = new System.Drawing.Point(213, 448);
             this.lblIDEmpresa.Name = "lblIDEmpresa";
-            this.lblIDEmpresa.Size = new System.Drawing.Size(85, 17);
+            this.lblIDEmpresa.Size = new System.Drawing.Size(65, 13);
             this.lblIDEmpresa.TabIndex = 59;
             this.lblIDEmpresa.Text = "ID Empresa:";
             // 
             // txtFechaContratacion
             // 
-            this.txtFechaContratacion.Location = new System.Drawing.Point(437, 465);
-            this.txtFechaContratacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFechaContratacion.Location = new System.Drawing.Point(328, 364);
             this.txtFechaContratacion.Name = "txtFechaContratacion";
-            this.txtFechaContratacion.Size = new System.Drawing.Size(320, 22);
+            this.txtFechaContratacion.Size = new System.Drawing.Size(241, 20);
             this.txtFechaContratacion.TabIndex = 77;
             this.txtFechaContratacion.Tag = "fechaContratacion";
             this.txtFechaContratacion.Visible = false;
@@ -214,28 +206,25 @@ namespace CapaVistaRRHH
             // lblFechaContratacion
             // 
             this.lblFechaContratacion.AutoSize = true;
-            this.lblFechaContratacion.Location = new System.Drawing.Point(285, 469);
-            this.lblFechaContratacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaContratacion.Location = new System.Drawing.Point(214, 367);
             this.lblFechaContratacion.Name = "lblFechaContratacion";
-            this.lblFechaContratacion.Size = new System.Drawing.Size(153, 17);
+            this.lblFechaContratacion.Size = new System.Drawing.Size(117, 13);
             this.lblFechaContratacion.TabIndex = 57;
             this.lblFechaContratacion.Text = "Fecha de contratación:";
             // 
             // txtAñosExperiencia
             // 
-            this.txtAñosExperiencia.Location = new System.Drawing.Point(437, 401);
-            this.txtAñosExperiencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAñosExperiencia.Location = new System.Drawing.Point(328, 312);
             this.txtAñosExperiencia.Name = "txtAñosExperiencia";
-            this.txtAñosExperiencia.Size = new System.Drawing.Size(320, 22);
+            this.txtAñosExperiencia.Size = new System.Drawing.Size(241, 20);
             this.txtAñosExperiencia.TabIndex = 76;
             this.txtAñosExperiencia.Tag = "añosDeExperiencia";
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(707, 602);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEstado.Location = new System.Drawing.Point(530, 475);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(51, 22);
+            this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 75;
             this.txtEstado.Tag = "estado";
             this.txtEstado.Visible = false;
@@ -244,19 +233,17 @@ namespace CapaVistaRRHH
             // lblAñosExperiencia
             // 
             this.lblAñosExperiencia.AutoSize = true;
-            this.lblAñosExperiencia.Location = new System.Drawing.Point(285, 405);
-            this.lblAñosExperiencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAñosExperiencia.Location = new System.Drawing.Point(214, 315);
             this.lblAñosExperiencia.Name = "lblAñosExperiencia";
-            this.lblAñosExperiencia.Size = new System.Drawing.Size(140, 17);
+            this.lblAñosExperiencia.Size = new System.Drawing.Size(106, 13);
             this.lblAñosExperiencia.TabIndex = 55;
             this.lblAñosExperiencia.Text = "Años de experiencia:";
             // 
             // txtFinContrato
             // 
-            this.txtFinContrato.Location = new System.Drawing.Point(439, 497);
-            this.txtFinContrato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFinContrato.Location = new System.Drawing.Point(329, 390);
             this.txtFinContrato.Name = "txtFinContrato";
-            this.txtFinContrato.Size = new System.Drawing.Size(320, 22);
+            this.txtFinContrato.Size = new System.Drawing.Size(241, 20);
             this.txtFinContrato.TabIndex = 74;
             this.txtFinContrato.Tag = "finDeContrato";
             this.txtFinContrato.Visible = false;
@@ -264,68 +251,62 @@ namespace CapaVistaRRHH
             // 
             // txtDirección
             // 
-            this.txtDirección.Location = new System.Drawing.Point(437, 337);
-            this.txtDirección.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDirección.Location = new System.Drawing.Point(328, 260);
             this.txtDirección.Name = "txtDirección";
-            this.txtDirección.Size = new System.Drawing.Size(320, 22);
+            this.txtDirección.Size = new System.Drawing.Size(241, 20);
             this.txtDirección.TabIndex = 73;
             this.txtDirección.Tag = "direccion";
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(437, 433);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Location = new System.Drawing.Point(328, 338);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(320, 22);
+            this.txtTelefono.Size = new System.Drawing.Size(241, 20);
             this.txtTelefono.TabIndex = 72;
             this.txtTelefono.Tag = "telefono";
             // 
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(285, 341);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDireccion.Location = new System.Drawing.Point(214, 263);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(71, 17);
+            this.lblDireccion.Size = new System.Drawing.Size(55, 13);
             this.lblDireccion.TabIndex = 53;
             this.lblDireccion.Text = "Dirección:";
             // 
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(285, 606);
-            this.lblEstatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEstatus.Location = new System.Drawing.Point(214, 478);
             this.lblEstatus.Name = "lblEstatus";
-            this.lblEstatus.Size = new System.Drawing.Size(59, 17);
+            this.lblEstatus.Size = new System.Drawing.Size(45, 13);
             this.lblEstatus.TabIndex = 58;
             this.lblEstatus.Text = "Estatus:";
             // 
             // txtJornada
             // 
-            this.txtJornada.Location = new System.Drawing.Point(439, 367);
-            this.txtJornada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtJornada.Location = new System.Drawing.Point(329, 284);
             this.txtJornada.Name = "txtJornada";
-            this.txtJornada.Size = new System.Drawing.Size(81, 22);
+            this.txtJornada.Size = new System.Drawing.Size(62, 20);
             this.txtJornada.TabIndex = 80;
             this.txtJornada.Tag = "fkIdJornada";
             this.txtJornada.Visible = false;
+            this.txtJornada.TextChanged += new System.EventHandler(this.txtJornada_TextChanged);
             // 
             // lblFinContrato
             // 
             this.lblFinContrato.AutoSize = true;
-            this.lblFinContrato.Location = new System.Drawing.Point(287, 506);
-            this.lblFinContrato.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFinContrato.Location = new System.Drawing.Point(215, 397);
             this.lblFinContrato.Name = "lblFinContrato";
-            this.lblFinContrato.Size = new System.Drawing.Size(109, 17);
+            this.lblFinContrato.Size = new System.Drawing.Size(82, 13);
             this.lblFinContrato.TabIndex = 66;
             this.lblFinContrato.Text = "Fin de Contrato:";
             // 
             // txtFechaNacimiento
             // 
-            this.txtFechaNacimiento.Location = new System.Drawing.Point(437, 241);
-            this.txtFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFechaNacimiento.Location = new System.Drawing.Point(328, 182);
             this.txtFechaNacimiento.Name = "txtFechaNacimiento";
-            this.txtFechaNacimiento.Size = new System.Drawing.Size(320, 22);
+            this.txtFechaNacimiento.Size = new System.Drawing.Size(241, 20);
             this.txtFechaNacimiento.TabIndex = 70;
             this.txtFechaNacimiento.Tag = "fechaDeNacimiento";
             this.txtFechaNacimiento.Visible = false;
@@ -334,106 +315,96 @@ namespace CapaVistaRRHH
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(285, 437);
-            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTelefono.Location = new System.Drawing.Point(214, 341);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(68, 17);
+            this.lblTelefono.Size = new System.Drawing.Size(52, 13);
             this.lblTelefono.TabIndex = 54;
             this.lblTelefono.Text = "Telefono:";
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(437, 305);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Location = new System.Drawing.Point(328, 234);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(320, 22);
+            this.txtCorreo.Size = new System.Drawing.Size(241, 20);
             this.txtCorreo.TabIndex = 69;
             this.txtCorreo.Tag = "correo";
             // 
             // lblContratacion
             // 
             this.lblContratacion.AutoSize = true;
-            this.lblContratacion.Location = new System.Drawing.Point(285, 373);
-            this.lblContratacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContratacion.Location = new System.Drawing.Point(214, 289);
             this.lblContratacion.Name = "lblContratacion";
-            this.lblContratacion.Size = new System.Drawing.Size(64, 17);
+            this.lblContratacion.Size = new System.Drawing.Size(48, 13);
             this.lblContratacion.TabIndex = 56;
             this.lblContratacion.Text = "Jornada:";
             // 
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(285, 245);
-            this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(214, 185);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(147, 17);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(112, 13);
             this.lblFechaNacimiento.TabIndex = 60;
             this.lblFechaNacimiento.Text = "Fecha de nacimiento: ";
             // 
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(285, 309);
-            this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCorreo.Location = new System.Drawing.Point(214, 237);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(55, 17);
+            this.lblCorreo.Size = new System.Drawing.Size(41, 13);
             this.lblCorreo.TabIndex = 61;
             this.lblCorreo.Text = "Correo:";
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(437, 209);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Location = new System.Drawing.Point(328, 156);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(320, 22);
+            this.txtApellido.Size = new System.Drawing.Size(241, 20);
             this.txtApellido.TabIndex = 67;
             this.txtApellido.Tag = "apellido";
             // 
             // txtSueldo
             // 
-            this.txtSueldo.Location = new System.Drawing.Point(437, 273);
-            this.txtSueldo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSueldo.Location = new System.Drawing.Point(328, 208);
             this.txtSueldo.Name = "txtSueldo";
-            this.txtSueldo.Size = new System.Drawing.Size(320, 22);
+            this.txtSueldo.Size = new System.Drawing.Size(241, 20);
             this.txtSueldo.TabIndex = 68;
             this.txtSueldo.Tag = "sueldo";
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(285, 213);
-            this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblApellido.Location = new System.Drawing.Point(214, 159);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(69, 17);
+            this.lblApellido.Size = new System.Drawing.Size(52, 13);
             this.lblApellido.TabIndex = 62;
             this.lblApellido.Text = "Apellidos:";
             // 
             // lblSueldo
             // 
             this.lblSueldo.AutoSize = true;
-            this.lblSueldo.Location = new System.Drawing.Point(285, 277);
-            this.lblSueldo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSueldo.Location = new System.Drawing.Point(214, 211);
             this.lblSueldo.Name = "lblSueldo";
-            this.lblSueldo.Size = new System.Drawing.Size(56, 17);
+            this.lblSueldo.Size = new System.Drawing.Size(43, 13);
             this.lblSueldo.TabIndex = 63;
             this.lblSueldo.Text = "Sueldo:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(437, 177);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Location = new System.Drawing.Point(328, 130);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(320, 22);
+            this.txtNombre.Size = new System.Drawing.Size(241, 20);
             this.txtNombre.TabIndex = 71;
             this.txtNombre.Tag = "nombre";
+            this.txtNombre.EnabledChanged += new System.EventHandler(this.txtNombre_EnabledChanged);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(285, 181);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(214, 133);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(73, 17);
+            this.lblNombre.Size = new System.Drawing.Size(55, 13);
             this.lblNombre.TabIndex = 64;
             this.lblNombre.Text = "Nombres: ";
             // 
@@ -441,27 +412,25 @@ namespace CapaVistaRRHH
             // 
             this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.navegador1.Location = new System.Drawing.Point(0, -1);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(1585, 107);
+            this.navegador1.Size = new System.Drawing.Size(1189, 87);
             this.navegador1.TabIndex = 51;
             // 
             // lblIDEmpleado
             // 
             this.lblIDEmpleado.AutoSize = true;
-            this.lblIDEmpleado.Location = new System.Drawing.Point(285, 149);
-            this.lblIDEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIDEmpleado.Location = new System.Drawing.Point(214, 107);
             this.lblIDEmpleado.Name = "lblIDEmpleado";
-            this.lblIDEmpleado.Size = new System.Drawing.Size(92, 17);
+            this.lblIDEmpleado.Size = new System.Drawing.Size(71, 13);
             this.lblIDEmpleado.TabIndex = 64;
             this.lblIDEmpleado.Text = "ID Empleado:";
             // 
             // txtIDEmpleado
             // 
-            this.txtIDEmpleado.Location = new System.Drawing.Point(437, 145);
-            this.txtIDEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIDEmpleado.Location = new System.Drawing.Point(328, 104);
             this.txtIDEmpleado.Name = "txtIDEmpleado";
-            this.txtIDEmpleado.Size = new System.Drawing.Size(320, 22);
+            this.txtIDEmpleado.Size = new System.Drawing.Size(241, 20);
             this.txtIDEmpleado.TabIndex = 71;
             this.txtIDEmpleado.Tag = "pkIdEmpleado";
             // 
@@ -470,30 +439,66 @@ namespace CapaVistaRRHH
             this.dgvVistaPrevia.AllowUserToAddRows = false;
             this.dgvVistaPrevia.AllowUserToDeleteRows = false;
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVistaPrevia.Location = new System.Drawing.Point(788, 145);
-            this.dgvVistaPrevia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvVistaPrevia.Location = new System.Drawing.Point(591, 104);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
             this.dgvVistaPrevia.ReadOnly = true;
             this.dgvVistaPrevia.RowHeadersWidth = 51;
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(780, 505);
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(585, 410);
             this.dgvVistaPrevia.TabIndex = 87;
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
             // cbxJornada
             // 
             this.cbxJornada.FormattingEnabled = true;
-            this.cbxJornada.Location = new System.Drawing.Point(437, 367);
-            this.cbxJornada.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxJornada.Location = new System.Drawing.Point(328, 284);
             this.cbxJornada.Name = "cbxJornada";
-            this.cbxJornada.Size = new System.Drawing.Size(320, 24);
+            this.cbxJornada.Size = new System.Drawing.Size(241, 21);
             this.cbxJornada.TabIndex = 88;
+            // 
+            // pbFoto
+            // 
+            this.pbFoto.Location = new System.Drawing.Point(10, 107);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(198, 251);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFoto.TabIndex = 89;
+            this.pbFoto.TabStop = false;
+            // 
+            // btnSelecionImagen
+            // 
+            this.btnSelecionImagen.Location = new System.Drawing.Point(33, 364);
+            this.btnSelecionImagen.Name = "btnSelecionImagen";
+            this.btnSelecionImagen.Size = new System.Drawing.Size(152, 23);
+            this.btnSelecionImagen.TabIndex = 90;
+            this.btnSelecionImagen.Text = "Examinar";
+            this.btnSelecionImagen.UseVisualStyleBackColor = true;
+            this.btnSelecionImagen.Click += new System.EventHandler(this.btnSelecionImagen_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(33, 397);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(152, 23);
+            this.btnGuardar.TabIndex = 91;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtIdFoto
+            // 
+            this.txtIdFoto.Location = new System.Drawing.Point(95, 426);
+            this.txtIdFoto.Name = "txtIdFoto";
+            this.txtIdFoto.Size = new System.Drawing.Size(32, 20);
+            this.txtIdFoto.TabIndex = 67;
+            this.txtIdFoto.Tag = "fotogrfia";
+            this.txtIdFoto.Visible = false;
+            this.txtIdFoto.TextChanged += new System.EventHandler(this.txtIdFoto_TextChanged);
             // 
             // frmEmpleados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1584, 665);
-            this.Controls.Add(this.cbxJornada);
+            this.ClientSize = new System.Drawing.Size(1188, 530);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtIDEmpresa);
             this.Controls.Add(this.txtIDPuesto);
@@ -506,9 +511,14 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtSueldo);
             this.Controls.Add(this.txtFechaNacimiento);
+            this.Controls.Add(this.txtIdFoto);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtIDEmpleado);
+            this.Controls.Add(this.cbxJornada);
+            this.Controls.Add(this.pbFoto);
+            this.Controls.Add(this.btnSelecionImagen);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.dtpFechaContratacion);
             this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.dgvVistaPrevia);
@@ -533,13 +543,13 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.lblIDEmpleado);
             this.Controls.Add(this.navegador1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2105 Empleados";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,5 +598,9 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.TextBox txtIDEmpleado;
         private System.Windows.Forms.DataGridView dgvVistaPrevia;
         private System.Windows.Forms.ComboBox cbxJornada;
+        private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.Button btnSelecionImagen;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.TextBox txtIdFoto;
     }
 }
