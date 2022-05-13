@@ -188,17 +188,6 @@ CREATE TABLE periodo (
     estado VARCHAR(1) NOT NULL       
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
   
-
-  -- --------------------------------------------------------------------------------------------------------------------------------------
--- Tercer sprint - Angel Chacón - tabla para la asignación de empleados a los conceptos - Fecha: 02/05/2022
--- --------------------------------------------------------------------------------------------------------------------------------------
-
-create table empleado_concepto(
-fkIdConcepto varchar(15) not null,
-fkIdEmpleado varchar(15) not null
-)ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
 -- --------------------------------------------------------------------------------------------------------------------------------------
 -- Tercer sprint - Angel Chacón, Danny Saldaña - Tabla Cuentas Contables, Formulas, Conceptos - Fecha: 04/05/2022
 -- --------------------------------------------------------------------------------------------------------------------------------------
@@ -259,3 +248,14 @@ INSERT INTO `hotelsancarlos`.`saldosporempleados` (`pkid`, `fkIdConcepto`, `fkId
 INSERT INTO `hotelsancarlos`.`saldosporempleados` (`pkid`, `fkIdConcepto`, `fkIdEmpleado`, `saldo`, `estado`) VALUES ('2', '2', '3', '300', '1');
 INSERT INTO `hotelsancarlos`.`saldosporempleados` (`pkid`, `fkIdConcepto`, `fkIdEmpleado`, `saldo`, `estado`) VALUES ('3', '2', '4', '190', '1');
 INSERT INTO `hotelsancarlos`.`saldosporempleados` (`pkid`, `fkIdConcepto`, `fkIdEmpleado`, `saldo`, `estado`) VALUES ('4', '2', '6', '150', '1');
+
+  -- --------------------------------------------------------------------------------------------------------------------------------------
+-- Tercer sprint - Angel Chacón - tabla para la asignación de empleados a los conceptos - Fecha: 12/05/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
+drop table empleado_concepto;
+create table empleado_concepto(
+fkIdConcepto varchar(15) not null,
+fkIdEmpleado varchar(15) not null,
+foreign key  (fkIdConcepto) references concepto (pkIdConcepto),
+foreign key  (fkIdEmpleado) references empleado (pkIdEmpleado)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;

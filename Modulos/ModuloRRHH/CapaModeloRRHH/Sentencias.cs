@@ -24,6 +24,16 @@ namespace CapaModeloRRHH
         }
 
         //9959-18-5201 Angel Chacón
+        //Muestra todos los saldos asignados a los empleados
+        public OdbcDataAdapter tblSaldoEmpleados()
+        {
+            //Obtiene todos los empleados
+            string sql = "SELECT concepto.nombreConcepto as 'Concepto',empleado.nombre as 'Empleado',saldo,saldosporempleados.estado FROM saldosporempleados,concepto,empleado where  saldosporempleados.fkIdEmpleado=empleado.pkIdEmpleado and saldosporempleados.fkIdConcepto=concepto.pkIdConcepto;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+        //9959-18-5201 Angel Chacón
         //Muestra todos los empleados asignados al concepto
         public OdbcDataAdapter llenarTblEmpleadosAsignadosConcepto(string tablaempleados, string IdConcepto)
         {
@@ -139,7 +149,7 @@ namespace CapaModeloRRHH
         //Muestra todos los empleados que no tengan asignado un monto o saldo
         public OdbcDataReader llenarcbxEmpleados(string idConcepto)
         {
-            string sql = "SELECT nombre FROM empleado  WHERE pkIdEmpleado NOT IN(SELECT fkIdEmpleado FROM saldosporempleados where fkIdConcepto = " + idConcepto+ ");";
+            string sql = "select empleado.nombre from empleado_concepto,empleado where fkIdConcepto = " + idConcepto + " and pkIdEmpleado=fkIdEmpleado and fkIdEmpleado NOT IN(SELECT fkIdEmpleado FROM saldosporempleados where fkIdConcepto = " + idConcepto+ ") order by fkIdEmpleado;";
             try
             {
                 OdbcCommand datos = new OdbcCommand(sql, cn.conexion());

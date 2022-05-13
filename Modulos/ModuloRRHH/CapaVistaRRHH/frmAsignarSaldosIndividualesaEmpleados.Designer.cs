@@ -48,8 +48,11 @@ namespace CapaVistaRRHH
             this.lblIdConcepto = new System.Windows.Forms.Label();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.cbxIdEmpleado = new System.Windows.Forms.ComboBox();
+            this.dgvAsignacionSaldos = new System.Windows.Forms.DataGridView();
+            this.btnActualizarTabla = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgConsulta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacionSaldos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblConcepto
@@ -233,6 +236,24 @@ namespace CapaVistaRRHH
             this.cbxIdEmpleado.Visible = false;
             this.cbxIdEmpleado.SelectedIndexChanged += new System.EventHandler(this.cbxIdEmpleado_SelectedIndexChanged_1);
             // 
+            // dgvAsignacionSaldos
+            // 
+            this.dgvAsignacionSaldos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAsignacionSaldos.Location = new System.Drawing.Point(575, 134);
+            this.dgvAsignacionSaldos.Name = "dgvAsignacionSaldos";
+            this.dgvAsignacionSaldos.Size = new System.Drawing.Size(583, 236);
+            this.dgvAsignacionSaldos.TabIndex = 123;
+            // 
+            // btnActualizarTabla
+            // 
+            this.btnActualizarTabla.Location = new System.Drawing.Point(475, 376);
+            this.btnActualizarTabla.Name = "btnActualizarTabla";
+            this.btnActualizarTabla.Size = new System.Drawing.Size(104, 23);
+            this.btnActualizarTabla.TabIndex = 124;
+            this.btnActualizarTabla.Text = "Actualizar Tabla";
+            this.btnActualizarTabla.UseVisualStyleBackColor = true;
+            this.btnActualizarTabla.Click += new System.EventHandler(this.btnActualizarTabla_Click);
+            // 
             // frmAsignarSaldosIndividualesaEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,8 +265,9 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.txtIdConcepto);
             this.Controls.Add(this.txtIdAsignacion);
             this.Controls.Add(this.cbxIdEmpleado);
+            this.Controls.Add(this.btnActualizarTabla);
+            this.Controls.Add(this.dgvAsignacionSaldos);
             this.Controls.Add(this.lblIdConcepto);
-            this.Controls.Add(this.dvgConsulta);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
@@ -255,6 +277,7 @@ namespace CapaVistaRRHH
             this.Controls.Add(this.cbxEmpleado);
             this.Controls.Add(this.navegador1);
             this.Controls.Add(this.lblConcepto);
+            this.Controls.Add(this.dvgConsulta);
             this.Name = "frmAsignarSaldosIndividualesaEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "1112 Asignar Saldos Individuales a Empleados";
@@ -262,6 +285,7 @@ namespace CapaVistaRRHH
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgConsulta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacionSaldos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,5 +311,7 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.Label lblIdConcepto;
         private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.ComboBox cbxIdEmpleado;
+        private System.Windows.Forms.DataGridView dgvAsignacionSaldos;
+        private System.Windows.Forms.Button btnActualizarTabla;
     }
 }
