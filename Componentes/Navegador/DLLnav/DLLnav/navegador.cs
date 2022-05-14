@@ -71,7 +71,7 @@ namespace DLL.nav
 
 
                 permisos = control.funObtienePermisos(idusuario, idAplicacion);
-                
+
 
                 if (permisos.Length < 5)
                 {
@@ -180,7 +180,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
 
@@ -189,11 +189,11 @@ namespace DLL.nav
             try
             {
                 controles = parent;
-                
+
             }
-            catch 
+            catch
             {
-              
+
             }
             return control.ordenandoTextos(parent);
 
@@ -213,7 +213,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
@@ -227,7 +227,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
@@ -246,7 +246,7 @@ namespace DLL.nav
             {
 
             }
-            
+
 
         }
 
@@ -262,7 +262,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
@@ -290,7 +290,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
@@ -305,7 +305,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         /*Wilmer Alexander Torres Lemus - 9959-18-9131*/
@@ -320,7 +320,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
@@ -335,7 +335,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         /*Josue Daniel Zapata Azañon - 9959-18-4829*/
@@ -350,7 +350,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
 
@@ -369,7 +369,7 @@ namespace DLL.nav
             {
 
             }
-            
+
 
         }
 
@@ -454,7 +454,7 @@ namespace DLL.nav
             }
 
 
-            
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)//Jaime López 0901-18-735
@@ -473,7 +473,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -532,7 +532,7 @@ namespace DLL.nav
             {
 
             }
-            
+
 
 
 
@@ -591,7 +591,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         //Lo hizo Wilber Enrique Segura Ramirez 0901-18-13952
@@ -628,7 +628,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         /*Brayan Mauricio Cifuentes López - 9959-18-11113*/
@@ -651,7 +651,7 @@ namespace DLL.nav
             {
 
             }
-            
+
 
         }
 
@@ -691,7 +691,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
 
@@ -708,7 +708,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
 
@@ -761,7 +761,7 @@ namespace DLL.nav
 
             }
 
-            
+
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)//Kevin Rolando González Ramírez 0901-18-1387
@@ -812,7 +812,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         private void btnInicio_Click(object sender, EventArgs e)//Kevin Rolando González Ramírez 0901-18-1387
@@ -849,7 +849,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         private void btnFinal_Click(object sender, EventArgs e)//Kevin Rolando González Ramírez 0901-18-1387
@@ -887,7 +887,7 @@ namespace DLL.nav
 
             }
 
-            
+
         }
 
         private void navegador_Load(object sender, EventArgs e)
@@ -903,7 +903,7 @@ namespace DLL.nav
             }
         }
 
-        
+
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             try
@@ -926,7 +926,7 @@ namespace DLL.nav
 
             }
             LlenarTabla();
-            
+
         }
 
         /*Jorge Lizandro Castañeda Choy - 9959-18-4964*/
@@ -935,13 +935,13 @@ namespace DLL.nav
             try
             {
                 bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Salir");
-                
+
             }
             catch
             {
 
             }
-            generic.Close();            
+            generic.Close();
         }
         Form generic;
 
@@ -956,7 +956,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
 
@@ -975,7 +975,7 @@ namespace DLL.nav
             {
 
             }
-            
+
         }
 
         private void ManipularEstadodeElementosVista(int modo)
@@ -1071,12 +1071,12 @@ namespace DLL.nav
                 }
 
             }
-            catch 
+            catch
             {
 
             }
 
-            
+
 
         }
         public void ContabilizarCamposenBD()
@@ -1091,11 +1091,11 @@ namespace DLL.nav
                 }
 
             }
-            catch 
+            catch
             {
 
             }
-            
+
 
         }
 
@@ -1106,11 +1106,11 @@ namespace DLL.nav
                 formReporte.ruta = control.obtieneRutaReporte(idAplicacion, campoRuta, campoB, tablaR);
 
             }
-            catch 
+            catch
             {
 
             }
-            
+
         }
 
 
@@ -1121,11 +1121,11 @@ namespace DLL.nav
                 formReporte.Show();
 
             }
-            catch 
+            catch
             {
 
             }
-            
+
         }
 
 
@@ -1143,11 +1143,11 @@ namespace DLL.nav
                 }
 
             }
-            catch 
+            catch
             {
 
             }
-            
+
         }
 
 
@@ -1167,12 +1167,12 @@ namespace DLL.nav
                 bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Reporteador");
 
             }
-            catch 
+            catch
             {
 
             }
 
-            
+
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -1186,11 +1186,25 @@ namespace DLL.nav
                 bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Consulta");
 
             }
-            catch 
+            catch
             {
 
             }
-            
+
+        }
+        public void Obtenerayuda(string idAplicacion, string campoAyuda, string tablaAyuda)
+        {
+            try
+            {
+                control.LlamadaAyudas(idAplicacion, campoAyuda, tablaAyuda);
+
+                bitacora.guardarEnBitacora(IdUsuario, idmodulo, idAplicacion, "Ayuda");
+            }
+            catch
+            {
+
+            }
+
         }
     }
 }

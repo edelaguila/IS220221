@@ -9,23 +9,6 @@ alter table banco add estado VARCHAR(1) NOT NULL;
 alter table moneda drop estadomoneda;
 alter table moneda add estado VARCHAR(1) NOT NULL;
 -- tablas necesarias para los conceptos
-CREATE TABLE excepciones (
-    pkIdExcepcion VARCHAR(15) NOT NULL,         
-    nombreExcepcion VARCHAR(50) NOT NULL,   #/valor unico, Valor Constante BD, Valor por periodo/        
-    estado VARCHAR(1) NOT NULL,
-    PRIMARY KEY (pkIdExcepcion)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE concepto (
-    pkIdConcepto VARCHAR(15) NOT NULL,           #001
-    nombreConcepto VARCHAR(60) NOT NULL,        #Horas Extras          
-    efectoConcepto VARCHAR(1) NOT NULL,         #/Ingreso, Descuento/
-    fkIdExcepcion VARCHAR(15) NOT NULL,     #/Todos, ninguno, Unicamente a, Exepto a/
-    formulaConcepto VARCHAR(800) NOT NULL,      #/Abrir modulo formulas/
-    estado VARCHAR(1) NOT NULL,        #/A, I/
-    PRIMARY KEY (pkIdConcepto),    
-    FOREIGN KEY (fkIdExcepcion) REFERENCES excepciones (pkIdExcepcion)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 -- cambio de datos para las ayudas de los mantenimientos de las tablas asignadas
 UPDATE aplicacion SET rutaChm='C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\Cambios 04042022\\IS220221\\Modulos\\Ayudas-Pareja2\\ayuda bancos y moneda.chm',rutaHtml='C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\Cambios 04042022\\IS220221\\Modulos\\Ayudas-Pareja2\\Ayuda-para-la-vista-del-mantenimiento-de-bancos.html' WHERE pkId='0009';
 UPDATE aplicacion SET rutaChm='C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\Cambios 04042022\\IS220221\\Modulos\\Ayudas-Pareja2\\ayuda bancos y moneda.chm',rutaHtml='C:\\Users\\achac\\OneDrive\\Escritorio\\RRHH\\Cambios 04042022\\IS220221\\Modulos\\Ayudas-Pareja2\\Ayuda-para-la-vista-del-mantenimiento-de-moneda.html' WHERE pkId='0010';
@@ -72,32 +55,6 @@ CREATE TABLE isrdetalle (
 
 INSERT INTO `hotelsancarlos`.`empleado` (`pkIdEmpleado`, `nombre`, `apellido`, `fechaDeNacimiento`, `sueldo`, `correo`, `direccion`, `contratado`, `añosDeExperiencia`, `telefono`, `fechaContratacion`, `finDeContrato`, `fkIdPuesto`, `fkIdEmpresa`, `estado`) VALUES ('2', 'Pedro', 'Sanchez', '1998-05-23', '3500', 'spedro@gmail.com', 'zona 2', '4', '5', '65985874', '2016-11-03', '2021-12-01', '1', '1', '1');
 
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('1', '2017-01-01', '2017-01-31', '13750', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('2', '2017-02-01', '2017-02-28', '13650', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('3', '2017-03-01', '2017-03-31', '13850', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('4', '2017-04-01', '2017-04-30', '13750', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('5', '2017-05-01', '2017-05-31', '13650', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('6', '2017-06-01', '2017-06-30', '13850', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('7', '2017-07-01', '2017-07-31', '13750', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('8', '2017-08-01', '2017-08-31', '13650', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('9', '2017-09-01', '2017-09-30', '13850', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('10', '2017-10-01', '2017-10-31', '13750', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('11', '2017-11-01', '2017-11-30', '13650', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('12', '2017-12-01', '2017-12-31', '13850', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('13', '2017-01-01', '2017-12-31', '165000', '1');
-INSERT INTO `hotelsancarlos`.`isrencabezado` (`pkIdISR`, `periodoInicio`, `periodoFinal`, `isrTotal`, `estado`) VALUES ('14', '2018-01-01', '2018-01-31', '13750', '1');
-
-insert into isrdetalle values ('1','1','2750','1');
-insert into isrdetalle values ('1','2','2750','1');
-insert into isrdetalle values ('1','4','2750','1');
-insert into isrdetalle values ('1','5','2750','1');
-insert into isrdetalle values ('1','6','2750','1');
-
-insert into isrdetalle values ('13','1','33000','1');
-insert into isrdetalle values ('13','2','33000','1');
-insert into isrdetalle values ('13','4','33000','1');
-insert into isrdetalle values ('13','5','33000','1');
-insert into isrdetalle values ('13','6','33000','1');
 
 -- --------------------------------------------------------------------------------------------------------------------------------------
 -- Tercer sprint - Heydi Quemé, Kevin Flores - Tabla nomina detalle y encabezado - Fecha: 18/04/2022
@@ -137,19 +94,7 @@ concepto(pkIdConcepto)
 
 use hotelsancarlos;
 
-DROP TABLE concepto;
-DROP TABLE excepciones;
-
-CREATE TABLE concepto (
-    pkIdConcepto VARCHAR(15) PRIMARY KEY,           #001
-    nombreConcepto VARCHAR(60) NOT NULL,        #Horas Extras          
-    efectoConcepto VARCHAR(1) NOT NULL,         #/Ingreso, Descuento/
-    aplicacion VARCHAR(25) NOT NULL,     #/Todos, Unicamente a, Exepto a/
-    formulaConcepto VARCHAR(800) NOT NULL,      #/Abrir modulo formulas/
-    estado VARCHAR(1) NOT NULL       #/A, I/
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-insert into concepto values ("1","Concepto 1","+","todos","250","1");
+drop table if exists excepciones;
 
 
 -- --------------------------------------------------------------------------------------------------------------------------------------
@@ -211,7 +156,6 @@ CREATE TABLE formula (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 insert into formula values ("0","NA","1");
-insert into formula values ("1","250","1");
 
 drop table if exists concepto;
 CREATE TABLE concepto (
@@ -243,12 +187,6 @@ foreign key (fkIdConcepto) references concepto (pkIdConcepto),
 foreign key (fkIdEmpleado) references empleado (pkIdEmpleado)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
-INSERT INTO `hotelsancarlos`.`saldosporempleados` (`pkid`, `fkIdConcepto`, `fkIdEmpleado`, `saldo`, `estado`) VALUES ('1', '2', '1', '250', '1');
-INSERT INTO `hotelsancarlos`.`saldosporempleados` (`pkid`, `fkIdConcepto`, `fkIdEmpleado`, `saldo`, `estado`) VALUES ('2', '2', '3', '300', '1');
-INSERT INTO `hotelsancarlos`.`saldosporempleados` (`pkid`, `fkIdConcepto`, `fkIdEmpleado`, `saldo`, `estado`) VALUES ('3', '2', '4', '190', '1');
-INSERT INTO `hotelsancarlos`.`saldosporempleados` (`pkid`, `fkIdConcepto`, `fkIdEmpleado`, `saldo`, `estado`) VALUES ('4', '2', '6', '150', '1');
-
   -- --------------------------------------------------------------------------------------------------------------------------------------
 -- Tercer sprint - Angel Chacón - tabla para la asignación de empleados a los conceptos - Fecha: 12/05/2022
 -- --------------------------------------------------------------------------------------------------------------------------------------
@@ -259,3 +197,34 @@ fkIdEmpleado varchar(15) not null,
 foreign key  (fkIdConcepto) references concepto (pkIdConcepto),
 foreign key  (fkIdEmpleado) references empleado (pkIdEmpleado)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ -- --------------------------------------------------------------------------------------------------------------------------------------
+-- Cuarto sprint - Heydi Quemé - Cambios en Empleado y creación de tabla foto - Fecha: 14/05/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE `hotelsancarlos`.`empleado` 
+ADD COLUMN `fotografia` VARCHAR(15) NULL AFTER `apellido`;
+
+create table foto (
+pkId varchar(15) primary key,
+fotografia LONGBLOB
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE empleado ADD FOREIGN KEY (fotografia) REFERENCES foto(pkid);
+
+INSERT INTO aplicacion VALUES ("2112","2",'Mantenimiento Jornada',"123","12334","1");
+INSERT INTO aplicacion VALUES ("2113","2",'Mantenimiento Periodo',"123","12334","1");
+INSERT INTO aplicacion VALUES ("2204","2",'Generacion Nomina',"123","12334","1");
+INSERT INTO aplicacion VALUES ("22041","2",'Nomina',"123","12334","1");
+INSERT INTO aplicacion VALUES ("2201","2",'Consulta Nomina',"123","12334","1");
+
+INSERT INTO reporte VALUES ('7','Jornadas','C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\ModuloRRHH\\CapaVistaRRHH\\ReporteJornada.rpt','2112','1');
+INSERT INTO reporte VALUES ('8','Periodos','C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\ModuloRRHH\\CapaVistaRRHH\\ReportePeriodo.rpt','2113','1');
+
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaGenerarNomina.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaGenerarNomina.html' WHERE pkId='2204';
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaNomina.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaNomina.html' WHERE pkId='22041';
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaConsultaNomina.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaConsultaNomina.html' WHERE pkId='2201';
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaNomina.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaJornada.html' WHERE pkId='2112';
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaNomina.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaPeriodo.html' WHERE pkId='2113';
+
+ALTER TABLE `hotelsancarlos`.`saldosporempleados` 
+CHANGE COLUMN `saldo` `saldo` FLOAT NOT NULL ;

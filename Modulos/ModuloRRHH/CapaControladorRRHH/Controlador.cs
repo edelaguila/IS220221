@@ -208,20 +208,20 @@ namespace CapaControladorRRHH
         {
             //sn.generarNomina(fechaInicio, fechaFin);
         }
-        public DataTable EncabezadoNominaControlador(string tabla,string sentencia)
+        public DataTable EncabezadoNominaControlador(string tabla, string sentencia)
         {
             DataTable encabazado = new DataTable();
             try
             {
-                encabazado=sn.EncabezadoNominaSetencias(tabla,sentencia);
+                encabazado = sn.EncabezadoNominaSetencias(tabla, sentencia);
             }
             catch (Exception ex) { MessageBox.Show("Error en obtener encabezado Nomina capa Controlador " + ex); }
             return (encabazado);
         }
         public int idSiguienteDeNuevoIngreso(string tabla, string campo)
         {
-            
-            int entero = sn.idSiguienteDeNuevoIngreso(tabla,campo);
+
+            int entero = sn.idSiguienteDeNuevoIngreso(tabla, campo);
 
             return entero;
         }
@@ -276,7 +276,7 @@ namespace CapaControladorRRHH
             try
             {
                 OdbcDataAdapter dt = sn.consultarPeriodo(fechainicio, fechafin);
-                dt.Fill(table);              
+                dt.Fill(table);
             }
             catch (Exception ex) { MessageBox.Show("Error en obtener información del periodo Capa Controlador " + ex); }
             return (table);
@@ -304,6 +304,14 @@ namespace CapaControladorRRHH
         {
             byte[] imagen = sn.obtenerByte(id);
             return imagen;
+        }
+
+        public DataTable calculoConceptoSentenciasFinal(int idConcepto, int idEmpleado, string IdPeriodo)
+        {
+            DataTable table = new DataTable();
+            table = sn.calculoConceptoSentenciasFinal(idConcepto,idEmpleado,IdPeriodo);
+
+            return table;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace CapaModeloRRHH
 {
     public class Sentencias
     {
+        DataTable tabla = new DataTable();
         private Conexion cn = new Conexion();
 
         //9959-18-5201 Angel Chacón
@@ -361,7 +362,7 @@ namespace CapaModeloRRHH
         }
         public DataTable calculoConceptoSentencias(int idConcepto, int idEmpleado, string IdPeriodo)
         {
-            DataTable tabla = new DataTable();
+            
             try
             {
                 //SE SELECCIONAN LAS FORMULAS RELACIONADAS CON LOS CONCEPTOS
@@ -402,6 +403,84 @@ namespace CapaModeloRRHH
             }
             catch (Exception ex) { MessageBox.Show("Error en obtener encabezado Nomina capa Controlador " + ex); }
             return (tabla);
+        }
+        public Boolean valorUnico(int idConcepto, int idEmpleado, string IdPeriodo) 
+        {
+
+            //SE SELECCIONAN LAS FORMULAS RELACIONADAS CON LOS CONCEPTOS
+            Boolean respuesta=false; string sql = "";
+            string Query2 = "SELECT * FROM saldosporempleados WHERE fkIdConcepto='" + idConcepto + "'" + " AND fkIdEmpleado='" + idEmpleado + "';";           
+            try
+            {
+                OdbcConnection conect = cn.conexion();
+                OdbcCommand consulta2 = new OdbcCommand(Query2, conect);
+                consulta2.ExecuteNonQuery();
+                OdbcDataReader busqueda2;
+                busqueda2 = consulta2.ExecuteReader();
+                if (busqueda2.Read())
+                {
+                    sql = busqueda2["fkidconcepto"].ToString();
+                }
+                cn.desconexion(conect);
+                if (sql == "")
+                {
+                    respuesta = false;
+                }
+                else
+                {
+                    respuesta = true;
+                }
+            }
+            catch (Exception)
+            {                
+            }
+            return respuesta;
+        }
+
+        public DataTable calculoValorUnicoSentencias(int idConcepto, int idEmpleado, string IdPeriodo)
+        {
+            string sql = "";
+                try
+                {
+                    //SE SELECCIONAN LAS FORMULAS RELACIONADAS CON LOS CONCEPTOS
+                    string Query2 = "SELECT saldo FROM saldosporempleados WHERE fkIdConcepto='" + idConcepto + "'" + " AND fkIdEmpleado='" + idEmpleado + "';";
+                    OdbcConnection conect = cn.conexion();
+                    OdbcCommand consulta2 = new OdbcCommand(Query2, conect);
+                    consulta2.ExecuteNonQuery(); OdbcDataReader busqueda2;
+                    busqueda2 = consulta2.ExecuteReader();
+                    if (busqueda2.Read())
+                    {
+                        sql = busqueda2["saldo"].ToString();
+                    }
+                    cn.desconexion(conect);
+                    //SE ENVIA COMO QUERY LA FORMULA DEL CONCEPTO
+                    try
+                    {
+                   // MessageBox.Show(Query2 + "   " + sql);
+                        tabla = PasarCalculoTabla(Query2);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error en Asignación:" + ex);
+                    }
+                
+                }
+                catch (Exception ex) { MessageBox.Show("Error en obtener encabezado Nomina capa Controlador " + ex); }         
+                return (tabla);
+        }
+        public DataTable calculoConceptoSentenciasFinal(int idConcepto, int idEmpleado, string IdPeriodo)
+        {
+            Boolean valor = valorUnico(idConcepto, idEmpleado, IdPeriodo);
+            DataTable tabla = new DataTable();
+            if (valor==true)
+            {
+                tabla = calculoValorUnicoSentencias(idConcepto,idEmpleado,IdPeriodo);
+            }
+            else if (valor ==false)
+            {
+                tabla=calculoConceptoSentencias(idConcepto, idEmpleado, IdPeriodo);
+            }
+            return tabla;
         }
         public int cantidadTB(string tabla)
         {
@@ -583,7 +662,7 @@ namespace CapaModeloRRHH
 
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Guradado exitoso");
+                    MessageBox.Show("Guardado exitoso");
                 }
                 cn.desconexion(conect);
             }
@@ -604,7 +683,7 @@ namespace CapaModeloRRHH
 
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Guradado exitoso");
+                    MessageBox.Show("Guardado exitoso");
                 }
                 cn.desconexion(conect);
             }

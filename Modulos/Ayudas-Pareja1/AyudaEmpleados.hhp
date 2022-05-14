@@ -7,7 +7,7 @@ Display compile progress=No
 Language=0x100a Español (Guatemala)
 
 [WINDOWS]
-Ayuda Empleados=,"AyudaEmpleados.hhc",,"AyudaEmpleados.html","AyudaEmpleados.html",,,,,0x3520,,0xc387e,,,,,,,,0
+Ayuda Empleados="Ayuda Empleados","AyudaEmpleados.hhc",,"AyudaEmpleados.html","AyudaEmpleados.html",,,,,0x3520,,0xc387e,,,,,,,,0
 
 
 [FILES]

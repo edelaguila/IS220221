@@ -18,6 +18,11 @@ namespace CapaVistaRRHH
         {
             InitializeComponent();
             llenarFecha();
+
+            navegador1.idAplicacion = "2204";
+            navegador1.idmodulo = "2";
+            navegador1.tablaAyuda = "Aplicacion";
+            navegador1.campoAyuda = "pkId";
         }
         CapaControladorRRHH.Controlador controlador = new CapaControladorRRHH.Controlador();
         // string[][] vectorNomina;
@@ -77,6 +82,9 @@ namespace CapaVistaRRHH
         {
             Loading.Close();
         }
-       
-    }
+		private void frmGeneracionNomina_HelpButtonClicked(object sender, CancelEventArgs e)
+		{
+            navegador1.Obtenerayuda(navegador1.idAplicacion, navegador1.campoAyuda, navegador1.tablaAyuda);
+        }
+	}
 }
