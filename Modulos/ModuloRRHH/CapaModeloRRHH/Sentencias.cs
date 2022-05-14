@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data.Odbc;
 using System.Windows.Forms;
 using System.Data;
+using System.IO;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CapaModeloRRHH
 {
@@ -275,8 +277,7 @@ namespace CapaModeloRRHH
             }
 
         }
-
-
+       
         public void GuradarFormula(string valor1, string valor2)
         {
             try
@@ -296,7 +297,6 @@ namespace CapaModeloRRHH
             }
 
         }
-
 
         //Generación de Nómina Heydi Quemé 9959-18-5335 Kevin Flores 9959-18-17632
 
@@ -387,18 +387,8 @@ namespace CapaModeloRRHH
                 {
                     sentenciaReplace2 = sentenciaReplace.Replace("+ condicion2 +", idperiodoingreso);
                     sentenciafinal = sentenciaReplace2;
-
                 }
-
-
                 //sentenciafinal = sentenciaReplace + ";";
-
-
-
-
-
-
-
                 //SE ENVIA COMO QUERY LA FORMULA DEL CONCEPTO
                 try
                 {
@@ -411,9 +401,7 @@ namespace CapaModeloRRHH
 
             }
             catch (Exception ex) { MessageBox.Show("Error en obtener encabezado Nomina capa Controlador " + ex); }
-
             return (tabla);
-
         }
         public int cantidadTB(string tabla)
         {
@@ -429,7 +417,6 @@ namespace CapaModeloRRHH
             {
                 MessageBox.Show("Error al consultar conceptos:" + ex);
             }
-
             return (CT);
         }
         public Boolean validarRelacion(int idEmpleado, int idConcepto, string tabla)
@@ -523,7 +510,6 @@ namespace CapaModeloRRHH
             {
                 MessageBox.Show("Error al añadir el detalle de nomina: " + ex.Message);
             }
-
         }
         //funcion general para llenar un combo sin consultar estado
         public OdbcDataReader llenarCombo(string tabla)
@@ -580,9 +566,82 @@ namespace CapaModeloRRHH
                 MessageBox.Show("Error al consultar conceptos:" + ex);
             }
             return tabla;
-
         }
 
         //Fin Generacion Nomina
+
+        //Foto Empleado Heydi Quemé 9959-18-5335 Kevin Flores 9959-18-17632
+        public void insertaNuevaFoto(string id, byte[] foto)
+        {
+            try
+            {
+                string insertQuery = "INSERT INTO foto VALUES ('" + id + "',?);";
+                OdbcConnection conect = cn.conexion(); //conect.Open();
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                OdbcParameter prm = new OdbcParameter("@img", OdbcType.Binary, foto.Length, ParameterDirection.Input, false, 0, 0, null, DataRowVersion.Current, foto);
+                command.Parameters.Add(prm);
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Guradado exitoso");
+                }
+                cn.desconexion(conect);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar imagen" + ex);
+            }
+        }
+        public void insertaFoto(string id, byte[] foto)
+        {
+            try
+            {
+                string insertQuery = "UPDATE foto SET fotografia=? where pkId='" + id + "';";
+                OdbcConnection conect = cn.conexion(); //conect.Open();
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                OdbcParameter prm = new OdbcParameter("@img", OdbcType.Binary, foto.Length, ParameterDirection.Input, false, 0, 0, null, DataRowVersion.Current, foto);
+                command.Parameters.Add(prm);
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Guradado exitoso");
+                }
+                cn.desconexion(conect);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar imagen" + ex);
+            }
+        }
+        public byte[] obtenerByte(string id)
+        {            
+            int bufferSize = 100; byte[] bytefoto = new byte[bufferSize]; 
+            byte[] binary = null;
+            try
+            {
+               string insertQuery = "SELECT * FROM foto WHERE pkId ='" + id + "';";
+               OdbcConnection conect = cn.conexion(); 
+               OdbcCommand command = new OdbcCommand(insertQuery, conect);
+               command.ExecuteNonQuery(); OdbcDataReader busquedac;
+               busquedac = command.ExecuteReader();
+                if (!busquedac.HasRows)
+                { 
+                  throw new Exception("No hay fotografia guardada.");
+                }
+                if (busquedac.Read())
+                {
+                    binary = (byte[])busquedac["fotografia"];
+                }
+                cn.desconexion(conect);
+                return binary;
+                }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar imagen" + ex);
+                return null;
+            }
+
+        }   
+
     }
 }

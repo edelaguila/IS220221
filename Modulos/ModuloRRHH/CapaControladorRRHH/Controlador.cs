@@ -291,5 +291,19 @@ namespace CapaControladorRRHH
             catch (Exception ex) { MessageBox.Show("Error en obtener información del periodo Capa Controlador " + ex); }
             return (table);
         }
+        //Foto Empleado Heydi Quemé 9959-18-5335 Kevin Flores 9959-18-17632
+        public void insertaNuevaFoto(string id, byte[] foto)
+        {
+            sn.insertaNuevaFoto(id, foto);
         }
+        public void insertaFoto(string id, byte[] foto)
+        {
+            sn.insertaFoto(id, foto);
+        }
+        public byte[] obtenerByte(string id)
+        {
+            byte[] imagen = sn.obtenerByte(id);
+            return imagen;
+        }
+    }
 }
