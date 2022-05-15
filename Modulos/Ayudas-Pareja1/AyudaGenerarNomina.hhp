@@ -1,0 +1,17 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=AyudaGenerarNomina.chm
+Contents file=AyudaGenerarNomina.hhc
+Default Window=Generar Nómina
+Display compile progress=No
+Language=0x100a Español (Guatemala)
+
+[WINDOWS]
+Generar Nómina="Generar Nómina","AyudaGenerarNomina.hhc",,"AyudaGenerarNomina.html","AyudaGenerarNomina.html",,,,,0x3521,,0xc387e,,,,,1,,,0
+
+
+[FILES]
+AyudaGenerarNomina.html
+
+[INFOTYPES]
+

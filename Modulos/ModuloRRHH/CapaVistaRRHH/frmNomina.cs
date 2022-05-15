@@ -39,6 +39,12 @@ namespace CapaVistaRRHH
            
 
             rbnEstatusamodulo.Checked = true;
+
+
+            navegador1.idAplicacion = "22041";
+            navegador1.idmodulo = "2";
+            navegador1.tablaAyuda = "Aplicacion";
+            navegador1.campoAyuda = "pkId";
         }
         // datosAutomatico: Llena los datos del encabezado de la nómina al generarla de manera automática.
         // función realizada por: Pareja 1 - Heydi Quemé y Kevin Flores
@@ -81,9 +87,10 @@ namespace CapaVistaRRHH
                     row["Sueldo Empleado"] = (sueldoEmpleado.Rows[y][0].ToString());
                     for (int z = 0; z < cantidadConceptos; z++)
                     {
-                        calculoConcepto = controlador.calculoConcepto(z + 1, y + 1, fechaPeriodo); string calculoConceptoSigno = "";
-                        Boolean respuesta = controlador.validarRelacion((y + 1), (z + 1), "empleado_concepto");
-                        if (respuesta == true)
+                        calculoConcepto = controlador.calculoConceptoSentenciasFinal(z + 1, y + 1, fechaPeriodo); string calculoConceptoSigno = "";
+                        Boolean respuestaformula = controlador.validarRelacion((y + 1), (z + 1), "empleado_concepto");
+                       
+                        if (respuestaformula == true)
                         {
                             Boolean efecto = controlador.validarEfecto(z + 1);
                             if (efecto == true)
@@ -100,8 +107,7 @@ namespace CapaVistaRRHH
                             }
                             else { MessageBox.Show("No se encontró un efecto para este concepto"); }
                         }
-                        else if (respuesta == false) { calculoConceptoSigno = "+0.00"; }
-                        else { MessageBox.Show("No se encontró calculo relacionado."); }
+                        else if (respuestaformula == false) { calculoConceptoSigno = "+0.00"; } 
                         row[nombreConcepto.Rows[z][0].ToString()] = (calculoConceptoSigno);
                     }
                     matrizNomina.Rows.Add(row);
@@ -162,9 +168,14 @@ namespace CapaVistaRRHH
           
         }
 
-        // calculoSueldoLiquido: Calcula el sueldo líquido por empleado y la suma total en planilla.
-        // función realizada por: Pareja 1 - Heydi Quemé y Kevin Flores
-        public DataTable calculoSueldoLiquido()
+		private void frmNomina_HelpButtonClicked(object sender, CancelEventArgs e)
+		{
+            navegador1.Obtenerayuda(navegador1.idAplicacion, navegador1.campoAyuda, navegador1.tablaAyuda);
+        }
+
+		// calculoSueldoLiquido: Calcula el sueldo líquido por empleado y la suma total en planilla.
+		// función realizada por: Pareja 1 - Heydi Quemé y Kevin Flores
+		public DataTable calculoSueldoLiquido()
         {
             DataTable TablaSueldoL  = new DataTable();
             TablaSueldoL.Columns.Add("sueldo liquido", typeof(string));
@@ -243,6 +254,6 @@ namespace CapaVistaRRHH
                 tabalaNomina.Rows[s][cantidadConceptos+3]= (sueldoL.Rows[s][0].ToString());
             }           
             dgvNomina.DataSource = tabalaNomina;
-        }        
+        }
     }
 }

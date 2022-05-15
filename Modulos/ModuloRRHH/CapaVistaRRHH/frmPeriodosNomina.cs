@@ -20,6 +20,11 @@ namespace CapaVistaRRHH
         {
             InitializeComponent();
             llenarDGV();
+
+            navegador1.idAplicacion = "2201";
+            navegador1.idmodulo = "2";
+            navegador1.tablaAyuda = "Aplicacion";
+            navegador1.campoAyuda = "pkId";
         }
 
         private void frmPeriodosNomina_Load(object sender, EventArgs e)
@@ -47,5 +52,10 @@ namespace CapaVistaRRHH
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
-    }
+
+		private void frmPeriodosNomina_HelpButtonClicked(object sender, CancelEventArgs e)
+		{
+            navegador1.Obtenerayuda(navegador1.idAplicacion, navegador1.campoAyuda, navegador1.tablaAyuda);
+        }
+	}
 }

@@ -1,0 +1,17 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=AyudaPeriodo.chm
+Contents file=AyudaPeriodo.hhc
+Default Window=AyudaPeriodo
+Display compile progress=No
+Language=0x100a Español (Guatemala)
+
+[WINDOWS]
+AyudaPeriodo="Ayuda Periodo","AyudaPeriodo.hhc",,"AyudaPeriodo.html","AyudaPeriodo.html",,,,,0x3521,,0xc387e,,,,,1,,,0
+
+
+[FILES]
+AyudaPeriodo.html
+
+[INFOTYPES]
+

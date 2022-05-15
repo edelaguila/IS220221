@@ -147,6 +147,7 @@ namespace CapaVistaRRHH
 					int id = controlador.idSiguienteDeNuevoIngreso("foto", "pkId");
 					byte[] imagen = imagenAbyte();
 					controlador.insertaNuevaFoto(id.ToString(), imagen);
+					txtIdFoto.Text = id.ToString();
 				}
 				else if (txtIdFoto.Text != "")
 				{
@@ -208,6 +209,10 @@ namespace CapaVistaRRHH
 				string id = txtIdFoto.Text;
 				obtienByte(id);
 			}
+			else if (txtIdFoto.Text == "")
+			{
+				pbFoto.Image = null;
+			}
 		}
 		private void activaBotones()
 		{
@@ -216,16 +221,16 @@ namespace CapaVistaRRHH
 				btnGuardar.Enabled = true;
 				btnSelecionImagen.Enabled = true;
 			}
-			else if (txtApellido.Enabled == true && txtApellido.Text == "" && txtNombre.Text=="")
+			else if (txtApellido.Enabled == true && txtApellido.Text == "" && txtNombre.Text == "")
 			{
 				btnGuardar.Enabled = true;
 				btnSelecionImagen.Enabled = true;
 				pbFoto.Image = null;
 			}
-			else if(txtApellido.Enabled==false)
-            {
+			else if (txtApellido.Enabled == false)
+			{
 				btnGuardar.Enabled = false;
-				btnSelecionImagen.Enabled = false;				
+				btnSelecionImagen.Enabled = false;
 			}
         }
 
@@ -237,6 +242,11 @@ namespace CapaVistaRRHH
         {
 			navegador1.SeleccionarElementosenCombo(cbxJornada, txtJornada);
 		}
-    }
+
+		private void cbxJornada_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			navegador1.EnviarDatoComboaTextbox(cbxJornada, txtJornada);
+		}
+	}
 }
 
