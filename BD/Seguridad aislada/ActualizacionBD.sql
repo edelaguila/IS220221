@@ -173,6 +173,18 @@ CREATE TABLE concepto (
 
 ALTER TABLE CONCEPTO MODIFY COLUMN  fkformulaConcepto VARCHAR(15) DEFAULT NULL;
 
+ALTER TABLE `hotelsancarlos`.`concepto` 
+DROP FOREIGN KEY `concepto_ibfk_1`;
+ALTER TABLE `hotelsancarlos`.`concepto` 
+CHANGE COLUMN `fkformulaConcepto` `TipoValor` VARCHAR(1) NULL DEFAULT NULL ,
+DROP INDEX `fkformulaConcepto` ;
+;
+ALTER TABLE `hotelsancarlos`.`concepto` 
+ADD CONSTRAINT `concepto_ibfk_1`
+  FOREIGN KEY ()
+  REFERENCES `hotelsancarlos`.`formula` ();
+
+
 -- --------------------------------------------------------------------------------------------------------------------------------------
 -- Tercer sprint - Angel Chacón - Tabla AsignarSaldosPorEmpleado - Fecha: 08/05/2022
 -- --------------------------------------------------------------------------------------------------------------------------------------

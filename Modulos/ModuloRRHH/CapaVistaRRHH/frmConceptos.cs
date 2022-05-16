@@ -23,7 +23,6 @@ namespace CapaVistaRRHH
 			TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
 			navegador1.ObtenerCamposdeTabla(alias, "concepto", "hotelSanCarlos");
 			navegador1.MetodoSalirVista(this);
-			navegador1.LlenarCombobox(cbxFormulaConcepto, "formula", "pkIdFormula", "valorFormula", "estado");
 			navegador1.LlenarCombobox(cbxCuentaContable, "cuentasContables", "pkId", "nombre", "estado");
 
 			//inicio de elementos para dar de baja
@@ -50,8 +49,6 @@ namespace CapaVistaRRHH
 			navegador1.ObtenerReferenciaFormActual(this);
 			//String cadena = txtprueba.Text;
 			//navegador1.pruebaMensaje(cadena);		
-			rbnValorU.Checked = false;
-			rbnFormula.Checked = false;
 		}
 
 
@@ -187,13 +184,8 @@ namespace CapaVistaRRHH
 			{
 				button1.Visible = false;
 				rbnFormula.Checked = false;
-				//cbxFormulaConcepto.Visible = false;
 				txtFormula.Visible = true;
-				txtIdFormulaConcepto.Text = "0";
-
-				
-				
-
+				txtTipoValor.Text = "1";
 			}
 		}
 
@@ -209,8 +201,7 @@ namespace CapaVistaRRHH
 				rbnValorU.Checked = false;
 				button1.Visible = true;
 				txtFormula.Text = "0";
-				txtFormula.Visible = false;
-				//cbxFormulaConcepto.Visible = false;				
+				txtTipoValor.Text = "0";				
 			}
 			txtFormula.Visible = false;
 
@@ -226,7 +217,7 @@ namespace CapaVistaRRHH
 
         private void cbxFormulaConcepto_SelectedIndexChanged(object sender, EventArgs e)
         {
-			navegador1.EnviarDatoComboaTextbox(cbxFormulaConcepto, txtIdFormulaConcepto);	
+				
 		}
 
         private void cbxCuentaContable_SelectedIndexChanged(object sender, EventArgs e)
@@ -236,19 +227,16 @@ namespace CapaVistaRRHH
 
         private void txtIdFormulaConcepto_TextChanged(object sender, EventArgs e)
         {
-			
-			navegador1.SeleccionarElementosenCombo(cbxFormulaConcepto, txtIdFormulaConcepto);
-
-			if (txtIdFormulaConcepto.Text != "0")
-			{
-				//cbxFormulaConcepto.Visible = false;
-				txtFormula.Visible = false;
+            if (txtTipoValor.Text=="1")
+            {
+				rbnValorU.Checked = true;
+				rbnFormula.Checked = false;
 			}
-			else
-			{
-				//cbxFormulaConcepto.Visible = false;
-			}
-
+			else if (txtTipoValor.Text == "0")
+            {
+				rbnValorU.Checked = false; ;
+				rbnFormula.Checked = true;
+            }
 			
 
 		}
@@ -256,12 +244,11 @@ namespace CapaVistaRRHH
         private void txtIdCuentaContable_TextChanged(object sender, EventArgs e)
         {
 			navegador1.SeleccionarElementosenCombo(cbxCuentaContable, txtIdCuentaContable);
-			cbxFormulaConcepto.SelectedIndex=cbxFormulaConcepto.Items.Count-1;
 		}
 
         private void txtFormula_TextChanged(object sender, EventArgs e)
         {
-			if (txtFormula.Text != "0")
+			if (txtTipoValor.Text == "1")
 			{
 				txtFormula.Visible = true;
 			}
@@ -271,7 +258,7 @@ namespace CapaVistaRRHH
 			}
 
 
-			if (cbxFormulaConcepto.Text == "NA")
+			if (txtTipoValor.Text == "1")
 			{
 				rbnValorU.Checked = true;
 				rbnFormula.Checked = false;
