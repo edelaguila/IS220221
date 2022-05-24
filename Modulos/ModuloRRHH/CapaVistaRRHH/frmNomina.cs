@@ -165,7 +165,7 @@ namespace CapaVistaRRHH
 
         private void frmNomina_Load(object sender, EventArgs e)
         {
-          
+            this.UseWaitCursor = false;
         }
 
 		private void frmNomina_HelpButtonClicked(object sender, CancelEventArgs e)
@@ -198,7 +198,7 @@ namespace CapaVistaRRHH
                 sumaSueldoLTotal = 0;
             }
             txtTotal.Text = sumaTotalLiquido.ToString();
-            return TablaSueldoL;           
+            return TablaSueldoL;
         }
 
         private void rbnEstatusamodulo_CheckedChanged(object sender, EventArgs e)

@@ -62,6 +62,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DGVPrinter.cs" />
+    <Compile Include="frmCandidatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCandidatos.Designer.cs">
+      <DependentUpon>frmCandidatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestorVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestorVacaciones.Designer.cs">
+      <DependentUpon>frmGestorVacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVacaciones.Designer.cs">
+      <DependentUpon>frmVacaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAsignacionEmpleadosaConceptos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +307,9 @@
     <EmbeddedResource Include="frmBancos.resx">
       <DependentUpon>frmBancos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCandidatos.resx">
+      <DependentUpon>frmCandidatos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConceptos.resx">
       <DependentUpon>frmConceptos.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeneracionNomina.resx">
       <DependentUpon>frmGeneracionNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestorVacaciones.resx">
+      <DependentUpon>frmGestorVacaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJornada.resx">
       <DependentUpon>frmJornada.cs</DependentUpon>
@@ -348,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTipoFalta.resx">
       <DependentUpon>frmTipoFalta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVacaciones.resx">
+      <DependentUpon>frmVacaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistorialISR.resx">
       <DependentUpon>HistorialISR.cs</DependentUpon>

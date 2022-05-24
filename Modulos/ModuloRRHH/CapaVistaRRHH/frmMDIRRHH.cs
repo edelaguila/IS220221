@@ -275,7 +275,43 @@ namespace CapaVistaRRHH
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
-    }
+
+		private void gestiónToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            try
+            {
+                frmVacaciones form = new frmVacaciones();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+		private void consultaDeVacacionesToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            try
+            {
+                frmGestorVacaciones form = new frmGestorVacaciones();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+		private void candidatosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            try
+            {
+                frmCandidatos form = new frmCandidatos();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+	}
 }
     
 

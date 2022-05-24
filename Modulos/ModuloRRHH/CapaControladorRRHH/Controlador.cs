@@ -309,9 +309,91 @@ namespace CapaControladorRRHH
         public DataTable calculoConceptoSentenciasFinal(int idConcepto, int idEmpleado, string IdPeriodo)
         {
             DataTable table = new DataTable();
-            table = sn.calculoConceptoSentenciasFinal(idConcepto,idEmpleado,IdPeriodo);
+            table = sn.calculoConceptoSentenciasFinal(idConcepto, idEmpleado, IdPeriodo);
 
             return table;
+        }
+
+        //HEYDI QUEME FRMVACACIONES
+        public DataTable llenarDGVDisponibles(string IdPeriodo)
+        {
+            OdbcDataAdapter dt = sn.llenarDGVDisponibles(IdPeriodo);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+        public void AsignarVacaciones(string tabla, string id, string valor2, string diasd, string diasg, string Estado)
+        {
+            sn.AsignarVacaciones(tabla, id, valor2, diasd, diasg, Estado);
+        }
+
+        public void guardarVacacionesEncabezado(string tabla, string id, string periodo, string estado)
+        {
+            sn.guardarVacacionesEncabezado(tabla, id, periodo, estado);
+        }
+        public DataTable llenarDGVAsignados(string IdPeriodo)
+        {
+            OdbcDataAdapter dt = sn.llenarDGVAsignados(IdPeriodo);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+        public void limpiarRegistros(string tabla, string encabezado)
+        {
+            sn.limpiarRegistros(tabla, encabezado);
+        }
+
+        public Boolean ComprobarEncabezado(string tabla, string encabezado, string periodo)
+        {
+            Boolean existente = sn.ComprobarEncabezado(tabla, encabezado, periodo);
+            return existente;
+        }
+
+        public void eliminarRegistroVacaciones(string tabla, string id, string empleado)
+        {
+            sn.eliminarRegistroVacaciones(tabla, id, empleado);
+        }
+        public Boolean ComprobarDetalles(string tabla, string encabezado)
+        {
+            Boolean existente = sn.ComprobarDetalles(tabla, encabezado);
+            return existente;
+        }
+
+        public void eliminarEncabezado(string tabla, string id, string periodo)
+        {
+            sn.eliminarEncabezado(tabla, id, periodo);
+        }
+        public DataTable llenarDGVRegistrados()
+        {
+            OdbcDataAdapter dt = sn.llenarDGVRegistrados();
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+        public OdbcDataReader llenarcbxPeriodo()
+        {
+            return sn.llenarcbxPeriodo();
+        }
+        public OdbcDataReader IdPeriodo(string nombreA)
+        {
+            return sn.IdPeriodo(nombreA);
+        }
+        public DataTable llenarDGVSeleccion(string IdPeriodo)
+        {
+            OdbcDataAdapter dt = sn.llenarDGVSeleccion(IdPeriodo);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+        public OdbcDataReader IdEncabezado(string nombreA)
+        {
+            return sn.IdEncabezado(nombreA);
+        }
+        public void ModificarVacaciones(string encabezado, string celdas, string dias)
+        {
+            {
+                sn.ModificarVacaciones(encabezado, celdas, dias);
+            }
         }
     }
 }
