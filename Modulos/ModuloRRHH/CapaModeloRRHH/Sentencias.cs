@@ -45,8 +45,8 @@ namespace CapaModeloRRHH
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
             return dataTable;
 
-        }       
-        
+        }
+
 
         //9959-18-5201 Angel Chacón
         public OdbcDataAdapter DatosConcepto(string IdConcepto)
@@ -152,7 +152,7 @@ namespace CapaModeloRRHH
         //Muestra todos los empleados que no tengan asignado un monto o saldo
         public OdbcDataReader llenarcbxEmpleados(string idConcepto)
         {
-            string sql = "select empleado.nombre from empleado_concepto,empleado where fkIdConcepto = " + idConcepto + " and pkIdEmpleado=fkIdEmpleado and fkIdEmpleado NOT IN(SELECT fkIdEmpleado FROM saldosporempleados where fkIdConcepto = " + idConcepto+ ") order by fkIdEmpleado;";
+            string sql = "select empleado.nombre from empleado_concepto,empleado where fkIdConcepto = " + idConcepto + " and pkIdEmpleado=fkIdEmpleado and fkIdEmpleado NOT IN(SELECT fkIdEmpleado FROM saldosporempleados where fkIdConcepto = " + idConcepto + ") order by fkIdEmpleado;";
             try
             {
                 OdbcCommand datos = new OdbcCommand(sql, cn.conexion());
@@ -278,7 +278,7 @@ namespace CapaModeloRRHH
             }
 
         }
-       
+
         public void GuradarFormula(string valor1, string valor2)
         {
             try
@@ -322,18 +322,18 @@ namespace CapaModeloRRHH
         {
             int dimensionalConceptos = 0; string querydimensionale = "", conceptos = ""; DataTable Encabezado = new DataTable();
             try
-            {                
-                dimensionalConceptos = cantidadTB(tabla);                
+            {
+                dimensionalConceptos = cantidadTB(tabla);
                 for (int i = 0; i < dimensionalConceptos; i++)
                 {
                     querydimensionale = "SELECT " + querybusqueda + " from " + tabla + " where estado= '1';";
                     Encabezado = PasarCalculoTabla(querydimensionale);
-                    string dtConceptosE = string.Join(Environment.NewLine, Encabezado.Rows.OfType<DataRow>().Select(l => string.Join(" ; ", l.ItemArray)));                                 
+                    string dtConceptosE = string.Join(Environment.NewLine, Encabezado.Rows.OfType<DataRow>().Select(l => string.Join(" ; ", l.ItemArray)));
                 }
             }
             catch (Exception ex) { MessageBox.Show("Error en obtener encabezado Nomina capa Modelo " + ex); }
             cn.desconexion(cn.conexion());
-            return (Encabezado);            
+            return (Encabezado);
         }
         public int idSiguienteDeNuevoIngreso(string tabla, string campoB)
         {
@@ -362,7 +362,7 @@ namespace CapaModeloRRHH
         }
         public DataTable calculoConceptoSentencias(int idConcepto, int idEmpleado, string IdPeriodo)
         {
-            
+
             try
             {
                 //SE SELECCIONAN LAS FORMULAS RELACIONADAS CON LOS CONCEPTOS
@@ -404,12 +404,12 @@ namespace CapaModeloRRHH
             catch (Exception ex) { MessageBox.Show("Error en obtener encabezado Nomina capa Controlador " + ex); }
             return (tabla);
         }
-        public Boolean valorUnico(int idConcepto, int idEmpleado, string IdPeriodo) 
+        public Boolean valorUnico(int idConcepto, int idEmpleado, string IdPeriodo)
         {
 
             //SE SELECCIONAN LAS FORMULAS RELACIONADAS CON LOS CONCEPTOS
-            Boolean respuesta=false; string sql = "";
-            string Query2 = "SELECT * FROM saldosporempleados WHERE fkIdConcepto='" + idConcepto + "'" + " AND fkIdEmpleado='" + idEmpleado + "';";           
+            Boolean respuesta = false; string sql = "";
+            string Query2 = "SELECT * FROM saldosporempleados WHERE fkIdConcepto='" + idConcepto + "'" + " AND fkIdEmpleado='" + idEmpleado + "';";
             try
             {
                 OdbcConnection conect = cn.conexion();
@@ -432,7 +432,7 @@ namespace CapaModeloRRHH
                 }
             }
             catch (Exception)
-            {                
+            {
             }
             return respuesta;
         }
@@ -440,45 +440,45 @@ namespace CapaModeloRRHH
         public DataTable calculoValorUnicoSentencias(int idConcepto, int idEmpleado, string IdPeriodo)
         {
             string sql = "";
+            try
+            {
+                //SE SELECCIONAN LAS FORMULAS RELACIONADAS CON LOS CONCEPTOS
+                string Query2 = "SELECT saldo FROM saldosporempleados WHERE fkIdConcepto='" + idConcepto + "'" + " AND fkIdEmpleado='" + idEmpleado + "';";
+                OdbcConnection conect = cn.conexion();
+                OdbcCommand consulta2 = new OdbcCommand(Query2, conect);
+                consulta2.ExecuteNonQuery(); OdbcDataReader busqueda2;
+                busqueda2 = consulta2.ExecuteReader();
+                if (busqueda2.Read())
+                {
+                    sql = busqueda2["saldo"].ToString();
+                }
+                cn.desconexion(conect);
+                //SE ENVIA COMO QUERY LA FORMULA DEL CONCEPTO
                 try
                 {
-                    //SE SELECCIONAN LAS FORMULAS RELACIONADAS CON LOS CONCEPTOS
-                    string Query2 = "SELECT saldo FROM saldosporempleados WHERE fkIdConcepto='" + idConcepto + "'" + " AND fkIdEmpleado='" + idEmpleado + "';";
-                    OdbcConnection conect = cn.conexion();
-                    OdbcCommand consulta2 = new OdbcCommand(Query2, conect);
-                    consulta2.ExecuteNonQuery(); OdbcDataReader busqueda2;
-                    busqueda2 = consulta2.ExecuteReader();
-                    if (busqueda2.Read())
-                    {
-                        sql = busqueda2["saldo"].ToString();
-                    }
-                    cn.desconexion(conect);
-                    //SE ENVIA COMO QUERY LA FORMULA DEL CONCEPTO
-                    try
-                    {
-                   // MessageBox.Show(Query2 + "   " + sql);
-                        tabla = PasarCalculoTabla(Query2);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error en Asignación:" + ex);
-                    }
-                
+                    // MessageBox.Show(Query2 + "   " + sql);
+                    tabla = PasarCalculoTabla(Query2);
                 }
-                catch (Exception ex) { MessageBox.Show("Error en obtener encabezado Nomina capa Controlador " + ex); }         
-                return (tabla);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en Asignación:" + ex);
+                }
+
+            }
+            catch (Exception ex) { MessageBox.Show("Error en obtener encabezado Nomina capa Controlador " + ex); }
+            return (tabla);
         }
         public DataTable calculoConceptoSentenciasFinal(int idConcepto, int idEmpleado, string IdPeriodo)
         {
             Boolean valor = valorUnico(idConcepto, idEmpleado, IdPeriodo);
             DataTable tabla = new DataTable();
-            if (valor==true)
+            if (valor == true)
             {
-                tabla = calculoValorUnicoSentencias(idConcepto,idEmpleado,IdPeriodo);
+                tabla = calculoValorUnicoSentencias(idConcepto, idEmpleado, IdPeriodo);
             }
-            else if (valor ==false)
+            else if (valor == false)
             {
-                tabla=calculoConceptoSentencias(idConcepto, idEmpleado, IdPeriodo);
+                tabla = calculoConceptoSentencias(idConcepto, idEmpleado, IdPeriodo);
             }
             return tabla;
         }
@@ -502,7 +502,7 @@ namespace CapaModeloRRHH
         {
             Boolean respuesta = false;
             int cantidadc = cantidadTB("concepto");
-            string Queryc = "SELECT * FROM " + tabla + " WHERE fkidempleado='" + idEmpleado + "' AND fkidconcepto='" + idConcepto + "';";           
+            string Queryc = "SELECT * FROM " + tabla + " WHERE fkidempleado='" + idEmpleado + "' AND fkidconcepto='" + idConcepto + "';";
             try
             {
                 OdbcConnection conect = cn.conexion();
@@ -522,7 +522,7 @@ namespace CapaModeloRRHH
             catch (Exception e)
             {
                 MessageBox.Show("Error al validar relación concepto-empleado: " + e);
-            }                        
+            }
             return respuesta;
         }
         public Boolean validarEfecto(int idConcepto)
@@ -530,7 +530,7 @@ namespace CapaModeloRRHH
             string efecto = "";
             Boolean respuesta = false;
             int cantidadc = cantidadTB("concepto");
-            string Queryc = "SELECT efectoConcepto FROM concepto WHERE pkidconcepto='" + idConcepto + "';";            
+            string Queryc = "SELECT efectoConcepto FROM concepto WHERE pkidconcepto='" + idConcepto + "';";
             try
             {
                 OdbcConnection conect = cn.conexion();
@@ -600,7 +600,7 @@ namespace CapaModeloRRHH
                 OdbcCommand datos = new OdbcCommand(sql, conect);
                 OdbcDataReader leer = datos.ExecuteReader();
                 cn.desconexion(conect);
-                return leer;                
+                return leer;
             }
             catch (Exception ex)
             {
@@ -693,19 +693,19 @@ namespace CapaModeloRRHH
             }
         }
         public byte[] obtenerByte(string id)
-        {            
-            int bufferSize = 100; byte[] bytefoto = new byte[bufferSize]; 
+        {
+            int bufferSize = 100; byte[] bytefoto = new byte[bufferSize];
             byte[] binary = null;
             try
             {
-               string insertQuery = "SELECT * FROM foto WHERE pkId ='" + id + "';";
-               OdbcConnection conect = cn.conexion(); 
-               OdbcCommand command = new OdbcCommand(insertQuery, conect);
-               command.ExecuteNonQuery(); OdbcDataReader busquedac;
-               busquedac = command.ExecuteReader();
+                string insertQuery = "SELECT * FROM foto WHERE pkId ='" + id + "';";
+                OdbcConnection conect = cn.conexion();
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                command.ExecuteNonQuery(); OdbcDataReader busquedac;
+                busquedac = command.ExecuteReader();
                 if (!busquedac.HasRows)
-                { 
-                  throw new Exception("No hay fotografia guardada.");
+                {
+                    throw new Exception("No hay fotografia guardada.");
                 }
                 if (busquedac.Read())
                 {
@@ -713,14 +713,173 @@ namespace CapaModeloRRHH
                 }
                 cn.desconexion(conect);
                 return binary;
-                }
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar imagen" + ex);
                 return null;
             }
 
-        }   
+        }
+        //HEYDI QUEME FRMVACACIONES
+        public OdbcDataAdapter llenarDGVDisponibles(string IdVacaciones)
+        {
+            //Obtiene todos los empleados
+            string sql = "SELECT pkIdEmpleado, nombre FROM empleado  WHERE pkIdEmpleado NOT IN(SELECT empleado FROM vacaciones_d where vacaciones_e = '" + IdVacaciones + "');";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
 
+        public void guardarVacacionesEncabezado(string tabla, string id, string periodo, string estado)
+        {
+            try
+            {
+                string cadena = "INSERT INTO " + tabla + " VALUES ('" + id + "','" + periodo + "','" + estado + "');";
+                OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
+                consulta.ExecuteNonQuery();
+            }
+            catch (OdbcException ex)
+            {
+                MessageBox.Show("Error al añadir vacaciones: " + ex.Message);
+            }
+        }
+
+        public void AsignarVacaciones(string tabla, string id, string valor2, string diasd, string diasg, string Estado)
+        {
+            string sql = "INSERT INTO " + tabla + " Values( '" + id + "', '" + valor2 + "','" + diasd + "','" + diasg + "','" + Estado + "');";
+            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+            consulta.ExecuteNonQuery();
+
+        }
+
+        public OdbcDataAdapter llenarDGVAsignados(string IdPeriodo)
+        {
+            //Obtiene todos los empleados
+            string sql = "SELECT pkIdEmpleado, nombre FROM empleado  WHERE pkIdEmpleado IN(SELECT empleado FROM vacaciones_d where vacaciones_e = '" + IdPeriodo + "');";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+        public void limpiarRegistros(string tabla, string encabezado)
+        {
+            string sql = "DELETE FROM " + tabla + " WHERE vacaciones_e = '" + encabezado + "';";
+            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+            consulta.ExecuteNonQuery();
+        }
+        public Boolean ComprobarEncabezado(string tabla, string encabezado, string periodo)
+        {
+            string sql = "SELECT * FROM " + tabla + " WHERE vacaciones_e = '" + encabezado + "' AND periodo = '" + periodo + "';";
+            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+            consulta.ExecuteNonQuery();
+            Boolean existente = false;
+            OdbcDataReader busqueda;
+            busqueda = consulta.ExecuteReader();
+            if (busqueda.Read())
+            {
+                existente = true;
+            }
+            else
+            {
+                existente = false;
+            }
+            return existente;
+        }
+
+        public void eliminarRegistroVacaciones(string tabla, string id, string empleado)
+        {
+            string sql = "DELETE FROM " + tabla + " WHERE vacaciones_e ='" + id + "' AND empleado ='" + empleado + "';";
+            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+            consulta.ExecuteNonQuery();
+        }
+
+        public Boolean ComprobarDetalles(string tabla, string encabezado)
+        {
+            string sql = "SELECT * FROM " + tabla + " WHERE vacaciones_e = '" + encabezado + "';";
+            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+            consulta.ExecuteNonQuery();
+            Boolean existente = false;
+            OdbcDataReader busqueda;
+            busqueda = consulta.ExecuteReader();
+            if (busqueda.Read())
+            {
+                existente = true;
+            }
+            else
+            {
+                existente = false;
+            }
+            return existente;
+        }
+
+        public void eliminarEncabezado(string tabla, string id, string periodo)
+        {
+            string sql = "DELETE FROM " + tabla + " WHERE vacaciones_e ='" + id + "' AND periodo ='" + periodo + "';";
+            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+            consulta.ExecuteNonQuery();
+        }
+        public OdbcDataAdapter llenarDGVRegistrados()
+        {
+            //Obtiene todos los empleados
+            string sql = "SELECT vacaciones_e.vacaciones_e, periodo.nombre, vacaciones_e.estado from vacaciones_e inner join periodo where vacaciones_e.periodo = periodo.pkid and periodo.estado='1' and vacaciones_e.estado='1';";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+        public OdbcDataReader llenarcbxPeriodo()
+        {
+            string sql = "select periodo.nombre from periodo inner join vacaciones_e where vacaciones_e.periodo = periodo.pkId;";
+            try
+            {
+                OdbcCommand datos = new OdbcCommand(sql, cn.conexion());
+                OdbcDataReader leer = datos.ExecuteReader();
+                return leer;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+        public OdbcDataReader IdPeriodo(string nombreA)//conexion para obtener el IdConcepto para el Combobox
+        {
+            string cadena = "Select pkid from periodo where nombre = '" + nombreA + "';";
+            try
+            {
+                OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
+                OdbcDataReader leer = consulta.ExecuteReader();
+                return leer;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error en Capa Modelo --> Consultas: " + e);
+                return null;
+            }
+        }
+        public OdbcDataReader IdEncabezado(string nombreA)//conexion para obtener el IdConcepto para el Combobox
+        {
+            string cadena = "Select vacaciones_e from hotelsancarlos.vacaciones_e where periodo = '" + nombreA + "';";
+            try
+            {
+                OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
+                OdbcDataReader leer = consulta.ExecuteReader();
+                return leer;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error en Capa Modelo --> Consultas: " + e);
+                return null;
+            }
+        }
+        public OdbcDataAdapter llenarDGVSeleccion(string IdPeriodo)
+        {
+            //Obtiene todos los empleados
+            string sql = "SELECT empleado.pkIdEmpleado, empleado.nombre, vacaciones_d.diasdisponibles, vacaciones_d.diasgozados FROM empleado INNER JOIN vacaciones_d ON empleado.pkidempleado = vacaciones_d.empleado WHERE vacaciones_d.diasdisponibles != 8 AND vacaciones_e IN(SELECT vacaciones_e.vacaciones_e FROM hotelsancarlos.vacaciones_e INNER JOIN vacaciones_d WHERE vacaciones_e.vacaciones_e = vacaciones_d.vacaciones_e AND vacaciones_e.periodo = '" + IdPeriodo + "') ORDER BY pkidempleado;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+        public void ModificarVacaciones(string encabezado, string celdas, string dias)
+        {
+            string sql = "UPDATE vacaciones_d SET diasdisponibles = diasdisponibles -" + dias + ", diasgozados = diasgozados +" + dias + " WHERE empleado= '" + celdas + "' AND vacaciones_e = '" + encabezado + "';";
+            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+            consulta.ExecuteNonQuery();
+        }
     }
 }

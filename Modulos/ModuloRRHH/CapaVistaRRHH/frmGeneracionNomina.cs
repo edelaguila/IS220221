@@ -28,7 +28,7 @@ namespace CapaVistaRRHH
         // string[][] vectorNomina;
         frmLoading Loading;
         private void btnGeneraNomina_Click(object sender, EventArgs e)
-        {            
+        {          
             string fechaInicio = txtInicio.Text.ToString();
             string fechaFin = txtFin.Text.ToString();
             string[,] vectorNomina = new string[1000, 100];
@@ -39,17 +39,20 @@ namespace CapaVistaRRHH
             if (dtpInicio.Value > dtpFin.Value)
             {
                 MessageBox.Show("La fecha inicial no puede ser mayor a la fecha final. Seleccione una fecha valida.");
+                
             }
             else
             {
                 try
                 {
+                     
                     show();
                     frmNomina frm = new frmNomina();
                     frm.Show();
                     hide();
+                   
                 }
-                catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+                catch (Exception ex) { MessageBox.Show("Error: " + ex);}
             }
         }
 
@@ -75,12 +78,15 @@ namespace CapaVistaRRHH
               
         public void show()
         {
+            
             Loading = new frmLoading();
             Loading.Show();
+            
         }
         public void hide()
         {
             Loading.Close();
+           
         }
 		private void frmGeneracionNomina_HelpButtonClicked(object sender, CancelEventArgs e)
 		{

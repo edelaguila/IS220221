@@ -15,6 +15,7 @@ namespace CapaVistaRRHH
         public frmLoading()
         {
             InitializeComponent();
+            this.UseWaitCursor = true;
         }
 
         private void frmLoading_Load(object sender, EventArgs e)

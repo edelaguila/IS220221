@@ -75,6 +75,7 @@ namespace CapaVistaRRHH
 			this.btnSelecionImagen = new System.Windows.Forms.Button();
 			this.btnGuardar = new System.Windows.Forms.Button();
 			this.txtIdFoto = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
@@ -458,6 +459,7 @@ namespace CapaVistaRRHH
 			// 
 			// pbFoto
 			// 
+			this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.pbFoto.Location = new System.Drawing.Point(10, 107);
 			this.pbFoto.Name = "pbFoto";
 			this.pbFoto.Size = new System.Drawing.Size(198, 251);
@@ -495,11 +497,21 @@ namespace CapaVistaRRHH
 			this.txtIdFoto.Visible = false;
 			this.txtIdFoto.TextChanged += new System.EventHandler(this.txtIdFoto_TextChanged);
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(83, 90);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(56, 13);
+			this.label1.TabIndex = 92;
+			this.label1.Text = "Fotografía";
+			// 
 			// frmEmpleados
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1188, 530);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.txtEstado);
 			this.Controls.Add(this.txtIDEmpresa);
 			this.Controls.Add(this.txtIDPuesto);
@@ -603,5 +615,6 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.Button btnSelecionImagen;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtIdFoto;
-    }
+		private System.Windows.Forms.Label label1;
+	}
 }
