@@ -220,12 +220,14 @@ namespace CapaVistaRRHH
 			{
 				btnGuardar.Enabled = true;
 				btnSelecionImagen.Enabled = true;
+				txtNombre.Focus();				
 			}
 			else if (txtApellido.Enabled == true && txtApellido.Text == "" && txtNombre.Text == "")
 			{
 				btnGuardar.Enabled = true;
 				btnSelecionImagen.Enabled = true;
 				pbFoto.Image = null;
+				txtNombre.Focus();				
 			}
 			else if (txtApellido.Enabled == false)
 			{
