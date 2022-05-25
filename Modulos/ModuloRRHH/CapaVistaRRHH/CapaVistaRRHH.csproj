@@ -434,6 +434,7 @@
     <Content Include="Recursos\loader.png" />
     <Content Include="Recursos\MDI.jpg" />
     <Content Include="Recursos\human_resources_search_employees_icon_187558.ico" />
+    <Content Include="Recursos\pngegg.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
