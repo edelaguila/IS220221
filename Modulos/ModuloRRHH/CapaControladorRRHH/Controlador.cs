@@ -395,5 +395,61 @@ namespace CapaControladorRRHH
                 sn.ModificarVacaciones(encabezado, celdas, dias);
             }
         }
+
+        public DataTable ConsultaTablasPoliza1(string id, string fecha)
+        {
+            OdbcDataAdapter dt = sn.ConsultaTablasPoliza1(id, fecha);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+        public DataTable ConsultaTablasPoliza2(string id, string fecha)
+        {
+            OdbcDataAdapter dt = sn.ConsultaTablasPoliza2(id, fecha);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+        public DataTable ConsultaTablasPoliza3(string id, string fecha)
+        {
+            OdbcDataAdapter dt = sn.ConsultaTablasPoliza3(id, fecha);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        public void Guradarpoliza(string valor1, string valor2, string valor3)
+        {
+            sn.Guradarpoliza(valor1, valor2, valor3);
+        }
+
+        public void Borrarpoliza(string valor3)
+        {
+            sn.Borrarpoliza(valor3);
+        }
+
+        public DataTable CantidadConceptosPlanilla(string id)
+        {
+            OdbcDataAdapter dt = sn.CantidadConceptosPlanilla(id);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        public DataTable MostarPoliza(string id, string fecha)
+        {
+            OdbcDataAdapter dt = sn.MostarPoliza(id, fecha);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        public DataTable ObtenerSalarioPoliza(string id, string fecha)
+        {
+            OdbcDataAdapter dt = sn.ObtenerSalarioPoliza(id, fecha);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
     }
 }

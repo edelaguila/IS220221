@@ -881,5 +881,92 @@ namespace CapaModeloRRHH
             OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
             consulta.ExecuteNonQuery();
         }
+
+        public OdbcDataAdapter ConsultaTablasPoliza1(string id, string fecha)
+        {
+            //Suma total de cada concepto
+            string sql = "SELECT cuentascontables.nomenclatura FROM nomina_d INNER JOIN nomina_e ON nomina_d.CodigoNominaE = nomina_e.CodigoNominaE INNER JOIN concepto  ON nomina_d.pkIdConcepto = concepto.pkIdConcepto INNER JOIN cuentascontables  ON concepto.fkCuentaContable = cuentascontables.pkId WHERE concepto.pkIdConcepto='" + id + "'AND nomina_e.FechaFinalN='"+ fecha +"' GROUP by cuentascontables.pkId ORDER BY cuentascontables.efecto;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+        public OdbcDataAdapter ConsultaTablasPoliza2(string id, string fecha)
+        {
+            //Suma total de cada concepto
+            string sql = "SELECT SUM(CalculoConcepto) FROM nomina_d INNER JOIN nomina_e ON nomina_d.CodigoNominaE = nomina_e.CodigoNominaE INNER JOIN concepto  ON nomina_d.pkIdConcepto = concepto.pkIdConcepto INNER JOIN cuentascontables  ON concepto.fkCuentaContable = cuentascontables.pkId WHERE concepto.pkIdConcepto='" + id + "' AND nomina_e.FechaFinalN='" + fecha + "' ORDER BY cuentascontables.efecto;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+        public OdbcDataAdapter ConsultaTablasPoliza3(string id, string fecha)
+        {
+            //Suma total de cada concepto
+            string sql = "SELECT cuentascontables.efecto FROM nomina_d INNER JOIN nomina_e ON nomina_d.CodigoNominaE = nomina_e.CodigoNominaE INNER JOIN concepto  ON nomina_d.pkIdConcepto = concepto.pkIdConcepto INNER JOIN cuentascontables  ON concepto.fkCuentaContable = cuentascontables.pkId WHERE concepto.pkIdConcepto='" + id + "' AND nomina_e.FechaFinalN='" + fecha + "' GROUP BY cuentascontables.efecto ORDER BY cuentascontables.efecto;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+
+        public void Guradarpoliza(string valor1, string valor2, string valor3)
+        {
+            try
+            {
+                string sql = "INSERT INTO poliza_p (fkidCuentaContable, valor, Periodo, estado) Values( '" + valor1 + "', '" + valor2 + "','" + valor3 + "','1');";
+                OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+                consulta.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error" + ex);
+            }
+
+        }
+        public void Borrarpoliza(string valor3)
+        {
+            try
+            {
+
+                string sqlBorrar = "DELETE FROM poliza_p WHERE Periodo = '" + valor3 + "';";
+                OdbcCommand consultaBorrar = new OdbcCommand(sqlBorrar, cn.conexion());
+                consultaBorrar.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error" + ex);
+            }
+
+        }
+
+
+
+        public OdbcDataAdapter CantidadConceptosPlanilla(string id)
+        {
+            //Ver que conceptos se usan en la planilla
+            string sql = "SELECT nomina_d.pkIdConcepto FROM nomina_d INNER JOIN nomina_e  ON nomina_d.CodigoNominaE = nomina_e.CodigoNominaE GROUP BY nomina_d.pkIdConcepto;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+
+        }
+
+
+
+        public OdbcDataAdapter MostarPoliza(string id, string fecha)
+        {
+            //Ver que conceptos se usan en la planilla
+            string sql = "SELECT cuentascontables.nomenclatura, cuentascontables.nombre, poliza_p.valor, cuentascontables.efecto  FROM poliza_p INNER JOIN cuentascontables ON poliza_p.fkidCuentaContable = cuentascontables.nomenclatura WHERE poliza_p.Periodo = '" + fecha + "' GROUP BY poliza_p.fkidCuentaContable ORDER BY cuentascontables.efecto;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+
+        }
+
+        public OdbcDataAdapter ObtenerSalarioPoliza(string id, string fecha)
+        {
+            //Ver que conceptos se usan en la planilla
+            string sql = "SELECT nomina_d.SueldoBase FROM nomina_d INNER JOIN nomina_e  ON nomina_d.CodigoNominaE = nomina_e.CodigoNominaE WHERE nomina_e.FechaFinalN='" + fecha + "' GROUP By nomina_d.pkIdEmpleado;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+
+        }
     }
 }

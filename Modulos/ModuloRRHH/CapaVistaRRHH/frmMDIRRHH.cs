@@ -311,7 +311,19 @@ namespace CapaVistaRRHH
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
-	}
+
+        private void polizaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmPoliza form = new frmPoliza();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+    }
 }
     
 
