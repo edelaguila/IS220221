@@ -395,6 +395,7 @@ namespace CapaVistaRRHH
 			this.txtEstudios.TabIndex = 124;
 			this.txtEstudios.TabStop = false;
 			this.txtEstudios.Tag = "estudios";
+			this.txtEstudios.Visible = false;
 			// 
 			// rtxtEstudios
 			// 
@@ -416,6 +417,7 @@ namespace CapaVistaRRHH
 			this.txtExperiencia.TabIndex = 125;
 			this.txtExperiencia.TabStop = false;
 			this.txtExperiencia.Tag = "experiencia";
+			this.txtExperiencia.Visible = false;
 			// 
 			// txtReferencias
 			// 
@@ -425,6 +427,7 @@ namespace CapaVistaRRHH
 			this.txtReferencias.TabIndex = 126;
 			this.txtReferencias.TabStop = false;
 			this.txtReferencias.Tag = "referencias";
+			this.txtReferencias.Visible = false;
 			// 
 			// frmCandidatos
 			// 
