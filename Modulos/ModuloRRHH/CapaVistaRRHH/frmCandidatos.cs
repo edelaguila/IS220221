@@ -18,7 +18,7 @@ namespace CapaVistaRRHH
 		public frmCandidatos()
 		{
 			InitializeComponent();
-
+			dgvVistaPrevia.CurrentCell=null;
 			TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
 			navegador1.ObtenerCamposdeTabla(alias, "candidato", "hotelSanCarlos");
 			navegador1.MetodoSalirVista(this);
@@ -163,6 +163,12 @@ namespace CapaVistaRRHH
 		private void txtNombre_EnabledChanged(object sender, EventArgs e)
 		{
 			activaBotones();
+			if (txtNombre.Enabled == false && txtNombre.Text == "")
+			{
+				rtxtEstudios.Text = "";
+				rtxtExperiencia.Text = "";
+				txtReferencias.Text = "";
+			}
 		}
 
 		private void rbnEstatusamodulo_CheckedChanged(object sender, EventArgs e)
@@ -198,11 +204,65 @@ namespace CapaVistaRRHH
 			txtReferencias.Text = rtxtReferencias.Text;
 		}
 
-		private void txtExperiencia_TextChanged(object sender, EventArgs e)
+		private void dgvVistaPrevia_SelectionChanged(object sender, EventArgs e)
 		{
-			if (txtNombre.Enabled == false)
+			if (txtNombre.Enabled == false && txtNombre.Text!="")
 			{
-				rtxtExperiencia.Text = txtExperiencia.Text;
+				rtxtEstudios.Text = "";
+				rtxtExperiencia.Text = "";
+				rtxtReferencias.Text = "";
+				rtxtEstudios.Text = dgvVistaPrevia.CurrentRow.Cells[9].Value.ToString();
+				rtxtExperiencia.Text = dgvVistaPrevia.CurrentRow.Cells[10].Value.ToString();
+				rtxtReferencias.Text = dgvVistaPrevia.CurrentRow.Cells[11].Value.ToString();
+			}
+			else if (txtNombre.Enabled == true && txtNombre.Text == "")
+			{
+				rtxtEstudios.Text = "";
+				rtxtExperiencia.Text = "";
+				rtxtReferencias.Text = "";
+			}
+		}
+
+		private void txtNombre_TextChanged(object sender, EventArgs e)
+		{
+			if (txtNombre.Enabled == false && txtNombre.Text != "" && txtApellido.Enabled==false && txtApellido.Text=="")
+			{
+				rtxtEstudios.Text = "";
+				rtxtExperiencia.Text = "";
+				rtxtReferencias.Text = "";
+				rtxtEstudios.Text = dgvVistaPrevia.CurrentRow.Cells[9].Value.ToString();
+				rtxtExperiencia.Text = dgvVistaPrevia.CurrentRow.Cells[10].Value.ToString();
+				rtxtReferencias.Text = dgvVistaPrevia.CurrentRow.Cells[11].Value.ToString();
+			}
+			else if (txtNombre.Enabled == true && txtNombre.Text == "" && txtApellido.Text =="" && txtApellido.Enabled==true)
+			{
+				rtxtEstudios.Text = "";
+				rtxtExperiencia.Text = "";
+				rtxtReferencias.Text = "";
+			}
+		}
+
+		private void rtxtEstudios_EnabledChanged(object sender, EventArgs e)
+		{
+			if (rtxtEstudios.Enabled == false)
+			{
+				rtxtEstudios.Text = "";
+			}
+		}
+
+		private void rtxtExperiencia_EnabledChanged(object sender, EventArgs e)
+		{
+			if (rtxtExperiencia.Enabled == false)
+			{
+				rtxtExperiencia.Text = "";
+			}
+		}
+
+		private void rtxtReferencias_EnabledChanged(object sender, EventArgs e)
+		{
+			if (rtxtReferencias.Enabled == false)
+			{
+				rtxtReferencias.Text = "";
 			}
 		}
 	}
