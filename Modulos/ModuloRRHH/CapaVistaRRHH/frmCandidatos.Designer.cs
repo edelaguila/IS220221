@@ -147,6 +147,7 @@ namespace CapaVistaRRHH
 			this.txtNombre.TabIndex = 1;
 			this.txtNombre.Tag = "nombre";
 			this.txtNombre.EnabledChanged += new System.EventHandler(this.txtNombre_EnabledChanged);
+			this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
 			// 
 			// txtID
 			// 
@@ -195,6 +196,7 @@ namespace CapaVistaRRHH
 			this.dgvVistaPrevia.Size = new System.Drawing.Size(1164, 249);
 			this.dgvVistaPrevia.TabIndex = 104;
 			this.dgvVistaPrevia.TabStop = false;
+			this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
 			// 
 			// txtEdad
 			// 
@@ -299,6 +301,7 @@ namespace CapaVistaRRHH
 			this.rtxtExperiencia.TabIndex = 9;
 			this.rtxtExperiencia.Tag = "";
 			this.rtxtExperiencia.Text = "";
+			this.rtxtExperiencia.EnabledChanged += new System.EventHandler(this.rtxtExperiencia_EnabledChanged);
 			this.rtxtExperiencia.TextChanged += new System.EventHandler(this.rtxtExperiencia_TextChanged);
 			// 
 			// label8
@@ -319,6 +322,7 @@ namespace CapaVistaRRHH
 			this.rtxtReferencias.TabIndex = 10;
 			this.rtxtReferencias.Tag = "";
 			this.rtxtReferencias.Text = "";
+			this.rtxtReferencias.EnabledChanged += new System.EventHandler(this.rtxtReferencias_EnabledChanged);
 			this.rtxtReferencias.TextChanged += new System.EventHandler(this.rtxtReferencias_TextChanged);
 			// 
 			// label9
@@ -401,6 +405,7 @@ namespace CapaVistaRRHH
 			this.rtxtEstudios.TabIndex = 8;
 			this.rtxtEstudios.Tag = "";
 			this.rtxtEstudios.Text = "";
+			this.rtxtEstudios.EnabledChanged += new System.EventHandler(this.rtxtEstudios_EnabledChanged);
 			this.rtxtEstudios.TextChanged += new System.EventHandler(this.rtxtEstudios_TextChanged);
 			// 
 			// txtExperiencia
@@ -411,7 +416,6 @@ namespace CapaVistaRRHH
 			this.txtExperiencia.TabIndex = 125;
 			this.txtExperiencia.TabStop = false;
 			this.txtExperiencia.Tag = "experiencia";
-			this.txtExperiencia.TextChanged += new System.EventHandler(this.txtExperiencia_TextChanged);
 			// 
 			// txtReferencias
 			// 
