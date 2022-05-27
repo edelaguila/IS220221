@@ -30,7 +30,7 @@ namespace CapaVistaRRHH
         public void FormulasTodosLosConceptos()
         {
             DataTable dt = cn.FormulasTodosLosConceptos();
-            dataGridView1.DataSource = dt;
+            //dataGridView1.DataSource = dt;
         }
 
         public void FormulasLlenarComboTablas()
@@ -330,7 +330,7 @@ namespace CapaVistaRRHH
             if (contadorParentesis == contadorParentesis2)
             {
                 string formula = txtFormula.Text;
-                string pkIdConcepto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                //string pkIdConcepto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 //cn.FormulasAsignarConcepto(formula, pkIdConcepto);
                 MessageBox.Show("Asignacion Correcta", "Formulas RRHH");
 
@@ -433,7 +433,7 @@ namespace CapaVistaRRHH
             if (contadorParentesis == contadorParentesis2)
             {
                 string formula = txtFormula.Text;
-                string pkIdConcepto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                //string pkIdConcepto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 //cn.FormulasAsignarConcepto(formula, pkIdConcepto);
                 
 

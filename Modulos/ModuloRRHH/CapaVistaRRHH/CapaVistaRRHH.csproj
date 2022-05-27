@@ -74,6 +74,12 @@
     <Compile Include="frmGestorVacaciones.Designer.cs">
       <DependentUpon>frmGestorVacaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPoliza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPoliza.designer.cs">
+      <DependentUpon>frmPoliza.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVacaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPeriodosNomina.resx">
       <DependentUpon>frmPeriodosNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPoliza.resx">
+      <DependentUpon>frmPoliza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPuesto.resx">
       <DependentUpon>frmPuesto.cs</DependentUpon>
