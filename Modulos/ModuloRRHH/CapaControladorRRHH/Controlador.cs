@@ -451,5 +451,50 @@ namespace CapaControladorRRHH
             dt.Fill(table);
             return table;
         }
+
+        public DataTable obtenerCuentaPagoPlanilla()
+        {
+            OdbcDataAdapter dt = sn.obtenerCuentaPagoPlanilla();
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        public DataTable obtenerGastoPlanilla()
+        {
+            OdbcDataAdapter dt = sn.obtenerGastoPlanilla();
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        public DataTable obtenerCuentaPasivoPlanilla()
+        {
+            OdbcDataAdapter dt = sn.obtenerCuentaPasivoPlanilla();
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        public DataTable obtenerSalarioPlanilla()
+        {
+            OdbcDataAdapter dt = sn.obtenerSalarioPlanilla();
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        public void ActualizarCodigosCuentas(string valor1, string valor2, string valor3, string valor4)
+        {
+            sn.ActualizarCodigosCuentas(valor1, valor2, valor3, valor4);
+        }
+
+        public DataTable ConsultaSentenciaSql(string valor1)
+        {
+            OdbcDataAdapter dt = sn.ConsultaSentenciaSql(valor1);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
     }
 }

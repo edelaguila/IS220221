@@ -240,3 +240,32 @@ UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modu
 
 ALTER TABLE `hotelsancarlos`.`saldosporempleados` 
 CHANGE COLUMN `saldo` `saldo` FLOAT NOT NULL ;
+
+
+
+
+
+
+
+
+
+drop table poliza_Conf;
+create table poliza_Conf(
+pkPoliza_Conf varchar(15),
+pago varchar(15),
+gasto varchar(15),
+pasivo varchar(15),
+salario varchar(15)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `poliza_conf`(`pkPoliza_Conf`, `pago`, `gasto`, `pasivo`, `salario`) VALUES ('1', '1.1.1.2.001','6.1.1.1.006','2.1.3.1.003','6.1.1.1.001');
+
+drop table poliza_p;
+CREATE TABLE `poliza_p` (
+  `fkidCuentaContable` varchar(15) DEFAULT NULL,
+  `valor` varchar(15) DEFAULT NULL,
+  `Periodo` date DEFAULT NULL,
+  `estado` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+

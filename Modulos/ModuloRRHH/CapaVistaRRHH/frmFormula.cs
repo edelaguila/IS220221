@@ -471,5 +471,13 @@ namespace CapaVistaRRHH
             //frmConceptos.txtEnvioFormula.Text = this.txtFormula.Text;
             //frmConceptos.labelsql2.Text = this.txtsql.Text;
         }
+
+        private void frmFormula_Load(object sender, EventArgs e)
+        {
+            string valor1 = textBox2.Text;
+            DataTable res = cn.ConsultaSentenciaSql(valor1);
+            string resF = string.Join(Environment.NewLine, res.Rows.OfType<DataRow>().Select(x => string.Join(" ; ", x.ItemArray)));
+            txtsql.Text = resF;
+        }
     }
 }

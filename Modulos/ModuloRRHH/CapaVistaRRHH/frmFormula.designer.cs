@@ -386,6 +386,7 @@ namespace CapaVistaRRHH
             this.Name = "frmFormula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2203 AsignacionFormulaAConcepto";
+            this.Load += new System.EventHandler(this.frmFormula_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
