@@ -488,5 +488,13 @@ namespace CapaControladorRRHH
         {
             sn.ActualizarCodigosCuentas(valor1, valor2, valor3, valor4);
         }
+
+        public DataTable ConsultaSentenciaSql(string valor1)
+        {
+            OdbcDataAdapter dt = sn.ConsultaSentenciaSql(valor1);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
     }
 }

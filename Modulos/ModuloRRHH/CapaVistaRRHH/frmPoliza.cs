@@ -81,6 +81,7 @@ namespace CapaVistaRRHH
                 DataTable valor2 = cn.ConsultaTablasPoliza2(ConnceptosUsados.Rows[i]["pkIdConcepto"].ToString(),fecha);
                 string valor2a = string.Join(Environment.NewLine, valor2.Rows.OfType<DataRow>().Select(x => string.Join(" ; ", x.ItemArray)));
 
+                
                 //Obtiene Efecto
                 DataTable valor3 = cn.ConsultaTablasPoliza3(ConnceptosUsados.Rows[i]["pkIdConcepto"].ToString(),fecha);
                 string valor3a = string.Join(Environment.NewLine, valor3.Rows.OfType<DataRow>().Select(x => string.Join(" ; ", x.ItemArray)));
@@ -102,17 +103,17 @@ namespace CapaVistaRRHH
             }
             string ResultadoSalarioFinal = ResultadoSalario.ToString();
 
-            string codigoSalario = "textBox4.Text"; //Id Salario
+            string codigoSalario = textBox4.Text; //Id Salario
             cn.Guradarpoliza(codigoSalario, ResultadoSalarioFinal, fecha);
             //Fin suma salarios
 
             //Calculo de Cuota patronal
             double cuotaPatronal = Convert.ToInt32(ResultadoSalarioFinal) * 0.1267;
             string cuotaPatronalFinal = ResultadoSalario.ToString();
-            string codigoPatronal = "textBox2.Text"; //id Cuota patronal
+            string codigoPatronal = textBox2.Text; //id Cuota patronal
             cn.Guradarpoliza(codigoPatronal, cuotaPatronalFinal, fecha);
 
-            string codigoPatronalPorPagar = "textBox3.Text"; //Id cuota patornal por pagar
+            string codigoPatronalPorPagar = textBox3.Text; //Id cuota patornal por pagar
             cn.Guradarpoliza(codigoPatronalPorPagar, cuotaPatronalFinal, fecha);
             //Fin cuota patronal
 
@@ -145,8 +146,15 @@ namespace CapaVistaRRHH
 
 
 
+
+
             DataTable dt = cn.MostarPoliza(id, fecha);
             dtgPoliza.DataSource = dt;
+            textBox5.Text = SaldoD.ToString();
+            int SaldoAcreedor = SaldoA + saldoBanco;
+    
+            textBox6.Text = SaldoAcreedor.ToString();
+            textBox7.Text = (Convert.ToInt32(textBox5.Text) - Convert.ToInt32(textBox6.Text)).ToString();
 
 
         }

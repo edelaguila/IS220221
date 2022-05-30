@@ -1004,5 +1004,19 @@ namespace CapaModeloRRHH
             consulta.ExecuteNonQuery();
 
         }
+
+
+
+        public OdbcDataAdapter ConsultaSentenciaSql(string valor1)
+        {
+            string sql = "SELECT `sentenciaSql` FROM `sentenciasqlplanilla` WHERE fkIdConcepto = '" + valor1 + "';";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+
+
+
+        
     }
 }
