@@ -20,6 +20,34 @@ namespace CapaVistaRRHH
         {
             InitializeComponent();
             ConsultaTablasPoliza();
+
+
+            textBox1.Visible = false;
+            textBox2.Visible = false;
+            textBox3.Visible = false;
+            textBox4.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            button3.Visible = false;
+
+
+            DataTable obtenerCuentaPagoPlanilla = cn.obtenerCuentaPagoPlanilla();
+            string res1 = string.Join(Environment.NewLine, obtenerCuentaPagoPlanilla.Rows.OfType<DataRow>().Select(x => string.Join(" ; ", x.ItemArray)));
+            textBox1.Text = res1;
+
+            DataTable obtenerGastoPlanilla = cn.obtenerGastoPlanilla();
+            string res2 = string.Join(Environment.NewLine, obtenerGastoPlanilla.Rows.OfType<DataRow>().Select(x => string.Join(" ; ", x.ItemArray)));
+            textBox2.Text = res2;
+
+            DataTable obtenerCuentaPasivoPlanilla = cn.obtenerCuentaPasivoPlanilla();
+            string res3 = string.Join(Environment.NewLine, obtenerCuentaPasivoPlanilla.Rows.OfType<DataRow>().Select(x => string.Join(" ; ", x.ItemArray)));
+            textBox3.Text = res3;
+
+            DataTable obtenerSalarioPlanilla = cn.obtenerSalarioPlanilla();
+            string res4 = string.Join(Environment.NewLine, obtenerSalarioPlanilla.Rows.OfType<DataRow>().Select(x => string.Join(" ; ", x.ItemArray)));
+            textBox4.Text = res4;
         }
 
 
@@ -74,17 +102,17 @@ namespace CapaVistaRRHH
             }
             string ResultadoSalarioFinal = ResultadoSalario.ToString();
 
-            string codigoSalario = "6.1.1.1.001"; //Id Salario
+            string codigoSalario = "textBox4.Text"; //Id Salario
             cn.Guradarpoliza(codigoSalario, ResultadoSalarioFinal, fecha);
             //Fin suma salarios
 
             //Calculo de Cuota patronal
             double cuotaPatronal = Convert.ToInt32(ResultadoSalarioFinal) * 0.1267;
             string cuotaPatronalFinal = ResultadoSalario.ToString();
-            string codigoPatronal = "6.1.1.1.006"; //id Cuota patronal
+            string codigoPatronal = "textBox2.Text"; //id Cuota patronal
             cn.Guradarpoliza(codigoPatronal, cuotaPatronalFinal, fecha);
 
-            string codigoPatronalPorPagar = "2.1.3.1.003"; //Id cuota patornal por pagar
+            string codigoPatronalPorPagar = "textBox3.Text"; //Id cuota patornal por pagar
             cn.Guradarpoliza(codigoPatronalPorPagar, cuotaPatronalFinal, fecha);
             //Fin cuota patronal
 
@@ -109,7 +137,7 @@ namespace CapaVistaRRHH
 
             }
             int saldoBanco = Math.Abs(SaldoD - SaldoA);
-            string codigoBanco = "1.1.1.2.001";
+            string codigoBanco = textBox1.Text;
             cn.Guradarpoliza(codigoBanco, saldoBanco.ToString(), fecha);
 
 
@@ -121,6 +149,44 @@ namespace CapaVistaRRHH
             dtgPoliza.DataSource = dt;
 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Visible == false)
+            {
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                textBox4.Visible = true;
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+                button3.Visible = true;
+            }else if (textBox1.Visible == true)
+            {
+                textBox1.Visible = false;
+                textBox2.Visible = false;
+                textBox3.Visible = false;
+                textBox4.Visible = false;
+                label1.Visible = false;
+                label2.Visible = false;
+                label3.Visible = false;
+                label4.Visible = false;
+                button3.Visible = false;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string valor1 = textBox1.Text;
+            string valor2 = textBox2.Text;
+            string valor3 = textBox3.Text;
+            string valor4 = textBox4.Text;
+
+            cn.ActualizarCodigosCuentas(valor1, valor2, valor3, valor4);
+            MessageBox.Show("Codigos de cuentas modificados");
         }
     }
 

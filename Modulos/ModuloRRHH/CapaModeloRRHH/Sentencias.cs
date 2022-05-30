@@ -968,5 +968,41 @@ namespace CapaModeloRRHH
             return dataTable;
 
         }
+
+        public OdbcDataAdapter obtenerCuentaPagoPlanilla()
+        {
+            string sql = "SELECT pago FROM poliza_Conf  WHERE pkPoliza_Conf = '1';";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+        public OdbcDataAdapter obtenerGastoPlanilla()
+        {
+            string sql = "SELECT gasto FROM poliza_Conf  WHERE pkPoliza_Conf = '1';";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+        public OdbcDataAdapter obtenerCuentaPasivoPlanilla()
+        {
+            string sql = "SELECT pasivo FROM poliza_Conf  WHERE pkPoliza_Conf = '1';";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+        public OdbcDataAdapter obtenerSalarioPlanilla()
+        {
+            string sql = "SELECT salario FROM poliza_Conf  WHERE pkPoliza_Conf = '1';";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+        public void ActualizarCodigosCuentas(string valor1, string valor2, string valor3, string valor4)
+        {
+            string sql = "UPDATE `poliza_conf` SET `pkPoliza_Conf`='1',`pago`='" + valor1 + "',`gasto`='" + valor2 + "',`pasivo`='" + valor3 + "',`salario`='" + valor4 + "' WHERE pkPoliza_Conf = '1';";
+            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+            consulta.ExecuteNonQuery();
+
+        }
     }
 }
