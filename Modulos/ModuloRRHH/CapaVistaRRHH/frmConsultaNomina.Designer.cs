@@ -111,7 +111,7 @@ namespace CapaVistaRRHH
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Location = new System.Drawing.Point(530, 46);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(93, 20);
             this.txtTotal.TabIndex = 124;
@@ -121,7 +121,7 @@ namespace CapaVistaRRHH
             // 
             this.txtsumaded.Enabled = false;
             this.txtsumaded.Location = new System.Drawing.Point(530, 23);
-            this.txtsumaded.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtsumaded.Margin = new System.Windows.Forms.Padding(2);
             this.txtsumaded.Name = "txtsumaded";
             this.txtsumaded.Size = new System.Drawing.Size(93, 20);
             this.txtsumaded.TabIndex = 123;
@@ -131,7 +131,7 @@ namespace CapaVistaRRHH
             // 
             this.txtsumaper.Enabled = false;
             this.txtsumaper.Location = new System.Drawing.Point(313, 43);
-            this.txtsumaper.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtsumaper.Margin = new System.Windows.Forms.Padding(2);
             this.txtsumaper.Name = "txtsumaper";
             this.txtsumaper.Size = new System.Drawing.Size(93, 20);
             this.txtsumaper.TabIndex = 122;
@@ -141,7 +141,7 @@ namespace CapaVistaRRHH
             // 
             this.txtFin.Enabled = false;
             this.txtFin.Location = new System.Drawing.Point(313, 20);
-            this.txtFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFin.Margin = new System.Windows.Forms.Padding(2);
             this.txtFin.Name = "txtFin";
             this.txtFin.Size = new System.Drawing.Size(93, 20);
             this.txtFin.TabIndex = 121;
@@ -150,7 +150,7 @@ namespace CapaVistaRRHH
             // 
             this.txtInicio.Enabled = false;
             this.txtInicio.Location = new System.Drawing.Point(92, 43);
-            this.txtInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInicio.Margin = new System.Windows.Forms.Padding(2);
             this.txtInicio.Name = "txtInicio";
             this.txtInicio.Size = new System.Drawing.Size(93, 20);
             this.txtInicio.TabIndex = 120;
@@ -159,7 +159,7 @@ namespace CapaVistaRRHH
             // 
             this.txtIdNomina.Enabled = false;
             this.txtIdNomina.Location = new System.Drawing.Point(92, 20);
-            this.txtIdNomina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdNomina.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdNomina.Name = "txtIdNomina";
             this.txtIdNomina.Size = new System.Drawing.Size(93, 20);
             this.txtIdNomina.TabIndex = 119;
@@ -235,14 +235,14 @@ namespace CapaVistaRRHH
             this.dgvNomina.Name = "dgvNomina";
             this.dgvNomina.ReadOnly = true;
             this.dgvNomina.RowHeadersWidth = 51;
-            this.dgvNomina.Size = new System.Drawing.Size(750, 418);
+            this.dgvNomina.Size = new System.Drawing.Size(1073, 418);
             this.dgvNomina.TabIndex = 112;
             // 
             // frmConsultaNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 521);
+            this.ClientSize = new System.Drawing.Size(1096, 521);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.panel1);

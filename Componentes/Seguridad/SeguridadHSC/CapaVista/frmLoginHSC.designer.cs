@@ -41,15 +41,14 @@ namespace CapaVistaSeguridadHSC
             this.adUser = new System.Windows.Forms.Panel();
             this.adClave = new System.Windows.Forms.Panel();
             this.lkbRecuperarContraseña = new System.Windows.Forms.LinkLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.txtIdFoto = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtUsuario.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.WindowFrame;
@@ -63,7 +62,7 @@ namespace CapaVistaSeguridadHSC
             // 
             // txtClave
             // 
-            this.txtClave.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtClave.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClave.ForeColor = System.Drawing.SystemColors.WindowFrame;
@@ -194,40 +193,41 @@ namespace CapaVistaSeguridadHSC
             this.lkbRecuperarContraseña.Text = "¿Has olvidado la contraseña?";
             this.lkbRecuperarContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkbRecuperarContraseña_LinkClicked);
             // 
-            // pictureBox2
+            // pbLogo
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::CapaVistaSeguridadHSC.Properties.Resources.cuadro;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(128, 149);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(208, 166);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbLogo.Location = new System.Drawing.Point(121, 160);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(225, 147);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 4;
+            this.pbLogo.TabStop = false;
             // 
-            // pictureBox1
+            // txtIdFoto
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CapaVistaSeguridadHSC.Properties.Resources.Logopng;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(129, 151);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 166);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.txtIdFoto.Enabled = false;
+            this.txtIdFoto.Location = new System.Drawing.Point(358, 285);
+            this.txtIdFoto.Name = "txtIdFoto";
+            this.txtIdFoto.Size = new System.Drawing.Size(32, 20);
+            this.txtIdFoto.TabIndex = 117;
+            this.txtIdFoto.TabStop = false;
+            this.txtIdFoto.Tag = "logo";
+            this.txtIdFoto.Visible = false;
+            this.txtIdFoto.TextChanged += new System.EventHandler(this.txtIdFoto_TextChanged);
             // 
             // frmLoginHSC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CapaVistaSeguridadHSC.Properties.Resources.FondoN;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(471, 590);
+            this.Controls.Add(this.txtIdFoto);
             this.Controls.Add(this.lkbRecuperarContraseña);
             this.Controls.Add(this.adClave);
             this.Controls.Add(this.adUser);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.btnPassword);
@@ -241,8 +241,7 @@ namespace CapaVistaSeguridadHSC
             this.Name = "frmLoginHSC";
             this.Text = "0001 LoginHSC";
             this.Load += new System.EventHandler(this.frmLoginHSC_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +260,7 @@ namespace CapaVistaSeguridadHSC
         private System.Windows.Forms.Panel adUser;
         private System.Windows.Forms.Panel adClave;
         private System.Windows.Forms.LinkLabel lkbRecuperarContraseña;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.TextBox txtIdFoto;
     }
 }

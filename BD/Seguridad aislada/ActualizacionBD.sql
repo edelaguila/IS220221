@@ -241,13 +241,49 @@ UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modu
 ALTER TABLE `hotelsancarlos`.`saldosporempleados` 
 CHANGE COLUMN `saldo` `saldo` FLOAT NOT NULL ;
 
+-- --------------------------------------------------------------------------------------------------------------------------------------
+-- Cuarto sprint - Heydi Quemé - Tabla VacacionesEmpleado - Fecha: 17/05/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
+create table Vacaciones_E(
+vacaciones_e varchar(15) primary key,
+periodo varchar(15),
+estado varchar(1) not null,
+foreign key (periodo) references periodo(pkid)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+create table Vacaciones_D(
+vacaciones_e varchar(15) not null,
+empleado varchar(15) not null,
+diasdisponibles double not null,
+diasgozados double not null,
+estado varchar(1) not null,
 
+foreign key (vacaciones_e) references vacaciones_e(vacaciones_e),
+foreign key (empleado) references empleado(pkidempleado)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+#drop table candidato;
+create table candidato(
+pkid varchar(15) primary key,
+fotografia varchar(15),
+nombre varchar(50) not null,
+apellido varchar(50) not null,
+edad int not null,
+dpi varchar(15),
+telefono varchar(8) not null,
+direccion varchar(50) not null,
+correo varchar(50) not null,
+estudios varchar(2000) not null,
+experiencia varchar(2000) not null,
+referencias varchar(500) not null,
+estado varchar(1) not null,
 
+foreign key (fotografia) references foto(pkid)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
-
+-- --------------------------------------------------------------------------------------------------------------------------------------
+-- Cuarto sprint - Danny Saldaña- Tabla Poliza Fecha: 30/05/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
 
 drop table poliza_Conf;
 create table poliza_Conf(
@@ -267,5 +303,4 @@ CREATE TABLE `poliza_p` (
   `Periodo` date DEFAULT NULL,
   `estado` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 

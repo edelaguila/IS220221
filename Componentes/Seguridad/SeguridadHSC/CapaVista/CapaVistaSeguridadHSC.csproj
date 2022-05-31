@@ -238,6 +238,7 @@
     <Content Include="Recursos\Fondo 590.jpg" />
     <Content Include="Recursos\Fondo.jpg" />
     <Content Include="Recursos\FondoN.jpg" />
+    <Content Include="Recursos\FondoRRHH.png" />
     <Content Include="Recursos\hide %281%29.png" />
     <Content Include="Recursos\Log.ico" />
     <Content Include="Recursos\login_50px.png" />

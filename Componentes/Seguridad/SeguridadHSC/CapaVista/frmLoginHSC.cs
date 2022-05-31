@@ -1,6 +1,8 @@
 ﻿using BitacoraUsuario;
 using CapaControladorSeguridadHSC;
 using System;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using static datosUsuario;
 //Forma Creada por Kevin Flores 9959-18-17632
@@ -18,6 +20,8 @@ namespace CapaVistaSeguridadHSC
 
             txtUsuario.Focus();
             CenterToScreen();
+            txtIdFoto.Text = conAplicacion.optnerIDLogoEmpresa("1");
+            obtienByte(txtIdFoto.Text);
         }
 
         private string nombreUsuario = "";
@@ -220,6 +224,35 @@ namespace CapaVistaSeguridadHSC
             var form2 = new frmRecuperarContraseña();
             form2.Closed += (s, args) => this.Close();
             form2.Show();
+        }
+        public void obtienByte(string id)
+        {
+            byte[] imagen = null;
+            pbLogo.Image = null;
+            try
+            {
+                imagen = conAplicacion.obtenerByte(id);
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    ms.Write(imagen, 0, imagen.Length);
+                    Image returnImage = Image.FromStream(ms, true);
+                    pbLogo.Image = returnImage;
+                    pbLogo.BackgroundImage = null;
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+        private void txtIdFoto_TextChanged(object sender, EventArgs e)
+        {
+            if (txtIdFoto.Text != "")
+            {
+                string id = txtIdFoto.Text;
+                obtienByte(id);
+            }
+            else if (txtIdFoto.Text == "")
+            {
+                pbLogo.Image = null;                
+            }
         }
     }
 }

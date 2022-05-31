@@ -637,7 +637,10 @@ namespace CapaModeloRRHH
             DataTable tabla = new DataTable();
             try
             {
-                string QueryDetalle = "SELECT * FROM nomina_d WHERE codigonominae = '" + idnomina + "';";
+                string QueryDetalle = "select nomina_d.CodigoNominaE, nomina_d.pkIdEmpleado, empleado.nombre, empleado.apellido, nomina_d.pkIdConcepto, concepto.nombreConcepto,nomina_d.SueldoBase, nomina_d.CalculoConcepto, nomina_d.SueldoLiquido, nomina_d.estado " +
+                                      "from((nomina_d " +
+                                      "inner join empleado on nomina_d.pkIdEmpleado = empleado.pkIdEmpleado) " +
+                                      "inner join concepto on nomina_d.pkIdConcepto = concepto.pkIdConcepto) where nomina_d.CodigoNominaE ='"+idnomina+"' order by nomina_d.pkIdEmpleado;";
                 tabla = PasarCalculoTabla(QueryDetalle);
             }
             catch (Exception ex)
