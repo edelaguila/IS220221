@@ -21,7 +21,6 @@ namespace CapaVistaSeguridadHSC
             txtUsuario.Focus();
             CenterToScreen();
             txtIdFoto.Text = conAplicacion.optnerIDLogoEmpresa("1");
-            obtienByte(txtIdFoto.Text);
         }
 
         private string nombreUsuario = "";
