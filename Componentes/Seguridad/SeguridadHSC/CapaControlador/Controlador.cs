@@ -441,5 +441,18 @@ namespace CapaControladorSeguridadHSC
             dt.Fill(table);
             return table;
         }
+
+        //Kevin Flores 9959-18-17632 Obtine Logo para el Login
+        public byte[] obtenerByte(string id)
+        {
+            byte[] imagen = sn.obtenerByte(id);
+            return imagen;
+        }
+        public string optnerIDLogoEmpresa(string nombre)
+        {
+            string respuesta = sn.optnerIDLogoEmpresa(nombre);
+            return respuesta;
+            
+        }
     }
 }

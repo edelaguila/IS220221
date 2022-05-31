@@ -231,6 +231,7 @@ namespace CapaVistaRRHH
             this.txtIdFoto.TabIndex = 116;
             this.txtIdFoto.TabStop = false;
             this.txtIdFoto.Tag = "logo";
+            this.txtIdFoto.Visible = false;
             this.txtIdFoto.TextChanged += new System.EventHandler(this.txtIdFoto_TextChanged);
             // 
             // pbFoto

@@ -1,5 +1,7 @@
 using System;
+using System.Data;
 using System.Data.Odbc;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CapaModeloSeguridadHSC
@@ -773,6 +775,67 @@ namespace CapaModeloSeguridadHSC
             string sql = "SELECT pkid, nombre, descripcion, estado FROM " + tabla + "  ;";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
             return dataTable;
+        }
+        //Kevin Flores 9959-18-17632 Obtine Logo para el Login
+        public byte[] obtenerByte(string id)
+        {
+            int bufferSize = 100; byte[] bytefoto = new byte[bufferSize];
+            byte[] binary = null;
+            try
+            {
+                string insertQuery = "SELECT * FROM foto WHERE pkId ='" + id + "';";
+                OdbcConnection conect = cn.conexion();
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                command.ExecuteNonQuery(); OdbcDataReader busquedac;
+                busquedac = command.ExecuteReader();
+                if (!busquedac.HasRows)
+                {
+                    throw new Exception("No hay fotografia guardada.");
+                }
+                if (busquedac.Read())
+                {
+                    binary = (byte[])busquedac["fotografia"];
+                }
+                cn.desconexion(conect);
+                return binary;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar imagen" + ex);
+                return null;
+            }
+        }
+        public OdbcDataAdapter ExtraerDatoCalculado(string condicion)
+        {
+            //Obtiene todos los calculos realizados
+            string sql = condicion;
+            OdbcConnection conect = cn.conexion();
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, conect);
+            cn.desconexion(conect);
+            return dataTable;
+
+        }
+        public DataTable PasarCalculoTabla(string sentencia)
+        {
+            OdbcDataAdapter dt = ExtraerDatoCalculado(sentencia);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+        public string optnerIDLogoEmpresa(string nombre)
+        {
+            string dta = "";
+            try
+            {
+                string querydimensionale = "SELECT logo from empresa where idEmpresa= '" + nombre + "' and estado= '1';";
+                DataTable dtConceptos = PasarCalculoTabla(querydimensionale);
+                dta = string.Join(Environment.NewLine, dtConceptos.Rows.OfType<DataRow>().Select(l => string.Join(" ; ", l.ItemArray)));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar conceptos:" + ex);
+            }
+            return (dta);
         }
     }
 }
