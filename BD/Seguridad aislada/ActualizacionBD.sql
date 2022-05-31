@@ -304,3 +304,10 @@ CREATE TABLE `poliza_p` (
   `estado` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------------------------------------------------------------------------------------
+-- Cuarto sprint - Heydi Quemé y Kevin Flores - Tabla Poliza Fecha: 30/05/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
+
+ALTER TABLE `hotelsancarlos`.`empresa` ADD COLUMN `logo` VARCHAR(15) NULL AFTER `nombre`;
+ALTER TABLE empresa ADD FOREIGN KEY (logo) REFERENCES foto(pkid);
+
