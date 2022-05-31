@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,7 +49,8 @@ namespace CapaVistaRRHH
 			//navegador1.pruebaMensaje(cadena);
 
 		}
-
+		CapaControladorRRHH.Controlador controlador = new CapaControladorRRHH.Controlador();
+		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmpresas));
 		private void txtEstado_TextChanged(object sender, EventArgs e)
 		{
 			navegador1.ActivaRadiobtn(rbnEstatusamodulo, rbnEstatusimodulo, txtEstado);
@@ -69,5 +72,85 @@ namespace CapaVistaRRHH
 			navegador1.SelecciondeFilaDGV(dgvVistaPrevia);
 
 		}
-	}
+		public byte[] imagenAbyte()
+		{
+			byte[] imagen = null; MemoryStream ms = new MemoryStream();
+			try
+			{
+				pbFoto.Image.Save(ms, ImageFormat.Png);
+				ms.Seek(0, SeekOrigin.Begin);
+				imagen = ms.ToArray();
+			}
+			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+			return imagen;
+		}
+		public void obtienByte(string id)
+		{
+			byte[] imagen = null;
+			pbFoto.Image = null;
+			try
+			{
+				imagen = controlador.obtenerByte(id);
+				using (MemoryStream ms = new MemoryStream())
+				{
+					ms.Write(imagen, 0, imagen.Length);
+					Image returnImage = Image.FromStream(ms, true);
+					pbFoto.Image = returnImage;
+					pbFoto.BackgroundImage = null;
+				}
+			}
+			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+		}
+		private void txtIdFoto_TextChanged(object sender, EventArgs e)
+        {
+			if (txtIdFoto.Text != "")
+			{
+				string id = txtIdFoto.Text;
+				obtienByte(id);
+			}
+			else if (txtIdFoto.Text == "")
+			{
+				pbFoto.Image = null;
+				pbFoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbFoto.BackgroundImage")));
+			}
+		}
+        private void btnSelecionImagen_Click(object sender, EventArgs e)
+        {
+			try
+			{
+				OpenFileDialog dialog = new OpenFileDialog();
+				dialog.Title = "Selecione una imagen";
+				dialog.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+				if (dialog.ShowDialog() == DialogResult.OK)
+				{
+					pbFoto.ImageLocation = dialog.FileName;
+					pbFoto.BackgroundImage = null;
+				}
+				else
+				{ MessageBox.Show("Error al cargar imagen."); }
+			}
+			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+		}
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+			try
+			{
+				if (txtIdFoto.Text == "")
+				{
+					int id = controlador.idSiguienteDeNuevoIngreso("foto", "pkId");
+					byte[] imagen = imagenAbyte();
+					controlador.insertaNuevaFoto(id.ToString(), imagen);
+					txtIdFoto.Text = id.ToString();
+				}
+				else if (txtIdFoto.Text != "")
+				{
+					string id = txtIdFoto.Text;
+					byte[] imagen = imagenAbyte();
+					controlador.insertaFoto(id, imagen);
+				}
+			}
+			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+		}
+    }
 }

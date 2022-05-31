@@ -47,13 +47,19 @@ namespace CapaVistaRRHH
             this.lblEstatus = new System.Windows.Forms.Label();
             this.dgvVistaPrevia = new System.Windows.Forms.DataGridView();
             this.navegador1 = new DLL.nav.navegador();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtIdFoto = new System.Windows.Forms.TextBox();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.btnSelecionImagen = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(169, 230);
+            this.txtTelefono.Location = new System.Drawing.Point(682, 245);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(200, 20);
             this.txtTelefono.TabIndex = 5;
@@ -62,7 +68,7 @@ namespace CapaVistaRRHH
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 233);
+            this.label4.Location = new System.Drawing.Point(572, 248);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 109;
@@ -70,7 +76,7 @@ namespace CapaVistaRRHH
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(169, 204);
+            this.txtDireccion.Location = new System.Drawing.Point(682, 219);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(200, 20);
             this.txtDireccion.TabIndex = 4;
@@ -79,7 +85,7 @@ namespace CapaVistaRRHH
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 207);
+            this.label3.Location = new System.Drawing.Point(572, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 110;
@@ -87,7 +93,7 @@ namespace CapaVistaRRHH
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(169, 178);
+            this.txtNombre.Location = new System.Drawing.Point(682, 193);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 3;
@@ -96,7 +102,7 @@ namespace CapaVistaRRHH
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 181);
+            this.label2.Location = new System.Drawing.Point(572, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 111;
@@ -104,7 +110,7 @@ namespace CapaVistaRRHH
             // 
             // txtNit
             // 
-            this.txtNit.Location = new System.Drawing.Point(169, 152);
+            this.txtNit.Location = new System.Drawing.Point(682, 167);
             this.txtNit.Name = "txtNit";
             this.txtNit.Size = new System.Drawing.Size(200, 20);
             this.txtNit.TabIndex = 2;
@@ -113,7 +119,7 @@ namespace CapaVistaRRHH
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(59, 155);
+            this.label5.Location = new System.Drawing.Point(572, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(23, 13);
             this.label5.TabIndex = 112;
@@ -121,7 +127,7 @@ namespace CapaVistaRRHH
             // 
             // txtIDEmpresa
             // 
-            this.txtIDEmpresa.Location = new System.Drawing.Point(169, 126);
+            this.txtIDEmpresa.Location = new System.Drawing.Point(682, 141);
             this.txtIDEmpresa.Name = "txtIDEmpresa";
             this.txtIDEmpresa.Size = new System.Drawing.Size(200, 20);
             this.txtIDEmpresa.TabIndex = 1;
@@ -130,7 +136,7 @@ namespace CapaVistaRRHH
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 129);
+            this.label1.Location = new System.Drawing.Point(572, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 113;
@@ -138,10 +144,11 @@ namespace CapaVistaRRHH
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(375, 256);
+            this.txtEstado.Location = new System.Drawing.Point(888, 271);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(39, 20);
             this.txtEstado.TabIndex = 106;
+            this.txtEstado.TabStop = false;
             this.txtEstado.Tag = "estado";
             this.txtEstado.Visible = false;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
@@ -150,7 +157,7 @@ namespace CapaVistaRRHH
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(169, 256);
+            this.panel1.Location = new System.Drawing.Point(682, 271);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 30);
             this.panel1.TabIndex = 107;
@@ -182,7 +189,7 @@ namespace CapaVistaRRHH
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(59, 259);
+            this.lblEstatus.Location = new System.Drawing.Point(572, 274);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(45, 13);
             this.lblEstatus.TabIndex = 105;
@@ -192,10 +199,11 @@ namespace CapaVistaRRHH
             // 
             this.dgvVistaPrevia.AllowUserToOrderColumns = true;
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVistaPrevia.Location = new System.Drawing.Point(483, 100);
+            this.dgvVistaPrevia.Location = new System.Drawing.Point(12, 402);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(693, 313);
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(1162, 231);
             this.dgvVistaPrevia.TabIndex = 104;
+            this.dgvVistaPrevia.TabStop = false;
             this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
             // navegador1
@@ -206,22 +214,78 @@ namespace CapaVistaRRHH
             this.navegador1.Size = new System.Drawing.Size(1189, 87);
             this.navegador1.TabIndex = 8;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(377, 102);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 13);
+            this.label6.TabIndex = 118;
+            this.label6.Text = "Logotipo";
+            // 
+            // txtIdFoto
+            // 
+            this.txtIdFoto.Location = new System.Drawing.Point(484, 365);
+            this.txtIdFoto.Name = "txtIdFoto";
+            this.txtIdFoto.Size = new System.Drawing.Size(32, 20);
+            this.txtIdFoto.TabIndex = 116;
+            this.txtIdFoto.TabStop = false;
+            this.txtIdFoto.Tag = "logo";
+            this.txtIdFoto.TextChanged += new System.EventHandler(this.txtIdFoto_TextChanged);
+            // 
+            // pbFoto
+            // 
+            this.pbFoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbFoto.BackgroundImage")));
+            this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbFoto.Location = new System.Drawing.Point(213, 118);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(347, 238);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFoto.TabIndex = 117;
+            this.pbFoto.TabStop = false;
+            // 
+            // btnSelecionImagen
+            // 
+            this.btnSelecionImagen.Location = new System.Drawing.Point(290, 362);
+            this.btnSelecionImagen.Name = "btnSelecionImagen";
+            this.btnSelecionImagen.Size = new System.Drawing.Size(91, 24);
+            this.btnSelecionImagen.TabIndex = 8;
+            this.btnSelecionImagen.Text = "Examinar";
+            this.btnSelecionImagen.UseVisualStyleBackColor = true;
+            this.btnSelecionImagen.Click += new System.EventHandler(this.btnSelecionImagen_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(387, 363);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(91, 23);
+            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // frmEmpresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 426);
+            this.ClientSize = new System.Drawing.Size(1186, 643);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtIdFoto);
+            this.Controls.Add(this.btnSelecionImagen);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNit);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtIDEmpresa);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.dgvVistaPrevia);
@@ -234,6 +298,7 @@ namespace CapaVistaRRHH
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +323,10 @@ namespace CapaVistaRRHH
         private System.Windows.Forms.Label lblEstatus;
         private System.Windows.Forms.DataGridView dgvVistaPrevia;
         private DLL.nav.navegador navegador1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtIdFoto;
+        private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.Button btnSelecionImagen;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
