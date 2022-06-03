@@ -418,7 +418,7 @@ namespace CapaVistaRRHH
                 + txtJornada.Text.ToString() + "\n" +"Fecha contratación: "+txtFechaContratacion.Text.ToString()
                 +"   Fecha de Fin de Contrato: "+txtFinContrato.Text.ToString()+ "\n" +" Puesto: "+txtPuesto
                 + " Empresa: "+txtEmpresa.Text.ToString()+"\n"+"Último Periodo de Vacaciones: "+txtUltimoPeriodoVacaciones.Text.ToString()
-                +" Pago De Liquidación: "+ txtUltimoPago .Text.ToString()+"\n"+" Sueldo Promedio"+txtSalarioPromedio.Text.ToString()
+                +" Pago De Liquidación: "+ txtUltimoPago .Text.ToString()+"\n"+" Sueldo Promedio: "+txtSalarioPromedio.Text.ToString()
                 +"\n"+"Observaciones: "+txtObservaciones.Text.ToString();
             printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
             printer.PageNumbers = true;
