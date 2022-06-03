@@ -222,7 +222,7 @@ namespace CapaVistaRRHH
             this.txtAñosExperiencia.Name = "txtAñosExperiencia";
             this.txtAñosExperiencia.Size = new System.Drawing.Size(241, 20);
             this.txtAñosExperiencia.TabIndex = 8;
-            this.txtAñosExperiencia.Tag = "añosDeExperiencia";
+            this.txtAñosExperiencia.Tag = "experiencia";
             // 
             // txtEstado
             // 

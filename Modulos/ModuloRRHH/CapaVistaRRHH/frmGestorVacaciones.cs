@@ -151,5 +151,10 @@ namespace CapaVistaRRHH
 		{
 			dgvGestionados.Rows.Clear();
 		}
-	}
+
+        private void frmGestorVacaciones_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+			navegador1.Obtenerayuda(navegador1.idAplicacion, navegador1.campoAyuda, navegador1.tablaAyuda);
+		}
+    }
 }

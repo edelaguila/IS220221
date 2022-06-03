@@ -1016,10 +1016,214 @@ namespace CapaModeloRRHH
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
             return dataTable;
         }
+        //Liquidación empleado 
+
+        public void formatoMoneda(TextBox txt)
+        {
+            if (txt.Text == string.Empty)
+            {
+                return;
+            }
+            else
+            {
+                decimal monto;
+                monto = Convert.ToDecimal(txt.Text);
+                txt.Text = monto.ToString("N2");
+            }
+        }
+        public DataTable consultarDetallesEmpleado(string idEmpleado)
+        {
+            DataTable tabla = new DataTable();
+            try
+            {
+                string QueryDetalle = "SELECT * FROM empleado WHERE pkIdEmpleado = '" + idEmpleado + "';";
+                tabla = PasarCalculoTabla(QueryDetalle);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar conceptos:" + ex);
+            }
+            return tabla;
+        }
+        public string BuscaDato(string tabla, string campo, string id, string buscarid)
+        {
+            string dato = "";
+            try
+            {
+                string insertQuery = "SELECT * FROM " + tabla + " WHERE " + buscarid + " ='" + id + "';";
+                OdbcConnection conect = cn.conexion();
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                command.ExecuteNonQuery(); OdbcDataReader busquedac;
+                busquedac = command.ExecuteReader();
+                if (!busquedac.HasRows)
+                {
+                    throw new Exception("No hay dato guardado.");
+                }
+                if (busquedac.Read())
+                {
+                    dato = busquedac[campo].ToString();
+                }
+                cn.desconexion(conect);
+                return dato;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al optener " + dato + ".    " + ex);
+                return dato;
+            }
+        }
+        //Cálculo Indemnizacion 
 
 
-
-
-        
+        //Paso 1: Cálculo días laborados. 
+        public int calculoDiasLaborados(string contratacion, string despido)
+        {
+            int dias = 0;
+            try
+            {
+                DateTime fechaUno = Convert.ToDateTime(contratacion);
+                DateTime fechaDos = Convert.ToDateTime(despido);
+                TimeSpan difFechas = fechaDos - fechaUno;
+                dias = difFechas.Days;
+                return dias;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al calcular días laborados" + ex);
+                return dias;
+            }
+        }
+        public int calculoDiasLaboradosAñoCursado(string despido)
+        {
+            int dias = 0;
+            try
+            {
+                DateTime fechaDos = Convert.ToDateTime(despido);
+                string año = fechaDos.Year.ToString();
+                DateTime fechaUno = Convert.ToDateTime(año + "-01-01");
+                TimeSpan difFechas = fechaDos - fechaUno;
+                dias = difFechas.Days;
+                return dias;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al calcular días laborados" + ex);
+                return dias;
+            }
+        }
+        public int calculoDiasLaboradosaguinaldo(string despido)
+        {
+            int dias = 0;
+            try
+            {
+                DateTime fechaDos = Convert.ToDateTime(despido);
+                int año = fechaDos.Year;
+                string year = (año - 1).ToString();
+                DateTime fechaUno = Convert.ToDateTime(year + "-12-01");
+                TimeSpan difFechas = fechaDos - fechaUno;
+                dias = difFechas.Days;
+                return dias;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al calcular días laborados" + ex);
+                return dias;
+            }
+        }
+        public int calculoDiasLaboradosBono14(string despido)
+        {
+            int dias = 0;
+            try
+            {
+                DateTime fechaDos = Convert.ToDateTime(despido);
+                int año = fechaDos.Year;
+                string year = (año - 1).ToString();
+                DateTime fechaUno = Convert.ToDateTime(year + "-07-01");
+                TimeSpan difFechas = fechaDos - fechaUno;
+                dias = difFechas.Days;
+                return dias;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al calcular días laborados" + ex);
+                return dias;
+            }
+        }
+        public int calculoDiasBonoIncentivo(string despido)
+        {
+            int dia = 0;
+            try
+            {
+                DateTime fechaDos = Convert.ToDateTime(despido);
+                dia = fechaDos.Day;
+                return dia;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al calcular días laborados" + ex);
+                return dia;
+            }
+        }
+        public void GuardarEncabezadoLiquidacion(string tabla,string id, string fecha, string estado)
+        {
+            try
+            {
+                string cadena = "INSERT INTO " + tabla + " VALUES ('" + id + "','" + fecha+ "','" + estado + "');";
+                OdbcConnection conect = cn.conexion();
+                OdbcCommand consulta = new OdbcCommand(cadena, conect);
+                consulta.ExecuteNonQuery();
+                cn.desconexion(conect);
+            }
+            catch (OdbcException ex)
+            {
+                MessageBox.Show("Error al añadir liquidación: " + ex.Message);
+            }
+        }
+        public void guardarLiquidacionDetalleBD(string tabla,string liquidacion_e, string empleado, double sueldo, string UltimasVacaciones, double salarioPromedio, double bonificacionIncentivo,double horaextra, string observaciones, double indeminizacion,double aguinaldoT,double bono14T, double bonificacionT, double vacacionesT, double comisionesT,double horasExtraT,double totalPercibido)
+        {
+            try
+            {
+                string cadena = "INSERT INTO "+tabla+" VALUES ('" + liquidacion_e + "','" + empleado + "','" + sueldo + "','" + UltimasVacaciones + "','" + salarioPromedio + "','" + bonificacionIncentivo  +"','" + horaextra + "','" + observaciones + "','" + aguinaldoT+"','" + aguinaldoT + "','" + bono14T + "','" + bonificacionT + "','"+ vacacionesT + "','"+ comisionesT + "','" + horasExtraT  + "','" + totalPercibido + "');";
+                OdbcConnection conect = cn.conexion();
+                OdbcCommand consulta = new OdbcCommand(cadena, conect);
+                consulta.ExecuteNonQuery();
+                cn.desconexion(conect);MessageBox.Show("Guardado con éxito.");
+            }
+            catch (OdbcException ex)
+            {
+                MessageBox.Show("Error al añadir el detalle de nomina: " + ex.Message);
+            }
+        }
+        public DataTable llenalistaliquidacion()
+        {
+            DataTable tabla = new DataTable();
+            try
+            {
+                string QueryDetalle = "select liquidacion_d.fkLiquidacion_e, empleado.nombre, empleado.apellido,liquidacion_e.fecha "
+                + "from((liquidacion_d "
+                + "inner join  empleado on liquidacion_d.fkIdEmpleado = empleado.pkIdEmpleado) "
+                + "inner join liquidacion_e on liquidacion_d.fkLiquidacion_e = liquidacion_e.pkid); ";                    
+                tabla = PasarCalculoTabla(QueryDetalle);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar Liquidaciones:" + ex);
+            }
+            return tabla;
+        }
+        public DataTable consultarDetallesliquidacion(string idliquidacion)
+        {
+            DataTable tabla = new DataTable();
+            try
+            {
+                string QueryDetalle = "SELECT * FROM liquidacion_d WHERE fkLiquidacion_e = '" + idliquidacion + "';";
+                tabla = PasarCalculoTabla(QueryDetalle);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar conceptos:" + ex);
+            }
+            return tabla;
+        }
     }
 }

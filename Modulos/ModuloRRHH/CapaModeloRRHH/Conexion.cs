@@ -30,6 +30,7 @@ namespace CapaModeloRRHH
             try
             {
                 conn.Close();
+                Console.WriteLine("Cerró conectión");
             }
             catch (OdbcException)
             {

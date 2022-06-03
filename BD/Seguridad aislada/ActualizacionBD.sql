@@ -311,3 +311,48 @@ CREATE TABLE `poliza_p` (
 ALTER TABLE `hotelsancarlos`.`empresa` ADD COLUMN `logo` VARCHAR(15) NULL AFTER `nombre`;
 ALTER TABLE empresa ADD FOREIGN KEY (logo) REFERENCES foto(pkid);
 
+-- --------------------------------------------------------------------------------------------------------------------------------------
+-- Cuarto sprint - Heydi Quemé y Kevin Flores - Tabla Liquidación Fecha: 02/06/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
+
+create table liquidacion_e(
+pkid varchar(15) primary key,
+fecha date not null,
+estado varchar(1) not null
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+create table liquidacion_d(
+fkLiquidacion_e varchar(15) primary key not null,
+fkIdEmpleado varchar(15) not null,
+sueldo double not null,
+ultimasVacaciones date not null,
+salarioPromedio double not null,
+bonificacionIncentivo double not null,
+horasExtras double not null,
+observaciones varchar(400) default null,
+indemnizacionT double not null,
+aguinaldoT double not null,
+bono14T double not null,
+bonificacionT double not null,
+vacacionesT double not null,
+comisionesT double not null,
+horasExtraT double not null,
+totalPercibido double not null,
+
+foreign key (fkLiquidacion_e) references liquidacion_e(pkid),
+foreign key (fkIdEmpleado) references empleado(pkIdEmpleado)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- --------------------------------------------------------------------------------------------------------------------------------------
+-- Cuarto sprint - Heydi Quemé y Kevin Flores - Ayudas y reportes Fecha: 02/06/2022
+-- --------------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO aplicacion VALUES ("2319","2",'Gestión de Vacaciones',"123","12334","1");
+INSERT INTO aplicacion VALUES ("2320","2",'Asignación de Vacaciones',"123","12334","1");
+INSERT INTO aplicacion VALUES ("2030","2",'Candidatos',"123","12334","1");
+INSERT INTO aplicacion VALUES ("2315","2",'Liquidación',"123","12334","1");
+
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaGestorVacaciones.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaGestorVacaciones.html' WHERE pkId='2319';
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaAsignaVacaciones.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaAsignaVacaciones.html' WHERE pkId='2320';
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaCandidatos.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaCandidatos.html' WHERE pkId='2030';
+UPDATE aplicacion SET rutaChm='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaLiquidacion.chm',rutaHtml='C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\Ayudas-Pareja1\\AyudaLiquidacion.html' WHERE pkId='2315';
+
+INSERT INTO reporte VALUES ('9','Candidatos','C:\\Users\\ZUZU\\Desktop\\ImplementarAyudas\\Modulos\\ModuloRRHH\\CapaVistaRRHH\\ReporteCandidatos.rpt','2320','1');

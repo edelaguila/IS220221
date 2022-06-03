@@ -496,5 +496,71 @@ namespace CapaControladorRRHH
             dt.Fill(table);
             return table;
         }
+        //Liquidacion Empleado
+
+        public void formatoMoneda(TextBox txt)
+        {
+            sn.formatoMoneda(txt);
+        }
+        public DataTable consultarDetallesEmpleado(string idEmpleado)
+        {
+            DataTable table = new DataTable();
+            table = sn.consultarDetallesEmpleado(idEmpleado);
+            return table;
+        }
+        public string BuscaDato(string tabla, string campo, string id, string buscarid)
+        {
+            string dato = sn.BuscaDato(tabla, campo, id, buscarid);
+            return dato;
+        }
+
+        // Cálculo Indemnización
+
+        public int calculoDiasLaborados(string contratacion, string despido)
+        {
+            int valor = sn.calculoDiasLaborados(contratacion, despido);
+            return valor;
+        }
+        public int calculoDiasLaboradosAñoCursado(string despido)
+        {
+            int valor = sn.calculoDiasLaboradosAñoCursado(despido);
+            return valor;
+        }
+        public int calculoDiasLaboradosaguinaldo(string despido)
+        {
+            int valor = sn.calculoDiasLaboradosaguinaldo(despido);
+            return valor;
+        }
+        public int calculoDiasLaboradosBono14(string despido)
+        {
+            int valor = sn.calculoDiasLaboradosBono14(despido);
+            return valor;
+        }
+        public int calculoDiasBonoIncentivo(string despido)
+        {
+            int valor = sn.calculoDiasBonoIncentivo(despido);
+            return valor;
+        }
+        public void GuardarEncabezadoLiquidacion(string tabla, string id, string fecha, string estado)
+        {
+            sn.GuardarEncabezadoLiquidacion(tabla, id, fecha, estado);
+        }
+        public void guardarLiquidacionDetalleBD(string tabla, string liquidacion_e, string empleado, double sueldo, string UltimasVacaciones, double salarioPromedio, double bonificacionIncentivo, double horaextra, string observaciones, double indemnizaciones,double aguinaldoT, double bono14T, double bonificacionT, double vacacionesT, double comisionesT, double horasExtraT, double totalPercibido)
+        {
+            sn.guardarLiquidacionDetalleBD(tabla, liquidacion_e, empleado, sueldo, UltimasVacaciones, salarioPromedio, bonificacionIncentivo, horaextra, observaciones, indemnizaciones,aguinaldoT, bono14T, bonificacionT, vacacionesT, comisionesT, horasExtraT, totalPercibido);
+        }
+        public DataTable llenalistaliquidacion()
+        {
+            DataTable table = new DataTable();
+            table = sn.llenalistaliquidacion();
+            return table;
+        }
+        public DataTable consultarDetallesliquidacion(string idliquidacion)
+        {
+            DataTable table = new DataTable();
+            table = sn.consultarDetallesliquidacion(idliquidacion);
+            return table;
+        }
+
     }
 }

@@ -204,5 +204,10 @@ namespace CapaVistaRRHH
             cbxPeriodo.Text = dgvRegistrados.CurrentRow.Cells[1].Value.ToString();
             txtEstado.Text = dgvRegistrados.CurrentRow.Cells[2].Value.ToString();
         }
-	}
+
+        private void frmVacaciones_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            navegador1.Obtenerayuda(navegador1.idAplicacion, navegador1.campoAyuda, navegador1.tablaAyuda);
+        }
+    }
 }
