@@ -410,16 +410,16 @@ namespace CapaVistaRRHH
         {
             DGVPrinterHelper.DGVPrinter printer = new DGVPrinterHelper.DGVPrinter();
             printer.Title = "Reporte de Liquidación";
-            
-            printer.SubTitle = string.Format("Fecha: {0}", DateTime.Now.Date.ToString("dd/MM/yyyy")) + " ID Liquidación: " 
-                + txtIdLiquidacion.Text.ToString() + "\n" + " Empleado: " + txtIDEmpleado.Text.ToString() 
-                + " " + txtNombre.Text.ToString()+" "+txtApellido.Text.ToString()+ "\n" + " Fecha de nacimiento: " 
-                + txtFechaNacimiento.Text.ToString() + "\n"+ " Sueldo " + txtSueldo.Text.ToString()+ " Jornada: " 
-                + txtJornada.Text.ToString() + "\n" +"Fecha contratación: "+txtFechaContratacion.Text.ToString()
-                +"   Fecha de Fin de Contrato: "+txtFinContrato.Text.ToString()+ "\n" +" Puesto: "+txtPuesto
-                + " Empresa: "+txtEmpresa.Text.ToString()+"\n"+"Último Periodo de Vacaciones: "+txtUltimoPeriodoVacaciones.Text.ToString()
-                +" Pago De Liquidación: "+ txtUltimoPago .Text.ToString()+"\n"+" Sueldo Promedio: "+txtSalarioPromedio.Text.ToString()
-                +"\n"+"Observaciones: "+txtObservaciones.Text.ToString();
+
+            printer.SubTitle = string.Format("Fecha: {0}", DateTime.Now.Date.ToString("dd/MM/yyyy")) + " ID Liquidación: "
+                + txtIdLiquidacion.Text.ToString() + "\n" + " Empleado: " + txtIDEmpleado.Text.ToString()
+                + " " + txtNombre.Text.ToString() + " " + txtApellido.Text.ToString() + "\n" + " Fecha de nacimiento: "
+                + txtFechaNacimiento.Text.ToString() + "\n" + " Sueldo " + txtSueldo.Text.ToString() + " \t Jornada: "
+                + txtJornada.Text.ToString() + "\n" + "Fecha contratación: " + txtFechaContratacion.Text.ToString()
+                + "   Fecha de Fin de Contrato: " + txtFinContrato.Text.ToString() + "\n" + " Puesto: " + txtPuesto.Text.ToString()
+                + "  \t \t Empresa: " + txtEmpresa.Text.ToString() + "\n" + "Último Periodo de Vacaciones: " + txtUltimoPeriodoVacaciones.Text.ToString()
+                + "\n" + " Feche de Pago De Liquidación: " + txtUltimoPago.Text.ToString() + "\n" + " Sueldo Promedio: " + txtSalarioPromedio.Text.ToString()
+                + "\n" + "Observaciones: " + txtObservaciones.Text.ToString();
             printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
             printer.PageNumbers = true;
             printer.PageNumberInHeader = false;
@@ -428,7 +428,6 @@ namespace CapaVistaRRHH
             printer.Footer = "Módulo Recursos Humanos";
             printer.FooterSpacing = 15;
             printer.PrintDataGridView(dgvVista);
-            
         }
 
         private void txtFechaNacimiento_TextChanged(object sender, EventArgs e)
