@@ -1,0 +1,17 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=AyudaLiquidacion.chm
+Contents file=AyudaLiquidacion.hhc
+Default Window=AyudaLiquidacion
+Display compile progress=No
+Language=0x100a Español (Guatemala)
+
+[WINDOWS]
+AyudaLiquidacion="Liquidacion","AyudaLiquidacion.hhc",,"AyudaLiquidacion.html","AyudaLiquidacion.html",,,,,0x2521,,0xc387e,,,,,1,,,0
+
+
+[FILES]
+AyudaLiquidacion.html
+
+[INFOTYPES]
+

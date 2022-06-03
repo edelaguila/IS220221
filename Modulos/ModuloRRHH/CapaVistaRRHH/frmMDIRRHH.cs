@@ -323,6 +323,30 @@ namespace CapaVistaRRHH
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
+
+        private void liquidaciónEmpeladoIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             try
+            {
+                frmLiquidacionEmpleado form = new frmLiquidacionEmpleado();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void consultarLiquidaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmListaLiquidacion form = new frmListaLiquidacion();
+                form.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
     }
 }
     

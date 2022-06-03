@@ -1,0 +1,17 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=AyudaGestorVacaciones.chm
+Contents file=AyudaGestorVacaciones.hhc
+Default Window=AyudaGestorVacaciones
+Display compile progress=No
+Language=0x100a Español (Guatemala)
+
+[WINDOWS]
+AyudaGestorVacaciones="GestorVacaciones","AyudaGestorVacaciones.hhc",,"AyudaGestorVacaciones.html","AyudaGestorVacaciones.html",,,,,0x2521,,0xc387e,,,,,1,,,0
+
+
+[FILES]
+AyudaGestorVacaciones.html
+
+[INFOTYPES]
+

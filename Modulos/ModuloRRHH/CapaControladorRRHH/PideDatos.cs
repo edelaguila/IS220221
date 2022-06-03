@@ -11,6 +11,7 @@ namespace CapaControladorRRHH
     {
         static string FechaF;
         static string FechaI;
+        static string liquida;
         public string FechaInicio
         {
             get { return FechaI; }
@@ -32,6 +33,11 @@ namespace CapaControladorRRHH
         {
             get { return PeriodoF; }
             set { PeriodoF = value; }
+        }
+        public string IdLiquidasion
+        {
+            get { return liquida; }
+            set { liquida = value; }
         }
     }
 }

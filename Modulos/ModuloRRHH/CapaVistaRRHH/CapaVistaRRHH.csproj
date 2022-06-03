@@ -68,11 +68,29 @@
     <Compile Include="frmCandidatos.Designer.cs">
       <DependentUpon>frmCandidatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaLiquidacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaLiquidacion.Designer.cs">
+      <DependentUpon>frmConsultaLiquidacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGestorVacaciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGestorVacaciones.Designer.cs">
       <DependentUpon>frmGestorVacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLiquidacionEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLiquidacionEmpleado.Designer.cs">
+      <DependentUpon>frmLiquidacionEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaLiquidacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaLiquidacion.Designer.cs">
+      <DependentUpon>frmListaLiquidacion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPoliza.cs">
       <SubType>Form</SubType>
@@ -236,6 +254,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ReporteCandidatos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCandidatos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ReporteConceptos1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -319,6 +343,9 @@
     <EmbeddedResource Include="frmConceptos.resx">
       <DependentUpon>frmConceptos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaLiquidacion.resx">
+      <DependentUpon>frmConsultaLiquidacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaNomina.resx">
       <DependentUpon>frmConsultaNomina.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,6 +375,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJornada.resx">
       <DependentUpon>frmJornada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLiquidacionEmpleado.resx">
+      <DependentUpon>frmLiquidacionEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaLiquidacion.resx">
+      <DependentUpon>frmListaLiquidacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
@@ -391,6 +424,10 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCandidatos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteCandidatos.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteConceptos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
