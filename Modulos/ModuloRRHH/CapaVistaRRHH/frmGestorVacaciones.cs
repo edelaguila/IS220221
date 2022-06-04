@@ -156,5 +156,12 @@ namespace CapaVistaRRHH
         {
 			navegador1.Obtenerayuda(navegador1.idAplicacion, navegador1.campoAyuda, navegador1.tablaAyuda);
 		}
-    }
+
+		private void dgvSeleccion_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+		{
+			string id = dgvSeleccion.CurrentRow.Cells[0].Value.ToString();
+			string nombre = dgvSeleccion.CurrentRow.Cells[1].Value.ToString();
+			dgvGestionados.Rows.Add(id, nombre);
+		}
+	}
 }

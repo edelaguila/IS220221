@@ -86,9 +86,6 @@ namespace CapaVistaRRHH
 				btnGuardar.Enabled = true;
 				btnSelecionImagen.Enabled = true;
 				txtNombre.Focus();
-				rtxtEstudios.Enabled = true;
-				rtxtExperiencia.Enabled = true;
-				rtxtReferencias.Enabled = true;
 			}
 			else if (txtApellido.Enabled == true && txtApellido.Text == "" && txtNombre.Text == "")
 			{
@@ -96,17 +93,11 @@ namespace CapaVistaRRHH
 				btnSelecionImagen.Enabled = true;
 				pbFoto.Image = null;
 				txtNombre.Focus();
-				rtxtEstudios.Enabled = true;
-				rtxtExperiencia.Enabled = true;
-				rtxtReferencias.Enabled = true;
 			}
 			else if (txtApellido.Enabled == false)
 			{
 				btnGuardar.Enabled = false;
 				btnSelecionImagen.Enabled = false;
-				rtxtEstudios.Enabled = false;
-				rtxtExperiencia.Enabled = false;
-				rtxtReferencias.Enabled = false;
 			}
 		}
 		private void btnSelecionImagen_Click(object sender, EventArgs e)
@@ -163,12 +154,6 @@ namespace CapaVistaRRHH
 		private void txtNombre_EnabledChanged(object sender, EventArgs e)
 		{
 			activaBotones();
-			if (txtNombre.Enabled == false && txtNombre.Text == "")
-			{
-				rtxtEstudios.Text = "";
-				rtxtExperiencia.Text = "";
-				txtReferencias.Text = "";
-			}
 		}
 
 		private void rbnEstatusamodulo_CheckedChanged(object sender, EventArgs e)
@@ -188,82 +173,24 @@ namespace CapaVistaRRHH
 
 		private void rtxtEstudios_TextChanged(object sender, EventArgs e)
 		{
-			txtEstudios.Text = "";
-			txtEstudios.Text = rtxtEstudios.Text;
 		}
 
 		private void rtxtExperiencia_TextChanged(object sender, EventArgs e)
 		{
-			txtExperiencia.Text = "";
-			txtExperiencia.Text = rtxtExperiencia.Text;
 		}
 
 		private void rtxtReferencias_TextChanged(object sender, EventArgs e)
 		{
-			txtReferencias.Text = "";
-			txtReferencias.Text = rtxtReferencias.Text;
 		}
 
 		private void dgvVistaPrevia_SelectionChanged(object sender, EventArgs e)
 		{
-			if (txtNombre.Enabled == false && txtNombre.Text!="")
-			{
-				rtxtEstudios.Text = "";
-				rtxtExperiencia.Text = "";
-				rtxtReferencias.Text = "";
-				rtxtEstudios.Text = dgvVistaPrevia.CurrentRow.Cells[9].Value.ToString();
-				rtxtExperiencia.Text = dgvVistaPrevia.CurrentRow.Cells[10].Value.ToString();
-				rtxtReferencias.Text = dgvVistaPrevia.CurrentRow.Cells[11].Value.ToString();
-			}
-			else if (txtNombre.Enabled == true && txtNombre.Text == "")
-			{
-				rtxtEstudios.Text = "";
-				rtxtExperiencia.Text = "";
-				rtxtReferencias.Text = "";
-			}
+			navegador1.SelecciondeFilaDGV(dgvVistaPrevia);
 		}
 
 		private void txtNombre_TextChanged(object sender, EventArgs e)
 		{
-			if (txtNombre.Enabled == false && txtNombre.Text != "" && txtApellido.Enabled==false && txtApellido.Text=="")
-			{
-				rtxtEstudios.Text = "";
-				rtxtExperiencia.Text = "";
-				rtxtReferencias.Text = "";
-				rtxtEstudios.Text = dgvVistaPrevia.CurrentRow.Cells[9].Value.ToString();
-				rtxtExperiencia.Text = dgvVistaPrevia.CurrentRow.Cells[10].Value.ToString();
-				rtxtReferencias.Text = dgvVistaPrevia.CurrentRow.Cells[11].Value.ToString();
-			}
-			else if (txtNombre.Enabled == true && txtNombre.Text == "" && txtApellido.Text =="" && txtApellido.Enabled==true)
-			{
-				rtxtEstudios.Text = "";
-				rtxtExperiencia.Text = "";
-				rtxtReferencias.Text = "";
-			}
-		}
-
-		private void rtxtEstudios_EnabledChanged(object sender, EventArgs e)
-		{
-			if (rtxtEstudios.Enabled == false)
-			{
-				rtxtEstudios.Text = "";
-			}
-		}
-
-		private void rtxtExperiencia_EnabledChanged(object sender, EventArgs e)
-		{
-			if (rtxtExperiencia.Enabled == false)
-			{
-				rtxtExperiencia.Text = "";
-			}
-		}
-
-		private void rtxtReferencias_EnabledChanged(object sender, EventArgs e)
-		{
-			if (rtxtReferencias.Enabled == false)
-			{
-				rtxtReferencias.Text = "";
-			}
+			
 		}
 	}
 }

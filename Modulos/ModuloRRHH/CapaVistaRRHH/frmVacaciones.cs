@@ -122,13 +122,15 @@ namespace CapaVistaRRHH
             else
             {
                 controlador.limpiarRegistros("vacaciones_d", txtid.Text);
-                int CantidadFilas = dgvDisponibles.RowCount;
+                llenarDGVDisponibles();
+                llenarDGVAsignados();
+                int CantidadFilas = dgvDisponibles.RowCount-1;
 
+                //controlador.guardarVacacionesEncabezado("vacaciones_e", txtid.Text, txtPeriodo.Text, txtEstado.Text);
                 for (int i = 0; i < CantidadFilas; i++)
                 {
                     dgvDisponibles.CurrentCell = dgvDisponibles.Rows[i].Cells[0];
                     str = dgvDisponibles.Rows[i].Cells[0].Value.ToString();
-
                     txtCeldas.Text = str;
 
                     controlador.AsignarVacaciones("vacaciones_d", txtid.Text, str, "15", "0", txtEstado.Text);
