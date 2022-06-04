@@ -183,20 +183,6 @@ namespace CapaVistaRRHH
 
         }
 
-
-
-        private void excepcionesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                frmExcepciones form = new frmExcepciones();
-                form.MdiParent = this;
-                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
-                form.Show();
-            }
-            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
-        }
-
         private void historialISRToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

@@ -874,7 +874,7 @@ namespace CapaModeloRRHH
         public OdbcDataAdapter llenarDGVSeleccion(string IdPeriodo)
         {
             //Obtiene todos los empleados
-            string sql = "SELECT empleado.pkIdEmpleado, empleado.nombre, vacaciones_d.diasdisponibles, vacaciones_d.diasgozados FROM empleado INNER JOIN vacaciones_d ON empleado.pkidempleado = vacaciones_d.empleado WHERE vacaciones_d.diasdisponibles != 8 AND vacaciones_e IN(SELECT vacaciones_e.vacaciones_e FROM hotelsancarlos.vacaciones_e INNER JOIN vacaciones_d WHERE vacaciones_e.vacaciones_e = vacaciones_d.vacaciones_e AND vacaciones_e.periodo = '" + IdPeriodo + "') ORDER BY pkidempleado;";
+            string sql = "SELECT empleado.pkIdEmpleado, empleado.nombre, vacaciones_d.diasdisponibles, vacaciones_d.diasgozados FROM empleado INNER JOIN vacaciones_d ON empleado.pkidempleado = vacaciones_d.empleado WHERE vacaciones_d.diasdisponibles != 0 AND vacaciones_e IN(SELECT vacaciones_e.vacaciones_e FROM hotelsancarlos.vacaciones_e INNER JOIN vacaciones_d WHERE vacaciones_e.vacaciones_e = vacaciones_d.vacaciones_e AND vacaciones_e.periodo = '" + IdPeriodo + "') ORDER BY pkidempleado;";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
             return dataTable;
         }
