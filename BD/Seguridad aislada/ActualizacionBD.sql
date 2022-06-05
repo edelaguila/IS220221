@@ -163,26 +163,12 @@ CREATE TABLE concepto (
     nombreConcepto VARCHAR(60) NOT NULL,                
     efectoConcepto VARCHAR(1) NOT NULL,         
     aplicacion VARCHAR(1) NOT NULL,    -- Identificacion:    1=todos, 2=algunos, 3=todos,excepto
-    fkformulaConcepto VARCHAR(15) DEFAULT NULL,     -- llave Foranea formulaConcepto
+    TipoValor VARCHAR(1) DEFAULT NULL,     -- llave Foranea formulaConcepto
     valorConcepto VARCHAR(25), 
     fkCuentaContable VARCHAR(15),      -- llave Foranea CuentaContable
     estado VARCHAR(1) NOT NULL,
-    foreign key (fkformulaConcepto) references  formula (pkIdFormula),
     foreign key (fkCuentaContable) references  cuentasContables (pkId)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-ALTER TABLE CONCEPTO MODIFY COLUMN  fkformulaConcepto VARCHAR(15) DEFAULT NULL;
-
-ALTER TABLE `hotelsancarlos`.`concepto` 
-DROP FOREIGN KEY `concepto_ibfk_1`;
-ALTER TABLE `hotelsancarlos`.`concepto` 
-CHANGE COLUMN `fkformulaConcepto` `TipoValor` VARCHAR(1) NULL DEFAULT NULL ,
-DROP INDEX `fkformulaConcepto` ;
-;
-ALTER TABLE `hotelsancarlos`.`concepto` 
-ADD CONSTRAINT `concepto_ibfk_1`
-  FOREIGN KEY ()
-  REFERENCES `hotelsancarlos`.`formula` ();
 
 
 -- --------------------------------------------------------------------------------------------------------------------------------------
